@@ -1,0 +1,123 @@
+MODO_PVP = false
+MODO_ANKALIKE = true
+MODO_HEROICO = false
+MODO_DEBUG = false
+RECIBIDOS = true
+ENVIADOS = true
+
+
+#INFO START SERVER
+IP_MULTISERVER = 127.0.0.1
+PUERTO_SERVIDOR = 7777
+SERVER_ID = 612
+SERVIDOR_PRIORIDAD = 4004
+PUERTO_SINCRONIZADOR = 9669
+
+LIMITE_STATS_CON_BUFF = 210,40;211,40;212,40;213,40;214,40;250,40;251,40;252,40;253,40;254,40
+LIMITE_STATS_SIN_BUFF = 111,12;128,7;117,6;210,40;211,40;212,40;213,40;214,40;250,40;251,40;252,40;253,40;254,40
+
+
+PARAM_VIP_CRAFT_SPEED = true
+PARAM_CORREGIR_NOMBRE_JUGADOR = true
+NOMBRE_SERVER = DutyFree Emulacion
+MENSAJE_BIENVENIDA_1 = <b>Bienvenidos al servidor</b>
+MENSAJE_REBOOT = Testing Reboot
+PUBLICIDAD_1 = <b>[Servidor]:</b> No olvides pasar por nuestras redes sociales.
+PUBLICIDAD_2 = <b>[Servidor]:</b> Discord  Onesv.fun <a href="https://discord.gg/yZnADDUKHx"><b><u>click aqui</u></b></a>	
+PUBLICIDAD_3 = <b>[Servidor]:</b> Publicidad 3
+COMANDOS_PERMITIDOS = infos,all,maitre,exo,villa,scroll,spellmax,zonas,astrub,pueblo,comandos,deblo,brakmar,neutral,bonta,shop,pvp
+ACCESO_ADMIN_MIN = 0
+
+#RATES
+RATE_XP_PVP = 1
+RATE_XP_PVM = 1
+RATE_XP_OFICIO = 1
+RATE_DROP = 1
+RATE_KAMAS = 1
+RATE_HONOR = 1
+#RATE_CRIANZA_PAVOS = 5
+#RATE_CAPTURA_PAVOS = 10
+
+
+# DB SQL
+BD_HOST = 127.0.0.1
+BD_USUARIO = root
+BD_PASS =
+BD_STATIC = estaticos
+BD_DYNAMIC = dinamicos
+BD_ACCOUNTS = cuentas
+
+PARAM_ALMANAX = true
+PARAM_BESTIARIO = true
+PARAM_TODOS_MOBS_EN_BESTIARIO = true
+ID_MIMOBIONTE = 312
+
+#CREAR PERSONAJE
+INICIO_NIVEL = 1
+INICIO_SET_ID = 5
+INICIO_KAMAS = 0
+
+#MAPAS A TELEPORTAR
+SHOP_MAPA_CELDA = 1907,427
+PVP_MAPA_CELDA = 952,297
+
+#DETALLE
+RANGO_NIVEL_PVP = 20
+
+
+#TIEMPO MINUTOS
+#MINUTOS_ALIMENTACION = 2
+MINUTOS_PARIR_MONTURA = 10
+PARAM_MONTURA_SIEMPRE_MONTABLES = true
+PARAM_CAPTURAR_MONTURA_COMO_PERGAMINO = false
+TIPO_ALIMENTO_MONTURA = 41
+SEGUNDOS_MOVER_MONTURAS = 30
+INICIO_NIVEL_MONTURA = 5
+
+
+#TIEMPO SEGUNDOS
+SEGUNDOS_SALVAR = 4000
+SEGUNDOS_REBOOT_SERVER = 96900
+SEGUNDOS_TRANSACCION_BD = 60
+SEGUNDOS_INACTIVIDAD = 900
+SEGUNDOS_ESTRELLAS_MOBS = 600
+SEGUNDOS_ESTRELLAS_RECURSOS = 900
+SEGUNDOS_REAPARECER_MOBS = 10
+SEGUNDOS_TURNO_PELEA = 120
+
+
+#PARAMETROS
+PARAM_PERMITIR_ORNAMENTOS = true
+PARAM_SALVAR_LOGS_AGRESION_SQL =true
+PARAM_RESET_STATS_PLAYERS = false
+PARAM_FORMULA_TIPO_OFICIAL = true
+PARAM_AUTO_COMMIT = true
+PARAM_START_EMOTES = true
+PARAM_DEVOLVER_OGRINAS = false
+PARAM_KOLISEO = true
+PARAM_PVP = true
+PARAM_MOBS = true
+PARAM_AURA = true
+PARAM_COMANDOS_JUGADOR = true
+PARAM_RECURSOS_EN_OGRINAS = false
+PARAM_PERMITIR_MULTICUENTA_PELEA_PVP = true
+PARAM_RANKING_STAFF = true
+
+PARAM_RANKING_NIVEL = true
+PARAM_RANKING_GREMIO = true
+PARAM_RANKING_EXP_DIA = true
+
+PARAM_RESTRINGIR_COLOR_DIA = true
+PARAM_ENCRIPTAR_PACKETS = false
+
+
+#KOLISEO
+SEGUNDOS_INICIAR_KOLISEO = 120
+MAPAS_KOLISEO = 9915,9986,10711,9033,1377,1713,7964,3695,4772,5203,1246
+
+MENSAJE_COMANDOS = - <b>.infos</b> Muestra los online del servidor<br/> - <b>.all</b> Te permite hablar de manera general a todos los online <br/> - <b>.scroll</b> Scrolleate a 101 a todos los elementos x) <br/> - <b>.spellmax</b> Sube el nivel maximo de tus hechizos <br/> - <b>.zonas</b> Mira las zonas a cual podras teleportarte <br/> - <b>.astrub</b> Te lleva a la ciudad de Astrub <br/> - <b>.pueblo</b> Te lleva al Pueblo de Amakna <br/> - <b>.comandos</b> Te muestra los comandos disponibles <br/> - <b>.deblo</b> Desbugea tu personaje <br/> - <b>.brakmar</b> Conviertete en brakmariano <br/> - <b>.neutral</b> Conviertete en neutral <br/> - <b>.bonta</b> Conviertete en bontariano <br/>
+
+#KAMAS_RULETA_JALATO = 1000
+KAMAS_MOSTRAR_PROBABILIDAD_FORJA = 1
+LIMITE_LADDER = 5
+KAMAS_RULETA_JALATO = 1000
