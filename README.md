@@ -1,4 +1,4 @@
-# 🛡️ Bustemu-Retro 1.43.7 (Emu-b)
+# 🛡️ Bustemu-Retro 1.43.7
 
 Un emulador avanzado basado en Java y desarrollado íntegramente en **Español-Latino**, **adaptado y pensado para el cliente 1.43.7**. Este proyecto es el núcleo técnico para la comunidad **Onesv**, optimizado para el rendimiento y la facilidad de modificación.
 
@@ -30,7 +30,6 @@ Para acelerar tu curva de aprendizaje, hemos integrado este repositorio con **De
 
 - `src/`: Lógica central del servidor escrita en Java (Clases, Protocolos, Motor de Batalla).
 - `docs/database/`: Diccionario técnico con las tablas MySQL convertidas a Markdown para fácil lectura.
-- `code_structure-emu-b.json`: Mapa del sistema para optimizar la indexación del RAG.
 
 ---
 

@@ -1,0 +1,10 @@
+** No cambiar el nombre de la base de datos llamada "conexion" 
+y ponerle el mismo nombre al crearla en navicat **
+
+Para el cambio de IP revisar la carpeta de codigo fuente y el 
+tutorial, también sigue las instrucciones de las notas:
+https://www.youtube.com/watch?v=I82K05izoUs
+
+
+Si la base de datos de estaticos o cualquier otra  no se importa, desactiva la opción del medio
+al importarla como se muestran en la imagen
