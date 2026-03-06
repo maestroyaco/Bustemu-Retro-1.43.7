@@ -22,7 +22,7 @@ import estaticos.Mundo.Duo;
 public class Objeto {
 	private ObjetoModelo _objModelo;
 	private byte _posicion = Constantes.OBJETO_POS_NO_EQUIPADO;
-	private int _id, _cantidad, _idObjevivo, _idObjModelo, _durabilidad = -1, _durabilidadMax = -1, _dueñoTemp;
+	private int _id, _cantidad, _idObjevivo, _idObjModelo, _durabilidad = -1, _durabilidadMax = -1, _due\u00f1oTemp;
 	private int _precio;
 	private Stats _statsGeneral = new Stats();
 	private ArrayList<EfectoHechizo> _efectosNormales;
@@ -144,12 +144,12 @@ public class Objeto {
 		return true;
 	}
 	
-	public int getDueñoTemp() {
-		return _dueñoTemp;
+	public int getDue\u00f1oTemp() {
+		return _due\u00f1oTemp;
 	}
 	
-	public void setDueñoTemp(final int id) {
-		_dueñoTemp = id;
+	public void setDue\u00f1oTemp(final int id) {
+		_due\u00f1oTemp = id;
 	}
 	
 	public int getPrecio() {
@@ -701,11 +701,11 @@ public class Objeto {
 		}
 	}
 	
-	public int getDañoPromedioNeutral() {
+	public int getDa\u00f1oPromedioNeutral() {
 		if (_efectosNormales != null) {
 			for (final EfectoHechizo EH : _efectosNormales) {
 				try {
-					if (EH.getEfectoID() != Constantes.STAT_DAÑOS_NEUTRAL) {
+					if (EH.getEfectoID() != Constantes.STAT_DA\u00D1OS_NEUTRAL) {
 						continue;
 					}
 					final String[] infos = EH.getArgs().split(",");
@@ -724,7 +724,7 @@ public class Objeto {
 			case 99 :
 				if (_efectosNormales != null) {
 					for (final EfectoHechizo EH : _efectosNormales) {
-						if (EH.getEfectoID() != Constantes.STAT_DAÑOS_NEUTRAL) {
+						if (EH.getEfectoID() != Constantes.STAT_DA\u00D1OS_NEUTRAL) {
 							continue;
 						}
 						final String[] infos = EH.getArgs().split(",");
@@ -961,7 +961,7 @@ public class Objeto {
 		return 0;
 	}
 	
-	public String stringObjetoConGuiño() {
+	public String stringObjetoConGui\u00f1o() {
 		final StringBuilder str = new StringBuilder();
 		try {
 			str.append(Integer.toHexString(_id) + "~" + Integer.toHexString(_idObjModelo) + "~" + Integer.toHexString(
@@ -969,7 +969,7 @@ public class Objeto {
 			+ convertirStatsAString(false) + "~" + _objModelo.getKamas() / 10);
 			str.append(";");
 		} catch (Exception e) {
-			MainServidor.redactarLogServidorln("OBJETO BUG stringObjetoConGuiño " + _id + " Exception: " + e.toString());
+			MainServidor.redactarLogServidorln("OBJETO BUG stringObjetoConGui\u00f1o " + _id + " Exception: " + e.toString());
 		}
 		return str.toString();
 	}

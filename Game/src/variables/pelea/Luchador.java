@@ -9,7 +9,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import sprites.PreLuchador;
 import variables.gremio.Recaudador;
 import variables.hechizo.Buff;
-import variables.hechizo.EfectoHechizo.TipoDaño;
+import variables.hechizo.EfectoHechizo.TipoDa\u00f1o;
 import variables.hechizo.HechizoLanzado;
 import variables.hechizo.StatHechizo;
 import variables.mapa.Celda;
@@ -51,7 +51,7 @@ public class Luchador {
 	private byte _turnosParaMorir;
 	private byte _turnosRestantes = 20;
 	private byte _alineacion = Constantes.ALINEACION_NULL;
-	private int _ultimoElementoDaño = Constantes.ELEMENTO_NULO;
+	private int _ultimoElementoDa\u00f1o = Constantes.ELEMENTO_NULO;
 	private int _idLuch, _PDVMax, _PDV, _gfxID;
 	private int _nroInvocaciones;
 	private int _idHechizoLanzado = -1;
@@ -237,12 +237,12 @@ public class Luchador {
 		_totalStats.getStatsBuff().clear();
 	}
 	
-	public int getUltimoElementoDaño() {
-		return _ultimoElementoDaño;
+	public int getUltimoElementoDa\u00f1o() {
+		return _ultimoElementoDa\u00f1o;
 	}
 	
-	public void setUltimoElementoDaño(int elemento) {
-		_ultimoElementoDaño = elemento;
+	public void setUltimoElementoDa\u00f1o(int elemento) {
+		_ultimoElementoDa\u00f1o = elemento;
 	}
 	
 	public Pelea getPelea() {
@@ -558,7 +558,7 @@ public class Luchador {
 			if (!buff.getCondicionBuff().isEmpty()) {
 				continue;
 			}
-			i += Constantes.estimaDaño(buff.getEfectoID());
+			i += Constantes.estimaDa\u00f1o(buff.getEfectoID());
 		}
 		if (equipoBin != _equipoBin) {
 			i = -i;
@@ -785,7 +785,7 @@ public class Luchador {
 	    // ID de celda, considerando si el luchador es invisible para el mirador.
 	    str.append(idMirador != 0 && esInvisible(idMirador) ? 0 : _celda.getID()).append(";");
 	    
-	    // Dirección del luchador.
+	    // Direcci\u00f3n del luchador.
 	    str.append(Camino.getIndexPorDireccion(getDireccion())).append(";");
 	    
 	    // Estrellas de bonus y estado de abonado.
@@ -795,38 +795,38 @@ public class Luchador {
 	    str.append(_idLuch).append(";");
 	    str.append(_nombre).append("^").append(_colorNombre).append(";");
 	    
-	    // Información gráfica del luchador (skin, tamaño, etc.).
+	    // Informaci\u00f3n gr\u00e1fica del luchador (skin, tama\u00f1o, etc.).
 	    str.append(getPreLuchador().stringGMLuchador());
 	    
-	    // Puntos de vida (PDV), Puntos de Acción (PA) y Puntos de Movimiento (PM) actuales.
+	    // Puntos de vida (PDV), Puntos de Acci\u00f3n (PA) y Puntos de Movimiento (PM) actuales.
 	    str.append(getPDVConBuff()).append(";");       // Vida actual (LP)
 	    str.append(getPARestantes()).append(";");      // PA actuales (AP)
 	    str.append(getPMRestantes()).append(";");      // PM actuales (MP)
 	    
-	    // Cálculo y formato de las resistencias (PVP o PVM).
+	    // C\u00e1lculo y formato de las resistencias (PVP o PVM).
 	    str.append(getResistenciasFormateadas()).append(";");
 
 	    // Equipo del luchador (formato binario).
 	    str.append(_equipoBin).append(";");
 	    
-	    // Apariencia de la montura si el luchador es un personaje y está montando.
+	    // Apariencia de la montura si el luchador es un personaje y est\u00e1 montando.
 	    appendInfoMontura(str);
 	    
-	    // Estadísticas de Huida y Placaje.
+	    // Estad\u00edsticas de Huida y Placaje.
 	    str.append(_totalStats.getTotalStatConComplemento(Constantes.STAT_MAS_HUIDA)).append(";");
 	    str.append(_totalStats.getTotalStatConComplemento(Constantes.STAT_MAS_PLACAJE)).append(";");
 	    str.append(_totalStats.getTotalStatParaMostrar(Constantes.STAT_MAS_PA) + ";");  // APinit  
 	    str.append(_totalStats.getTotalStatParaMostrar(Constantes.STAT_MAS_PM));        // MPinit  
 
 
-	    // Vida máxima (LPmax) al final de la cadena.
+	    // Vida m\u00e1xima (LPmax) al final de la cadena.
 	    str.append(getPDVMaxConBuff());
 
 	    return str.toString();
 	}
 
 	/**
-	 * Determina y formatea la cadena de resistencias según el tipo de pelea (PvP o PvM).
+	 * Determina y formatea la cadena de resistencias seg\u00fan el tipo de pelea (PvP o PvM).
 	 * @return Una cadena con las 7 resistencias separadas por comas.
 	 */
 	private String getResistenciasFormateadas() {
@@ -868,8 +868,8 @@ public class Luchador {
 	}
 
 	/**
-	 * Añade la información de la montura a la cadena de StringBuilder si es aplicable.
-	 * @param str El StringBuilder al que se añadirá la información.
+	 * A\u00f1ade la informaci\u00f3n de la montura a la cadena de StringBuilder si es aplicable.
+	 * @param str El StringBuilder al que se a\u00f1adir\u00e1 la informaci\u00f3n.
 	 */
 	private void appendInfoMontura(StringBuilder str) {
 	    if (getPreLuchador() instanceof Personaje) {
@@ -912,7 +912,7 @@ public class Luchador {
 		setPDV(_PDV - pdv);
 		if (pdv > 0) {
 			int pdvMax = getPDVMaxSinBuff();
-			pdvMax -= Math.floor(pdv * MainServidor.PORCENTAJE_DAÑO_NO_CURABLE / 100);
+			pdvMax -= Math.floor(pdv * MainServidor.PORCENTAJE_DA\u00f1O_NO_CURABLE / 100);
 			if (pdvMax < 1) {
 				pdvMax = 1;
 			}
@@ -1111,13 +1111,13 @@ public class Luchador {
 	}
 	
 	public Duo<Boolean, Buff> addBuffConGIE(int efectoID, final int valor, final int turnosRestantes, final int hechizoID,
-	String args, final Luchador lanzador, final boolean conGIE, TipoDaño tipo, String condicion) {
+	String args, final Luchador lanzador, final boolean conGIE, TipoDa\u00f1o tipo, String condicion) {
 		// se usa para todos menos los de la clase buff porq tienen condicional
 		return addBuffConGIE(efectoID, valor, turnosRestantes, hechizoID, args, lanzador, conGIE, tipo, condicion, true);
 	}
 	
 	private Duo<Boolean, Buff> addBuffConGIE(int efectoID, final int valor, final int turnosRestantes,
-	final int hechizoID, String args, final Luchador lanzador, final boolean conGIE, TipoDaño tipo,
+	final int hechizoID, String args, final Luchador lanzador, final boolean conGIE, TipoDa\u00f1o tipo,
 	String condicionHechizo, boolean inicioBuff) {
 		Buff buff = null;
 		boolean variosGIE = false;
@@ -1125,7 +1125,7 @@ public class Luchador {
 			variosGIE = true;
 			boolean desbufeable = true;
 			int tempTurnos = turnosRestantes;
-			if (inicioBuff && (tipo != TipoDaño.TRAMPA && puedeJugar())) {
+			if (inicioBuff && (tipo != TipoDa\u00f1o.TRAMPA && puedeJugar())) {
 				variosGIE = false;
 				tempTurnos++;
 			}
@@ -1135,26 +1135,26 @@ public class Luchador {
 					case 108 :// Cura, PDV devueltos
 					case 82 :// Robar Vida(fijo)
 					case 90 :// Dona % de su vida
-					case 275 :// Daï¿½os Agua %vida del atacante
-					case 276 :// Daï¿½os Tierra %vida del atacante
-					case 277 :// Daï¿½os Aire %vida del atacante
-					case 278 :// Daï¿½os Fuego %vida del atacante
-					case 279 :// Daï¿½os Neutral %vida del atacante
-					case 85 :// Daï¿½os Agua %vida del atacante
-					case 86 :// Daï¿½os Tierra %vida del atacante
-					case 87 :// Daï¿½os Aire %vida del atacante
-					case 88 :// Daï¿½os Fuego %vida del atacante
-					case 89 :// Daï¿½os Neutral %vida del atacante
+					case 275 :// Da\u00f1os Agua %vida del atacante
+					case 276 :// Da\u00f1os Tierra %vida del atacante
+					case 277 :// Da\u00f1os Aire %vida del atacante
+					case 278 :// Da\u00f1os Fuego %vida del atacante
+					case 279 :// Da\u00f1os Neutral %vida del atacante
+					case 85 :// Da\u00f1os Agua %vida del atacante
+					case 86 :// Da\u00f1os Tierra %vida del atacante
+					case 87 :// Da\u00f1os Aire %vida del atacante
+					case 88 :// Da\u00f1os Fuego %vida del atacante
+					case 89 :// Da\u00f1os Neutral %vida del atacante
 					case 91 :// Robar Vida(agua)
 					case 92 :// Robar Vida(tierra)
 					case 93 :// Robar Vida(aire)
 					case 94 :// Robar Vida(fuego)
 					case 95 :// Robar Vida(neutral)
-					case 96 :// Daï¿½os Agua
-					case 97 :// Daï¿½os Tierra
-					case 98 :// Daï¿½os Aire
-					case 99 :// Daï¿½os Fuego
-					case 100 :// Daï¿½os Neutral
+					case 96 :// Da\u00f1os Agua
+					case 97 :// Da\u00f1os Tierra
+					case 98 :// Da\u00f1os Aire
+					case 99 :// Da\u00f1os Fuego
+					case 100 :// Da\u00f1os Neutral
 						break;
 					default :
 						variosGIE = false;
@@ -1164,7 +1164,7 @@ public class Luchador {
 			}
 			// tempTurnos no es para GIE
 			switch (efectoID) {
-				case 293 :// aumenta los daï¿½os del hechizo X
+				case 293 :// aumenta los da\u00f1os del hechizo X
 				case 294 :
 				case 788 :// estado de los castigos de sacrogito
 				case Constantes.STAT_MENOS_PORC_PDV_TEMPORAL :

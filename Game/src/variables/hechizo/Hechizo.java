@@ -9,7 +9,7 @@ import estaticos.Constantes;
 import estaticos.Formulas;
 import estaticos.GestorSQL;
 import estaticos.GestorSalida;
-import variables.hechizo.EfectoHechizo.TipoDaño;
+import variables.hechizo.EfectoHechizo.TipoDa\u00f1o;
 import variables.mapa.Celda;
 import variables.mapa.Mapa;
 import variables.pelea.Luchador;
@@ -120,7 +120,7 @@ public class Hechizo {
 		_statsHechizos.put(nivel, stats);
 	}
 	
-	// public static String strDañosStats2(StatHechizo sh, int valoresStat[]) {
+	// public static String strDa\u00f1osStats2(StatHechizo sh, int valoresStat[]) {
 	// StringBuilder str = new StringBuilder(sh.getHechizoID() + "");
 	// for (EfectoHechizo eh : sh.getEfectosNormales()) {
 	// int valorStat = 0;
@@ -142,7 +142,7 @@ public class Hechizo {
 	// return str.toString();
 	// }
 	//
-	public static String strDañosStats(StatHechizo sh, int valoresStat[]) {
+	public static String strDa\u00f1osStats(StatHechizo sh, int valoresStat[]) {
 		StringBuilder str = new StringBuilder(sh.getHechizoID() + "");
 		boolean paso = false;
 		for (EfectoHechizo eh : sh.getEfectosNormales()) {
@@ -191,7 +191,7 @@ public class Hechizo {
 	}
 	
 	public static void aplicaHechizoAPelea(final Pelea pelea, final Luchador lanzador, final Celda celdaObj,
-	final ArrayList<EfectoHechizo> efectosH, final TipoDaño tipo, final boolean esGC) {
+	final ArrayList<EfectoHechizo> efectosH, final TipoDa\u00f1o tipo, final boolean esGC) {
 		int cantObjetivos = aplicaHechizoAPeleaSinGTM(pelea, lanzador, celdaObj, efectosH, tipo, esGC);
 		if (cantObjetivos > 0) {
 			GestorSalida.ENVIAR_GTM_INFO_STATS_TODO_LUCHADORES_A_TODOS(pelea, 7,  false);
@@ -199,7 +199,7 @@ public class Hechizo {
 	}
 	
 	public static int aplicaHechizoAPeleaSinGTM(final Pelea pelea, final Luchador lanzador, final Celda celdaObj,
-	final ArrayList<EfectoHechizo> efectosH, final TipoDaño tipo, final boolean esGC) {
+	final ArrayList<EfectoHechizo> efectosH, final TipoDa\u00f1o tipo, final boolean esGC) {
 		if (efectosH == null) {
 			return 0;
 		}
@@ -237,7 +237,7 @@ public class Hechizo {
 	
 	// public static int aplicaHechizoAPelea(final Pelea pelea, final Luchador lanzador, final Celda
 	// celdaObj,
-	// final ArrayList<EfectoHechizo> efectosH, final TipoDaño tipo, final boolean esGC,
+	// final ArrayList<EfectoHechizo> efectosH, final TipoDa\u00f1o tipo, final boolean esGC,
 	// ArrayList<ArrayList<Luchador>> aObjetivos) {
 	// if (efectosH == null) {
 	// return 0;
@@ -281,11 +281,11 @@ public class Hechizo {
 		int elemento = EH.getAfectadosCond();
 		if (elemento > 0) {
 			// son bytes
-			int ultDaño = lanzador.getUltimoElementoDaño();
-			if (ultDaño < Constantes.ELEMENTO_NULO) {
+			int ultDa\u00f1o = lanzador.getUltimoElementoDa\u00f1o();
+			if (ultDa\u00f1o < Constantes.ELEMENTO_NULO) {
 				return objetivos;
 			}
-			if (((1 << ultDaño) & elemento) == 0) {
+			if (((1 << ultDa\u00f1o) & elemento) == 0) {
 				return objetivos;
 			}
 		}

@@ -133,7 +133,7 @@ public class ServidorServer extends Thread {
 							if (Mundo.MSJ_CUENTA_REGRESIVA.equalsIgnoreCase("LOTERIA")) {
 								new SortearLoteria();
 							} else {
-								GestorSalida.ENVIAR_ÑL_BOTON_LOTERIA_TODOS(false);
+								GestorSalida.ENVIAR_\u00D1L_BOTON_LOTERIA_TODOS(false);
 								new BorrarCuentaRegresiva();
 							}
 						}
@@ -163,8 +163,8 @@ public class ServidorServer extends Thread {
 				new CheckearObjInteractivos();
 				new MoverRecaudadores();
 				int dia = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
-				if (Mundo.DIA_DEL_AÑO != dia) {
-					Mundo.DIA_DEL_AÑO = dia;
+				if (Mundo.DIA_DEL_A\u00D1O != dia) {
+					Mundo.DIA_DEL_A\u00D1O = dia;
 					new ResetExpDia();
 				}
 			}
@@ -472,8 +472,8 @@ public class ServidorServer extends Thread {
 		while (mes.length() < 2) {
 			mes = "0" + mes;
 		}
-		int año = hoy.get(Calendar.YEAR);
-		return "BD" + año + "|" + mes + "|" + dia;
+		int a\u00f1o = hoy.get(Calendar.YEAR);
+		return "BD" + a\u00f1o + "|" + mes + "|" + dia;
 	}
 	public static class Reiniciar extends Thread {
 		private static boolean ACTIVO = false;

@@ -120,14 +120,14 @@ public class GestorSQL {
 	}
 
 	public static ResultSet consultaSQL(final String consultaSQL, final Connection conexion) throws Exception {
-		final PreparedStatement declaracion = conexion.prepareStatement(consultaSQL);  // ✅ sin cast
+		final PreparedStatement declaracion = conexion.prepareStatement(consultaSQL);  // âœ… sin cast
 		declaracion.setQueryTimeout(300); 
 		final ResultSet resultado = declaracion.executeQuery();
 		return resultado;
 	}
 
 	public static PreparedStatement transaccionSQL(final String consultaSQL, final Connection conexion) throws Exception {
-		final PreparedStatement declaracion = conexion.prepareStatement(consultaSQL);  // ✅ sin cast
+		final PreparedStatement declaracion = conexion.prepareStatement(consultaSQL);  // âœ… sin cast
 		_necesitaCommit = true;
 		return declaracion;
 	}
@@ -673,14 +673,14 @@ public class GestorSQL {
 		return false;
 	}
 	
-	public static String GET_CONTRASEÑA_CUENTA(final String cuenta) {
+	public static String GET_CONTRASE\u00D1A_CUENTA(final String cuenta) {
 		String str = "";
-		String consultaSQL = "SELECT `contraseña` FROM `cuentas` WHERE `cuenta` = '" + cuenta + "' ;";
+		String consultaSQL = "SELECT `contrase\u00f1a` FROM `cuentas` WHERE `cuenta` = '" + cuenta + "' ;";
 		try {
 			final ResultSet resultado = consultaSQL(consultaSQL, _bdCuentas);
 			if (resultado.next()) {
 				try {
-					str = resultado.getString("contraseña");
+					str = resultado.getString("contrase\u00f1a");
 				} catch (final Exception e) {}
 			}
 			cerrarResultado(resultado);
@@ -690,11 +690,11 @@ public class GestorSQL {
 		return str;
 	}
 	
-	public static void CAMBIAR_CONTRASEÑA_CUENTA(final String contraseña, final int cuentaID) {
-		String consultaSQL = "UPDATE `cuentas` SET `contraseña`= ? WHERE `id`= ?";
+	public static void CAMBIAR_CONTRASE\u00D1A_CUENTA(final String contrase\u00f1a, final int cuentaID) {
+		String consultaSQL = "UPDATE `cuentas` SET `contrase\u00f1a`= ? WHERE `id`= ?";
 		try {
 			final PreparedStatement declaracion = transaccionSQL(consultaSQL, _bdCuentas);
-			declaracion.setString(1, contraseña);
+			declaracion.setString(1, contrase\u00f1a);
 			declaracion.setInt(2, cuentaID);
 			ejecutarTransaccion(declaracion);
 			cerrarDeclaracion(declaracion);
@@ -1497,7 +1497,7 @@ public class GestorSQL {
 			final ResultSet resultado = consultaSQL("SELECT * FROM `casas`;", _bdDinamica);
 			while (resultado.next()) {
 				try {
-					Mundo.getCasa(resultado.getInt("id")).actualizarCasa(resultado.getInt("dueño"), resultado.getInt("precio"),
+					Mundo.getCasa(resultado.getInt("id")).actualizarCasa(resultado.getInt("dueÃ±o"), resultado.getInt("precio"),
 					resultado.getByte("bloqueado"), resultado.getString("clave"), resultado.getInt("derechosGremio"));
 				} catch (Exception e) {}
 			}
@@ -1679,14 +1679,14 @@ public class GestorSQL {
 			while (resultado.next()) {
 				final Mercadillo puesto = Mundo.getPuestoMercadillo(resultado.getInt("mercadillo"));
 				Objeto objeto = Mundo.getObjeto(resultado.getInt("objeto"));
-				if (puesto == null || objeto == null || objeto.getDueñoTemp() != 0) {
+				if (puesto == null || objeto == null || objeto.getDue\u00f1oTemp() != 0) {
 					MainServidor.redactarLogServidorln("Se borro el objeto mercadillo id:" + resultado.getInt("objeto")
-					+ ", dueño: " + resultado.getInt("dueño"));
+					+ ", dueÃ±o: " + resultado.getInt("dueÃ±o"));
 					DELETE_OBJ_MERCADILLO(resultado.getInt("objeto"));
 					continue;
 				}
 				puesto.addObjMercaAlPuesto(new ObjetoMercadillo(resultado.getInt("precio"), resultado.getByte("cantidad"),
-				resultado.getInt("dueño"), objeto, puesto.getID()));
+				resultado.getInt("dueÃ±o"), objeto, puesto.getID()));
 				num++;
 			}
 			cerrarResultado(resultado);
@@ -1709,7 +1709,7 @@ public class GestorSQL {
 				.getShort("celda"), resultado.getByte("orientacion"), resultado.getInt("gremio"), resultado.getString(
 				"nombre1"), resultado.getString("nombre2"), resultado.getString("objetos"), resultado.getLong("kamas"),
 				resultado.getLong("xp"), resultado.getLong("tiempoProteccion"), resultado.getLong("tiempoCreacion"), resultado
-				.getInt("dueño"));
+				.getInt("dueÃ±o"));
 				Mundo.addRecaudador(recaudador);
 				numero++;
 			}
@@ -2188,7 +2188,7 @@ public class GestorSQL {
 				resultado.getString("nombre"), resultado.getInt("fatiga"), resultado.getInt("energia"), resultado.getByte(
 				"reproducciones"), resultado.getInt("madurez"), resultado.getInt("serenidad"), resultado.getString("objetos"),
 				resultado.getString("ancestros"), resultado.getString("habilidad"), resultado.getByte("talla"), resultado
-				.getShort("celda"), resultado.getShort("mapa"), resultado.getInt("dueño"), resultado.getByte("orientacion"),
+				.getShort("celda"), resultado.getShort("mapa"), resultado.getInt("dueÃ±o"), resultado.getByte("orientacion"),
 				resultado.getLong("fecundable"), resultado.getInt("pareja"), resultado.getByte("salvaje")), false);
 			}
 			cerrarResultado(resultado);
@@ -2411,7 +2411,7 @@ public class GestorSQL {
 			while (resultado.next()) {
 				try {
 					Mundo.getCofre(resultado.getInt("id")).actualizarCofre(resultado.getString("objetos"), resultado.getLong(
-					"kamas"), resultado.getString("clave"), resultado.getInt("dueño"));
+					"kamas"), resultado.getString("clave"), resultado.getInt("dueÃ±o"));
 				} catch (Exception e) {}
 			}
 			cerrarResultado(resultado);
@@ -2685,7 +2685,7 @@ public class GestorSQL {
 			declaracion.setString(2, cofre.analizarObjetoCofreABD());
 			declaracion.setLong(3, cofre.getKamas());
 			declaracion.setString(4, cofre.getClave());
-			declaracion.setInt(5, cofre.getDueñoID());
+			declaracion.setInt(5, cofre.getDue\u00f1oID());
 			ejecutarTransaccion(declaracion);
 			cerrarDeclaracion(declaracion);
 			if (salvarObjetos) {
@@ -3241,7 +3241,7 @@ public class GestorSQL {
 			declaracion.setInt(18, montura.getOrientacion());
 			declaracion.setInt(19, montura.getCelda() == null ? -1 : montura.getCelda().getID());
 			declaracion.setInt(20, montura.getMapa() == null ? -1 : montura.getMapa().getID());
-			declaracion.setInt(21, montura.getDueñoID());
+			declaracion.setInt(21, montura.getDue\u00f1oID());
 			declaracion.setLong(22, montura.getTiempoFecundacion());
 			declaracion.setInt(23, montura.getParejaID());
 			declaracion.setString(24, montura.esSalvaje() ? "1" : "0");
@@ -3274,7 +3274,7 @@ public class GestorSQL {
 		try {
 			PreparedStatement declaracion = transaccionSQL(consultaSQL, _bdDinamica);
 			declaracion.setInt(1, cercado.getMapa().getID());
-			declaracion.setInt(2, cercado.getDueñoID());
+			declaracion.setInt(2, cercado.getDue\u00f1oID());
 			declaracion.setInt(3, cercado.getGremio() == null ? -1 : cercado.getGremio().getID());
 			declaracion.setInt(4, cercado.getPrecioPJ());
 			declaracion.setString(5, cercado.strPavosCriando());
@@ -3737,7 +3737,7 @@ public class GestorSQL {
 			declaracion.setLong(9, recaudador.getKamas());
 			declaracion.setLong(10, recaudador.getExp());
 			declaracion.setLong(11, recaudador.getTiempoProteccion());
-			declaracion.setInt(12, recaudador.getDueño());
+			declaracion.setInt(12, recaudador.getDue\u00f1o());
 			declaracion.setLong(13, recaudador.getTiempoCreacion());
 			ejecutarTransaccion(declaracion);
 			cerrarDeclaracion(declaracion);
@@ -4003,7 +4003,7 @@ public class GestorSQL {
 		try {
 			final PreparedStatement declaracion = transaccionSQL(consultaSQL, _bdDinamica);
 			declaracion.setInt(1, casa.getID());
-			declaracion.setInt(2, casa.getDueño() != null ? casa.getDueño().getID() : 0);
+			declaracion.setInt(2, casa.getDue\u00f1o() != null ? casa.getDue\u00f1o().getID() : 0);
 			declaracion.setLong(3, casa.getKamasVenta());
 			declaracion.setByte(4, (byte) (casa.getActParametros() ? 1 : 0));
 			declaracion.setString(5, casa.getClave());
@@ -4038,7 +4038,7 @@ public class GestorSQL {
 	}
 	
 	public static boolean REPLACE_OBJETO_MERCADILLO(final ObjetoMercadillo objMerca) {
-		String consultaSQL = "REPLACE INTO `mercadillo_objetos` (`objeto`,`mercadillo`,`cantidad`,`dueño`,`precio`) VALUES (?,?,?,?,?);";
+		String consultaSQL = "REPLACE INTO `mercadillo_objetos` (`objeto`,`mercadillo`,`cantidad`,`dueÃ±o`,`precio`) VALUES (?,?,?,?,?);";
 		try {
 			PreparedStatement declaracion = transaccionSQL(consultaSQL, _bdDinamica);
 			if (objMerca.getCuentaID() == 0) {
@@ -4356,7 +4356,7 @@ public class GestorSQL {
 				Personaje perso = Mundo.getPersonaje(resultado.getInt("idPersonaje"));
 				if (perso != null) {
 					perso.addObjetoConOAKO(objNew, true);
-					GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE(perso, "Vous avez reçu " + resultado.getInt("cantidad") + " "
+					GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE(perso, "Vous avez reÃ§u " + resultado.getInt("cantidad") + " "
 					+ resultado.getString("nombreObjeto"));
 				}
 			}

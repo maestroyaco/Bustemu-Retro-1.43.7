@@ -34,7 +34,7 @@ public class Gremio {
 	private final CopyOnWriteArrayList<Recaudador> _recaudadores = new CopyOnWriteArrayList<>();
 	private final Stats _statsPelea = new Stats();
 	
-	public Gremio(final Personaje dueño, final String nombre, final String emblema) {
+	public Gremio(final Personaje due\u00f1o, final String nombre, final String emblema) {
 		_id = Mundo.sigIDGremio();
 		_nombre = nombre;
 		_emblema = emblema;
@@ -282,7 +282,7 @@ public class Gremio {
 		stats.put(Constantes.STAT_MAS_PA, 6);
 		stats.put(Constantes.STAT_MAS_PM, 5);
 		stats.put(Constantes.STAT_MAS_SABIDURIA, getStatRecolecta(Constantes.STAT_MAS_SABIDURIA));
-		stats.put(Constantes.STAT_MAS_DAÑOS, (int) _nivel);
+		stats.put(Constantes.STAT_MAS_DA\u00f1OS, (int) _nivel);
 		int[] statsIDs = {Constantes.STAT_MAS_RES_PORC_NEUTRAL, Constantes.STAT_MAS_RES_PORC_TIERRA,
 		Constantes.STAT_MAS_RES_PORC_FUEGO, Constantes.STAT_MAS_RES_PORC_AIRE, Constantes.STAT_MAS_RES_PORC_AGUA,
 		Constantes.STAT_MAS_ESQUIVA_PERD_PA, Constantes.STAT_MAS_ESQUIVA_PERD_PM,};
@@ -326,10 +326,10 @@ public class Gremio {
 							str.append(",");
 						}
 						str.append(DP.getColor() + "," + DP.getNombre() + ",");
-						if (Mundo.getPersonaje(DP.getDueñoID()) == null) {
-							str.append("SIN DUEÑO");
+						if (Mundo.getPersonaje(DP.getDue\u00f1oID()) == null) {
+							str.append("SIN DUE\u00f1O");
 						} else {
-							str.append(Mundo.getPersonaje(DP.getDueñoID()).getNombre());
+							str.append(Mundo.getPersonaje(DP.getDue\u00f1oID()).getNombre());
 						}
 						primero = true;
 					}

@@ -12,8 +12,8 @@ import java.net.URLEncoder;
 public class TextoAVoz {
 	private static final String TEXT_TO_SPEECH_SERVICE = "http://translate.google.com/translate_tts?ie=UTF-8&tl=es-MX&client=tw-ob&q=";
 	private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko/20100101 Firefox/11.0";
-	private static final String LETRAS = "abcdefghijklmnopqrstuvwxyz·ÈÌÛ˙‰ÎÔˆ¸";
-	private static final String SIGNOS = ",.-°!ø?=$* ";
+	private static final String LETRAS = "abcdefghijklmnopqrstuvwxyz\u00e1\u00e9\u00ed\u00f3\u00fa\u00e4\u00eb\u00ef\u00f6\u00fc";
+	private static final String SIGNOS = ",.-\u00a1!\u00bf?=$* ";
 	private static final String NUMEROS = "0123456789";
 	
 	public static String crearMP3(String texto, String idioma) {

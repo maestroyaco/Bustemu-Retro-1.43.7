@@ -68,8 +68,8 @@ public class Grupo {
 		final ArrayList<Integer> lista = new ArrayList<Integer>();
 		for (final Personaje perso : _integrantes) {
 			lista.add(perso.getID());
-			if (perso.getCompañero() != null && perso.getCompañero().esMultiman()) {
-				lista.add(perso.getCompañero().getID());
+			if (perso.getCompa\u00f1ero() != null && perso.getCompa\u00f1ero().esMultiman()) {
+				lista.add(perso.getCompa\u00f1ero().getID());
 			}
 		}
 		return lista;

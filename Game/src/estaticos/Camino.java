@@ -183,7 +183,7 @@ public class Camino {
 			// }
 			// for (final Trampa trampa : pelea.getTrampas()) {
 			// final int dist = distanciaDosCeldas(mapa, trampa.getCelda().getID(), nuevaCelda);
-			// if (dist <= trampa.getTamaño()) {
+			// if (dist <= trampa.getTama\u00f1o()) {
 			// pathRef.set(nuevoPath.toString());
 			// return (short) (movimientos + 10000);
 			// }
@@ -263,7 +263,7 @@ public class Camino {
 					if (pelea.getTrampas() != null) {
 						for (final Trampa trampa : pelea.getTrampas()) {
 							final int dist = distanciaDosCeldas(mapa, trampa.getCelda().getID(), celdaTempID);
-							if (dist <= trampa.getTamaño()) {
+							if (dist <= trampa.getTama\u00f1o()) {
 								return "trampa" + ";" + _nroMovimientos + ";" + celdaTempID;
 							}
 						}
@@ -505,7 +505,7 @@ public class Camino {
 			if (pelea.getTrampas() != null) {
 				for (final Trampa trampa : pelea.getTrampas()) {
 					final int dist = distanciaDosCeldas(mapa, trampa.getCelda().getID(), sigCeldaID);
-					if (dist <= trampa.getTamaño()) {
+					if (dist <= trampa.getTama\u00f1o()) {
 						return new Duo<Integer, Short>(0, sigCeldaID);
 					}
 				}
@@ -661,10 +661,10 @@ public class Camino {
 		if (mapa.getCelda(celdaIDObjetivo) == null) {
 			return celdas;
 		}
-		final int tamaño = Encriptador.getNumeroPorValorHash(areaEfecto.charAt(1));
+		final int tama\u00f1o = Encriptador.getNumeroPorValorHash(areaEfecto.charAt(1));
 		switch (areaEfecto.charAt(0)) {
 			case 'A' :// cruz en celda lanzador
-				for (int a = tamaño; a >= 0; a--) {
+				for (int a = tama\u00f1o; a >= 0; a--) {
 					for (final short celda2 : celdasPorCruz(mapa.getCelda(celdaIDLanzador), mapa, a)) {
 						Celda celda = mapa.getCelda(celda2);
 						if (!celdas.contains(celda)) {
@@ -674,8 +674,8 @@ public class Camino {
 				}
 				break;
 			case 'D' :// diagonales
-				int i = tamaño % 2 == 0 ? 1 : 0;
-				for (; i < tamaño; i += 2) {
+				int i = tama\u00f1o % 2 == 0 ? 1 : 0;
+				for (; i < tama\u00f1o; i += 2) {
 					for (final short celda2 : celdasPorDistancia(mapa.getCelda(celdaIDObjetivo), mapa, i + 1)) {
 						Celda celda = mapa.getCelda(celda2);
 						if (!celdas.contains(celda)) {
@@ -685,11 +685,11 @@ public class Camino {
 				}
 				break;
 			case 'C' :// Circulo
-				if (tamaño >= 64) {
+				if (tama\u00f1o >= 64) {
 					celdas.addAll(mapa.getCeldas().values());
 					break;
 				}
-				for (int a = tamaño; a >= 0; a--) {
+				for (int a = tama\u00f1o; a >= 0; a--) {
 					for (final short celda2 : celdasPorDistancia(mapa.getCelda(celdaIDObjetivo), mapa, a)) {
 						Celda celda = mapa.getCelda(celda2);
 						if (!celdas.contains(celda)) {
@@ -699,7 +699,7 @@ public class Camino {
 				}
 				break;
 			case 'O' :// anillo
-				for (final short celda2 : celdasPorDistancia(mapa.getCelda(celdaIDObjetivo), mapa, tamaño)) {
+				for (final short celda2 : celdasPorDistancia(mapa.getCelda(celdaIDObjetivo), mapa, tama\u00f1o)) {
 					Celda celda = mapa.getCelda(celda2);
 					if (!celdas.contains(celda)) {
 						celdas.add(celda);
@@ -707,7 +707,7 @@ public class Camino {
 				}
 				break;
 			case 'X' :// Cruz
-				for (int a = tamaño; a >= 0; a--) {
+				for (int a = tama\u00f1o; a >= 0; a--) {
 					for (final short celda2 : celdasPorCruz(mapa.getCelda(celdaIDObjetivo), mapa, a)) {
 						Celda celda = mapa.getCelda(celda2);
 						if (!celdas.contains(celda)) {
@@ -718,14 +718,14 @@ public class Camino {
 				break;
 			case 'T' :// Estilo Baston
 				final int dir2 = direccionEntreDosCeldas(mapa, celdaIDLanzador, celdaIDObjetivo, true);
-				for (final short celda2 : celdasPorLinea(mapa.getCelda(celdaIDObjetivo), mapa, tamaño, correctaDireccion(dir2
+				for (final short celda2 : celdasPorLinea(mapa.getCelda(celdaIDObjetivo), mapa, tama\u00f1o, correctaDireccion(dir2
 				- 2))) {
 					Celda celda = mapa.getCelda(celda2);
 					if (!celdas.contains(celda)) {
 						celdas.add(celda);
 					}
 				}
-				for (final short celda2 : celdasPorLinea(mapa.getCelda(celdaIDObjetivo), mapa, tamaño, correctaDireccion(dir2
+				for (final short celda2 : celdasPorLinea(mapa.getCelda(celdaIDObjetivo), mapa, tama\u00f1o, correctaDireccion(dir2
 				+ 2))) {
 					Celda celda = mapa.getCelda(celda2);
 					if (!celdas.contains(celda)) {
@@ -738,7 +738,7 @@ public class Camino {
 				break;
 			case 'L' :// Linea
 				final int dir = direccionEntreDosCeldas(mapa, celdaIDLanzador, celdaIDObjetivo, true);
-				for (final short celda2 : celdasPorLinea(mapa.getCelda(celdaIDObjetivo), mapa, tamaño, correctaDireccion(
+				for (final short celda2 : celdasPorLinea(mapa.getCelda(celdaIDObjetivo), mapa, tama\u00f1o, correctaDireccion(
 				dir))) {
 					Celda celda = mapa.getCelda(celda2);
 					if (!celdas.contains(celda)) {

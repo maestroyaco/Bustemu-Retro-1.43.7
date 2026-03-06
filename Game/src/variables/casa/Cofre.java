@@ -36,7 +36,7 @@ public class Cofre implements Exchanger {
 		_limite = limite;
 	}
 	
-	public void actualizarCofre(final String objetos, final long kamas, final String clave, final int dueñoID) {
+	public void actualizarCofre(final String objetos, final long kamas, final String clave, final int due\u00f1oID) {
 		for (final String str : objetos.split(Pattern.quote("|"))) {
 			try {
 				if (str.isEmpty()) {
@@ -53,7 +53,7 @@ public class Cofre implements Exchanger {
 		}
 		addKamas(kamas, null);
 		_clave = clave;
-		_persoID = dueñoID;
+		_persoID = due\u00f1oID;
 	}
 	
 	public int getID() {
@@ -98,12 +98,12 @@ public class Cofre implements Exchanger {
 		_clave = clave;
 	}
 	
-	public int getDueñoID() {
+	public int getDue\u00f1oID() {
 		return _persoID;
 	}
 	
-	public void setDueñoID(final int dueñoID) {
-		_persoID = dueñoID;
+	public void setDue\u00f1oID(final int due\u00f1oID) {
+		_persoID = due\u00f1oID;
 	}
 	
 	public boolean intentarAcceder(final Personaje perso, String clave) {
@@ -182,7 +182,7 @@ public class Cofre implements Exchanger {
 			if (objeto == null) {
 				continue;
 			}
-			packet.append("O" + objeto.stringObjetoConGuiño());
+			packet.append("O" + objeto.stringObjetoConGui\u00f1o());
 		}
 		if (_kamas > 0) {
 			packet.append("G" + getKamas());
@@ -224,7 +224,7 @@ public class Cofre implements Exchanger {
 			}
 		}
 		if (_objetos.size() >= _limite) {
-			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "Llegaste al máximo de objetos que puede soportar este cofre",
+			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "Llegaste al m\u00e1ximo de objetos que puede soportar este cofre",
 			Constantes.COLOR_ROJO);
 			return;
 		}
@@ -350,7 +350,7 @@ public class Cofre implements Exchanger {
 				}
 			}
 			final Cofre cofre = new Cofre(id, casa.getID(), mapaID, celdaID, MainServidor.LIMITE_OBJETOS_COFRE);
-			cofre.actualizarCofre("", 0, "-", casa.getDueño() != null ? casa.getDueño().getID() : 0);
+			cofre.actualizarCofre("", 0, "-", casa.getDue\u00f1o() != null ? casa.getDue\u00f1o().getID() : 0);
 			Mundo.addCofre(cofre);
 			GestorSQL.REPLACE_COFRE(cofre, false);
 			return cofre;

@@ -14,20 +14,20 @@ public class Buff extends EfectoHechizo {
 	private String _condicionBuff = "";
 	// por el momento las condiciones son
 	// SOIN, BN,DN,DE,DA,DW,DF,-PA,-PM,PA,PM
-	private TipoDaño _tipo;
+	private TipoDa\u00f1o _tipo;
 	
 	public Buff(final int efectoID, final int hechizoID, final boolean desbufeable, final int turnos,
-	final Luchador lanzador, final String args, final TipoDaño tipo) {
+	final Luchador lanzador, final String args, final TipoDa\u00f1o tipo) {
 		super(hechizoID);
 		_efectoID = efectoID;
 		_desbuffeable = desbufeable;
 		_turnoRestantes = turnos <= -1 ? -3 : turnos;
 		_duracion = 0;
 		_lanzador = lanzador;
-		if (tipo == TipoDaño.GLIFO || tipo == TipoDaño.TRAMPA) {
+		if (tipo == TipoDa\u00f1o.GLIFO || tipo == TipoDa\u00f1o.TRAMPA) {
 			_tipo = tipo;
 		} else {
-			_tipo = TipoDaño.POST_TURNOS;
+			_tipo = TipoDa\u00f1o.POST_TURNOS;
 		}
 		setArgs(args);
 	}
@@ -90,12 +90,12 @@ public class Buff extends EfectoHechizo {
 			ArrayList<Luchador> obj2 = new ArrayList<Luchador>();
 			obj2.add(objetivo);
 			switch (_efectoID) {
-				case 85 :// Daños Agua %vida del atacante
-				case 86 :// Daños Tierra %vida del atacante
-				case 87 :// Daños Aire %vida del atacante
-				case 88 :// Daños Fuego %vida del atacante
-				case 89 :// Daños Neutral %vida del atacante
-					efecto_Daños_Porc_Elemental(obj2, pelea, _lanzador, _tipo, false);
+				case 85 :// Da\u00f1os Agua %vida del atacante
+				case 86 :// Da\u00f1os Tierra %vida del atacante
+				case 87 :// Da\u00f1os Aire %vida del atacante
+				case 88 :// Da\u00f1os Fuego %vida del atacante
+				case 89 :// Da\u00f1os Neutral %vida del atacante
+					efecto_Da\u00f1os_Porc_Elemental(obj2, pelea, _lanzador, _tipo, false);
 					return;
 				case 91 :// Robar Vida(agua)
 				case 92 :// Robar Vida(tierra)
@@ -104,12 +104,12 @@ public class Buff extends EfectoHechizo {
 				case 95 :// Robar Vida(neutral)
 					efecto_Roba_PDV_Elemental(obj2, pelea, _lanzador, _tipo, false);
 					return;
-				case 96 :// Daños Agua
-				case 97 :// Daños Tierra
-				case 98 :// Daños Aire
-				case 99 :// Daños Fuego
-				case 100 :// Daños Neutral
-					efecto_Daños_Elemental(obj2, pelea, _lanzador, _tipo, false);
+				case 96 :// Da\u00f1os Agua
+				case 97 :// Da\u00f1os Tierra
+				case 98 :// Da\u00f1os Aire
+				case 99 :// Da\u00f1os Fuego
+				case 100 :// Da\u00f1os Neutral
+					efecto_Da\u00f1os_Elemental(obj2, pelea, _lanzador, _tipo, false);
 					return;
 				case 81 :
 				case 108 :// Cura, PDV devueltos
@@ -146,6 +146,6 @@ public class Buff extends EfectoHechizo {
 		if (sh == null) {
 			return;
 		}
-		Hechizo.aplicaHechizoAPelea(pelea, objetivo, celdaObjetivo, sh.getEfectosNormales(), TipoDaño.NORMAL, false);
+		Hechizo.aplicaHechizoAPelea(pelea, objetivo, celdaObjetivo, sh.getEfectosNormales(), TipoDa\u00f1o.NORMAL, false);
 	}
 }

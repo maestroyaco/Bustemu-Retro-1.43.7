@@ -117,7 +117,7 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 	private long _kamas, _experiencia, _tiempoAgresion, _experienciaDia, _inicioTuto;
 	private long _tiempoDesconexion, _tiempoUltEncarnacion, _tiempoPenalizacionKoliseo, _tiempoUltDesafio;
 	// private float _velocidad;
-	private String _nombre = "", _forjaEc = "", _ultVictimaPVP = "", _tituloVIP = "", _canales = "*#%!pi$:?^¡@~",
+	private String _nombre = "", _forjaEc = "", _ultVictimaPVP = "", _tituloVIP = "", _canales = "*#%!pi$:?^\u00a1@~",
 	_tipoInvitacion = "";
 	private final Cuenta _cuenta;
 	private MiembroGremio _miembroGremio;
@@ -129,7 +129,7 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 	private Celda _celda;
 	private Grupo _grupo;
 	private Montura _montura;
-	private Personaje _compañero, _invitandoA, _invitador;
+	private Personaje _compa\u00f1ero, _invitandoA, _invitador;
 	private Exchanger _exchanger;
 	private MisionPVP _misionPvp;
 	private Cofre _consultarCofre;
@@ -174,7 +174,7 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 		_tiempoUltDesafio = System.currentTimeMillis();
 	}
 	public void addInvocacionPersonaje(Personaje perso){
-		perso.setCompañero(this);
+		perso.setCompa\u00f1ero(this);
 		invocacionControlable.add(perso);
 	}
 	
@@ -866,12 +866,12 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 		}
 	}
 	
-	public Personaje getCompañero() {
-		return _compañero;
+	public Personaje getCompa\u00f1ero() {
+		return _compa\u00f1ero;
 	}
 	
-	public void setCompañero(Personaje compañero) {
-		_compañero = compañero;
+	public void setCompa\u00f1ero(Personaje compa\u00f1ero) {
+		_compa\u00f1ero = compa\u00f1ero;
 	}
 	
 	public boolean esMultiman() {
@@ -935,7 +935,7 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 			_ultimoNivel = ultimoNivel;
 			_canales = canal;
 			if (MainServidor.PARAM_REINICIAR_CANALES) {
-				_canales = "*#%!pi$:?^¡@~";
+				_canales = "*#%!pi$:?^\u00a1@~";
 				modificar = true;
 			}
 			addCanal("~");
@@ -1063,13 +1063,13 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 						continue;
 					}
 					Objeto obj = Mundo.getObjeto(Integer.parseInt(idObjeto));
-					if (obj.getDueñoTemp() == 0) {
-						obj.setDueñoTemp(_id);
+					if (obj.getDue\u00f1oTemp() == 0) {
+						obj.setDue\u00f1oTemp(_id);
 						// se agrega el objeto al array _objPos
 						addObjetoConOAKO(obj, false);
 					} else {
 						modificar = true;
-						MainServidor.redactarLogServidorln("El objetoID " + idObjeto + " tiene dueño " + (obj.getDueñoTemp())
+						MainServidor.redactarLogServidorln("El objetoID " + idObjeto + " tiene due\u00f1o " + (obj.getDue\u00f1oTemp())
 						+ " no se puede agregar a " + _nombre + "(" + _id + ")");
 					}
 				} catch (Exception e) {
@@ -1084,8 +1084,8 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 						continue;
 					}
 					Objeto obj = Mundo.getObjeto(Integer.parseInt(idObjeto));
-					if (obj.getDueñoTemp() == 0) {
-						obj.setDueñoTemp(_id);
+					if (obj.getDue\u00f1oTemp() == 0) {
+						obj.setDue\u00f1oTemp(_id);
 						if (obj.getPrecio() <= 0) {
 							addObjetoConOAKO(obj, false);
 						} else {
@@ -1093,7 +1093,7 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 						}
 					} else {
 						modificar = true;
-						MainServidor.redactarLogServidorln("La tiendaID " + idObjeto + " tiene dueño " + (obj.getDueñoTemp())
+						MainServidor.redactarLogServidorln("La tiendaID " + idObjeto + " tiene due\u00f1o " + (obj.getDue\u00f1oTemp())
 						+ " no se puede agregar a " + _nombre + "(" + _id + ")");
 					}
 				} catch (Exception e) {
@@ -1119,8 +1119,8 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 			// _cuenta.addRegalo(str.toString());
 			// _cuenta
 			// .addMensaje(
-			// "1223;Tus objetos magueados se han puesto con los stats base debido a una modificación en
-			// la forjamagia muy importante, así evitarémos el over magueo en el servidor ANKALIKE. Te
+			// "1223;Tus objetos magueados se han puesto con los stats base debido a una modificaci\u00f3n en
+			// la forjamagia muy importante, as\u00ed evitar\u00e9mos el over magueo en el servidor ANKALIKE. Te
 			// hemos dejado un regalo por cada objeto que te modificamos.",
 			// true);
 			// }
@@ -1344,12 +1344,12 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 					continue;
 				}
 				Objeto obj = Mundo.getObjeto(Integer.parseInt(idObjeto));
-				if (obj.getDueñoTemp() == 0) {
-					obj.setDueñoTemp(_id);
+				if (obj.getDue\u00f1oTemp() == 0) {
+					obj.setDue\u00f1oTemp(_id);
 					// se agrega el objeto al array _objPos
 					addObjetoConOAKO(obj, false);
 				} else {
-					MainServidor.redactarLogServidorln("El objetoID " + idObjeto + " tiene dueño " + (obj.getDueñoTemp())
+					MainServidor.redactarLogServidorln("El objetoID " + idObjeto + " tiene due\u00f1o " + (obj.getDue\u00f1oTemp())
 					+ " no se puede agregar a " + _nombre + "(" + _id + ")");
 				}
 			} catch (Exception e) {
@@ -2037,7 +2037,7 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 	
 	public Grupo getGrupoParty() {
 		if (esMultiman()) {
-			return _compañero.getGrupoParty();
+			return _compa\u00f1ero.getGrupoParty();
 		}
 		return _grupo;
 	}
@@ -2412,11 +2412,11 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 	
 	public void setPelea(final Pelea pelea) {
 		if (_pelea != null && pelea == null) {
-			if (_compañero != null) {
+			if (_compa\u00f1ero != null) {
 				GestorSalida.ENVIAR_AI_CAMBIAR_ID(this, _id);
 				GestorSalida.ENVIAR_SL_LISTA_HECHIZOS(this);
-				_compañero.setCompañero(null);
-				_compañero = null;
+				_compa\u00f1ero.setCompa\u00f1ero(null);
+				_compa\u00f1ero = null;
 				invocacionControlable.clear();
 			}
 			else if(!invocacionControlable.isEmpty()){
@@ -3143,7 +3143,7 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 		}
 		str.append(";");
 		str.append(";");
-		if (_miembroGremio != null && _miembroGremio.getGremio().getCantidadMiembros() >= 1) { //condición de emblema gremio
+		if (_miembroGremio != null && _miembroGremio.getGremio().getCantidadMiembros() >= 1) { //condici\u00f3n de emblema gremio
 			str.append(_miembroGremio.getGremio().getNombre() + ";" + _miembroGremio.getGremio().getEmblema() + ";");
 		} else {
 			str.append(";;");
@@ -3918,7 +3918,7 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 			if (obj == null) {
 				continue;
 			}
-			str.append(obj.stringObjetoConGuiño());
+			str.append(obj.stringObjetoConGui\u00f1o());
 		}
 		return str.toString();
 	}
@@ -4439,8 +4439,8 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 			} else { // pelea
 				Luchador luch = _pelea.getLuchadorPorID(getID());
 				if (!luch.puedeJugar()) {
-					if (getCompañero() != null) {
-						luch = _pelea.getLuchadorPorID(getCompañero().getID());
+					if (getCompa\u00f1ero() != null) {
+						luch = _pelea.getLuchadorPorID(getCompa\u00f1ero().getID());
 						if (!luch.puedeJugar()) {
 							luch = null;
 							for(Personaje perso: invocacionControlable){
@@ -5035,7 +5035,7 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 		str.append("~");
 		primero = false;
 		for (final Montura montura : cercado.getCriando().values()) {
-			if (montura.getDueñoID() == _id) {
+			if (montura.getDue\u00f1oID() == _id) {
 				if (primero) {
 					str.append(";");
 				}
@@ -5236,8 +5236,8 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 					GestorSalida.ENVIAR_Im_INFORMACION(this, "1117");
 					return;
 				}
-				if (_montura.getDueñoID() != _id) {
-					GestorSalida.ENVIAR_BN_NADA(this, "SUBIR BAJAR MONTURA NO DUEÑO " + _montura.getDueñoID());
+				if (_montura.getDue\u00f1oID() != _id) {
+					GestorSalida.ENVIAR_BN_NADA(this, "SUBIR BAJAR MONTURA NO DUE\u00f1O " + _montura.getDue\u00f1oID());
 					return;
 				}
 			}
@@ -5362,8 +5362,8 @@ public class Personaje implements PreLuchador, Exchanger, Preguntador {
 			case "F" :// envia
 			case "T" :// recibe
 			case "@" :// admin
-			case "¡" :// vip
-			case "¬" :// unknown
+			case "\u00a1" :// vip
+			case "Â¬" :// unknown
 			case "~" :// all
 				return true;
 		}

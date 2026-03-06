@@ -65,10 +65,16 @@ public class Mapa {
 	private Recaudador _recaudador;
 	private int _minNivelGrupoMob = 0;
 	private int _maxNivelGrupoMob = 0;
-	private Boolean _prePelea = new Boolean(true);
+	private Boolean _prePelea = Boolean.TRUE;
+	/** Lock para sincronizaci\u00f3n de pre-pelea (evitar sincronizar sobre Boolean). */
+	private final Object _prePeleaLock = new Object();
 	
 	public Boolean getPrePelea() {
 		return _prePelea;
+	}
+	
+	public Object getPrePeleaLock() {
+		return _prePeleaLock;
 	}
 	
 	public Mapa(final short id, final String fecha, final byte ancho, final byte alto, final String posDePelea,
@@ -83,7 +89,7 @@ public class Mapa {
 		_alto = alto;
 		_X = X;
 		_Y = Y;
-		_key = key;  // AGREGAR ESTA LÍNEA  CLIENTE 1.43.7
+		_key = key;  // AGREGAR ESTA L\u00edNEA  CLIENTE 1.43.7
 		if (MainServidor.MODO_DEBUG) {
 			System.out.println("  --> Descifrando MapData ID " + _id + " con key " + key);
 		}		
@@ -1113,7 +1119,7 @@ public class Mapa {
 		final StringBuilder str = new StringBuilder("GM");
 		boolean esPublico = _cercado.esPublico();
 		for (final Montura montura : _cercado.getCriando().values()) {
-			if (esPublico && montura.getDueñoID() != perso.getID()) {
+			if (esPublico && montura.getDue\u00f1oID() != perso.getID()) {
 				continue;
 			}
 			str.append("|+" + montura.stringGM());
@@ -1130,7 +1136,7 @@ public class Mapa {
 			if (str.length() > 0) {
 				str.append("|");
 			}
-			if (_cercado.getDueñoID() == -1) {
+			if (_cercado.getDue\u00f1oID() == -1) {
 				str.append(entry.getKey() + ";" + Constantes.getObjCriaPorMapa(_id) + ";1;1000;1000");
 			} else {
 				str.append(entry.getKey() + ";" + entry.getValue().getObjModeloID() + ";1;" + entry.getValue().getDurabilidad()

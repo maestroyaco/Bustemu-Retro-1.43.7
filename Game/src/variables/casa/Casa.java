@@ -17,7 +17,7 @@ public class Casa {
 	private final short _mapaIDFuera, _celdaIDFuera;
 	private short _mapaIDDentro, _celdaIDDentro;
 	private final int _id;
-	private Personaje _dueñoID;
+	private Personaje _due\u00f1oID;
 	private Gremio _gremio;
 	private int _derechosGremio;
 	private long _kamasVenta = 1000000;
@@ -41,14 +41,14 @@ public class Casa {
 		_mapasContenidos.trimToSize();
 	}
 	
-	public void actualizarCasa(final int dueño, final long precio, final byte bloqueado, final String clave,
+	public void actualizarCasa(final int due\u00f1o, final long precio, final byte bloqueado, final String clave,
 	final int derechos) {
-		_dueñoID = Mundo.getPersonaje(dueño);
+		_due\u00f1oID = Mundo.getPersonaje(due\u00f1o);
 		_kamasVenta = precio;
 		_clave = clave;
 		_actParametros = bloqueado == 1;
-		if (_actParametros && _dueñoID != null) {
-			_gremio = _dueñoID.getGremio();
+		if (_actParametros && _due\u00f1oID != null) {
+			_gremio = _due\u00f1oID.getGremio();
 			if (_gremio == null) {
 				_actParametros = false;
 			}
@@ -73,8 +73,8 @@ public class Casa {
 		return _mapasContenidos;
 	}
 	
-	public Personaje getDueño() {
-		return _dueñoID;
+	public Personaje getDue\u00f1o() {
+		return _due\u00f1oID;
 	}
 	
 	public long getKamasVenta() {
@@ -110,14 +110,14 @@ public class Casa {
 	}
 	
 	public boolean esSuCasa(final int id) {
-		if (_dueñoID != null && _dueñoID.getID() == id) {
+		if (_due\u00f1oID != null && _due\u00f1oID.getID() == id) {
 			return true;
 		}
 		return false;
 	}
 	
 	public void resetear() {
-		_dueñoID = null;
+		_due\u00f1oID = null;
 		_gremio = null;
 		_kamasVenta = 1000000;
 		_clave = "-";
@@ -252,25 +252,25 @@ public class Casa {
 		long kamasCofre = 0;
 		for (final Cofre cofre : Mundo.getCofresPorCasa(this)) {
 			try {
-				cofre.moverCofreABanco(_dueñoID.getCuenta());
+				cofre.moverCofreABanco(_due\u00f1oID.getCuenta());
 			} catch (final Exception e) {}
 			kamasCofre += cofre.getKamas();
 			cofre.setKamasCero();
 			cofre.setClave("-");
-			cofre.setDueñoID(perso.getID());
+			cofre.setDue\u00f1oID(perso.getID());
 			GestorSQL.REPLACE_COFRE(cofre, false);
 		}
 		try {
-			_dueñoID.addKamasBanco(_kamasVenta + kamasCofre);
-			Personaje tempPerso = _dueñoID.getCuenta().getTempPersonaje();
+			_due\u00f1oID.addKamasBanco(_kamasVenta + kamasCofre);
+			Personaje tempPerso = _due\u00f1oID.getCuenta().getTempPersonaje();
 			if (tempPerso != null) {
 				GestorSalida.ENVIAR_M1_MENSAJE_SERVER_SVR_MUESTRA_INSTANTANEO(tempPerso, 5, _kamasVenta + ";" + perso
 				.getNombre(), "");
 			} else {
-				_dueñoID.getCuenta().addMensaje("M15|" + _kamasVenta + ";" + perso.getNombre() + "|", true);
+				_due\u00f1oID.getCuenta().addMensaje("M15|" + _kamasVenta + ";" + perso.getNombre() + "|", true);
 			}
 		} catch (final Exception e) {}
-		_dueñoID = perso;
+		_due\u00f1oID = perso;
 		_kamasVenta = 0;
 		_clave = "-";
 		_actParametros = false;
@@ -318,7 +318,7 @@ public class Casa {
 		try {
 			switch (packet) {
 				case "+" :
-					Gremio gremio = _dueñoID.getGremio();
+					Gremio gremio = _due\u00f1oID.getGremio();
 					if (gremio == null) {
 						return;
 					}
@@ -367,7 +367,7 @@ public class Casa {
 	public String propiedadesPuertaCasa(Personaje perso) {
 		final StringBuilder packet = new StringBuilder(_id + "|");
 		try {
-			packet.append(_dueñoID.getNombre());
+			packet.append(_due\u00f1oID.getNombre());
 		} catch (final Exception e) {}
 		packet.append(";" + (_kamasVenta > 0 ? 1 : 0));
 		boolean esDelGremio = perso.getGremio() != null && perso.getGremio().getID() == getGremioID();
@@ -396,7 +396,7 @@ public class Casa {
 				}
 				packet.append(casa._id + ";");
 				try {
-					packet.append(casa.getDueño().getNombre() + ";");
+					packet.append(casa.getDue\u00f1o().getNombre() + ";");
 				} catch (final Exception e) {
 					packet.append("?;");
 				}

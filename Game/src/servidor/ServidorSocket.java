@@ -93,6 +93,9 @@ public class ServidorSocket implements Runnable {
 	private long _tiempoUltComercio, _tiempoUltReclutamiento, _tiempoUltAlineacion, _tiempoUltIncarnam, _tiempoUltVIP,
 	_ultSalvada, _tiempoUltPacket, _tiempoLLegoMapa, _tiempoUltAll;
 	private long _ping, _lastMillis, _ultMillis;
+	/** Throttle peticiones GI/U+0406 para cliente 1.43.7 (ms). */
+	private long _lastEntityRequestTime = 0;
+	private static final long ENTITY_REQUEST_THROTTLE_MS = 800;
 	private byte _excesoPackets = 0, _sigPacket = 0;
 	private final String[] _ultPackets = new String[7];
 	private final long[] _timePackets = new long[7];
@@ -190,10 +193,10 @@ public class ServidorSocket implements Runnable {
 	                        continue;  
 	                    }  
 	                      
-	                    // Manejar packets con formato ù del cliente 1.43.7  
+	                    // Manejar packets con formato Ã¹ del cliente 1.43.7  
 	                    boolean esPacket143 = false;  
-	                    if (packet.contains("ù")) {  
-	                        String[] parts = packet.split("ù");  
+	                    if (packet.contains("Ã¹")) {  
+	                        String[] parts = packet.split("Ã¹");  
 	                        if (parts.length >= 3) {  
 	                            // parts[0] = Base64 (ignorar)  
 	                            // parts[1] = checksum (ignorar)  
@@ -203,7 +206,7 @@ public class ServidorSocket implements Runnable {
 	                        }  
 	                    }  
 	                      
-	                    // Solo desencriptar si NO es un packet 1.43.7 Y si está habilitada la encriptación  
+	                    // Solo desencriptar si NO es un packet 1.43.7 Y si estÃ\u00a1 habilitada la encriptaciÃ³n  
 	                    if (!esPacket143 && MainServidor.PARAM_ENCRIPTAR_PACKETS) {  
 	                        packet = Encriptador.unprepareData(packet, _currentKey, _aKeys);  
 	                    }  
@@ -434,9 +437,9 @@ public class ServidorSocket implements Runnable {
 			case 'K' :// casa
 				analizar_Claves(packet);
 				break;
-			case 'Ñ' :// captcha
+			case '\u00D1' :// captcha
 				try {
-					GestorSalida.ENVIAR_ÑV_VOTO_RPG(this, Mundo.CAPTCHAS.get(Formulas.getRandomInt(0, Mundo.CAPTCHAS.size()
+					GestorSalida.ENVIAR_\u00D1V_VOTO_RPG(this, Mundo.CAPTCHAS.get(Formulas.getRandomInt(0, Mundo.CAPTCHAS.size()
 					- 1)));
 				} catch (final Exception e) {}
 				break;
@@ -611,31 +614,31 @@ public class ServidorSocket implements Runnable {
 					if (_perso != null) {
 						return;
 					}
-					// LAS Ñs y sus variables globales
-					// GestorSalida.ENVIAR_Ñm_MENSAJE_NOMBRE_SERVER(this);;
-					GestorSalida.ENVIAR_ÑG_CLASES_PERMITIDAS(this);
-					GestorSalida.ENVIAR_ÑO_ID_OBJETO_MODELO_MAX(this);
-					GestorSalida.ENVIAR_Ña_AUTO_PASAR_TURNO(this);
-					GestorSalida.ENVIAR_Ñe_EXO_PANEL_ITEMS(this);
-					GestorSalida.ENVIAR_Ñr_SUFJIO_RESET(this);
-					GestorSalida.ENVIAR_ÑD_DAÑO_PERMANENTE(this);
-					// el % de daño incurable
-					GestorSalida.ENVIAR_ÑI_CREA_TU_ITEM_OBJETOS(this);
-					GestorSalida.ENVIAR_Ñp_RANGO_NIVEL_PVP(this);
-					GestorSalida.ENVIAR_ÑZ_COLOR_CHAT(this);
-					GestorSalida.ENVIAR_ÑV_ACTUALIZAR_URL_LINK_MP3(this);
+					// LAS Ã‘s y sus variables globales
+					// GestorSalida.ENVIAR_\u00D1m_MENSAJE_NOMBRE_SERVER(this);;
+					GestorSalida.ENVIAR_\u00D1G_CLASES_PERMITIDAS(this);
+					GestorSalida.ENVIAR_\u00D1O_ID_OBJETO_MODELO_MAX(this);
+					GestorSalida.ENVIAR_\u00D1a_AUTO_PASAR_TURNO(this);
+					GestorSalida.ENVIAR_\u00D1e_EXO_PANEL_ITEMS(this);
+					GestorSalida.ENVIAR_\u00D1r_SUFJIO_RESET(this);
+					GestorSalida.ENVIAR_\u00D1D_DA\u00F1O_PERMANENTE(this);
+					// el % de daÃ±o incurable
+					GestorSalida.ENVIAR_\u00D1I_CREA_TU_ITEM_OBJETOS(this);
+					GestorSalida.ENVIAR_\u00D1p_RANGO_NIVEL_PVP(this);
+					GestorSalida.ENVIAR_\u00D1Z_COLOR_CHAT(this);
+					GestorSalida.ENVIAR_\u00D1V_ACTUALIZAR_URL_LINK_MP3(this);
 					GestorSalida.ENVIAR_bo_RESTRINGIR_COLOR_DIA(this);
 					if (!MainServidor.URL_IMAGEN_VOTO.isEmpty()) {
-						GestorSalida.ENVIAR_ÑU_URL_IMAGEN_VOTO(this);
+						GestorSalida.ENVIAR_\u00D1U_URL_IMAGEN_VOTO(this);
 					}
 					if (!MainServidor.URL_LINK_VOTO.isEmpty()) {
-						GestorSalida.ENVIAR_Ñu_URL_LINK_VOTO(this);
+						GestorSalida.ENVIAR_\u00D1u_URL_LINK_VOTO(this);
 					}
 					if (!MainServidor.URL_LINK_BUG.isEmpty()) {
-						GestorSalida.ENVIAR_Ñx_URL_LINK_BUG(this);
+						GestorSalida.ENVIAR_\u00D1x_URL_LINK_BUG(this);
 					}
 					if (!MainServidor.URL_LINK_COMPRA.isEmpty()) {
-						GestorSalida.ENVIAR_Ñz_URL_LINK_COMPRA(this);
+						GestorSalida.ENVIAR_\u00D1z_URL_LINK_COMPRA(this);
 					}
 					GestorSalida.ENVIAR_ALK_LISTA_DE_PERSONAJES(this, _cuenta);
 					break;
@@ -771,7 +774,7 @@ public class ServidorSocket implements Runnable {
 					_cuenta.setActualIP(_IP);
 					GestorSalida.ENVIAR_ATK_TICKET_A_CUENTA(this, crearPacketKey());
 					if (MainServidor.MODO_HEROICO) {
-						GestorSalida.ENVIAR_ÑS_SERVER_HEROICO(this);
+						GestorSalida.ENVIAR_\u00D1S_SERVER_HEROICO(this);
 					}
 					for (final Personaje perso : _cuenta.getPersonajes()) {
 						if (perso.getPelea() == null) {
@@ -794,8 +797,8 @@ public class ServidorSocket implements Runnable {
 	}
 	
 	private void cuenta_Idioma(final String packet) {
-		GestorSalida.ENVIAR_ÑA_LISTA_GFX(this);
-		GestorSalida.ENVIAR_ÑB_LISTA_NIVEL(this);
+		GestorSalida.ENVIAR_\u00D1A_LISTA_GFX(this);
+		GestorSalida.ENVIAR_\u00D1B_LISTA_NIVEL(this);
 		_cuenta.setIdioma(packet.substring(2));
 		if (_perso == null) {
 			cuenta_Regalo();
@@ -1006,10 +1009,10 @@ public class ServidorSocket implements Runnable {
 					bustofus_Mision_Almanax();
 					break;
 				case 'C' :// album mob o bestiario
-					GestorSalida.ENVIAR_ÑF_BESTIARIO_MOBS(this, _perso.listaCardMobs());
+					GestorSalida.ENVIAR_\u00D1F_BESTIARIO_MOBS(this, _perso.listaCardMobs());
 					break;
 				case 'D' :
-					GestorSalida.ENVIAR_Ñi_CREA_TU_ITEM_PRECIOS(this);
+					GestorSalida.ENVIAR_\u00D1i_CREA_TU_ITEM_PRECIOS(this);
 					GestorSalida.ENVIAR_bb_DATA_CREAR_ITEM(_perso);
 					break;
 				case 'E' :// detalle mob
@@ -1018,7 +1021,7 @@ public class ServidorSocket implements Runnable {
 						GestorSalida.ENVIAR_BN_NADA(_perso);
 						return;
 					}
-					GestorSalida.ENVIAR_ÑE_DETALLE_MOB(this, Mundo.getMobModelo(idMob).detalleMob());
+					GestorSalida.ENVIAR_\u00D1E_DETALLE_MOB(this, Mundo.getMobModelo(idMob).detalleMob());
 					break;
 				case 'e' :
 					bustofus_Buscar_Mobs_Drop(packet);
@@ -1049,13 +1052,13 @@ public class ServidorSocket implements Runnable {
 				case 'm' :
 					bustofus_Mostrar_Loteria();
 					break;
-				case 'ñ' :
+				case '\u00F1' :
 					if (_perso.getPelea() != null) {
 						return;
 					}
 					bustofus_Panel_Ornamentos();
 					break;
-				case 'Ñ' :
+				case '\u00D1' :
 					bustofus_Elegir_Ornamento(packet);
 					break;
 				case 'O' :// ogrinas
@@ -1119,7 +1122,7 @@ public class ServidorSocket implements Runnable {
 			GestorSalida.ENVIAR_BN_NADA(_perso, "ORNAMENTOS NO DISPONIBLES");
 			return;
 		}
-		GestorSalida.ENVIAR_bñ_PANEL_ORNAMENTOS(_perso);
+		GestorSalida.ENVIAR_b\u00f1_PANEL_ORNAMENTOS(_perso);
 	}
 	
 	private void bustofus_Elegir_Ornamento(final String packet) {
@@ -1193,7 +1196,7 @@ public class ServidorSocket implements Runnable {
 			}
 			str.append(idMob);
 		}
-		GestorSalida.ENVIAR_Ñf_BESTIARIO_DROPS(this, str.toString());
+		GestorSalida.ENVIAR_\u00D1f_BESTIARIO_DROPS(this, str.toString());
 	}
 	
 	public void bustofus_Mision_Almanax() {
@@ -1360,7 +1363,7 @@ public class ServidorSocket implements Runnable {
 		}
 		try {
 			Calendar cal = Calendar.getInstance();
-			GestorSalida.ENVIAR_ÑX_PANEL_ALMANAX(this, cal.get(Calendar.YEAR) + "|" + cal.get(Calendar.MONTH) + "|" + cal.get(
+			GestorSalida.ENVIAR_\u00D1X_PANEL_ALMANAX(this, cal.get(Calendar.YEAR) + "|" + cal.get(Calendar.MONTH) + "|" + cal.get(
 			Calendar.DAY_OF_MONTH) + "|" + almanax.getOfrenda()._primero + "," + almanax.getOfrenda()._segundo + "|" + almanax
 			.getTipo() + "," + almanax.getBonus() + "|" + _perso.cantMisionseAlmanax() + ","
 			+ MainServidor.MAX_MISIONES_ALMANAX + "|" + (_perso.realizoMisionDelDia() ? 1 : 0));
@@ -3298,7 +3301,7 @@ public class ServidorSocket implements Runnable {
 			GestorSalida.ENVIAR_Im_INFORMACION(_perso, "194");
 			return;
 		}
-		if (cercado.getDueñoID() != _perso.getID()) {
+		if (cercado.getDue\u00f1oID() != _perso.getID()) {
 			GestorSalida.ENVIAR_Im_INFORMACION(_perso, "195");
 			return;
 		}
@@ -3319,7 +3322,7 @@ public class ServidorSocket implements Runnable {
 	private void montura_Comprar_Cercado(final String packet) {
 		GestorSalida.ENVIAR_Rv_MONTURA_CERRAR(_perso);
 		final Cercado cercado = _perso.getMapa().getCercado();
-		final Personaje vendedor = Mundo.getPersonaje(cercado.getDueñoID());
+		final Personaje vendedor = Mundo.getPersonaje(cercado.getDue\u00f1oID());
 		if (cercado.esPublico()) {
 			GestorSalida.ENVIAR_Im_INFORMACION(_perso, "196");
 			return;
@@ -3358,7 +3361,7 @@ public class ServidorSocket implements Runnable {
 			}
 		}
 		cercado.setPrecioPJ(0);
-		cercado.setDueñoID(_perso.getID());
+		cercado.setDue\u00f1oID(_perso.getID());
 		cercado.setGremio(_perso.getGremio());
 		for (final Personaje pj : _perso.getMapa().getArrayPersonajes()) {
 			GestorSalida.ENVIAR_Rp_INFORMACION_CERCADO(pj, cercado);
@@ -3805,11 +3808,11 @@ public class ServidorSocket implements Runnable {
 			case 'm' :// disasociar mimobionte
 				objeto_Desasociar_Mimobionte(packet);
 				break;
-			 case 's': // Sets rápidos  
+			 case 's': // Sets rÃ\u00a1pidos  
 	                if (packet.length() > 2) {  
 	                    char subCmd = packet.charAt(2);  
 	                    if (Character.isDigit(subCmd)) {  
-	                        // Cliente solicita info de un set específico  
+	                        // Cliente solicita info de un set especÃ­fico  
 	                        // Simplemente enviar BN (no hacer nada)  
 	                        GestorSalida.ENVIAR_BN_NADA(_perso, "Os");  
 	                        return;  
@@ -3958,7 +3961,7 @@ public class ServidorSocket implements Runnable {
 			}
 			final ObjetoModelo objModelo = objeto.getObjModelo();
 			if (objModelo.getID() == MainServidor.ID_MIMOBIONTE) {
-				GestorSalida.ENVIAR_ÑM_PANEL_MIMOBIONTE(_perso);
+				GestorSalida.ENVIAR_\u00D1M_PANEL_MIMOBIONTE(_perso);
 				return;
 			}
 			boolean comestible = objModelo.getTipo() == Constantes.OBJETO_TIPO_BEBIDA || objModelo
@@ -4191,7 +4194,7 @@ public class ServidorSocket implements Runnable {
 			}
 			byte[] orden = {Constantes.OBJETO_POS_DOFUS1, Constantes.OBJETO_POS_DOFUS2, Constantes.OBJETO_POS_DOFUS3,
 			Constantes.OBJETO_POS_DOFUS4, Constantes.OBJETO_POS_DOFUS5, Constantes.OBJETO_POS_DOFUS6,
-			Constantes.OBJETO_POS_COMPAÑERO, Constantes.OBJETO_POS_MASCOTA, Constantes.OBJETO_POS_ANILLO1,
+			Constantes.OBJETO_POS_COMPA\u00f1ERO, Constantes.OBJETO_POS_MASCOTA, Constantes.OBJETO_POS_ANILLO1,
 			Constantes.OBJETO_POS_ANILLO_DERECHO, Constantes.OBJETO_POS_BOTAS, Constantes.OBJETO_POS_CINTURON,
 			Constantes.OBJETO_POS_AMULETO, Constantes.OBJETO_POS_SOMBRERO, Constantes.OBJETO_POS_CAPA,
 			Constantes.OBJETO_POS_ESCUDO, Constantes.OBJETO_POS_ARMA};
@@ -4222,7 +4225,7 @@ public class ServidorSocket implements Runnable {
 			}
 			byte[] orden = {Constantes.OBJETO_POS_DOFUS1, Constantes.OBJETO_POS_DOFUS2, Constantes.OBJETO_POS_DOFUS3,
 			Constantes.OBJETO_POS_DOFUS4, Constantes.OBJETO_POS_DOFUS5, Constantes.OBJETO_POS_DOFUS6,
-			Constantes.OBJETO_POS_COMPAÑERO, Constantes.OBJETO_POS_MASCOTA, Constantes.OBJETO_POS_ANILLO1,
+			Constantes.OBJETO_POS_COMPA\u00f1ERO, Constantes.OBJETO_POS_MASCOTA, Constantes.OBJETO_POS_ANILLO1,
 			Constantes.OBJETO_POS_ANILLO_DERECHO, Constantes.OBJETO_POS_BOTAS, Constantes.OBJETO_POS_CINTURON,
 			Constantes.OBJETO_POS_AMULETO, Constantes.OBJETO_POS_SOMBRERO, Constantes.OBJETO_POS_CAPA,
 			Constantes.OBJETO_POS_ESCUDO, Constantes.OBJETO_POS_ARMA};
@@ -4246,7 +4249,7 @@ public class ServidorSocket implements Runnable {
 		StringBuilder cond = new StringBuilder();
 		byte[] orden = {Constantes.OBJETO_POS_DOFUS1, Constantes.OBJETO_POS_DOFUS2, Constantes.OBJETO_POS_DOFUS3,
 		Constantes.OBJETO_POS_DOFUS4, Constantes.OBJETO_POS_DOFUS5, Constantes.OBJETO_POS_DOFUS6,
-		Constantes.OBJETO_POS_COMPAÑERO, Constantes.OBJETO_POS_MASCOTA, Constantes.OBJETO_POS_ANILLO1,
+		Constantes.OBJETO_POS_COMPA\u00f1ERO, Constantes.OBJETO_POS_MASCOTA, Constantes.OBJETO_POS_ANILLO1,
 		Constantes.OBJETO_POS_ANILLO_DERECHO, Constantes.OBJETO_POS_BOTAS, Constantes.OBJETO_POS_CINTURON,
 		Constantes.OBJETO_POS_AMULETO, Constantes.OBJETO_POS_SOMBRERO, Constantes.OBJETO_POS_CAPA,
 		Constantes.OBJETO_POS_ESCUDO, Constantes.OBJETO_POS_ARMA};
@@ -4405,12 +4408,12 @@ public class ServidorSocket implements Runnable {
 			}
 		} else if (!MainServidor.MODO_ANKALIKE && objMoverMod.getTipo() == Constantes.OBJETO_TIPO_POCION_FORJAMAGIA
 		&& posAMover == Constantes.OBJETO_POS_ARMA) {
-			// cambiar daño elemental
+			// cambiar daÃ±o elemental
 			int statFM = Constantes.getStatPorRunaPocima(objMover);
 			int potenciaFM = Constantes.getValorPorRunaPocima(objMover);
 			exObj.forjaMagiaGanar(statFM, potenciaFM);
 			GestorSalida.ENVIAR_IO_ICONO_OBJ_INTERACTIVO(_perso.getMapa(), _perso.getID(), "+" + objMoverMod.getID());
-			GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1OBJETO_CAMBIO_DAÑO_ELEMENTAL");
+			GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1OBJETO_CAMBIO_DAÃ‘O_ELEMENTAL");
 		}
 		if (objMover.addDurabilidad(-1)) {
 			_perso.borrarOEliminarConOR(objMover.getID(), true);
@@ -4586,7 +4589,7 @@ public class ServidorSocket implements Runnable {
 			_perso.setConversandoCon(id);
 			if (id > -100) {
 				int[] tt = {MisionObjetivoModelo.HABLAR_CON_NPC, MisionObjetivoModelo.VOLVER_VER_NPC,
-				MisionObjetivoModelo.ENSEÑAR_OBJETO_NPC, MisionObjetivoModelo.ENTREGAR_OBJETO_NPC};
+				MisionObjetivoModelo.ENSE\u00D1AR_OBJETO_NPC, MisionObjetivoModelo.ENTREGAR_OBJETO_NPC};
 				_perso.verificarMisionesTipo(tt, null, false, 0);
 			}
 			Preguntador preguntador = _perso;
@@ -4677,10 +4680,10 @@ public class ServidorSocket implements Runnable {
 				break;
             case 'L': // Replay craft  
                 if (packet.length() <= 2 || packet.substring(2).contains("NaN")) {  
-                    // Cliente envía EL sin datos - ignorar  
+                    // Cliente envÃ­a EL sin datos - ignorar  
                     GestorSalida.ENVIAR_BN_NADA(_perso, "EL");  
                     return;  
-                }   // Procesar replay craft si hay datos válidos  
+                }   // Procesar replay craft si hay datos vÃ\u00a1lidos  
                 break;
 			case 'M' :
 				intercambio_Mover_Objeto(packet);
@@ -5084,7 +5087,7 @@ public class ServidorSocket implements Runnable {
 						String[] split = sp.split(Pattern.quote(";"));
 						if (MainServidor.PARAM_MOVER_MULTIPLE_OBJETOS_SOLO_ABONADOS && _perso.getCuenta().getVip() == 0) {
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Réservé au V.I.P", "B9121B");
+								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "RÃ©servÃ© au V.I.P", "B9121B");
 							} else {
 								GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1ONLY_FOR_VIP");
 							}
@@ -5544,7 +5547,7 @@ public class ServidorSocket implements Runnable {
 					}
 					if (!escapaDespuesParir(montura)) {
 						_cuenta.addMonturaEstablo(montura);
-						montura.setDueñoID(_perso.getID());
+						montura.setDue\u00f1oID(_perso.getID());
 						montura.setPergamino(0);
 						GestorSalida.ENVIAR_Ee_MONTURA_A_ESTABLO(_perso, '+', montura.detallesMontura());
 					}
@@ -5885,7 +5888,7 @@ public class ServidorSocket implements Runnable {
 		final Cercado cercado = _perso.getMapa().getCercado();
 		if (cercado != null) {
 			switch (emote) {
-				case Constantes.EMOTE_SEÑAL_CON_MANO :
+				case Constantes.EMOTE_SE\u00f1AL_CON_MANO :
 				case Constantes.EMOTE_ENFADARSE :
 				case Constantes.EMOTE_APLAUDIR :
 				case Constantes.EMOTE_PEDO :
@@ -5893,14 +5896,14 @@ public class ServidorSocket implements Runnable {
 				case Constantes.EMOTE_BESO :
 					ArrayList<Montura> monturas = new ArrayList<Montura>();
 					for (final Montura montura : cercado.getCriando().values()) {
-						if (montura.getDueñoID() == _perso.getID()) {
+						if (montura.getDue\u00f1oID() == _perso.getID()) {
 							monturas.add(montura);
 						}
 					}
 					if (!monturas.isEmpty()) {
 						int casillas = 0;
 						switch (emote) {
-							case Constantes.EMOTE_SEÑAL_CON_MANO :
+							case Constantes.EMOTE_SE\u00f1AL_CON_MANO :
 							case Constantes.EMOTE_ENFADARSE :
 								casillas = 1;
 								break;
@@ -5914,7 +5917,7 @@ public class ServidorSocket implements Runnable {
 								break;
 						}
 						boolean alejar;
-						if (emote == Constantes.EMOTE_SEÑAL_CON_MANO || emote == Constantes.EMOTE_APLAUDIR
+						if (emote == Constantes.EMOTE_SE\u00f1AL_CON_MANO || emote == Constantes.EMOTE_APLAUDIR
 						|| emote == Constantes.EMOTE_BESO) {
 							alejar = false;
 						} else {
@@ -6284,7 +6287,7 @@ public class ServidorSocket implements Runnable {
 					}
 					GestorSalida.ENVIAR_cMK_MENSAJE_CHAT_GRUPO(_perso, msjChat);
 					break;
-				case "¿" :// koliseo
+				case "Â\u00bf" :// koliseo
 					if (_perso.getGrupoKoliseo() == null) {
 						GestorSalida.ENVIAR_BN_NADA(_perso);
 						return;
@@ -6294,7 +6297,7 @@ public class ServidorSocket implements Runnable {
 				case "~" :// all
 					GestorSalida.ENVIAR_cMK_CHAT_MENSAJE_TODOS(sufijo, _perso, msjChat);
 					break;
-				case "¬" :// unknown
+				case "Â¬" :// unknown
 					GestorSalida.ENVIAR_cMK_CHAT_MENSAJE_TODOS(sufijo, _perso, msjChat);
 					break;
 				case "%" :// mensaje gremio
@@ -6344,7 +6347,7 @@ public class ServidorSocket implements Runnable {
 						}
 					}
 					break;
-				case "¡" :// mensaje vip
+				case "Â\u00a1" :// mensaje vip
 					if (!_cuenta.esAbonado()) {
 						GestorSalida.ENVIAR_BN_NADA(_perso, "NO ABONADO");
 						return;
@@ -6552,7 +6555,7 @@ public class ServidorSocket implements Runnable {
 											for (int s : stats) {
 												if (_perso.getStatScroll(s) > 0) {
 													GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE(_perso,
-													"Veuillez remettre à zéro vos caractéristiques via la Fée Risette avant de vous parchotter.");
+													"Veuillez remettre Ã  zÃ©ro vos caractÃ©ristiques via la FÃ©e Risette avant de vous parchotter.");
 													return false;
 												}
 											}
@@ -6639,18 +6642,18 @@ public class ServidorSocket implements Runnable {
 						} else {
 							GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso,
 							"Les commandes disponnible sont :\n<b>.infos</b> - Permet d'obtenir des informations sur le serveur."
-							+ "\n<b>.start</b> - Permet de se téléporter au zaap d'Astrub."
+							+ "\n<b>.start</b> - Permet de se tÃ©lÃ©porter au zaap d'Astrub."
 							+ "\n<b>.staff</b> - Permet de voir les membres du staff connect\u00e9s."
-							+ "\n<b>.boutique</b> - Permet de se téléporter à la map Boutique."
+							+ "\n<b>.boutique</b> - Permet de se tÃ©lÃ©porter Ã  la map Boutique."
 							+ "\n<b>.points</b> - Savoir ses points boutique."
 							+ "\n<b>.all</b> - Permet d'envoyer un message \u00e0 tous les joueurs."
-							+ "\n<b>.celldeblo</b> - Vous tp a une cellule Libre si vous êtes bloqué."
-							+ "\n<b>.banque</b> - Ouvrir la banque nimporte où."
-							+ "\n<b>.maitre</b> -permet crée l'éscouade , inviter tout tes mules dans ton groupes et rediriger tout les Messages privés de tes mûles vers le Maître."
+							+ "\n<b>.celldeblo</b> - Vous tp a une cellule Libre si vous Ãªtes bloquÃ©."
+							+ "\n<b>.banque</b> - Ouvrir la banque nÂ’importe oÃ¹."
+							+ "\n<b>.maitre</b> -permet crÃ©e l'Ã©scouade , inviter tout tes mules dans ton groupes et rediriger tout les Messages privÃ©s de tes mÃ»les vers le MaÃ®tre."
 							+ "\n<b>.pass</b> -  permet au joueurs de passer automatiquement ses tours."
 							+ "\n<b>.transfert</b> -  transfert rapide en banque ( Items , Divers et ressources)."
 							+ "\n<b>.tp</b> - Permet de TP tes Personajes sur ta map actuel ( hors Donjon)."
-							+ "\n<b>.join</b> - permet que les Personajes sautotp et rejoignent automatiquement quand un combat et lancer.",
+							+ "\n<b>.join</b> - permet que les Personajes sÂ’autotp et rejoignent automatiquement quand un combat et lancer.",
 							"B9121B");
 						}
 						return true;
@@ -6664,13 +6667,13 @@ public class ServidorSocket implements Runnable {
 								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Join On", "B9121B");
 							}
 						} else {
-							GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Mets toi Maître avant", "B9121B");
+							GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Mets toi MaÃ®tre avant", "B9121B");
 						}
 						return true;
 					case "tp" :
 						if (!_perso.estaDisponible(false, false)) {
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes occupé", "B9121B");
+								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes occupÃ©", "B9121B");
 							}
 							return true;
 						}
@@ -6682,14 +6685,14 @@ public class ServidorSocket implements Runnable {
 							}
 							_perso.getGrupoParty().teleportATodos(_perso.getMapa().getID(), _perso.getCelda().getID());
 						} else {
-							GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Mets toi Maître avant", "B9121B");
+							GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Mets toi MaÃ®tre avant", "B9121B");
 						}
 						return true;
 					case "banque" :
 						try {
 							if (!_perso.estaDisponible(false, false)) {
 								if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes occupé", "B9121B");
+									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes occupÃ©", "B9121B");
 								}
 								return true;
 							}
@@ -6711,7 +6714,7 @@ public class ServidorSocket implements Runnable {
 							if (_perso.getPelea() != null) {
 								GestorSalida.ENVIAR_Im_INFORMACION(_perso, "191");
 							} else {
-								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes occupé", "B9121B");
+								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes occupÃ©", "B9121B");
 							}
 							break;
 						}
@@ -6748,7 +6751,7 @@ public class ServidorSocket implements Runnable {
 					case "boutique" :
 						if (!_perso.estaDisponible(false, true)) {
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes occupé", "B9121B");
+								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes occupÃ©", "B9121B");
 							}
 							break;
 						}
@@ -6821,8 +6824,8 @@ public class ServidorSocket implements Runnable {
 								+ ServidorServer.getRecordJugadores() + "\n" + "====================");
 							} else {
 								GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE(_perso, "====================\n<b>"
-								+ MainServidor.NOMBRE_SERVER + "</b>\nEnLínea: " + dia + "d " + hora + "h " + minuto + "m " + segundo
-								+ "s\n" + "Jugadores en línea: " + ServidorServer.nroJugadoresLinea() + "\n" + "Record de conexión: "
+								+ MainServidor.NOMBRE_SERVER + "</b>\nEnLÃ­nea: " + dia + "d " + hora + "h " + minuto + "m " + segundo
+								+ "s\n" + "Jugadores en lÃ­nea: " + ServidorServer.nroJugadoresLinea() + "\n" + "Record de conexiÃ³n: "
 								+ ServidorServer.getRecordJugadores() + "\n" + "====================");
 							}
 						} catch (final Exception e) {
@@ -6891,7 +6894,7 @@ public class ServidorSocket implements Runnable {
 						}
 						int potenciaFM = 85;
 						exObj.forjaMagiaGanar(statFM, potenciaFM);
-						GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1OBJETO_CAMBIO_DAÑO_ELEMENTAL");
+						GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1OBJETO_CAMBIO_DAÃ‘O_ELEMENTAL");
 						GestorSalida.ENVIAR_OCK_ACTUALIZA_OBJETO(_perso, exObj);
 						GestorSalida.ENVIAR_As_STATS_DEL_PJ(_perso);
 						GestorSQL.SALVAR_OBJETO(exObj);
@@ -6989,7 +6992,7 @@ public class ServidorSocket implements Runnable {
 						for (int s : statsExo) {
 							if (objeto.tieneStatExo(s)) {
 								if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-									GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE(_perso, "Vous ne pouvez pas dépasser un exo par item.");
+									GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE(_perso, "Vous ne pouvez pas dÃ©passer un exo par item.");
 								} else {
 									GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE(_perso, "YA ESTA CON EXOMAGIA");
 								}
@@ -7051,13 +7054,13 @@ public class ServidorSocket implements Runnable {
 								_perso.getGrupoParty().activarMaestro(b, MainServidor.COMANDOS_VIP.contains(comando));
 								if (b) {
 									if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-										GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "maître On", "B9121B");
+										GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "maÃ®tre On", "B9121B");
 									} else {
 										GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1MASTER_ON");
 									}
 								} else {
 									if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-										GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "maître Off", "B9121B");
+										GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "maÃ®tre Off", "B9121B");
 									} else {
 										GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1MASTER_OFF");
 									}
@@ -7094,7 +7097,7 @@ public class ServidorSocket implements Runnable {
 								}
 								_perso.getGrupoParty().activarMaestro(true, false);
 								if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "maître On", "B9121B");
+									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "maÃ®tre On", "B9121B");
 								} else {
 									GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1MASTER_ON");
 								}
@@ -7116,13 +7119,13 @@ public class ServidorSocket implements Runnable {
 						if (_perso.getGrupoParty() != null) {
 							if (_perso.getGrupoParty().addAlumno(_perso)) {
 								if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes désormais un suiveur.", "B9121B");
+									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes dÃ©sormais un suiveur.", "B9121B");
 								} else {
 									GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1SLAVE_ON");
 								}
 							} else {
 								if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous n'êtes plus un suiveur.", "B9121B");
+									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous n'Ãªtes plus un suiveur.", "B9121B");
 								} else {
 									GestorSalida.ENVIAR_Im_INFORMACION(_perso, "1SLAVE_OFF");
 								}
@@ -7145,7 +7148,7 @@ public class ServidorSocket implements Runnable {
 					case "pasarTurno" :
 					case "pass" :
 						if (_perso.getCuenta().getVip() == 0) {
-							GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Réservé au V.I.P", "B9121B");
+							GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "RÃ©servÃ© au V.I.P", "B9121B");
 							return true;
 						}
 						_perso.setComandoPasarTurno(!_perso.getComandoPasarTurno());
@@ -7290,7 +7293,7 @@ public class ServidorSocket implements Runnable {
 					case "album" :
 					case "zafidex" :
 					case "bestiarie" :
-						GestorSalida.ENVIAR_ÑF_BESTIARIO_MOBS(this, _perso.listaCardMobs());
+						GestorSalida.ENVIAR_\u00D1F_BESTIARIO_MOBS(this, _perso.listaCardMobs());
 						return true;
 					case "scroll" :
 					case "parcho" :
@@ -7378,7 +7381,7 @@ public class ServidorSocket implements Runnable {
 					case "astrub" :
 						if (!_perso.estaDisponible(false, true)) {
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes occupé", "B9121B");
+								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes occupÃ©", "B9121B");
 							}
 							break;
 						}
@@ -7387,7 +7390,7 @@ public class ServidorSocket implements Runnable {
 					case "pueblo" :
 						if (!_perso.estaDisponible(false, true)) {
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes occupé", "B9121B");
+								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes occupÃ©", "B9121B");
 							}
 							break;
 						}
@@ -7397,7 +7400,7 @@ public class ServidorSocket implements Runnable {
 					case "start" :
 						if (!_perso.estaDisponible(false, true)) {
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes occupé", "B9121B");
+								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes occupÃ©", "B9121B");
 							}
 							break;
 						}
@@ -7421,7 +7424,7 @@ public class ServidorSocket implements Runnable {
 					case "shop" :
 						if (!_perso.estaDisponible(false, true)) {
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes occupé", "B9121B");
+								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes occupÃ©", "B9121B");
 							}
 							break;
 						}
@@ -7447,7 +7450,7 @@ public class ServidorSocket implements Runnable {
 					case "cercados" :
 						if (!_perso.estaDisponible(false, true)) {
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous êtes occupé", "B9121B");
+								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(_perso, "Vous Ãªtes occupÃ©", "B9121B");
 							}
 							break;
 						}
@@ -7681,15 +7684,15 @@ public class ServidorSocket implements Runnable {
 					if (_perso.getPelea() == null) {
 						GestorSalida.ENVIAR_BN_NADA(_perso);
 					} else {
-						GestorSalida.ENVIAR_Gñ_IDS_PARA_MODO_CRIATURA(_perso.getPelea(), _perso);
+						GestorSalida.ENVIAR_G\u00f1_IDS_PARA_MODO_CRIATURA(_perso.getPelea(), _perso);
 					}
 					break;
 				case 'C' :
 					_perso.crearJuegoPJ();
 					break;
 				case 'D':  
-				    // Cliente solicita mapData - pero ya lo descargó vía HTTP  
-				    // Solo confirmar que está listo  
+				    // Cliente solicita mapData - pero ya lo descargÃ³ vÃ­a HTTP  
+				    // Solo confirmar que estÃ\u00a1 listo  
 				    if (_perso.getCargandoMapa()) {  
 				        _perso.setCargandoMapa(false, this);  
 				    }  
@@ -7711,11 +7714,13 @@ public class ServidorSocket implements Runnable {
 					_perso.convertirseFantasma();
 					break;
 				case 'I' :
+				case '\u0406' : // Car\u00e1cter cir\u00edlico (U+0406) usado por cliente 1.43.7
+					if (System.currentTimeMillis() - _lastEntityRequestTime < ENTITY_REQUEST_THROTTLE_MS) {
+						return;
+					}
+					_lastEntityRequestTime = System.currentTimeMillis();
 					juego_Cargando_Informacion_Mapa();
 					break;
-				case 'І' : // Carácter cirílico І (U+0406) usado por cliente 1.43.7  
-				    juego_Cargando_Informacion_Mapa();  
-				    break;
 				case 'K' :
 					juego_Finalizar_Accion(packet);
 					break;
@@ -7852,8 +7857,7 @@ public class ServidorSocket implements Runnable {
 		try {
 			_tiempoLLegoMapa = System.currentTimeMillis();
 			limpiarAcciones(true);
-			GestorSalida.ENVIAR_GDK_CARGAR_MAPA(_perso);
-			Thread.sleep(MainServidor.TIME_SLEEP_PACKETS_CARGAR_MAPA);
+			// GDK no se envÃ­a aquÃ­: para 1.43.7 (carga desde memoria) se envÃ­a solo tras todas las entidades
 			if (_iniciandoPerso) {
 				creandoJuego();
 				Thread.sleep(MainServidor.TIME_SLEEP_PACKETS_CARGAR_MAPA);
@@ -7947,6 +7951,9 @@ public class ServidorSocket implements Runnable {
 					GestorSalida.enviar(_perso, packet.toString());
 					Thread.sleep(MainServidor.TIME_SLEEP_PACKETS_CARGAR_MAPA);
 				}
+				// 1.43.7: GDK tras todas las entidades (carga desde memoria)
+				GestorSalida.ENVIAR_GDK_CARGAR_MAPA(_perso);
+				Thread.sleep(MainServidor.TIME_SLEEP_PACKETS_CARGAR_MAPA);
 				cargandoMapa = true;
 			}
 			_perso.setCargandoMapa(false, this);
@@ -7983,7 +7990,7 @@ public class ServidorSocket implements Runnable {
 	
 	public void enviarInformacionMapa() {  
 	    try {  
-	        // NO enviar GDK aquí - ya se envió antes  
+	        // NO enviar GDK aquÃ­ - ya se enviÃ³ antes  
 	          
 	        StringBuilder packet;  
 	          
@@ -8049,13 +8056,13 @@ public class ServidorSocket implements Runnable {
 		GestorSalida.ENVIAR_BD_FECHA_SERVER(_perso);
 		GestorSalida.ENVIAR_BT_TIEMPO_SERVER(_perso);
 		if (MainServidor.PRECIO_SISTEMA_RECURSO > 0) {
-			GestorSalida.ENVIAR_ÑR_BOTON_RECURSOS(this);
+			GestorSalida.ENVIAR_\u00D1R_BOTON_RECURSOS(this);
 		}
 		if (MainServidor.PARAM_BOTON_BOUTIQUE) {
-			GestorSalida.ENVIAR_Ñs_BOTON_BOUTIQUE(this);
+			GestorSalida.ENVIAR_\u00D1s_BOTON_BOUTIQUE(this);
 		}
 		GestorSalida.ENVIAR_cC_SUSCRIBIR_CANAL(_perso, '+', _perso.getCanales());
-		// + (_cuenta.esAbonado() ? "¡" : "")
+		// + (_cuenta.esAbonado() ? "Â\u00a1" : "")
 		if (_perso.getPelea() == null) {
 			_perso.mostrarTutorial();
 			if (!MainServidor.MENSAJE_BIENVENIDA.isEmpty()) {
@@ -8071,7 +8078,7 @@ public class ServidorSocket implements Runnable {
 				GestorSalida.ENVIAR_cMK_CHAT_MENSAJE_PERSONAJE(_perso, "", 0, Mundo.NOMBRE_CACERIA, "BUSCA Y CAZA!! - " + Mundo
 				.mensajeCaceria() + ", usa comando .caceria para rastrear al super-mob");
 			}
-			GestorSalida.ENVIAR_ÑL_BOTON_LOTERIA(this, Mundo.VENDER_BOLETOS);
+			GestorSalida.ENVIAR_\u00D1L_BOTON_LOTERIA(this, Mundo.VENDER_BOLETOS);
 			GestorSalida.ENVIAR_bRI_INICIAR_CUENTA_REGRESIVA(_perso);
 		}
 		try {
@@ -8260,7 +8267,7 @@ public class ServidorSocket implements Runnable {
 	
 	private void juego_Ataque_Recaudador(final String packet) {
 		try {
-			synchronized (_perso.getMapa().getPrePelea()) {
+			synchronized (_perso.getMapa().getPrePeleaLock()) {
 				if (!_perso.estaDisponible(false, true) || _perso.estaInmovil()) {
 					GestorSalida.ENVIAR_GA903_ERROR_PELEA(_perso, 'o');
 					return;
@@ -8294,7 +8301,7 @@ public class ServidorSocket implements Runnable {
 	
 	private void juego_Ataque_Prisma(final String packet) {
 		try {
-			synchronized (_perso.getMapa().getPrePelea()) {
+			synchronized (_perso.getMapa().getPrePeleaLock()) {
 				if (!_perso.estaDisponible(false, true) || _perso.estaInmovil()) {
 					GestorSalida.ENVIAR_GA903_ERROR_PELEA(_perso, 'o');
 					return;
@@ -8331,7 +8338,7 @@ public class ServidorSocket implements Runnable {
 		try {
 			// Personaje _perso = s._perso;
 			// System.out.println("1");
-			synchronized (_perso.getMapa().getPrePelea()) {
+			synchronized (_perso.getMapa().getPrePeleaLock()) {
 				// System.out.println("2");
 				if (!_perso.estaDisponible(false, true) || _perso.estaInmovil()) {
 					GestorSalida.ENVIAR_GA903_ERROR_PELEA(_perso, 'o');
@@ -8401,7 +8408,7 @@ public class ServidorSocket implements Runnable {
 	
 	private void juego_Ataque_Caceria(final String packet) {
 		try {
-			synchronized (_perso.getMapa().getPrePelea()) {
+			synchronized (_perso.getMapa().getPrePeleaLock()) {
 				if (!_perso.estaDisponible(false, true) || _perso.estaInmovil()) {
 					GestorSalida.ENVIAR_GA903_ERROR_PELEA(_perso, 'o');
 					return;
@@ -8474,7 +8481,7 @@ public class ServidorSocket implements Runnable {
 	}
 	
 	private boolean juego_Aceptar_Desafio(final String packet) {
-		synchronized (_perso.getMapa().getPrePelea()) {
+		synchronized (_perso.getMapa().getPrePeleaLock()) {
 			if (!_perso.getTipoInvitacion().equals("desafio")) {
 				GestorSalida.ENVIAR_BN_NADA(_perso);
 				return false;
@@ -8537,9 +8544,9 @@ public class ServidorSocket implements Runnable {
 			Personaje perso = _perso;
 			Luchador luch = pelea.getLuchadorPorID(perso.getID());
 			if (!luch.puedeJugar()) {
-				if (perso.getCompañero() != null) {
-					luch = pelea.getLuchadorPorID(perso.getCompañero().getID());
-					perso = perso.getCompañero();
+				if (perso.getCompa\u00f1ero() != null) {
+					luch = pelea.getLuchadorPorID(perso.getCompa\u00f1ero().getID());
+					perso = perso.getCompa\u00f1ero();
 					if (!luch.puedeJugar()) {
 						luch = null;
 						perso = null;

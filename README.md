@@ -20,9 +20,15 @@ Para acelerar tu curva de aprendizaje, hemos integrado este repositorio con **De
 | :--- | :--- |
 | **Nombre del Proyecto** | Bustemu-Retro 1.43.7 |
 | **Lenguaje Base** | Java |
+| **Versión de Java** | **17 o 21** (LTS) |
+| **Build** | **Gradle** (Kotlin DSL) |
 | **Versión del Cliente** | **1.43.7** (adaptado) |
 | **Idioma del Código** | Español (Spanish) |
 | **Documentación DB** | Markdown (docs/database/) |
+
+### Carga de mapas desde memoria
+
+Este emulador **carga los mapas desde la memoria del servidor** (y/o BD), **no desde archivos .swf**. El cliente 1.43.7 recibe los datos del mapa vía paquete **GDM** (nunca **GD**); las entidades se envían con **GM** y se cierra la secuencia con **GDK**. No se usa descarga de .swf en ningún flujo.
 
 ---
 
@@ -43,11 +49,39 @@ Formamos parte de la comunidad **Onesv**, apoyando a desarrolladores de **Españ
 
 ---
 
-## 📥 Clonar el repositorio
+## 📥 Clonar y compilar
 
 ```bash
 git clone https://github.com/maestroyaco/Bustemu-Retro-1.43.7.git
 cd Bustemu-Retro-1.43.7
+```
+
+**Requisitos:** Java 17 o 21.
+
+**Compilar y ejecutar con Gradle:**
+
+```bash
+# Windows
+.\gradlew.bat build
+.\gradlew.bat run
+
+# Linux / macOS / WSL
+./gradlew build
+./gradlew run
+```
+
+**Tests:**
+
+```bash
+.\gradlew.bat test   # Windows
+./gradlew test       # Linux / macOS
+```
+
+**JAR con dependencias (fat JAR):**
+
+```bash
+.\gradlew.bat jar
+# El JAR se genera en build/libs/
 ```
 
 Si ya tienes un repositorio local y quieres apuntar a este remoto:
@@ -55,6 +89,12 @@ Si ya tienes un repositorio local y quieres apuntar a este remoto:
 ```bash
 git remote add origin https://github.com/maestroyaco/Bustemu-Retro-1.43.7.git
 ```
+
+### Despliegue en VPS (Ubuntu)
+
+- Usa Java 17 o 21 instalado en el servidor.
+- Ejecuta con `./gradlew run` o `java -jar build/libs/<nombre>.jar`.
+- Si se usa JEP u otras librerías nativas, instala las dependencias del sistema que requieran (p. ej. `libjep` en Linux).
 
 ---
 

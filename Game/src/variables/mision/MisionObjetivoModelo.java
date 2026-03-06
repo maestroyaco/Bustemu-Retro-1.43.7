@@ -14,7 +14,7 @@ public class MisionObjetivoModelo {
 	// public final static int SIN_CUMPLIR = 0, CUMPLIDO = 1;
 	public final static byte NULL = 0;
 	public final static byte HABLAR_CON_NPC = 1;
-	public final static byte ENSEÑAR_OBJETO_NPC = 2;
+	public final static byte ENSE\u00D1AR_OBJETO_NPC = 2;
 	public final static byte ENTREGAR_OBJETO_NPC = 3;
 	public final static byte DESCUBRIR_MAPA = 4;
 	public final static byte DESCUBRIR_ZONA = 5;
@@ -77,7 +77,7 @@ public class MisionObjetivoModelo {
 					}
 				} catch (final Exception e) {}
 				break;
-			case ENSEÑAR_OBJETO_NPC :// enseñar X cant de X objeto a X NPC
+			case ENSE\u00D1AR_OBJETO_NPC :// ense\u00f1ar X cant de X objeto a X NPC
 				try {
 					if (npc == null) {
 						break;

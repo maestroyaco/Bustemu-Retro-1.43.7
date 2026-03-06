@@ -3,7 +3,7 @@ package variables.pelea;
 import java.util.ArrayList;
 import variables.hechizo.Hechizo;
 import variables.hechizo.StatHechizo;
-import variables.hechizo.EfectoHechizo.TipoDaño;
+import variables.hechizo.EfectoHechizo.TipoDa\u00f1o;
 import variables.mapa.Celda;
 import estaticos.Constantes;
 import estaticos.GestorSalida;
@@ -12,7 +12,7 @@ public class Glifo {
 	private final boolean _inicioTurno;
 	private final Luchador _lanzador;
 	private final Celda _celda;
-	private final byte _tamaño;
+	private final byte _tama\u00f1o;
 	private int _duracion;
 	private final int _hechizoID, _color;
 	private final StatHechizo _glifoSH;
@@ -20,14 +20,14 @@ public class Glifo {
 	private final ArrayList<Celda> _celdas;
 	private final char _forma;
 	
-	public Glifo(final Pelea pelea, final Luchador lanzador, final Celda celda, final byte tamaño,
+	public Glifo(final Pelea pelea, final Luchador lanzador, final Celda celda, final byte tama\u00f1o,
 	final StatHechizo glifoHechizo, final int _duracion2, final int hechizoID, final boolean inicioTurno,
 	final ArrayList<Celda> celdas, final int color, char forma) {
 		_pelea = pelea;
 		_lanzador = lanzador;
 		_celda = celda;
 		_hechizoID = hechizoID;
-		_tamaño = tamaño;
+		_tama\u00f1o = tama\u00f1o;
 		_glifoSH = glifoHechizo;
 		_duracion = _duracion2;
 		_color = color;
@@ -38,7 +38,7 @@ public class Glifo {
 		for (Celda c : celdas) {
 			c.addGlifo(this);
 		}
-		GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_EN_PELEA(pelea, 7, "+", celda.getID(), _tamaño, _color, _forma);
+		GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_EN_PELEA(pelea, 7, "+", celda.getID(), _tama\u00f1o, _color, _forma);
 		// GestorSalida.ENVIAR_GDC_ACTUALIZAR_CELDA_EN_PELEA(pelea, 7, celda.getID(), "Haaaaaaaaa3005",
 		// false);
 	}
@@ -55,8 +55,8 @@ public class Glifo {
 		return _forma;
 	}
 	
-	public byte getTamaño() {
-		return _tamaño;
+	public byte getTama\u00f1o() {
+		return _tama\u00f1o;
 	}
 	
 	public int getColor() {
@@ -86,7 +86,7 @@ public class Glifo {
 			Thread.sleep(100);
 		} catch (Exception e) {}
 		Hechizo.aplicaHechizoAPelea(_pelea, _lanzador, glifeado.getCeldaPelea(), _glifoSH.getEfectosNormales(),
-		TipoDaño.GLIFO, false);
+		TipoDa\u00f1o.GLIFO, false);
 		// _pelea.acaboPelea((byte) 3);
 	}
 	
@@ -95,7 +95,7 @@ public class Glifo {
 		for (Celda c : _celdas) {
 			c.borrarGlifo(this);
 		}
-		GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_EN_PELEA(_pelea, 7, "-", _celda.getID(), _tamaño, _color, ' ');
+		GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_EN_PELEA(_pelea, 7, "-", _celda.getID(), _tama\u00f1o, _color, ' ');
 		// GestorSalida.ENVIAR_GDC_ACTUALIZAR_CELDA_EN_PELEA(_pelea, 7, _celda.getID(),
 		// "Haaaaaaaaa3005", false);
 	}

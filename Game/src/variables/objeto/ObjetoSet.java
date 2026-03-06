@@ -58,7 +58,7 @@ public class ObjetoSet {
 				} else if (Constantes.esStatTexto(statID)) {
 					stats.addStatTexto(statID, str, true);
 				} else if (Constantes.esEfectoHechizo(statID)) {
-					// no da efectos de daño
+					// no da efectos de da\u00f1o
 				} else {
 					int valor = Integer.parseInt(splitStats[1], 16);
 					stats.addStatID(statID, valor);

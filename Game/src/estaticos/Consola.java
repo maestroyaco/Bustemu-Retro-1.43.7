@@ -119,8 +119,8 @@ public class Consola extends Thread {
 					enLinea %= 60000L;
 					final int segundo = (int) (enLinea / 1000L);
 					System.out.println("===========\n" + MainServidor.NOMBRE_SERVER + " (ELBUSTEMU "
-					+ Constantes.VERSION_EMULADOR + ")\n\nEnLínea: " + dia + "d " + hora + "h " + minuto + "m " + segundo + "s\n"
-					+ "Jugadores en línea: " + ServidorServer.nroJugadoresLinea() + "\n" + "Record de conexión: "
+					+ Constantes.VERSION_EMULADOR + ")\n\nEnL\u00ednea: " + dia + "d " + hora + "h " + minuto + "m " + segundo + "s\n"
+					+ "Jugadores en l\u00ednea: " + ServidorServer.nroJugadoresLinea() + "\n" + "Record de conexi\u00f3n: "
 					+ ServidorServer.getRecordJugadores() + "\n" + "===========");
 					break;
 				case "SAVE" :

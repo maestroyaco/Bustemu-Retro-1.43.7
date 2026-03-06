@@ -201,7 +201,7 @@ public class MobModelo {
 		+ strMaxKamas.toString();
 	}
 	
-	// public String testDaño(byte grado, String s) {
+	// public String testDa\u00f1o(byte grado, String s) {
 	// MobGradoModelo mg = getGradoPorGrado(grado);
 	// int[] stats = getStatsParaCalculo(grado, s);
 	// if (stats == null) {
@@ -212,25 +212,25 @@ public class MobModelo {
 	// if (str.length() > 0) {
 	// str.append("|");
 	// }
-	// str.append(Hechizo.strDañosStats2(sh, stats));
+	// str.append(Hechizo.strDa\u00f1osStats2(sh, stats));
 	// }
 	// return str.toString();
 	// }
-	public String calculoDaño(byte grado, String s) {
+	public String calculoDa\u00f1o(byte grado, String s) {
 		MobGradoModelo mg = getGradoPorGrado(grado);
 		int[] stats = getStatsParaCalculo(grado, s);
 		if (stats == null) {
 			return "";
 		}
 		StringBuilder str = new StringBuilder();
-		// str.append("\nCalculo de daño del mob " + _nombre + ":");
+		// str.append("\nCalculo de da\u00f1o del mob " + _nombre + ":");
 		boolean paso = false;
 		for (StatHechizo sh : mg.getHechizos().values()) {
 			if (paso) {
 				str.append("|");
 			}
 			paso = true;
-			str.append(Hechizo.strDañosStats(sh, stats));
+			str.append(Hechizo.strDa\u00f1osStats(sh, stats));
 		}
 		return str.toString();
 	}

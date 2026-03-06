@@ -166,22 +166,22 @@ public class Mercadillo implements Exchanger {
 	}
 	
 	public synchronized boolean comprarObjeto(final int lineaID, final int cant, final long precio,
-	final Personaje nuevoDueño) {
+	final Personaje nuevoDue\u00f1o) {
 		try {
-			if (nuevoDueño.getKamas() < precio) {
-				GestorSalida.ENVIAR_Im_INFORMACION(nuevoDueño, "1128;" + precio);
+			if (nuevoDue\u00f1o.getKamas() < precio) {
+				GestorSalida.ENVIAR_Im_INFORMACION(nuevoDue\u00f1o, "1128;" + precio);
 				return false;
 			}
 			final LineaMercadillo linea = getLinea(lineaID);
 			final ObjetoMercadillo objAComprar = linea.tuTienes(cant, precio);
 			final Objeto objeto = objAComprar.getObjeto();
-			if (objeto == null || !borrarObjMercaDelPuesto(objAComprar, nuevoDueño)) {
+			if (objeto == null || !borrarObjMercaDelPuesto(objAComprar, nuevoDue\u00f1o)) {
 				MainServidor.redactarLogServidorln("Bug objeto mercadillo " + objeto.getID());
 				return false;
 			}
-			nuevoDueño.addObjIdentAInventario(objeto, true);
+			nuevoDue\u00f1o.addObjIdentAInventario(objeto, true);
 			objeto.getObjModelo().nuevoPrecio(objAComprar.getTipoCantidad(true), precio);
-			nuevoDueño.addKamas(-precio, true, true);
+			nuevoDue\u00f1o.addKamas(-precio, true, true);
 			Cuenta viejoProp = Mundo.getCuenta(objAComprar.getCuentaID());
 			if (viejoProp != null) {
 				viejoProp.addKamasBanco(precio);

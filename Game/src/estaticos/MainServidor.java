@@ -275,7 +275,7 @@ public class MainServidor {
 	public static boolean PARAM_CAPTURAR_MONTURA_COMO_PERGAMINO;
 	public static boolean PARAM_EXPULSAR_PREFASE_PVP = true;
 	public static boolean PARAM_JUGADORES_HEROICO_MORIR = true;
-	public static boolean PARAM_INFO_DA—O_BATALLA;
+	public static boolean PARAM_INFO_DA\u00f1O_BATALLA;
 	public static boolean PARAM_BOOST_SACRO_DESBUFEABLE;
 	public static boolean PARAM_REINICIAR_CANALES;
 	public static boolean PARAM_PERMITIR_BONUS_PELEA_AFECTEN_PROSPECCION;
@@ -405,7 +405,7 @@ public class MainServidor {
 	public static int MAX_CAC_POR_TURNO = 0;
 	public static int MAX_PJS_POR_CUENTA = 5;
 	public static int MAX_PORCENTAJE_DE_STAT_PARA_FM = 80;
-	public static int PORCENTAJE_DA—O_NO_CURABLE = 10;
+	public static int PORCENTAJE_DA\u00f1O_NO_CURABLE = 10;
 	public static int PROBABILIDAD_ARCHI_MOBS = 10;
 	public static int PROBABILIDAD_PROTECTOR_RECURSOS = 1;
 	public static int PROBABILIDAD_RECURSO_ESPECIAL = 1;
@@ -484,7 +484,7 @@ public class MainServidor {
 		System.out.println("Modificado por Maestro-Yaco Para Onesv.fun");
 		System.out.println("Gracias Elbusta, % trabajo 256 MB = 1000 Mapas\n");
 		// cargando la config
-		System.out.println("Cargando la configuraciÛn");
+		System.out.println("Cargando la configuraci¬ùn");
 		leyendoIpsPermitidas();
 		cargarConfiguracion(null);
 		while (!IP_MULTISERVIDOR.get(0).equalsIgnoreCase("127.0.0.1")) {
@@ -505,7 +505,7 @@ public class MainServidor {
 			}
 		}
 		// conectado a la base de datos sql
-		System.out.print("ConexiÛn a la base de datos:  ");
+		System.out.print("Conexi¬ùn a la base de datos:  ");
 		if (GestorSQL.iniciarConexion()) {
 			System.out.println("CONEXION OK!!");
 		} else {
@@ -946,7 +946,7 @@ public class MainServidor {
 						case "DB_PASSWORD" :
 						case "DB_PASS" :
 						case "BD_PASSWORD" :
-						case "BD_CONTRASE—A" :
+						case "BD_CONTRASE¬ùA" :
 						case "BD_PASS" :
 							BD_PASS = valor;
 							variable = "BD_PASS";
@@ -1603,15 +1603,15 @@ public class MainServidor {
 							ACCESO_ADMIN_MINIMO = Integer.parseInt(valor);
 							variable = "ACCESO_ADMIN_MINIMO";
 							break;
-						case "PORCENTAJE_DA—O_NO_CURABLE" :
-						case "DA—O_PERMANENTE" :
-							PORCENTAJE_DA—O_NO_CURABLE = Integer.parseInt(valor);
-							variable = "PORCENTAJE_DA—O_NO_CURABLE";
-							if (PORCENTAJE_DA—O_NO_CURABLE < 0) {
-								PORCENTAJE_DA—O_NO_CURABLE = 0;
+						case "PORCENTAJE_DA\u00f1O_NO_CURABLE" :
+						case "DA¬ùO_PERMANENTE" :
+							PORCENTAJE_DA\u00f1O_NO_CURABLE = Integer.parseInt(valor);
+							variable = "PORCENTAJE_DA\u00f1O_NO_CURABLE";
+							if (PORCENTAJE_DA\u00f1O_NO_CURABLE < 0) {
+								PORCENTAJE_DA\u00f1O_NO_CURABLE = 0;
 							}
-							if (PORCENTAJE_DA—O_NO_CURABLE > 100) {
-								PORCENTAJE_DA—O_NO_CURABLE = 100;
+							if (PORCENTAJE_DA\u00f1O_NO_CURABLE > 100) {
+								PORCENTAJE_DA\u00f1O_NO_CURABLE = 100;
 							}
 							break;
 						case "LIMITE_MAPAS" :
@@ -1859,16 +1859,16 @@ public class MainServidor {
 							variable = "NIVEL_MINIMO_PARA_PVP";
 							break;
 						case "ADIC_CAC" :
-							EfectoHechizo.MULTIPLICADOR_DA—O_CAC = Float.parseFloat(valor);
-							variable = "MULTIPLICADOR_DA—O_CAC";
+							EfectoHechizo.MULTIPLICADOR_DA\u00f1O_CAC = Float.parseFloat(valor);
+							variable = "MULTIPLICADOR_DA\u00f1O_CAC";
 							break;
 						case "ADIC_MOB" :
-							EfectoHechizo.MULTIPLICADOR_DA—O_MOB = Float.parseFloat(valor);
-							variable = "MULTIPLICADOR_DA—O_MOB";
+							EfectoHechizo.MULTIPLICADOR_DA\u00f1O_MOB = Float.parseFloat(valor);
+							variable = "MULTIPLICADOR_DA\u00f1O_MOB";
 							break;
 						case "ADIC_PJ" :
-							EfectoHechizo.MULTIPLICADOR_DA—O_PJ = Float.parseFloat(valor);
-							variable = "MULTIPLICADOR_DA—O_PJ";
+							EfectoHechizo.MULTIPLICADOR_DA\u00f1O_PJ = Float.parseFloat(valor);
+							variable = "MULTIPLICADOR_DA\u00f1O_PJ";
 							break;
 						case "PROBABILIDAD_ARCHI_MOBS" :
 							PROBABILIDAD_ARCHI_MOBS = Integer.parseInt(valor);
@@ -2059,9 +2059,9 @@ public class MainServidor {
 							PARAM_TODOS_MOBS_EN_BESTIARIO = valor.equalsIgnoreCase("true");
 							variable = "PARAM_TODOS_MOBS_EN_BESTIARIO";
 							break;
-						case "PARAM_INFO_DA—O_BATALLA" :
-							PARAM_INFO_DA—O_BATALLA = valor.equalsIgnoreCase("true");
-							variable = "PARAM_INFO_DA—O_BATALLA";
+						case "PARAM_INFO_DA\u00f1O_BATALLA" :
+							PARAM_INFO_DA\u00f1O_BATALLA = valor.equalsIgnoreCase("true");
+							variable = "PARAM_INFO_DA\u00f1O_BATALLA";
 							break;
 						case "PARAM_BOOST_SACRO_DESBUFEABLE" :
 							PARAM_BOOST_SACRO_DESBUFEABLE = valor.equalsIgnoreCase("true");
@@ -2570,7 +2570,7 @@ public class MainServidor {
 				GestorSalida.ENVIAR_BAT2_CONSOLA(perso, "Config Exception DONT FILE");
 			}
 			System.out.println(e.toString());
-			System.out.println("Ficha de la configuraciÛn no existe o ilegible");
+			System.out.println("Ficha de la configuraci¬ùn no existe o ilegible");
 			System.out.println("Cerrando el server");
 			if (Mundo.SERVIDOR_ESTADO == Constantes.SERVIDOR_OFFLINE) {
 				System.exit(1);

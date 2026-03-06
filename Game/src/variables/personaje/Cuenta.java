@@ -143,12 +143,12 @@ public class Cuenta {
 				// return;
 			} else {
 				final String[] array = _ultimaConexion.split("~");
-				int año = Integer.parseInt(array[0]);
+				int a\u00f1o = Integer.parseInt(array[0]);
 				int mes = Integer.parseInt(array[1]);
 				int dia = Integer.parseInt(array[2]);
 				int hora = Integer.parseInt(array[3]);
 				int minuto = Integer.parseInt(array[4]);
-				final long minutos = Constantes.getTiempoFechaX(año, mes, dia, hora, minuto, 60 * 1000);
+				final long minutos = Constantes.getTiempoFechaX(a\u00f1o, mes, dia, hora, minuto, 60 * 1000);
 				if (Mundo.borrarLasCuentas(minutos)) {
 					Mundo.CUENTAS_A_BORRAR.add(this);
 				}
@@ -197,13 +197,13 @@ public class Cuenta {
 	
 	public void setUltimaConexion() {
 		final Calendar hoy = Calendar.getInstance();
-		int año = hoy.get(Calendar.YEAR);
+		int a\u00f1o = hoy.get(Calendar.YEAR);
 		int dia = hoy.get(Calendar.DAY_OF_MONTH);
 		int mes = (hoy.get(Calendar.MONTH) + 1);
 		int hora = hoy.get(Calendar.HOUR_OF_DAY);
 		int minutos = hoy.get(Calendar.MINUTE);
 		int segundos = hoy.get(Calendar.SECOND);
-		_ultimaConexion = año + "~" + mes + "~" + dia + "~" + hora + "~" + minutos + "~" + segundos;
+		_ultimaConexion = a\u00f1o + "~" + mes + "~" + dia + "~" + hora + "~" + minutos + "~" + segundos;
 	}
 	
 	public String getUltimaConexion() {
@@ -256,8 +256,8 @@ public class Cuenta {
 		return GestorSQL.GET_PRIMERA_VEZ(_nombre);
 	}
 	
-	public String getContraseña() {
-		return GestorSQL.GET_CONTRASEÑA_CUENTA(_nombre);
+	public String getContrase\u00f1a() {
+		return GestorSQL.GET_CONTRASE\u00D1A_CUENTA(_nombre);
 	}
 	
 	public String getApodo() {

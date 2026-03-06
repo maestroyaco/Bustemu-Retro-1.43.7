@@ -19,7 +19,7 @@ import variables.gremio.Gremio;
 import variables.gremio.Recaudador;
 import variables.hechizo.Buff;
 import variables.hechizo.EfectoHechizo;
-import variables.hechizo.EfectoHechizo.TipoDaño;
+import variables.hechizo.EfectoHechizo.TipoDa\u00f1o;
 import variables.hechizo.Hechizo;
 import variables.hechizo.HechizoLanzado;
 import variables.hechizo.StatHechizo;
@@ -94,7 +94,7 @@ public class Pelea {
 	private boolean _salvarMobHeroico, _1vs1;
 	private int _prospeccionEquipo;
 	private int _luchMenorNivelReto, _ultimoElementoReto = Constantes.ELEMENTO_NULO, _ultimoMovedorIDReto;
-	private TipoDaño _ultimoTipoDañoReto = TipoDaño.NULL;
+	private TipoDa\u00f1o _ultimoTipoDa\u00f1oReto = TipoDa\u00f1o.NULL;
 	private Timer _timerPelea = new Timer(1, new ActionListener() {
 		public void actionPerformed(final ActionEvent e) {
 			actionListener();
@@ -321,8 +321,8 @@ public class Pelea {
 		return _ultimoElementoReto;
 	}
 	
-	public void setUltimoTipoDaño(TipoDaño t) {
-		_ultimoTipoDañoReto = t;
+	public void setUltimoTipoDa\u00f1o(TipoDa\u00f1o t) {
+		_ultimoTipoDa\u00f1oReto = t;
 	}
 	
 	private void addDropPelea(DropMob dropM) {
@@ -419,16 +419,16 @@ public class Pelea {
 		if (!MainServidor.PERMITIR_MULTIMAN_TIPO_COMBATE.contains(_tipo)) {
 			return;
 		}
-		if (perso == null || perso.getCompañero() != null) {
+		if (perso == null || perso.getCompa\u00f1ero() != null) {
 			return;
 		}
-		Objeto obj = perso.getObjPosicion(Constantes.OBJETO_POS_COMPAÑERO);
+		Objeto obj = perso.getObjPosicion(Constantes.OBJETO_POS_COMPA\u00f1ERO);
 		if (obj == null) {
 			return;
 		}
 		int mobMultiman = 0;
 		try {
-			mobMultiman = Integer.parseInt(obj.getParamStatTexto(Constantes.STAT_MAS_COMPAÑERO, 3), 16);
+			mobMultiman = Integer.parseInt(obj.getParamStatTexto(Constantes.STAT_MAS_COMPA\u00D1ERO, 3), 16);
 		} catch (Exception e) {}
 		MobModelo mobModelo = Mundo.getMobModelo(mobMultiman);
 		if (mobModelo == null) {
@@ -440,8 +440,8 @@ public class Pelea {
 		multiman.setMapa(_mapaCopia);
 		multiman.setCelda(perso.getCelda());
 		if (unirsePelea(multiman, perso.getID())) {
-			perso.setCompañero(multiman);
-			multiman.setCompañero(perso);
+			perso.setCompa\u00f1ero(multiman);
+			multiman.setCompa\u00f1ero(perso);
 		}
 	}
 	
@@ -831,7 +831,7 @@ public class Pelea {
 			GestorSalida.ENVIAR_Im_INFORMACION_A_PELEA(this, 7, "1182;" + luchador.getNombre() + "~" + luchador
 			.getTurnosRestantes());
 			if (!perso.esMultiman()) {
-				desconectarLuchador(perso.getCompañero());
+				desconectarLuchador(perso.getCompa\u00f1ero());
 			}
 			if (luchador.puedeJugar()) {
 				luchador.setTurnosRestantes((byte) (luchador.getTurnosRestantes() - 1));
@@ -875,11 +875,11 @@ public class Pelea {
 				GestorSalida.ENVIAR_Im_INFORMACION_A_PELEA(this, 7, "1184;" + perso.getNombre());
 				luchador.setDesconectado(false);
 				if (!perso.esMultiman()) {
-					Personaje compañero = perso.getCompañero();
-					if (compañero != null) {
-						GestorSalida.ENVIAR_Im_INFORMACION_A_PELEA(this, 7, "1184;" + compañero.getNombre());
+					Personaje compa\u00f1ero = perso.getCompa\u00f1ero();
+					if (compa\u00f1ero != null) {
+						GestorSalida.ENVIAR_Im_INFORMACION_A_PELEA(this, 7, "1184;" + compa\u00f1ero.getNombre());
 						try {
-							getLuchadorPorID(compañero.getID()).setDesconectado(false);
+							getLuchadorPorID(compa\u00f1ero.getID()).setDesconectado(false);
 						} catch (Exception e) {}
 					}
 				}
@@ -923,7 +923,7 @@ public class Pelea {
 	public void mostrarGlifos(Luchador luchador) {
 		if (_glifos != null) {
 			for (Glifo glifo : _glifos) {
-				GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADOR(luchador, "+", glifo.getCelda().getID(), glifo.getTamaño(),
+				GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADOR(luchador, "+", glifo.getCelda().getID(), glifo.getTama\u00f1o(),
 				glifo.getColor(), glifo.getForma());
 			}
 		}
@@ -933,7 +933,7 @@ public class Pelea {
 		if (_trampas != null) {
 			for (Trampa trampa : _trampas) {
 				if (!trampa.esInvisiblePara(luchador.getID())) {
-					GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADOR(luchador, "+", trampa.getCelda().getID(), trampa.getTamaño(),
+					GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADOR(luchador, "+", trampa.getCelda().getID(), trampa.getTama\u00f1o(),
 					trampa.getColor(), ' ');
 					boolean[] permisos = new boolean[16];
 					int[] valores = new int[16];
@@ -1056,25 +1056,25 @@ public class Pelea {
 		if (_fase != Constantes.PELEA_FASE_POSICION) {
 			return;
 		}
-		final Luchador dueño = getLuchadorPorID(perso.getID());
-		if (dueño == null || dueño.estaListo()) {
+		final Luchador due\u00f1o = getLuchadorPorID(perso.getID());
+		if (due\u00f1o == null || due\u00f1o.estaListo()) {
 			return;
 		}
-		if (perso.getCompañero() == null) {
+		if (perso.getCompa\u00f1ero() == null) {
 			return;
 		}
-		final Luchador multiman = getLuchadorPorID(perso.getCompañero().getID());
+		final Luchador multiman = getLuchadorPorID(perso.getCompa\u00f1ero().getID());
 		if (multiman == null || multiman.getID() != idMultiman) {
 			return;
 		}
 		Celda cMultiman = multiman.getCeldaPelea();
-		Celda cDueño = dueño.getCeldaPelea();
+		Celda cDue\u00f1o = due\u00f1o.getCeldaPelea();
 		cMultiman.limpiarLuchadores();
-		cDueño.limpiarLuchadores();
-		dueño.setCeldaPelea(cMultiman);
-		multiman.setCeldaPelea(cDueño);
-		GestorSalida.ENVIAR_GIC_CAMBIAR_POS_PELEA(this, 3, _mapaCopia, multiman.getID(), cDueño.getID());
-		GestorSalida.ENVIAR_GIC_CAMBIAR_POS_PELEA(this, 3, _mapaCopia, dueño.getID(), cMultiman.getID());
+		cDue\u00f1o.limpiarLuchadores();
+		due\u00f1o.setCeldaPelea(cMultiman);
+		multiman.setCeldaPelea(cDue\u00f1o);
+		GestorSalida.ENVIAR_GIC_CAMBIAR_POS_PELEA(this, 3, _mapaCopia, multiman.getID(), cDue\u00f1o.getID());
+		GestorSalida.ENVIAR_GIC_CAMBIAR_POS_PELEA(this, 3, _mapaCopia, due\u00f1o.getID(), cMultiman.getID());
 	}
 	
 	public synchronized void cambiarPosicion(final int id, final short celda) {
@@ -1334,7 +1334,7 @@ public class Pelea {
 			}
 			int nivel = 10000;
 			switch (retoID) {
-				case Constantes.RETO_LOS_PEQUEÑOS_ANTES :// los pequeños antes
+				case Constantes.RETO_LOS_PEQUE\u00f1OS_ANTES :// los peque\u00f1os antes
 					for (final Luchador luch : _equipo1.values()) {
 						if (luch.getNivel() < nivel) {
 							_luchMenorNivelReto = luch.getID();
@@ -1623,10 +1623,10 @@ public class Pelea {
 			return;
 		}
 		if (!luchador.puedeJugar()) {
-			if (perso.getCompañero() == null) {
+			if (perso.getCompa\u00f1ero() == null) {
 				return;
 			}
-			luchador = getLuchadorPorID(perso.getCompañero().getID());
+			luchador = getLuchadorPorID(perso.getCompa\u00f1ero().getID());
 			if (luchador == null || !luchador.puedeJugar()) {
 				return;
 			}
@@ -1657,7 +1657,7 @@ public class Pelea {
 			return false;
 		}
 		startTimerInicioTurno();
-		_ultimoTipoDañoReto = TipoDaño.NULL;
+		_ultimoTipoDa\u00f1oReto = TipoDa\u00f1o.NULL;
 		_tiempoHechizo = 0;
 		_idUnicaAccion = -1;
 		_nroOrdenLuc++;
@@ -1692,11 +1692,11 @@ public class Pelea {
 			if (_luchadorDeTurno.getPersonaje().getServidorSocket() != null) {
 				_luchadorDeTurno.getPersonaje().getServidorSocket().limpiarAcciones(true);
 			}
-			Personaje compañero = _luchadorDeTurno.getPersonaje().getCompañero();
-			if (compañero != null) {
+			Personaje compa\u00f1ero = _luchadorDeTurno.getPersonaje().getCompa\u00f1ero();
+			if (compa\u00f1ero != null) {
 				if (!_luchadorDeTurno.esIDReal()) {
 					_luchadorDeTurno.setIDReal(true);
-					getLuchadorPorID(compañero.getID()).setIDReal(false);
+					getLuchadorPorID(compa\u00f1ero.getID()).setIDReal(false);
 					GestorSalida.ENVIAR_AI_CAMBIAR_ID(_luchadorDeTurno.getPersonaje(), _luchadorDeTurno.getID());
 					GestorSalida.ENVIAR_SL_LISTA_HECHIZOS(_luchadorDeTurno.getPersonaje());
 				}
@@ -1930,7 +1930,7 @@ public class Pelea {
 							if (victima.esInvocacion()) {
 								continue;
 							}
-							if (_ultimoTipoDañoReto == TipoDaño.NORMAL) {
+							if (_ultimoTipoDa\u00f1oReto == TipoDa\u00f1o.NORMAL) {
 								exitoReto = Reto.EstReto.FALLADO;
 							}
 							break;
@@ -2001,7 +2001,7 @@ public class Pelea {
 								exitoReto = Reto.EstReto.FALLADO;
 							}
 							break;
-						case Constantes.RETO_LOS_PEQUEÑOS_ANTES :// los pequeños antes
+						case Constantes.RETO_LOS_PEQUE\u00f1OS_ANTES :// los peque\u00f1os antes
 							if (_luchadorDeTurno.getID() != _luchMenorNivelReto) {
 								exitoReto = Reto.EstReto.FALLADO;
 							}
@@ -2234,7 +2234,7 @@ public class Pelea {
 		_vecesQuePasa = 0;
 		_tiempoTurno = System.currentTimeMillis();
 		_luchadorDeTurno.setPuedeJugar(false);
-		_luchadorDeTurno.setUltimoElementoDaño(Constantes.ELEMENTO_NULO);
+		_luchadorDeTurno.setUltimoElementoDa\u00f1o(Constantes.ELEMENTO_NULO);
 		try {
 			if (!_luchadorDeTurno.estaMuerto()) {
 				GestorSalida.ENVIAR_GTF_FIN_DE_TURNO(this, 7, _luchadorDeTurno.getID());
@@ -2344,7 +2344,7 @@ public class Pelea {
 					if (luchTurno.getCeldaPelea().getGlifos() != null) {
 						for (final Glifo glifo : luchTurno.getCeldaPelea().getGlifos()) {
 							if (_fase == Constantes.PELEA_FASE_FINALIZADO) {
-								return "Se finalizó la pelea en glifos";
+								return "Se finaliz\u00f1 la pelea en glifos";
 							}
 							if (luchTurno.estaMuerto()) {
 								continue;
@@ -2589,11 +2589,11 @@ public class Pelea {
 		}
 		int idLuch = perso.getID();
 		if (idLuch != _ultimoMovedorIDReto) {
-			if (perso.getCompañero() == null) {
+			if (perso.getCompa\u00f1ero() == null) {
 				return false;
 			}
-			idLuch = perso.getCompañero().getID();
-			perso = perso.getCompañero();
+			idLuch = perso.getCompa\u00f1ero().getID();
+			perso = perso.getCompa\u00f1ero();
 			if (idLuch != _ultimoMovedorIDReto) {
 				return false;
 			}
@@ -2735,7 +2735,7 @@ public class Pelea {
 				if (costePA > 0 && lanzador.esInvisible(0)) {
 					GestorSalida.ENVIAR_Gf_MOSTRAR_CELDA_EN_PELEA(this, 7, lanzador.getID(), lanzador.getCeldaPelea().getID());
 				}
-				cantObjetivos = Hechizo.aplicaHechizoAPeleaSinGTM(this, lanzador, celdaObjetivo, efectos, TipoDaño.NORMAL,
+				cantObjetivos = Hechizo.aplicaHechizoAPeleaSinGTM(this, lanzador, celdaObjetivo, efectos, TipoDa\u00f1o.NORMAL,
 				esGC);
 			}
 			// salio del fallo o lanz normal
@@ -2881,7 +2881,7 @@ public class Pelea {
 			if (esGC) {
 				GestorSalida.ENVIAR_GA_ACCION_PELEA(this, 7, 301, perso.getID() + "", "0");
 			}
-			Hechizo.aplicaHechizoAPelea(this, lanzador, celdaObjetivo, esGC ? eCriticos : eNormales, TipoDaño.CAC, esGC);
+			Hechizo.aplicaHechizoAPelea(this, lanzador, celdaObjetivo, esGC ? eCriticos : eNormales, TipoDa\u00f1o.CAC, esGC);
 			_tempAccion = "";
 		}
 		GestorSalida.ENVIAR_GAF_FINALIZAR_ACCION(perso, perso.getID(), -1);
@@ -3414,6 +3414,12 @@ public class Pelea {
 			}
 			Thread.sleep(100 + (300 * _cantUltAfec));
 			GestorSalida.ENVIAR_GE_PANEL_RESULTADOS_PELEA(this, 7, packet);
+			// 1.43.7: delay antes de restaurar mapa para evitar race con cierre de combate en cliente
+			try {
+				Thread.sleep(450);
+			} catch (InterruptedException e) {
+				Thread.currentThread().interrupt();
+			}
 			GestorSalida.ENVIAR_fL_LISTA_PELEAS_AL_MAPA(_mapaReal);
 			pararIAs();
 			eliminarTimer();
@@ -3792,7 +3798,7 @@ public class Pelea {
 								}
 								_capturadores.add(luchGanador);
 							}
-							if (luchGanador.tieneEstado(Constantes.ESTADO_DOMESTICACIÓN)) {
+							if (luchGanador.tieneEstado(Constantes.ESTADO_DOMESTICACI\u00D3N)) {
 								if (_domesticadores == null) {
 									_domesticadores = new ArrayList<>(8);
 								}
@@ -4426,7 +4432,7 @@ public class Pelea {
 								StringBuilder oako = new StringBuilder();
 								for (Entry<Objeto, Boolean> entry : recibidor.getDropsPelea().entrySet()) {
 									if (entry.getValue()) {
-										oako.append(entry.getKey().stringObjetoConGuiño());
+										oako.append(entry.getKey().stringObjetoConGui\u00f1o());
 									} else {
 										GestorSalida.ENVIAR_OQ_CAMBIA_CANTIDAD_DEL_OBJETO(recibidor, entry.getKey());
 									}
@@ -4902,8 +4908,8 @@ public class Pelea {
 						GestorSalida.ENVIAR_GV_RESETEAR_PANTALLA_JUEGO(persoRetirador);
 						return;
 					}
-					if (persoRetirador.getCompañero() != null && !persoRetirador.esMultiman()) {
-						int idMultiman = persoRetirador.getCompañero().getID();
+					if (persoRetirador.getCompa\u00f1ero() != null && !persoRetirador.esMultiman()) {
+						int idMultiman = persoRetirador.getCompa\u00f1ero().getID();
 						retirarsePelea(idMultiman, idMultiman, true);
 					}
 					if (addMuertosReturnFinalizo(luchRetirador, null)) {
@@ -4948,8 +4954,8 @@ public class Pelea {
 							// si puede expulsar, y expulsa a otro jugador
 							if (luchExpulsado.getEquipoBin() == luchRetirador.getEquipoBin()) {
 								Personaje persoExpulsado = luchExpulsado.getPersonaje();
-								if (persoExpulsado != null && persoExpulsado.getCompañero() != null && !persoExpulsado.esMultiman()) {
-									int idMultiman = persoExpulsado.getCompañero().getID();
+								if (persoExpulsado != null && persoExpulsado.getCompa\u00f1ero() != null && !persoExpulsado.esMultiman()) {
+									int idMultiman = persoExpulsado.getCompa\u00f1ero().getID();
 									retirarsePelea(idRetirador, idMultiman, true);
 								}
 								luchadorSalirPelea(luchExpulsado);
@@ -4974,8 +4980,8 @@ public class Pelea {
 									return;
 								default :
 									Personaje persoExpulsado = luchRetirador.getPersonaje();
-									if (persoExpulsado != null && persoExpulsado.getCompañero() != null && !persoExpulsado.esMultiman()) {
-										int idMultiman = persoExpulsado.getCompañero().getID();
+									if (persoExpulsado != null && persoExpulsado.getCompa\u00f1ero() != null && !persoExpulsado.esMultiman()) {
+										int idMultiman = persoExpulsado.getCompa\u00f1ero().getID();
 										retirarsePelea(idRetirador, idMultiman, true);
 									}
 									consecuenciasPerder(luchRetirador);
@@ -4993,15 +4999,15 @@ public class Pelea {
 						Personaje persoExpulsado = luchRetirador.getPersonaje();
 						switch (_tipo) {
 							case Constantes.PELEA_TIPO_DESAFIO :
-								if (persoExpulsado != null && persoExpulsado.getCompañero() != null && !persoExpulsado.esMultiman()) {
-									int idMultiman = persoExpulsado.getCompañero().getID();
+								if (persoExpulsado != null && persoExpulsado.getCompa\u00f1ero() != null && !persoExpulsado.esMultiman()) {
+									int idMultiman = persoExpulsado.getCompa\u00f1ero().getID();
 									retirarsePelea(idRetirador, idMultiman, true);
 								}
 								luchadorSalirPelea(luchRetirador);
 								break;
 							default :
-								if (persoExpulsado != null && persoExpulsado.getCompañero() != null && !persoExpulsado.esMultiman()) {
-									int idMultiman = persoExpulsado.getCompañero().getID();
+								if (persoExpulsado != null && persoExpulsado.getCompa\u00f1ero() != null && !persoExpulsado.esMultiman()) {
+									int idMultiman = persoExpulsado.getCompa\u00f1ero().getID();
 									retirarsePelea(idRetirador, idMultiman, true);
 								}
 								consecuenciasPerder(luchRetirador);
@@ -5214,7 +5220,7 @@ public class Pelea {
 	}
 	
 	public void addBuffLuchadores(final ArrayList<Luchador> objetivos, int efectoID, final int valor,
-	final int turnosRestantes, final int hechizoID, String args, final Luchador lanzador, TipoDaño tipo,
+	final int turnosRestantes, final int hechizoID, String args, final Luchador lanzador, TipoDa\u00f1o tipo,
 	String condicionHechizo) {
 		if (objetivos.isEmpty()) {
 			return;

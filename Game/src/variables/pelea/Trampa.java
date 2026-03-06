@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import variables.hechizo.EfectoHechizo;
 import variables.hechizo.Hechizo;
 import variables.hechizo.StatHechizo;
-import variables.hechizo.EfectoHechizo.TipoDaño;
+import variables.hechizo.EfectoHechizo.TipoDa\u00f1o;
 import variables.mapa.Celda;
 import estaticos.Constantes;
 import estaticos.Encriptador;
@@ -13,8 +13,8 @@ import estaticos.GestorSalida;
 public class Trampa implements Comparable<Trampa> {
 	private final Luchador _lanzador;
 	private final Celda _celda;
-	private final byte _tamaño;
-	private byte _paramEquipoDueño = -1;
+	private final byte _tama\u00f1o;
+	private byte _paramEquipoDue\u00f1o = -1;
 	private final int _hechizoID, _color;
 	private final StatHechizo _trampaSH;
 	private final Pelea _pelea;
@@ -22,17 +22,17 @@ public class Trampa implements Comparable<Trampa> {
 	private final ArrayList<Celda> _celdas;
 	
 	// private ArrayList<Luchador> _objetivos;
-	public Trampa(final Pelea pelea, final Luchador lanzador, final Celda celda, final byte tamaño,
+	public Trampa(final Pelea pelea, final Luchador lanzador, final Celda celda, final byte tama\u00f1o,
 	final StatHechizo trampaHechizo, final int hechizoID, final ArrayList<Luchador> mostrar,
 	final ArrayList<Celda> celdas, final int color) {
 		_pelea = pelea;
 		_lanzador = lanzador;
 		_celda = celda;
-		_tamaño = tamaño;
+		_tama\u00f1o = tama\u00f1o;
 		_trampaSH = trampaHechizo;
 		_hechizoID = hechizoID;
 		_color = color;
-		_paramEquipoDueño = lanzador.getParamEquipoAliado();
+		_paramEquipoDue\u00f1o = lanzador.getParamEquipoAliado();
 		_pelea.addTrampa(this);
 		_celdas = celdas;
 		for (Celda c : celdas) {
@@ -45,12 +45,12 @@ public class Trampa implements Comparable<Trampa> {
 		return _celda;
 	}
 	
-	public int getParamEquipoDueño() {
-		return _paramEquipoDueño;
+	public int getParamEquipoDue\u00f1o() {
+		return _paramEquipoDue\u00f1o;
 	}
 	
-	public byte getTamaño() {
-		return _tamaño;
+	public byte getTama\u00f1o() {
+		return _tama\u00f1o;
 	}
 	
 	public Luchador getLanzador() {
@@ -96,7 +96,7 @@ public class Trampa implements Comparable<Trampa> {
 		// Thread.sleep(100);
 		// } catch (Exception e) {}
 		if (!victima.estaMuerto()) {
-			Hechizo.aplicaHechizoAPelea(_pelea, _lanzador, _celda, _trampaSH.getEfectosNormales(), TipoDaño.TRAMPA, false);
+			Hechizo.aplicaHechizoAPelea(_pelea, _lanzador, _celda, _trampaSH.getEfectosNormales(), TipoDa\u00f1o.TRAMPA, false);
 			if (_pelea.getLuchadorTurno().getIA() != null) {
 				_pelea.getLuchadorTurno().getIA().nullear();
 			}
@@ -109,7 +109,7 @@ public class Trampa implements Comparable<Trampa> {
 				_visibles.add(luchador.getID());
 			}
 		}
-		GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADORES(luchadores, "+", _celda.getID(), _tamaño, _color, ' ');
+		GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADORES(luchadores, "+", _celda.getID(), _tama\u00f1o, _color, ' ');
 		boolean[] permisos = new boolean[16];
 		int[] valores = new int[16];
 		permisos[2] = true;
@@ -125,7 +125,7 @@ public class Trampa implements Comparable<Trampa> {
 		for (int i : _visibles) {
 			luchadores.add(_pelea.getLuchadorPorID(i));
 		}
-		GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADORES(luchadores, "-", _celda.getID(), _tamaño, _color, ' ');
+		GestorSalida.ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADORES(luchadores, "-", _celda.getID(), _tama\u00f1o, _color, ' ');
 		boolean[] permisos = new boolean[16];
 		int[] valores = new int[16];
 		permisos[2] = true;
@@ -148,6 +148,6 @@ public class Trampa implements Comparable<Trampa> {
 	
 	@Override
 	public int compareTo(Trampa o) {
-		return new Integer(getPrioridad()).compareTo(new Integer(o.getPrioridad()));
+		return Integer.compare(getPrioridad(), o.getPrioridad());
 	}
 }

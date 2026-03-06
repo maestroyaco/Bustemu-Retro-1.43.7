@@ -26,7 +26,7 @@ public class PreguntaNPC {
 	public void setPreguntasCondicionales(String alternos) {
 		_strAlternos = alternos;
 		_pregCondicionales.clear();
-		String[] alt = alternos.replaceAll("\\],\\[", "¬").replaceAll("[\\[\\]]", "").split("¬");
+		String[] alt = alternos.replaceAll("\\],\\[", "Â¬").replaceAll("[\\[\\]]", "").split("Â¬");
 		for (String s : alt) {
 			try {
 				String[] split = s.split(";");

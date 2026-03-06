@@ -913,7 +913,7 @@ public class Accion {
 					try {
 						GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE_TODOS("El anutrofado ganador de la RULETA DEL JALATO es: "
 						+ perso.getNombre() + ", demosle un fuerte aplauso!!!",
-						"Vous avez gagnez en jouant a la roulette du bouftou :  " + perso.getNombre() + ", félicitations !");
+						"Vous avez gagnez en jouant a la roulette du bouftou :  " + perso.getNombre() + ", f\u00e9licitations !");
 						perso.addKamas(MainServidor.KAMAS_RULETA_JALATO, true, true);
 						MainServidor.KAMAS_RULETA_JALATO = 10000;
 					} catch (final Exception e) {
@@ -990,7 +990,7 @@ public class Accion {
 						return false;
 					}
 					break;
-				case ACCION_AGREGAR_MOB_ALBUM :// añadir carta coleccion mob
+				case ACCION_AGREGAR_MOB_ALBUM :// a\u00f1adir carta coleccion mob
 					try {
 						for (String s : _args.split(";")) {
 							perso.addCardMob(Integer.parseInt(s));
@@ -1083,7 +1083,7 @@ public class Accion {
 							if (System.currentTimeMillis() - mision.getTiempoInicio() < MainServidor.MINUTOS_MISION_PVP * 60 * 1000) {
 								if (perso.getCuenta().getIdioma().equalsIgnoreCase("fr")) {
 									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso,
-									"<b>[Thomas Sacre]</b> Tu viens de terminer un contrat, tu dois attendre 10 minutes avant de te relancer dans ta quête de meurtre.",
+									"<b>[Thomas Sacre]</b> Tu viens de terminer un contrat, tu dois attendre 10 minutes avant de te relancer dans ta quÃªte de meurtre.",
 									"000000");
 								} else {
 									GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso,
@@ -1124,10 +1124,10 @@ public class Accion {
 						if (victimas.isEmpty()) {
 							if (perso.getCuenta().getIdioma().equalsIgnoreCase("fr")) {
 								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso,
-								"<b>[Thomas Sacre]</b> Je ne trouve pas de victime à ta hauteur, reviens plus tard.", "000000");
+								"<b>[Thomas Sacre]</b> Je ne trouve pas de victime Ã  ta hauteur, reviens plus tard.", "000000");
 							} else {
 								GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso,
-								"<b>[Thomas Sacre]</b> No se encontró ningún personaje a tu altura, porfavor regresa más tarde.",
+								"<b>[Thomas Sacre]</b> No se encontr\u00f3 ning\u00fan personaje a tu altura, porfavor regresa m\u00e1s tarde.",
 								"000000");
 							}
 							return false;

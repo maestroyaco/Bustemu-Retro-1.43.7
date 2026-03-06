@@ -344,39 +344,39 @@ public class Stats {
 			valor = _statsIDs.get(statID);
 		}
 		switch (statID) {
-			// case Informacion.STAT_REENVIA_DAÑOS :// reenvio daños
-			// if (_statsIDs.get(Informacion.STAT_DAÑOS_DEVUELTOS) != null) {
-			// val += _statsIDs.get(Informacion.STAT_DAÑOS_DEVUELTOS);
+			// case Informacion.STAT_REENVIA_DA\u00f1OS :// reenvio da\u00f1os
+			// if (_statsIDs.get(Informacion.STAT_DA\u00f1OS_DEVUELTOS) != null) {
+			// val += _statsIDs.get(Informacion.STAT_DA\u00f1OS_DEVUELTOS);
 			// }
 			// break;
-			case Constantes.STAT_MAS_DAÑOS_DE_AGUA :
-				if (_statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_AGUA) != null) {
-					valor -= _statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_AGUA);
+			case Constantes.STAT_MAS_DA\u00f1OS_DE_AGUA :
+				if (_statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_AGUA) != null) {
+					valor -= _statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_AGUA);
 				}
 				break;
-			case Constantes.STAT_MAS_DAÑOS_DE_AIRE :
-				if (_statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_AIRE) != null) {
-					valor -= _statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_AIRE);
+			case Constantes.STAT_MAS_DA\u00f1OS_DE_AIRE :
+				if (_statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_AIRE) != null) {
+					valor -= _statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_AIRE);
 				}
 				break;
-			case Constantes.STAT_MAS_DAÑOS_DE_FUEGO :
-				if (_statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_FUEGO) != null) {
-					valor -= _statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_FUEGO);
+			case Constantes.STAT_MAS_DA\u00f1OS_DE_FUEGO :
+				if (_statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_FUEGO) != null) {
+					valor -= _statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_FUEGO);
 				}
 				break;
-			case Constantes.STAT_MAS_DAÑOS_DE_TIERRA :
-				if (_statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_TIERRA) != null) {
-					valor -= _statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_TIERRA);
+			case Constantes.STAT_MAS_DA\u00f1OS_DE_TIERRA :
+				if (_statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_TIERRA) != null) {
+					valor -= _statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_TIERRA);
 				}
 				break;
-			case Constantes.STAT_MAS_DAÑOS_DE_NEUTRAL :
-				if (_statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_NEUTRAL) != null) {
-					valor -= _statsIDs.get(Constantes.STAT_MENOS_DAÑOS_DE_NEUTRAL);
+			case Constantes.STAT_MAS_DA\u00f1OS_DE_NEUTRAL :
+				if (_statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_NEUTRAL) != null) {
+					valor -= _statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_DE_NEUTRAL);
 				}
 				break;
-			case Constantes.STAT_MAS_DAÑOS_EMPUJE :
-				if (_statsIDs.get(Constantes.STAT_MENOS_DAÑOS_EMPUJE) != null) {
-					valor -= _statsIDs.get(Constantes.STAT_MENOS_DAÑOS_EMPUJE);
+			case Constantes.STAT_MAS_DA\u00f1OS_EMPUJE :
+				if (_statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_EMPUJE) != null) {
+					valor -= _statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_EMPUJE);
 				}
 				break;
 			case Constantes.STAT_MAS_REDUCCION_CRITICOS :
@@ -384,9 +384,9 @@ public class Stats {
 					valor -= _statsIDs.get(Constantes.STAT_MENOS_REDUCCION_CRITICOS);
 				}
 				break;
-			case Constantes.STAT_MAS_DAÑOS_CRITICOS :
-				if (_statsIDs.get(Constantes.STAT_MENOS_DAÑOS_CRITICOS) != null) {
-					valor -= _statsIDs.get(Constantes.STAT_MENOS_DAÑOS_CRITICOS);
+			case Constantes.STAT_MAS_DA\u00f1OS_CRITICOS :
+				if (_statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_CRITICOS) != null) {
+					valor -= _statsIDs.get(Constantes.STAT_MENOS_DA\u00D1OS_CRITICOS);
 				}
 				break;
 			case Constantes.STAT_MAS_GOLPES_CRITICOS :
@@ -515,7 +515,7 @@ public class Stats {
 					valor -= _statsIDs.get(116);
 				}
 				break;
-			case Constantes.STAT_MAS_DAÑOS :// + daños
+			case Constantes.STAT_MAS_DA\u00f1OS :// + da\u00f1os
 				if (_statsIDs.get(121) != null) {
 					valor += _statsIDs.get(121);
 				}
@@ -526,7 +526,7 @@ public class Stats {
 					valor -= _statsIDs.get(144);
 				}
 				break;
-			case Constantes.STAT_MAS_PORC_DAÑOS :// % daños
+			case Constantes.STAT_MAS_PORC_DA\u00D1OS :// % da\u00f1os
 				if (_statsIDs.get(186) != null) {
 					valor -= _statsIDs.get(186);
 				}

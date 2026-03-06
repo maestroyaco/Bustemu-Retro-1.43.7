@@ -1,0 +1,1428 @@
+﻿
+> Task :compileJava FAILED
+.\gradlew.bat : C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:2287: error: unmappable 
+character (0x98) for encoding UTF-8
+En C:\Users\user\AppData\Local\Temp\ps-script-1ef9ff71-dd7c-47bf-aeb5-120cbf9d8c45.ps1: 79 Carácter: 47
++ ... esv.fun\Bustemu-Retro-1.43.7"; .\gradlew.bat compileJava 2>&1 | Out-F ...
++                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Dofus\onesv.... encoding UTF-8:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+				return "P´┐¢os";
+				         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:3034: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 120 :// A´┐¢ade X PA
+				              ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:3751: error: unmappable character (0x98) 
+for encoding UTF-8
+			case OFICIO_LE\u00cdADOR :// le´┐¢ador
+			                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4396: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 808 :// Tofu Gordinfl´┐¢n
+				                          ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4401: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 2357 :// Tofumantx´┐¢ el M´┐¢tico
+				                       ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4401: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 2357 :// Tofumantx´┐¢ el M´┐¢tico
+				                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4405: error: unmappable character (0x98) 
+for encoding UTF-8
+						carne = 1896;// Carne de p´┐¢jaro
+						                          ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4421: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 413 :// Larva Rub´┐¢
+				                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4427: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 134 :// Jalat´┐¢n Blanco
+				                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4428: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 149 :// Jalat´┐¢n Negro
+				                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4430: error: unmappable character (0x98) 
+for encoding UTF-8
+						carne = 1911; // Muslo de jalat´┐¢n
+						                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4436: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 101 :// Jalat´┐¢n Blanco
+				                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4438: error: unmappable character (0x98) 
+for encoding UTF-8
+						carne = 1912; // Muslo de jalat´┐¢ **
+						                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4453: error: unmappable character (0x98) 
+for encoding UTF-8
+						carne = 1933; // Carne de p´┐¢jaro ****
+						                           ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4463: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 104 :// Jabal´┐¢
+				                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4464: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 2769 :// Jabal´┐¢
+				                   ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4477: error: unmappable character (0x98) 
+for encoding UTF-8
+						carne = 1897; // Carne de p´┐¢jaro **
+						                           ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4487: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 148 :// Jefe de Guerra Jalat´┐¢
+				                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4489: error: unmappable character (0x98) 
+for encoding UTF-8
+						carne = 1913; // Muslo de jalat´┐¢ ***
+						                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4517: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 147 :// Jalat´┐¢ Real
+				                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4519: error: unmappable character (0x98) 
+for encoding UTF-8
+						carne = 1914; // Muslo de jalat´┐¢ ****
+						                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4523: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 297 :// Jabal´┐¢ de las llanuras
+				                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4536: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 751 :// Koalak ´┐¢ndigo
+				                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4540: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 744 :// Koalak Sangu´┐¢neo
+				                         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4542: error: unmappable character (0x98) 
+for encoding UTF-8
+				case 755 :// Mam´┐¢ Koalak
+				                ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4911: error: unmappable character (0x98) 
+for encoding UTF-8
+			colorNuevaCria = 55; // esmeralda e ´┐¢ndigo
+			                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4917: error: unmappable character (0x98) 
+for encoding UTF-8
+			colorNuevaCria = 59; // esmeralda - orqu´┐¢deo
+			                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4919: error: unmappable character (0x98) 
+for encoding UTF-8
+			colorNuevaCria = 60; // esmeralda - p´┐¢rpura
+			                                     ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4929: error: unmappable character (0x98) 
+for encoding UTF-8
+			colorNuevaCria = 82; // ciruela - ´┐¢ndigo
+			                                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4937: error: unmappable character (0x98) 
+for encoding UTF-8
+			colorNuevaCria = 86; // ciruela - orqu´┐¢deo
+			                                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5056: error: unmappable character (0x98) 
+for encoding UTF-8
+			case RETO_ZOMBI :// 1;// Utiliza s´┐¢lo un punto de movimiento en cada turno.
+			                                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5069: error: unmappable character (0x98) 
+for encoding UTF-8
+			case RETO_APLAZAMIENTO :// 4;// Matar %1 el ´┐¢ltimo.
+			                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5074: error: unmappable character (0x98) 
+for encoding UTF-8
+				// personaje s´┐¢lo debe utilizar la misma acci´┐¢n una ´┐¢nica vez.
+				              ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5074: error: unmappable character (0x98) 
+for encoding UTF-8
+				// personaje s´┐¢lo debe utilizar la misma acci´┐¢n una ´┐¢nica vez.
+				                                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5074: error: unmappable character (0x98) 
+for encoding UTF-8
+				// personaje s´┐¢lo debe utilizar la misma acci´┐¢n una ´┐¢nica vez.
+				                                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5078: error: unmappable character (0x98) 
+for encoding UTF-8
+			case RETO_VERSATIL :// 6;// Durante su turno, cada jugador s´┐¢lo puede utilizar
+			                                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5079: error: unmappable character (0x98) 
+for encoding UTF-8
+				// una vez la misma acci´┐¢n.
+				                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5088: error: unmappable character (0x98) 
+for encoding UTF-8
+			case RETO_BARBARO :// 9;// No utilices ning´┐¢n hechizo durante el tiempo que dure
+			                                           ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5103: error: unmappable character (0x98) 
+for encoding UTF-8
+			case RETO_ENTOMOLOGO :// 16;// Invocar una Llamita cada vez que el hechizo est´┐¢
+			                                                                              ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5104: error: unmappable character (0x98) 
+for encoding UTF-8
+				// disponible. V´┐¢lido durante todo el combate.
+				                ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5126: error: unmappable character (0x98) 
+for encoding UTF-8
+				// ocasionados por desplazamiento as´┐¢ como los
+				                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5182: error: unmappable character (0x98) 
+for encoding UTF-8
+			case RETO_SUPERVIVIENTE :// 33;// Ning´┐¢n aliado debe morir.
+			                                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5191: error: unmappable character (0x98) 
+for encoding UTF-8
+				// indicado. Cada vez que mates a un objetivo, obtendr´┐¢s el nombre del pr´┐¢ximo al que tienes
+				                                                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5191: error: unmappable character (0x98) 
+for encoding UTF-8
+				// indicado. Cada vez que mates a un objetivo, obtendr´┐¢s el nombre del pr´┐¢ximo al que tienes
+				                                                                         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5218: error: unmappable character (0x98) 
+for encoding UTF-8
+			case RETO_IMPETUOSO :// 41;// Utiliza todos tus puntos de acci´┐¢n antes de acabar
+			                                                              ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5223: error: unmappable character (0x98) 
+for encoding UTF-8
+				// tiene que matar obligatoriamente a un (y s´┐¢lo a un) segundo adversario durante su turno.
+				                                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5232: error: unmappable character (0x98) 
+for encoding UTF-8
+				// (que no sea una invocaci´┐¢n) durante el combate.
+				                           ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5235: error: unmappable character (0x98) 
+for encoding UTF-8
+			case RETO_DUELO :// 45;// Cuando un personaje ataca a un adversario, ning´┐¢n otro
+			                                                                         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5240: error: unmappable character (0x98) 
+for encoding UTF-8
+				// a un adversario durante el combate. Cuando un personaje ataca a un adversario, ning´┐¢n
+				                                                                                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5246: error: unmappable character (0x98) 
+for encoding UTF-8
+				// dispones de 3 turnos para rematar a tu aliado o ´┐¢ganar el combate!
+				                                                   ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5250: error: unmappable character (0x98) 
+for encoding UTF-8
+				// de menor nivel tiene que matar a todos los adversarios (as´┐¢ aprender´┐¢s a querer abusar
+				                                                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5250: error: unmappable character (0x98) 
+for encoding UTF-8
+				// de menor nivel tiene que matar a todos los adversarios (as´┐¢ aprender´┐¢s a querer abusar
+				                                                                       ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5289: error: unmappable character (0x98) 
+for encoding UTF-8
+			case RETO_ARACNOFILO :// aracnofilo, invocar una ara´┐¢a cada vez q se pueda
+			                                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5337: error: unmappable character (0x98) 
+for encoding UTF-8
+				case RETO_ARACNOFILO :// aracnofilo, invocar una ara´┐¢a cada vez q se pueda
+				                                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5373: error: unmappable character (0x98) 
+for encoding UTF-8
+					// que matar obligatoriamente a un (y s´┐¢lo
+					                                       ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5379: error: unmappable character (0x98) 
+for encoding UTF-8
+														// sea una invocaci´┐¢n) durante el duelo
+														                   ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5389: error: unmappable character (0x98) 
+for encoding UTF-8
+				case RETO_LOS_PEQUE\u00f1OS_ANTES :// los peque´┐¢os antes, el personaje de menor nivel debe acabar
+				                                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5391: error: unmappable character (0x98) 
+for encoding UTF-8
+				case RETO_SUPERVIVIENTE :// superviviente, Ning´┐¢n aliado debe morir
+				                                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5478: error: unmappable character (0x98) 
+for encoding UTF-8
+				case RETO_ELEGIDO_VOLUNTARIO :// elegido voluntario, Matar %1 el ´┐¢ltimo
+				                                                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5479: error: unmappable character (0x98) 
+for encoding UTF-8
+				case RETO_APLAZAMIENTO :// aplazamiento, Matar %1 el ´┐¢ltimo
+				                                                     ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5491: error: unmappable character (0x98) 
+for encoding UTF-8
+				case RETO_DUELO :// duelo, Cuando un personaje ataca a un adversario, ning´┐¢n otro personaje
+				                                                                          ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5691: error: unmappable character (0x98) 
+for encoding UTF-8
+					case 54 :// segar ca´┐¢amo
+					                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5721: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 2 :// le´┐¢ador
+			             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5764: error: unmappable character (0x98) 
+for encoding UTF-8
+					case 69 :// cosechar ca´┐¢amo
+					                       ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5853: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7606 : // Pesebre cl´┐¢sico
+			                         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5857: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7686 : // Pesebre de bamb\u00fa m´┐¢gico
+			                                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5870: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7690 : // Pesebre de madera de tronk´┐¢nido
+			                                         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5878: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7628 : // Acariciador Cl´┐¢sico
+			                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5883: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7735 : // Acariciador de Pluma de P´┐¢o Amarillo
+			                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5884: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7623 : // Acariciador de Pluma de P´┐¢o Azul
+			                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5885: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7734 : // Acariciador de Pluma de P´┐¢o Rojo
+			                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5886: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7736 : // Acariciador de Pluma de P´┐¢o Rosa
+			                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5887: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7733 : // Acariciador de Pluma de P´┐¢o Verde
+			                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5888: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7624 : // Acariciador de Pluma de P´┐¢o Violeta
+			                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5890: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7737 : // Acariciador de Pluma de Tofu Mal´┐¢fico
+			                                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5894: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7743 : // Acariciador de Pluma del ´┐¢ltimo Pohoyo
+			                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5897: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7625 : // Aporreadora cl´┐¢sica
+			                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5901: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7772 : // Aporreadora de bamb\u00fa m´┐¢gico
+			                                          ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5914: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7769 : // Aporreadora de madera de tronk´┐¢nido
+			                                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5922: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7634 : // Dragonalgas cl´┐¢sico
+			                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5925: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7693 : // Dragonalgas de cuero de jabal´┐¢
+			                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5926: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7699 : // Dragonalgas de cuero de jabal´┐¢ de las llanuras
+			                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5927: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7635 : // Dragonalgas de cuero de jalat´┐¢n blanco
+			                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5928: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7636 : // Dragonalgas de cuero de jalat´┐¢n negro
+			                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5929: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7637 : // Dragonalgas de cuero de jalat´┐¢
+			                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5930: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7692 : // Dragonalgas de cuero de Jalat´┐¢ Real
+			                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5931: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7691 : // Dragonalgas de cuero de jefe de guerra jalat´┐¢
+			                                                           ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5937: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7798 : // Fulminadora cl´┐¢sica
+			                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5941: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7794 : // Fulminadora de bamb\u00fa m´┐¢gico
+			                                          ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5954: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7792 : // Fulminadora de madera de tronk´┐¢nido
+			                                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5962: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7605 : // Abrevadero Cl´┐¢sico
+			                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5964: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7602 : // Abrevadero de Bamb´┐¢
+			                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5965: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7676 : // Abrevadero de Bamb´┐¢ Dorado
+			                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5966: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7677 : // Abrevadero de Bamb´┐¢ M´┐¢gico
+			                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5966: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7677 : // Abrevadero de Bamb´┐¢ M´┐¢gico
+			                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5967: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7603 : // Abrevadero de Bamb´┐¢ Oscuro
+			                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5968: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7604 : // Abrevadero de Bamb´┐¢ Sagrado
+			                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5969: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7600 : // Abrevadero de Bomb´┐¢
+			                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5979: error: unmappable character (0x98) 
+for encoding UTF-8
+			case 7675 : // Abrevadero de Madera de Tronk´┐¢nido
+			                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:618: error: illegal unicode escape
+	// 285 Reduce en #3 el n\u00fumero de PA que cuesta el hechizo #1.", c: 0, o: "+"
+	                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:619: error: illegal unicode escape
+	// 286 Reduce en #3 el n\u00fumero de turnos a esperar antes de poder volver a lanzar el hechizo
+	                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:624: error: illegal unicode escape
+	// 290 +#3 al n\u00fumero m\u00e1ximo de veces por que se puede lanzar el hechizo #1", c: 0, o: "+"
+	                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:625: error: illegal unicode escape
+	// 291 +#3 al n\u00fumero m\u00e1ximo de veces que se le puede lanzar a un mismo objetivo el hechizo
+	                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:627: error: illegal unicode escape
+	// 292 Fija a #3 el n\u00fumero de turnos para volver a lanzar el hechizo #1", c: 0, o: "+"
+	                          ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\GestorSalida.java:926: error: unmappable character (0x9D) 
+for encoding UTF-8
+		String packet = ("G´┐¢");
+		                   ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1702: error: illegal character: '\ufffd'
+				int influencia = calculaInfluenciaDa´┐¢o(_pelea.getMapaCopia(), SH2, celdaPosibleObj.getID(), celdaLanzador,
+				                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1889: error: illegal character: '\ufffd'
+			int tama´┐¢o = 0;
+			        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1891: error: illegal character: '\ufffd'
+			boolean da´┐¢o = false;
+			          ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1933: error: illegal character: '\ufffd'
+							tama´┐¢o = Encriptador.getNumeroPorValorHash(EH.getZonaEfecto().charAt(1));
+							    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1933: error: not a statement
+							tama´┐¢o = Encriptador.getNumeroPorValorHash(EH.getZonaEfecto().charAt(1));
+							^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1936: error: illegal character: '\ufffd'
+								da´┐¢o = Constantes.estimaDa\u00f1o(eh.getEfectoID()) == 1;
+								  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1936: error: not a statement
+								da´┐¢o = Constantes.estimaDa\u00f1o(eh.getEfectoID()) == 1;
+								^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1947: error: illegal character: '\ufffd'
+			objetivos.addAll(ordenLuchadores(da´┐¢o ? _lanzador.getParamEquipoEnemigo() : _lanzador.getParamEquipoAliado(),
+			                                   ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1947: error: not a statement
+			objetivos.addAll(ordenLuchadores(da´┐¢o ? _lanzador.getParamEquipoEnemigo() : _lanzador.getParamEquipoAliado(),
+			                                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1947: error: ';' expected
+			objetivos.addAll(ordenLuchadores(da´┐¢o ? _lanzador.getParamEquipoEnemigo() : _lanzador.getParamEquipoAliado(),
+			                                                                                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1948: error: not a statement
+			Orden.NADA));
+			     ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1948: error: ';' expected
+			Orden.NADA));
+			          ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1964: error: illegal character: '\ufffd'
+					if (dist - tama´┐¢o > 3) {
+					               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1964: error: not a statement
+					if (dist - tama´┐¢o > 3) {
+					                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1964: error: ';' expected
+					if (dist - tama´┐¢o > 3) {
+					                     ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1967: error: illegal character: '\ufffd'
+					if (dist - tama´┐¢o < distancia) {
+					               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1967: error: > or ',' expected
+					if (dist - tama´┐¢o < distancia) {
+					                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1967: error: not a statement
+					if (dist - tama´┐¢o < distancia) {
+					                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2002: error: illegal character: '\ufffd'
+				boolean esDa´┐¢o = false;
+				            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2029: error: illegal character: '\ufffd'
+							esDa´┐¢o = true;
+							    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2029: error: not a statement
+							esDa´┐¢o = true;
+							^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2033: error: illegal character: '\ufffd'
+				if (!esTeleport || esDa´┐¢o) {
+				                       ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2033: error: not a statement
+				if (!esTeleport || esDa´┐¢o) {
+				                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2033: error: ';' expected
+				if (!esTeleport || esDa´┐¢o) {
+				                         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2303: error: illegal character: '\ufffd'
+					influencia = Constantes.getInflDa´┐¢oPorEfecto(EH.getEfectoID(), _lanzador, objetivo, max, celdaLanzamientoID,
+					                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2338: error: illegal character: '\ufffd'
+	private int calculaInfluenciaDa´┐¢o(final Mapa mapa, final StatHechizo SH, final short celdaLanzamientoID,
+	                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2338: error: invalid method declaration; 
+return type required
+	private int calculaInfluenciaDa´┐¢o(final Mapa mapa, final StatHechizo SH, final short celdaLanzamientoID,
+	                                ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2442: error: illegal character: '\ufffd'
+			boolean esDa´┐¢o = false;
+			            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2505: error: illegal character: '\ufffd'
+					esDa´┐¢o = true;
+					    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2505: error: not a statement
+					esDa´┐¢o = true;
+					^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2520: error: illegal character: '\ufffd'
+					influencia = Constantes.getInflDa´┐¢oPorEfecto(EH.getEfectoID(), _lanzador, objetivo, max, celdaLanzamientoID,
+					                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2554: error: illegal character: '\ufffd'
+							if (esDa´┐¢o && influencia > 0) {
+							        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2554: error: not a statement
+							if (esDa´┐¢o && influencia > 0) {
+							           ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2554: error: ';' expected
+							if (esDa´┐¢o && influencia > 0) {
+							                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2634: error: illegal character: '\ufffd'
+		Constantes.STAT_MAS_DA´┐¢OS_REDUCIDOS_NO_FECA) > 100)
+		                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2634: error: not a statement
+		Constantes.STAT_MAS_DA´┐¢OS_REDUCIDOS_NO_FECA) > 100)
+		                       ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2634: error: ';' expected
+		Constantes.STAT_MAS_DA´┐¢OS_REDUCIDOS_NO_FECA) > 100)
+		                                           ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:278: error: illegal character: '\ufffd'
+	public static boolean PARAM_INFO_DA´┐¢O_BATALLA;
+	                                   ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:278: error: <identifier> expected
+	public static boolean PARAM_INFO_DA´┐¢O_BATALLA;
+	                                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:408: error: illegal character: '\ufffd'
+	public static int PORCENTAJE_DA´┐¢O_NO_CURABLE = 10;
+	                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:408: error: <identifier> expected
+	public static int PORCENTAJE_DA´┐¢O_NO_CURABLE = 10;
+	                                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1608: error: illegal character: '\ufffd'
+							PORCENTAJE_DA´┐¢O_NO_CURABLE = Integer.parseInt(valor);
+							             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1608: error: not a statement
+							PORCENTAJE_DA´┐¢O_NO_CURABLE = Integer.parseInt(valor);
+							^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1610: error: illegal character: '\ufffd'
+							if (PORCENTAJE_DA´┐¢O_NO_CURABLE < 0) {
+							                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1610: error: illegal start of type
+							if (PORCENTAJE_DA´┐¢O_NO_CURABLE < 0) {
+							                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1610: error: not a statement
+							if (PORCENTAJE_DA´┐¢O_NO_CURABLE < 0) {
+							                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1611: error: illegal character: '\ufffd'
+								PORCENTAJE_DA´┐¢O_NO_CURABLE = 0;
+								             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1611: error: not a statement
+								PORCENTAJE_DA´┐¢O_NO_CURABLE = 0;
+								^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1613: error: illegal character: '\ufffd'
+							if (PORCENTAJE_DA´┐¢O_NO_CURABLE > 100) {
+							                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1613: error: not a statement
+							if (PORCENTAJE_DA´┐¢O_NO_CURABLE > 100) {
+							                               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1613: error: ';' expected
+							if (PORCENTAJE_DA´┐¢O_NO_CURABLE > 100) {
+							                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1614: error: illegal character: '\ufffd'
+								PORCENTAJE_DA´┐¢O_NO_CURABLE = 100;
+								             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1614: error: not a statement
+								PORCENTAJE_DA´┐¢O_NO_CURABLE = 100;
+								^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1862: error: illegal character: '\ufffd'
+							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_CAC = Float.parseFloat(valor);
+							                              ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1862: error: not a statement
+							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_CAC = Float.parseFloat(valor);
+							             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1866: error: illegal character: '\ufffd'
+							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_MOB = Float.parseFloat(valor);
+							                              ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1866: error: not a statement
+							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_MOB = Float.parseFloat(valor);
+							             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1870: error: illegal character: '\ufffd'
+							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_PJ = Float.parseFloat(valor);
+							                              ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1870: error: not a statement
+							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_PJ = Float.parseFloat(valor);
+							             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:2063: error: illegal character: '\ufffd'
+							PARAM_INFO_DA´┐¢O_BATALLA = valor.equalsIgnoreCase("true");
+							             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:2063: error: not a statement
+							PARAM_INFO_DA´┐¢O_BATALLA = valor.equalsIgnoreCase("true");
+							^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:165: error: illegal character: '\ufffd'
+	SIG_ID_RECAUDADOR = -100, SIG_ID_PRISMA = -102, CANT_SALVANDO, TOTAL_SALVADO, SEGUNDOS_INICIO_KOLISEO, DIA_DEL_A´┐¢O;
+	                                                                                                                ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:165: error: <identifier> expected
+	SIG_ID_RECAUDADOR = -100, SIG_ID_PRISMA = -102, CANT_SALVANDO, TOTAL_SALVADO, SEGUNDOS_INICIO_KOLISEO, DIA_DEL_A´┐¢O;
+	                                                                                                                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:225: error: illegal character: '\ufffd'
+		DIA_DEL_A´┐¢O = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+		         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:225: error: not a statement
+		DIA_DEL_A´┐¢O = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+		^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:539: error: illegal character: '\ufffd'
+		return ALMANAX.get(DIA_DEL_A´┐¢O);
+		                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:539: error: not a statement
+		return ALMANAX.get(DIA_DEL_A´┐¢O);
+		                             ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:539: error: ';' expected
+		return ALMANAX.get(DIA_DEL_A´┐¢O);
+		                              ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:1299: error: illegal character: '\ufffd'
+			GestorSalida.ENVIAR_´┐¢L_BOTON_LOTERIA_TODOS(true);
+			                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:1299: error: not a statement
+			GestorSalida.ENVIAR_´┐¢L_BOTON_LOTERIA_TODOS(true);
+			            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:2386: error: illegal character: '\ufffd'
+				if (cercado.getDue´┐¢oID() == perso.getID()) {
+				                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:2386: error: not a statement
+				if (cercado.getDue´┐¢oID() == perso.getID()) {
+				                         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:2386: error: ';' expected
+				if (cercado.getDue´┐¢oID() == perso.getID()) {
+				                                         ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:136: error: illegal character: '\ufffd'
+								GestorSalida.ENVIAR_´┐¢L_BOTON_LOTERIA_TODOS(false);
+[Incubating] Problems report is available at: file:///C:/Dofus/onesv.fun/Bustemu-Retro-1.43.7/build/reports/problems/problems-report.html
+								                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:136: error: not a statement
+								GestorSalida.ENVIAR_´┐¢L_BOTON_LOTERIA_TODOS(false);
+								            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:166: error: illegal character: '\ufffd'
+				if (Mundo.DIA_DEL_A´┐¢O != dia) {
+				                   ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:166: error: not a statement
+				if (Mundo.DIA_DEL_A´┐¢O != dia) {
+				                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:166: error: ';' expected
+				if (Mundo.DIA_DEL_A´┐¢O != dia) {
+				                            ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:167: error: illegal character: '\ufffd'
+					Mundo.DIA_DEL_A´┐¢O = dia;
+					               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:167: error: not a statement
+					Mundo.DIA_DEL_A´┐¢O = dia;
+					     ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:475: error: illegal character: '\ufffd'
+		int a´┐¢o = hoy.get(Calendar.YEAR);
+		     ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:476: error: illegal character: '\ufffd'
+		return "BD" + a´┐¢o + "|" + mes + "|" + dia;
+		               ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:476: error: not a statement
+		return "BD" + a´┐¢o + "|" + mes + "|" + dia;
+		                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:20: error: illegal character: '\ufffd'
+	private Personaje _due´┐¢oID;
+	                      ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:20: error: <identifier> expected
+	private Personaje _due´┐¢oID;
+	                          ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:44: error: illegal character: '\ufffd'
+	public void actualizarCasa(final int due´┐¢o, final long precio, final byte bloqueado, final String clave,
+	                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:44: error: <identifier> expected
+	public void actualizarCasa(final int due´┐¢o, final long precio, final byte bloqueado, final String clave,
+	                                                              ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:44: error: <identifier> expected
+	public void actualizarCasa(final int due´┐¢o, final long precio, final byte bloqueado, final String clave,
+	                                                                                    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:44: error: <identifier> expected
+	public void actualizarCasa(final int due´┐¢o, final long precio, final byte bloqueado, final String clave,
+	                                                                                                        ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:45: error: ';' expected
+	final int derechos) {
+	                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: illegal character: '\ufffd'
+		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+		    ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: not a statement
+		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+		^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: illegal character: '\ufffd'
+		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+		                                 ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: not a statement
+		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+		                                  ^
+C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: ';' expected
+		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+		                                   ^
+200 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1947: error: ';' expected
+  			objetivos.addAll(ordenLuchadores(da´┐¢o ? _lanzador.getParamEquipoEnemigo() : _lanzador.getParamEquipoAliado(),
+  			                                                                                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1948: error: ';' expected
+  			Orden.NADA));
+  			          ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1964: error: ';' expected
+  					if (dist - tama´┐¢o > 3) {
+  					                     ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2033: error: ';' expected
+  				if (!esTeleport || esDa´┐¢o) {
+  				                         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2554: error: ';' expected
+  							if (esDa´┐¢o && influencia > 0) {
+  							                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2634: error: ';' expected
+  		Constantes.STAT_MAS_DA´┐¢OS_REDUCIDOS_NO_FECA) > 100)
+  		                                           ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:278: error: <identifier> expected
+  	public static boolean PARAM_INFO_DA´┐¢O_BATALLA;
+  	                                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:408: error: <identifier> expected
+  	public static int PORCENTAJE_DA´┐¢O_NO_CURABLE = 10;
+  	                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1613: error: ';' expected
+  							if (PORCENTAJE_DA´┐¢O_NO_CURABLE > 100) {
+  							                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:165: error: <identifier> expected
+  	SIG_ID_RECAUDADOR = -100, SIG_ID_PRISMA = -102, CANT_SALVANDO, TOTAL_SALVADO, SEGUNDOS_INICIO_KOLISEO, 
+DIA_DEL_A´┐¢O;
+  	                                                                                                                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:539: error: ';' expected
+  		return ALMANAX.get(DIA_DEL_A´┐¢O);
+  		                              ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:2386: error: ';' expected
+  				if (cercado.getDue´┐¢oID() == perso.getID()) {
+  				                                         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:166: error: ';' expected
+  				if (Mundo.DIA_DEL_A´┐¢O != dia) {
+  				                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:20: error: <identifier> expected
+  	private Personaje _due´┐¢oID;
+  	                          ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:44: error: <identifier> expected
+  	public void actualizarCasa(final int due´┐¢o, final long precio, final byte bloqueado, final String clave,
+  	                                                              ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:44: error: <identifier> expected
+  	public void actualizarCasa(final int due´┐¢o, final long precio, final byte bloqueado, final String clave,
+  	                                                                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:44: error: <identifier> expected
+  	public void actualizarCasa(final int due´┐¢o, final long precio, final byte bloqueado, final String clave,
+  	                                                                                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:45: error: ';' expected
+  	final int derechos) {
+  	                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: ';' expected
+  		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+  		                                   ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1610: error: illegal start of type
+  							if (PORCENTAJE_DA´┐¢O_NO_CURABLE < 0) {
+  							                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1933: error: not a statement
+  							tama´┐¢o = Encriptador.getNumeroPorValorHash(EH.getZonaEfecto().charAt(1));
+  							^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1936: error: not a statement
+  								da´┐¢o = Constantes.estimaDa\u00f1o(eh.getEfectoID()) == 1;
+  								^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1947: error: not a statement
+  			objetivos.addAll(ordenLuchadores(da´┐¢o ? _lanzador.getParamEquipoEnemigo() : _lanzador.getParamEquipoAliado(),
+  			                                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1948: error: not a statement
+  			Orden.NADA));
+  			     ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1964: error: not a statement
+  					if (dist - tama´┐¢o > 3) {
+  					                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1967: error: not a statement
+  					if (dist - tama´┐¢o < distancia) {
+  					                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2029: error: not a statement
+  							esDa´┐¢o = true;
+  							^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2033: error: not a statement
+  				if (!esTeleport || esDa´┐¢o) {
+  				                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2505: error: not a statement
+  					esDa´┐¢o = true;
+  					^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2554: error: not a statement
+  							if (esDa´┐¢o && influencia > 0) {
+  							           ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2634: error: not a statement
+  		Constantes.STAT_MAS_DA´┐¢OS_REDUCIDOS_NO_FECA) > 100)
+  		                       ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1608: error: not a statement
+  							PORCENTAJE_DA´┐¢O_NO_CURABLE = Integer.parseInt(valor);
+  							^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1610: error: not a statement
+  							if (PORCENTAJE_DA´┐¢O_NO_CURABLE < 0) {
+  							                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1611: error: not a statement
+  								PORCENTAJE_DA´┐¢O_NO_CURABLE = 0;
+  								^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1613: error: not a statement
+  							if (PORCENTAJE_DA´┐¢O_NO_CURABLE > 100) {
+  							                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1614: error: not a statement
+  								PORCENTAJE_DA´┐¢O_NO_CURABLE = 100;
+  								^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1862: error: not a statement
+  							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_CAC = Float.parseFloat(valor);
+  							             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1866: error: not a statement
+  							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_MOB = Float.parseFloat(valor);
+  							             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1870: error: not a statement
+  							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_PJ = Float.parseFloat(valor);
+  							             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:2063: error: not a statement
+  							PARAM_INFO_DA´┐¢O_BATALLA = valor.equalsIgnoreCase("true");
+  							^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:225: error: not a statement
+  		DIA_DEL_A´┐¢O = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+  		^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:539: error: not a statement
+  		return ALMANAX.get(DIA_DEL_A´┐¢O);
+  		                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:1299: error: not a statement
+  			GestorSalida.ENVIAR_´┐¢L_BOTON_LOTERIA_TODOS(true);
+  			            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:2386: error: not a statement
+  				if (cercado.getDue´┐¢oID() == perso.getID()) {
+  				                         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:136: error: not a statement
+  								GestorSalida.ENVIAR_´┐¢L_BOTON_LOTERIA_TODOS(false);
+  								            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:166: error: not a statement
+  				if (Mundo.DIA_DEL_A´┐¢O != dia) {
+  				                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:167: error: not a statement
+  					Mundo.DIA_DEL_A´┐¢O = dia;
+  					     ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:476: error: not a statement
+  		return "BD" + a´┐¢o + "|" + mes + "|" + dia;
+  		                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: not a statement
+  		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+  		^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: not a statement
+  		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+  		                                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1702: error: illegal character: '\ufffd'
+  				int influencia = calculaInfluenciaDa´┐¢o(_pelea.getMapaCopia(), SH2, celdaPosibleObj.getID(), celdaLanzador,
+  				                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1889: error: illegal character: '\ufffd'
+  			int tama´┐¢o = 0;
+  			        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1891: error: illegal character: '\ufffd'
+  			boolean da´┐¢o = false;
+  			          ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1933: error: illegal character: '\ufffd'
+  							tama´┐¢o = Encriptador.getNumeroPorValorHash(EH.getZonaEfecto().charAt(1));
+  							    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1936: error: illegal character: '\ufffd'
+  								da´┐¢o = Constantes.estimaDa\u00f1o(eh.getEfectoID()) == 1;
+  								  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1947: error: illegal character: '\ufffd'
+  			objetivos.addAll(ordenLuchadores(da´┐¢o ? _lanzador.getParamEquipoEnemigo() : _lanzador.getParamEquipoAliado(),
+  			                                   ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1964: error: illegal character: '\ufffd'
+  					if (dist - tama´┐¢o > 3) {
+  					               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1967: error: illegal character: '\ufffd'
+  					if (dist - tama´┐¢o < distancia) {
+  					               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2002: error: illegal character: '\ufffd'
+  				boolean esDa´┐¢o = false;
+  				            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2029: error: illegal character: '\ufffd'
+  							esDa´┐¢o = true;
+  							    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2033: error: illegal character: '\ufffd'
+  				if (!esTeleport || esDa´┐¢o) {
+  				                       ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2303: error: illegal character: '\ufffd'
+  					influencia = Constantes.getInflDa´┐¢oPorEfecto(EH.getEfectoID(), _lanzador, objetivo, max, celdaLanzamientoID,
+  					                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2338: error: illegal character: '\ufffd'
+  	private int calculaInfluenciaDa´┐¢o(final Mapa mapa, final StatHechizo SH, final short celdaLanzamientoID,
+  	                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2442: error: illegal character: '\ufffd'
+  			boolean esDa´┐¢o = false;
+  			            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2505: error: illegal character: '\ufffd'
+  					esDa´┐¢o = true;
+  					    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2520: error: illegal character: '\ufffd'
+  					influencia = Constantes.getInflDa´┐¢oPorEfecto(EH.getEfectoID(), _lanzador, objetivo, max, celdaLanzamientoID,
+  					                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2554: error: illegal character: '\ufffd'
+  							if (esDa´┐¢o && influencia > 0) {
+  							        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2634: error: illegal character: '\ufffd'
+  		Constantes.STAT_MAS_DA´┐¢OS_REDUCIDOS_NO_FECA) > 100)
+  		                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:278: error: illegal character: '\ufffd'
+  	public static boolean PARAM_INFO_DA´┐¢O_BATALLA;
+  	                                   ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:408: error: illegal character: '\ufffd'
+  	public static int PORCENTAJE_DA´┐¢O_NO_CURABLE = 10;
+  	                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1608: error: illegal character: '\ufffd'
+  							PORCENTAJE_DA´┐¢O_NO_CURABLE = Integer.parseInt(valor);
+  							             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1610: error: illegal character: '\ufffd'
+  							if (PORCENTAJE_DA´┐¢O_NO_CURABLE < 0) {
+  							                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1611: error: illegal character: '\ufffd'
+  								PORCENTAJE_DA´┐¢O_NO_CURABLE = 0;
+  								             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1613: error: illegal character: '\ufffd'
+  							if (PORCENTAJE_DA´┐¢O_NO_CURABLE > 100) {
+  							                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1614: error: illegal character: '\ufffd'
+  								PORCENTAJE_DA´┐¢O_NO_CURABLE = 100;
+  								             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1862: error: illegal character: '\ufffd'
+  							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_CAC = Float.parseFloat(valor);
+  							                              ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1866: error: illegal character: '\ufffd'
+  							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_MOB = Float.parseFloat(valor);
+  							                              ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:1870: error: illegal character: '\ufffd'
+  							EfectoHechizo.MULTIPLICADOR_DA´┐¢O_PJ = Float.parseFloat(valor);
+  							                              ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\MainServidor.java:2063: error: illegal character: '\ufffd'
+  							PARAM_INFO_DA´┐¢O_BATALLA = valor.equalsIgnoreCase("true");
+  							             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:165: error: illegal character: '\ufffd'
+  	SIG_ID_RECAUDADOR = -100, SIG_ID_PRISMA = -102, CANT_SALVANDO, TOTAL_SALVADO, SEGUNDOS_INICIO_KOLISEO, 
+DIA_DEL_A´┐¢O;
+  	                                                                                                                ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:225: error: illegal character: '\ufffd'
+  		DIA_DEL_A´┐¢O = Calendar.getInstance().get(Calendar.DAY_OF_YEAR);
+  		         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:539: error: illegal character: '\ufffd'
+  		return ALMANAX.get(DIA_DEL_A´┐¢O);
+  		                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:1299: error: illegal character: '\ufffd'
+  			GestorSalida.ENVIAR_´┐¢L_BOTON_LOTERIA_TODOS(true);
+  			                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Mundo.java:2386: error: illegal character: '\ufffd'
+  				if (cercado.getDue´┐¢oID() == perso.getID()) {
+  				                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:136: error: illegal character: '\ufffd'
+  								GestorSalida.ENVIAR_´┐¢L_BOTON_LOTERIA_TODOS(false);
+  								                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:166: error: illegal character: '\ufffd'
+  				if (Mundo.DIA_DEL_A´┐¢O != dia) {
+  				                   ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:167: error: illegal character: '\ufffd'
+  					Mundo.DIA_DEL_A´┐¢O = dia;
+  					               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:475: error: illegal character: '\ufffd'
+  		int a´┐¢o = hoy.get(Calendar.YEAR);
+  		     ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\servidor\ServidorServer.java:476: error: illegal character: '\ufffd'
+  		return "BD" + a´┐¢o + "|" + mes + "|" + dia;
+  		               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:20: error: illegal character: '\ufffd'
+  	private Personaje _due´┐¢oID;
+  	                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:44: error: illegal character: '\ufffd'
+  	public void actualizarCasa(final int due´┐¢o, final long precio, final byte bloqueado, final String clave,
+  	                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: illegal character: '\ufffd'
+  		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+  		    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\variables\casa\Casa.java:46: error: illegal character: '\ufffd'
+  		_due´┐¢oID = Mundo.getPersonaje(due´┐¢o);
+  		                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:618: error: illegal unicode escape
+  	// 285 Reduce en #3 el n\u00fumero de PA que cuesta el hechizo #1.", c: 0, o: "+"
+  	                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:619: error: illegal unicode escape
+  	// 286 Reduce en #3 el n\u00fumero de turnos a esperar antes de poder volver a lanzar el hechizo
+  	                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:624: error: illegal unicode escape
+  	// 290 +#3 al n\u00fumero m\u00e1ximo de veces por que se puede lanzar el hechizo #1", c: 0, o: "+"
+  	                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:625: error: illegal unicode escape
+  	// 291 +#3 al n\u00fumero m\u00e1ximo de veces que se le puede lanzar a un mismo objetivo el hechizo
+  	                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:627: error: illegal unicode escape
+  	// 292 Fija a #3 el n\u00fumero de turnos para volver a lanzar el hechizo #1", c: 0, o: "+"
+  	                          ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:1967: error: > or ',' expected
+  					if (dist - tama´┐¢o < distancia) {
+  					                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Inteligencia.java:2338: error: invalid method 
+declaration; return type required
+  	private int calculaInfluenciaDa´┐¢o(final Mapa mapa, final StatHechizo SH, final short celdaLanzamientoID,
+  	                                ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:2287: error: unmappable character (0x98) 
+for encoding UTF-8
+  				return "P´┐¢os";
+  				         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:3034: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 120 :// A´┐¢ade X PA
+  				              ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:3751: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case OFICIO_LE\u00cdADOR :// le´┐¢ador
+  			                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4396: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 808 :// Tofu Gordinfl´┐¢n
+  				                          ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4401: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 2357 :// Tofumantx´┐¢ el M´┐¢tico
+  				                       ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4401: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 2357 :// Tofumantx´┐¢ el M´┐¢tico
+  				                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4405: error: unmappable character (0x98) 
+for encoding UTF-8
+  						carne = 1896;// Carne de p´┐¢jaro
+  						                          ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4421: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 413 :// Larva Rub´┐¢
+  				                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4427: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 134 :// Jalat´┐¢n Blanco
+  				                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4428: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 149 :// Jalat´┐¢n Negro
+  				                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4430: error: unmappable character (0x98) 
+for encoding UTF-8
+  						carne = 1911; // Muslo de jalat´┐¢n
+  						                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4436: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 101 :// Jalat´┐¢n Blanco
+  				                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4438: error: unmappable character (0x98) 
+for encoding UTF-8
+  						carne = 1912; // Muslo de jalat´┐¢ **
+  						                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4453: error: unmappable character (0x98) 
+for encoding UTF-8
+  						carne = 1933; // Carne de p´┐¢jaro ****
+  						                           ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4463: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 104 :// Jabal´┐¢
+  				                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4464: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 2769 :// Jabal´┐¢
+  				                   ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4477: error: unmappable character (0x98) 
+for encoding UTF-8
+  						carne = 1897; // Carne de p´┐¢jaro **
+  						                           ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4487: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 148 :// Jefe de Guerra Jalat´┐¢
+  				                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4489: error: unmappable character (0x98) 
+for encoding UTF-8
+  						carne = 1913; // Muslo de jalat´┐¢ ***
+  						                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4517: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 147 :// Jalat´┐¢ Real
+  				                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4519: error: unmappable character (0x98) 
+for encoding UTF-8
+  						carne = 1914; // Muslo de jalat´┐¢ ****
+  						                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4523: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 297 :// Jabal´┐¢ de las llanuras
+  				                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4536: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 751 :// Koalak ´┐¢ndigo
+  				                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4540: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 744 :// Koalak Sangu´┐¢neo
+  				                         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4542: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case 755 :// Mam´┐¢ Koalak
+  				                ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4911: error: unmappable character (0x98) 
+for encoding UTF-8
+  			colorNuevaCria = 55; // esmeralda e ´┐¢ndigo
+  			                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4917: error: unmappable character (0x98) 
+for encoding UTF-8
+  			colorNuevaCria = 59; // esmeralda - orqu´┐¢deo
+  			                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4919: error: unmappable character (0x98) 
+for encoding UTF-8
+  			colorNuevaCria = 60; // esmeralda - p´┐¢rpura
+  			                                     ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4929: error: unmappable character (0x98) 
+for encoding UTF-8
+  			colorNuevaCria = 82; // ciruela - ´┐¢ndigo
+  			                                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:4937: error: unmappable character (0x98) 
+for encoding UTF-8
+  			colorNuevaCria = 86; // ciruela - orqu´┐¢deo
+  			                                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5056: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case RETO_ZOMBI :// 1;// Utiliza s´┐¢lo un punto de movimiento en cada turno.
+  			                                  ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5069: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case RETO_APLAZAMIENTO :// 4;// Matar %1 el ´┐¢ltimo.
+  			                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5074: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// personaje s´┐¢lo debe utilizar la misma acci´┐¢n una ´┐¢nica vez.
+  				              ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5074: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// personaje s´┐¢lo debe utilizar la misma acci´┐¢n una ´┐¢nica vez.
+  				                                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5074: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// personaje s´┐¢lo debe utilizar la misma acci´┐¢n una ´┐¢nica vez.
+  				                                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5078: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case RETO_VERSATIL :// 6;// Durante su turno, cada jugador s´┐¢lo puede utilizar
+  			                                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5079: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// una vez la misma acci´┐¢n.
+  				                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5088: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case RETO_BARBARO :// 9;// No utilices ning´┐¢n hechizo durante el tiempo que dure
+  			                                           ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5103: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case RETO_ENTOMOLOGO :// 16;// Invocar una Llamita cada vez que el hechizo est´┐¢
+  			                                                                              ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5104: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// disponible. V´┐¢lido durante todo el combate.
+  				                ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5126: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// ocasionados por desplazamiento as´┐¢ como los
+  				                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5182: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case RETO_SUPERVIVIENTE :// 33;// Ning´┐¢n aliado debe morir.
+  			                                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5191: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// indicado. Cada vez que mates a un objetivo, obtendr´┐¢s el nombre del pr´┐¢ximo al que tienes
+  				                                                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5191: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// indicado. Cada vez que mates a un objetivo, obtendr´┐¢s el nombre del pr´┐¢ximo al que tienes
+  				                                                                         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5218: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case RETO_IMPETUOSO :// 41;// Utiliza todos tus puntos de acci´┐¢n antes de acabar
+  			                                                              ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5223: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// tiene que matar obligatoriamente a un (y s´┐¢lo a un) segundo adversario durante su turno.
+  				                                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5232: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// (que no sea una invocaci´┐¢n) durante el combate.
+  				                           ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5235: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case RETO_DUELO :// 45;// Cuando un personaje ataca a un adversario, ning´┐¢n otro
+  			                                                                         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5240: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// a un adversario durante el combate. Cuando un personaje ataca a un adversario, ning´┐¢n
+  				                                                                                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5246: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// dispones de 3 turnos para rematar a tu aliado o ´┐¢ganar el combate!
+  				                                                   ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5250: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// de menor nivel tiene que matar a todos los adversarios (as´┐¢ aprender´┐¢s a querer abusar
+  				                                                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5250: error: unmappable character (0x98) 
+for encoding UTF-8
+  				// de menor nivel tiene que matar a todos los adversarios (as´┐¢ aprender´┐¢s a querer abusar
+  				                                                                       ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5289: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case RETO_ARACNOFILO :// aracnofilo, invocar una ara´┐¢a cada vez q se pueda
+  			                                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5337: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case RETO_ARACNOFILO :// aracnofilo, invocar una ara´┐¢a cada vez q se pueda
+  				                                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5373: error: unmappable character (0x98) 
+for encoding UTF-8
+  					// que matar obligatoriamente a un (y s´┐¢lo
+  					                                       ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5379: error: unmappable character (0x98) 
+for encoding UTF-8
+  														// sea una invocaci´┐¢n) durante el duelo
+  														                   ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5389: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case RETO_LOS_PEQUE\u00f1OS_ANTES :// los peque´┐¢os antes, el personaje de menor nivel debe acabar
+  				                                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5391: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case RETO_SUPERVIVIENTE :// superviviente, Ning´┐¢n aliado debe morir
+  				                                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5478: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case RETO_ELEGIDO_VOLUNTARIO :// elegido voluntario, Matar %1 el ´┐¢ltimo
+  				                                                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5479: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case RETO_APLAZAMIENTO :// aplazamiento, Matar %1 el ´┐¢ltimo
+  				                                                     ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5491: error: unmappable character (0x98) 
+for encoding UTF-8
+  				case RETO_DUELO :// duelo, Cuando un personaje ataca a un adversario, ning´┐¢n otro personaje
+  				                                                                          ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5691: error: unmappable character (0x98) 
+for encoding UTF-8
+  					case 54 :// segar ca´┐¢amo
+  					                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5721: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 2 :// le´┐¢ador
+  			             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5764: error: unmappable character (0x98) 
+for encoding UTF-8
+  					case 69 :// cosechar ca´┐¢amo
+  					                       ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5853: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7606 : // Pesebre cl´┐¢sico
+  			                         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5857: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7686 : // Pesebre de bamb\u00fa m´┐¢gico
+  			                                      ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5870: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7690 : // Pesebre de madera de tronk´┐¢nido
+  			                                         ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5878: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7628 : // Acariciador Cl´┐¢sico
+  			                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5883: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7735 : // Acariciador de Pluma de P´┐¢o Amarillo
+  			                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5884: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7623 : // Acariciador de Pluma de P´┐¢o Azul
+  			                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5885: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7734 : // Acariciador de Pluma de P´┐¢o Rojo
+  			                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5886: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7736 : // Acariciador de Pluma de P´┐¢o Rosa
+  			                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5887: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7733 : // Acariciador de Pluma de P´┐¢o Verde
+  			                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5888: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7624 : // Acariciador de Pluma de P´┐¢o Violeta
+  			                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5890: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7737 : // Acariciador de Pluma de Tofu Mal´┐¢fico
+  			                                               ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5894: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7743 : // Acariciador de Pluma del ´┐¢ltimo Pohoyo
+  			                                        ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5897: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7625 : // Aporreadora cl´┐¢sica
+  			                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5901: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7772 : // Aporreadora de bamb\u00fa m´┐¢gico
+  			                                          ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5914: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7769 : // Aporreadora de madera de tronk´┐¢nido
+  			                                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5922: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7634 : // Dragonalgas cl´┐¢sico
+  			                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5925: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7693 : // Dragonalgas de cuero de jabal´┐¢
+  			                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5926: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7699 : // Dragonalgas de cuero de jabal´┐¢ de las llanuras
+  			                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5927: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7635 : // Dragonalgas de cuero de jalat´┐¢n blanco
+  			                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5928: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7636 : // Dragonalgas de cuero de jalat´┐¢n negro
+  			                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5929: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7637 : // Dragonalgas de cuero de jalat´┐¢
+  			                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5930: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7692 : // Dragonalgas de cuero de Jalat´┐¢ Real
+  			                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5931: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7691 : // Dragonalgas de cuero de jefe de guerra jalat´┐¢
+  			                                                           ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5937: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7798 : // Fulminadora cl´┐¢sica
+  			                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5941: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7794 : // Fulminadora de bamb\u00fa m´┐¢gico
+  			                                          ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5954: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7792 : // Fulminadora de madera de tronk´┐¢nido
+  			                                             ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5962: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7605 : // Abrevadero Cl´┐¢sico
+  			                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5964: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7602 : // Abrevadero de Bamb´┐¢
+  			                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5965: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7676 : // Abrevadero de Bamb´┐¢ Dorado
+  			                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5966: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7677 : // Abrevadero de Bamb´┐¢ M´┐¢gico
+  			                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5966: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7677 : // Abrevadero de Bamb´┐¢ M´┐¢gico
+  			                                    ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5967: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7603 : // Abrevadero de Bamb´┐¢ Oscuro
+  			                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5968: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7604 : // Abrevadero de Bamb´┐¢ Sagrado
+  			                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5969: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7600 : // Abrevadero de Bomb´┐¢
+  			                                 ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\Constantes.java:5979: error: unmappable character (0x98) 
+for encoding UTF-8
+  			case 7675 : // Abrevadero de Madera de Tronk´┐¢nido
+  			                                            ^
+  C:\Dofus\onesv.fun\Bustemu-Retro-1.43.7\Game\src\estaticos\GestorSalida.java:926: error: unmappable character (0x9D) 
+for encoding UTF-8
+  		String packet = ("G´┐¢");
+  		                   ^
+  200 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1s
+1 actionable task: 1 executed

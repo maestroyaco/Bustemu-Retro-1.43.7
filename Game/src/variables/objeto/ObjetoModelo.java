@@ -154,12 +154,12 @@ public class ObjetoModelo {
 		switch (statID) {
 			case Constantes.STAT_MAS_PA_2 :
 				return Constantes.STAT_MAS_PA;
-			case Constantes.STAT_MAS_DAÑOS_2 :
-				return Constantes.STAT_MAS_DAÑOS;
+			case Constantes.STAT_MAS_DA\u00f1OS_2 :
+				return Constantes.STAT_MAS_DA\u00f1OS;
 			case Constantes.STAT_MAS_PM_2 :
 				return Constantes.STAT_MAS_PM;
-			case Constantes.STAT_DAÑOS_DEVUELTOS :
-				return Constantes.STAT_REENVIA_DAÑOS;
+			case Constantes.STAT_DA\u00f1OS_DEVUELTOS :
+				return Constantes.STAT_REENVIA_DA\u00f1OS;
 		}
 		return statID;
 	}
@@ -531,12 +531,12 @@ public class ObjetoModelo {
 	}
 	
 	public static String getStatSegunFecha(Calendar actual) {
-		int año = actual.get(Calendar.YEAR);
+		int a\u00f1o = actual.get(Calendar.YEAR);
 		int mes = actual.get(Calendar.MONTH);
 		int dia_del_mes = actual.get(Calendar.DAY_OF_MONTH);
 		int hora_del_dia = actual.get(Calendar.HOUR_OF_DAY);
 		int minuto_de_hora = actual.get(Calendar.MINUTE);
-		return (Integer.toHexString(año) + "#" + Integer.toHexString(mes * 100 + dia_del_mes) + "#" + Integer.toHexString(
+		return (Integer.toHexString(a\u00f1o) + "#" + Integer.toHexString(mes * 100 + dia_del_mes) + "#" + Integer.toHexString(
 		hora_del_dia * 100 + minuto_de_hora));
 	}
 	

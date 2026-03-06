@@ -42,25 +42,25 @@ public class Inteligencia extends Thread {
 	private static class CompPDVMenosMas implements Comparator<Luchador> {
 		@Override
 		public int compare(Luchador p1, Luchador p2) {
-			return new Integer(p1.getPDVSinBuff()).compareTo(new Integer(p2.getPDVSinBuff()));
+			return Integer.compare(p1.getPDVSinBuff(), p2.getPDVSinBuff());
 		}
 	}
 	private static class CompPDVMasMenos implements Comparator<Luchador> {
 		@Override
 		public int compare(Luchador p1, Luchador p2) {
-			return new Integer(p2.getPDVSinBuff()).compareTo(new Integer(p1.getPDVSinBuff()));
+			return Integer.compare(p2.getPDVSinBuff(), p1.getPDVSinBuff());
 		}
 	}
 	private static class CompNivelMenosMas implements Comparator<Luchador> {
 		@Override
 		public int compare(Luchador p1, Luchador p2) {
-			return new Integer(p1.getNivel()).compareTo(new Integer(p2.getNivel()));
+			return Integer.compare(p1.getNivel(), p2.getNivel());
 		}
 	}
 	private static class CompNivelMasMenos implements Comparator<Luchador> {
 		@Override
 		public int compare(Luchador p1, Luchador p2) {
-			return new Integer(p2.getNivel()).compareTo(new Integer(p1.getNivel()));
+			return Integer.compare(p2.getNivel(), p1.getNivel());
 		}
 	}
 	private static class CompInvosUltimos implements Comparator<Luchador> {
@@ -83,6 +83,8 @@ public class Inteligencia extends Thread {
 	}
 	private static int PDV_MINIMO_CURAR = 99;
 	private boolean _fin = false, _resetearCeldasHechizos, _resetearInfluencias;
+	private volatile boolean _paused = false;
+	private final Object _pauseLock = new Object();
 	private boolean _refrescarMov = false;
 	private final Pelea _pelea;
 	private final Luchador _lanzador;
@@ -133,13 +135,15 @@ public class Inteligencia extends Thread {
 	// finalize();
 	// } catch (final Throwable e) {}
 	// }
-	@SuppressWarnings("deprecation")
 	public synchronized void arrancar() {
 		try {
 			if (this.getState() == State.NEW) {
 				this.start();
 			} else if (this.getState() != State.TERMINATED) {
-				this.resume();
+				synchronized (_pauseLock) {
+					_paused = false;
+					_pauseLock.notifyAll();
+				}
 			}
 		} catch (Exception e) {
 			MainServidor.redactarLogServidorln("Exception ARRANCAR IA tipo: " + getTipoIA() + ", atacante: "
@@ -151,12 +155,13 @@ public class Inteligencia extends Thread {
 	}
 	
 	// solo funciona cuando se cancela una pelea
-	@SuppressWarnings("deprecation")
 	public synchronized void parar() {
 		try {
 			_fin = true;
-			// arrancar();
-			this.stop();
+			synchronized (_pauseLock) {
+				_pauseLock.notifyAll();
+			}
+			this.interrupt();
 		} catch (Exception e) {
 			e.printStackTrace();
 			MainServidor.redactarLogServidorln("EXCEPTION parar IA tipo: " + getTipoIA() + ", atacante: " + (_lanzador == null
@@ -168,7 +173,6 @@ public class Inteligencia extends Thread {
 		}
 	}
 	
-	@SuppressWarnings("deprecation")
 	public void run() {
 		String sTipo = "ninguna";
 		try {
@@ -249,7 +253,17 @@ public class Inteligencia extends Thread {
 						}
 					}
 					if (!_lanzador.puedeJugar()) {
-						this.suspend();
+						synchronized (_pauseLock) {
+							_paused = true;
+							while (_paused && !_fin) {
+								try {
+									_pauseLock.wait();
+								} catch (InterruptedException e) {
+									Thread.currentThread().interrupt();
+									break;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -797,7 +811,7 @@ public class Inteligencia extends Thread {
 				}
 				disponibles.add(SH);
 				for (EfectoHechizo EH : SH.getEfectosNormales()) {
-					if (Constantes.estimaDaño(EH.getEfectoID()) == 1) {
+					if (Constantes.estimaDa\u00f1o(EH.getEfectoID()) == 1) {
 						if (_lanzador.getDistMinAtq() == -1) {
 							_lanzador.setDistMinAtq(SH.getMinAlc());
 						}
@@ -1699,7 +1713,7 @@ public class Inteligencia extends Thread {
 				if (_pelea.puedeLanzarHechizo(_lanzador, SH2, celdaPosibleObj, celdaLanzador) != EstadoLanzHechizo.PODER) {
 					continue;
 				}
-				int influencia = calculaInfluenciaDaño(_pelea.getMapaCopia(), SH2, celdaPosibleObj.getID(), celdaLanzador,
+				int influencia = calculaInfluenciaDa\u00f1o(_pelea.getMapaCopia(), SH2, celdaPosibleObj.getID(), celdaLanzador,
 				filtroIA);
 				if (influencia <= 0) {
 					continue;
@@ -1886,9 +1900,9 @@ public class Inteligencia extends Thread {
 			return null;
 		}
 		for (final StatHechizo SH : hechizosLanzables()) {
-			int tamaño = 0;
+			int tama\u00f1o = 0;
 			int trampa = 0;
-			boolean daño = false;
+			boolean da\u00f1o = false;
 			int filtroIA = getFiltroIA(SH, null, Accion.TRAMPEAR);
 			if (filtroIA < 0) {
 				continue;
@@ -1900,26 +1914,26 @@ public class Inteligencia extends Thread {
 					}
 					switch (EH.getEfectoID()) {
 						case 82 :
-						case 85 :// Daños Agua %vida del atacante
-						case 86 :// Daños Tierra %vida del atacante
-						case 87 :// Daños Aire %vida del atacante
-						case 88 :// Daños Fuego %vida del atacante
-						case 89 :// Daños Neutral %vida del atacante
+						case 85 :// Da\u00f1os Agua %vida del atacante
+						case 86 :// Da\u00f1os Tierra %vida del atacante
+						case 87 :// Da\u00f1os Aire %vida del atacante
+						case 88 :// Da\u00f1os Fuego %vida del atacante
+						case 89 :// Da\u00f1os Neutral %vida del atacante
 						case 91 :// robo de vida Agua
 						case 92 :// robo de vida Tierra
 						case 93 :// robo de vida Aire
 						case 94 :// robo de vida fuego
 						case 95 :// robo de vida neutral
-						case 96 :// Daños Agua
-						case 97 :// Daños Tierra
-						case 98 :// Daños Aire
-						case 99 :// Daños fuego
-						case 100 :// Daños neutral
-						case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-						case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-						case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-						case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-						case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+						case 96 :// Da\u00f1os Agua
+						case 97 :// Da\u00f1os Tierra
+						case 98 :// Da\u00f1os Aire
+						case 99 :// Da\u00f1os fuego
+						case 100 :// Da\u00f1os neutral
+						case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+						case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+						case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+						case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+						case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 							trampa = 3;
 							break;
 						case 400 :// Crea una trampa
@@ -1930,10 +1944,10 @@ public class Inteligencia extends Thread {
 							} else {
 								trampa = 2;
 							}
-							tamaño = Encriptador.getNumeroPorValorHash(EH.getZonaEfecto().charAt(1));
+							tama\u00f1o = Encriptador.getNumeroPorValorHash(EH.getZonaEfecto().charAt(1));
 							final StatHechizo sh = Mundo.getHechizo(EH.getPrimerValor()).getStatsPorNivel(EH.getSegundoValor());
 							for (EfectoHechizo eh : sh.getEfectosNormales()) {
-								daño = Constantes.estimaDaño(eh.getEfectoID()) == 1;
+								da\u00f1o = Constantes.estimaDa\u00f1o(eh.getEfectoID()) == 1;
 							}
 							break;
 					}
@@ -1944,7 +1958,7 @@ public class Inteligencia extends Thread {
 			}
 			int distancia = 10000;
 			ArrayList<Luchador> objetivos = new ArrayList<>();
-			objetivos.addAll(ordenLuchadores(daño ? _lanzador.getParamEquipoEnemigo() : _lanzador.getParamEquipoAliado(),
+			objetivos.addAll(ordenLuchadores(da\u00f1o ? _lanzador.getParamEquipoEnemigo() : _lanzador.getParamEquipoAliado(),
 			Orden.NADA));
 			Celda celdaObjetivo = null;
 			for (final Celda celda : Camino.celdasPosibleLanzamiento(SH, _lanzador, _pelea.getMapaCopia(), _lanzador
@@ -1961,10 +1975,10 @@ public class Inteligencia extends Thread {
 				for (Luchador objetivo : objetivos) {
 					final int dist = Camino.distanciaDosCeldas(_pelea.getMapaCopia(), celda.getID(), objetivo.getCeldaPelea()
 					.getID());
-					if (dist - tamaño > 3) {
+					if (dist - tama\u00f1o > 3) {
 						continue;
 					}
-					if (dist - tamaño < distancia) {
+					if (dist - tama\u00f1o < distancia) {
 						celdaObjetivo = celda;
 						distancia = dist;
 						if (dist == 0) {
@@ -1999,38 +2013,38 @@ public class Inteligencia extends Thread {
 			}
 			if (filtroIA == 0) {
 				boolean esTeleport = false;
-				boolean esDaño = false;
+				boolean esDa\u00f1o = false;
 				for (final EfectoHechizo EH : SH.getEfectosNormales()) {
 					switch (EH.getEfectoID()) {
 						case 4 :
 							esTeleport = true;
 							break;
 						case 82 :
-						case 85 :// Daños Agua %vida del atacante
-						case 86 :// Daños Tierra %vida del atacante
-						case 87 :// Daños Aire %vida del atacante
-						case 88 :// Daños Fuego %vida del atacante
-						case 89 :// Daños Neutral %vida del atacante
+						case 85 :// Da\u00f1os Agua %vida del atacante
+						case 86 :// Da\u00f1os Tierra %vida del atacante
+						case 87 :// Da\u00f1os Aire %vida del atacante
+						case 88 :// Da\u00f1os Fuego %vida del atacante
+						case 89 :// Da\u00f1os Neutral %vida del atacante
 						case 91 :// robo de vida Agua
 						case 92 :// robo de vida Tierra
 						case 93 :// robo de vida Aire
 						case 94 :// robo de vida fuego
 						case 95 :// robo de vida neutral
-						case 96 :// Daños Agua
-						case 97 :// Daños Tierra
-						case 98 :// Daños Aire
-						case 99 :// Daños fuego
-						case 100 :// Daños neutral
-						case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-						case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-						case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-						case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-						case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
-							esDaño = true;
+						case 96 :// Da\u00f1os Agua
+						case 97 :// Da\u00f1os Tierra
+						case 98 :// Da\u00f1os Aire
+						case 99 :// Da\u00f1os fuego
+						case 100 :// Da\u00f1os neutral
+						case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+						case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+						case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+						case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+						case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+							esDa\u00f1o = true;
 							break;
 					}
 				}
-				if (!esTeleport || esDaño) {
+				if (!esTeleport || esDa\u00f1o) {
 					continue;
 				}
 			}
@@ -2089,29 +2103,29 @@ public class Inteligencia extends Thread {
 					case 5 :// empuja
 					case 6 :// atrae
 					case 82 :
-					case 85 :// Daños Agua %vida del atacante
-					case 86 :// Daños Tierra %vida del atacante
-					case 87 :// Daños Aire %vida del atacante
-					case 88 :// Daños Fuego %vida del atacante
-					case 89 :// Daños Neutral %vida del atacante
+					case 85 :// Da\u00f1os Agua %vida del atacante
+					case 86 :// Da\u00f1os Tierra %vida del atacante
+					case 87 :// Da\u00f1os Aire %vida del atacante
+					case 88 :// Da\u00f1os Fuego %vida del atacante
+					case 89 :// Da\u00f1os Neutral %vida del atacante
 					case 91 :// robo de vida Agua
 					case 92 :// robo de vida Tierra
 					case 93 :// robo de vida Aire
 					case 94 :// robo de vida fuego
 					case 95 :// robo de vida neutral
-					case 96 :// Daños Agua
-					case 97 :// Daños Tierra
-					case 98 :// Daños Aire
-					case 99 :// Daños fuego
-					case 100 :// Daños neutral
+					case 96 :// Da\u00f1os Agua
+					case 97 :// Da\u00f1os Tierra
+					case 98 :// Da\u00f1os Aire
+					case 99 :// Da\u00f1os fuego
+					case 100 :// Da\u00f1os neutral
 					case 180 :// invoca mob
 					case 181 :// invoca doble
 					case 185 :// invoca estatico
-					case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-					case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-					case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-					case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-					case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+					case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+					case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+					case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+					case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+					case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 					case 780 :// resucita
 						return -1;
 					case 141 :// mata al objetivo
@@ -2237,29 +2251,29 @@ public class Inteligencia extends Thread {
 					case 5 :// empuja
 					case 6 :// atrae
 					case 82 :
-					case 85 :// Daños Agua %vida del atacante
-					case 86 :// Daños Tierra %vida del atacante
-					case 87 :// Daños Aire %vida del atacante
-					case 88 :// Daños Fuego %vida del atacante
-					case 89 :// Daños Neutral %vida del atacante
+					case 85 :// Da\u00f1os Agua %vida del atacante
+					case 86 :// Da\u00f1os Tierra %vida del atacante
+					case 87 :// Da\u00f1os Aire %vida del atacante
+					case 88 :// Da\u00f1os Fuego %vida del atacante
+					case 89 :// Da\u00f1os Neutral %vida del atacante
 					case 91 :// robo de vida Agua
 					case 92 :// robo de vida Tierra
 					case 93 :// robo de vida Aire
 					case 94 :// robo de vida fuego
 					case 95 :// robo de vida neutral
-					case 96 :// Daños Agua
-					case 97 :// Daños Tierra
-					case 98 :// Daños Aire
-					case 99 :// Daños fuego
-					case 100 :// Daños neutral
+					case 96 :// Da\u00f1os Agua
+					case 97 :// Da\u00f1os Tierra
+					case 98 :// Da\u00f1os Aire
+					case 99 :// Da\u00f1os fuego
+					case 100 :// Da\u00f1os neutral
 					case 180 :// invoca mob
 					case 181 :// invoca doble
 					case 185 :// invoca estatico
-					case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-					case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-					case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-					case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-					case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+					case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+					case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+					case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+					case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+					case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 					case 780 :// resucita
 						return -1;
 					case 141 :// mata al objetivo
@@ -2300,7 +2314,7 @@ public class Inteligencia extends Thread {
 				if (_influencias.containsKey(objetivo) && _influencias.get(objetivo).containsKey(EH)) {
 					influencia = _influencias.get(objetivo).get(EH);
 				} else {
-					influencia = Constantes.getInflDañoPorEfecto(EH.getEfectoID(), _lanzador, objetivo, max, celdaLanzamientoID,
+					influencia = Constantes.getInflDa\u00f1oPorEfecto(EH.getEfectoID(), _lanzador, objetivo, max, celdaLanzamientoID,
 					SH);
 					if (!_influencias.containsKey(objetivo)) {
 						_influencias.put(objetivo, new HashMap<EfectoHechizo, Integer>());
@@ -2335,7 +2349,7 @@ public class Inteligencia extends Thread {
 		return influenciaTotal;
 	}
 	
-	private int calculaInfluenciaDaño(final Mapa mapa, final StatHechizo SH, final short celdaLanzamientoID,
+	private int calculaInfluenciaDa\u00f1o(final Mapa mapa, final StatHechizo SH, final short celdaLanzamientoID,
 	final short celdaLanzadorID, int filtroIA) {
 		if (SH == null) {
 			return -1;
@@ -2372,33 +2386,33 @@ public class Inteligencia extends Thread {
 					case 77 :// robo de PM
 					case 82 :// robar Pdv fijo
 					case 84 :// robo de PA
-					case 85 :// Daños Agua %vida del atacante
-					case 86 :// Daños Tierra %vida del atacante
-					case 87 :// Daños Aire %vida del atacante
-					case 88 :// Daños Fuego %vida del atacante
-					case 89 :// Daños Neutral %vida del atacante
+					case 85 :// Da\u00f1os Agua %vida del atacante
+					case 86 :// Da\u00f1os Tierra %vida del atacante
+					case 87 :// Da\u00f1os Aire %vida del atacante
+					case 88 :// Da\u00f1os Fuego %vida del atacante
+					case 89 :// Da\u00f1os Neutral %vida del atacante
 					case 91 :// robo de vida Agua
 					case 92 :// robo de vida Tierra
 					case 93 :// robo de vida Aire
 					case 94 :// robo de vida fuego
 					case 95 :// robo de vida neutral
-					case 96 :// Daños Agua
-					case 97 :// Daños Tierra
-					case 98 :// Daños Aire
-					case 99 :// Daños fuego
-					case 100 :// Daños neutral
+					case 96 :// Da\u00f1os Agua
+					case 97 :// Da\u00f1os Tierra
+					case 98 :// Da\u00f1os Aire
+					case 99 :// Da\u00f1os fuego
+					case 100 :// Da\u00f1os neutral
 					case 101 :// - PA
 					case 116 :// - Alcance
 					case 127 :// - PM
 					case 131 :// veneno X pdv por PA
 					case 132 :// deshechiza
 					case 140 :// pasar turno
-					case 145 :// - a los daños
+					case 145 :// - a los da\u00f1os
 					case 152 :// -#1{~1~2 a -}#2 a la suerte
 					case 153 :// -#1{~1~2 a -}#2 a la vitalidad
 					case 154 :// -#1{~1~2 a -}#2 a la agilidad
 					case 155 :// -#1{~1~2 a -}#2 a la inteligencia
-					case 156 :// -#1{~1~2 a -}#2 a la sabiduría
+					case 156 :// -#1{~1~2 a -}#2 a la sabidur\u00eda
 					case 157 :// -#1{~1~2 a -}#2 a la fuerza
 					case 162 :// - % probabilidad de perder PA
 					case 163 :// - % probabilidad de perder PM
@@ -2413,13 +2427,13 @@ public class Inteligencia extends Thread {
 					case 267 :// robo de vitalidad
 					case 268 :// robo de agilidad
 					case 269 :// robo de inteligencia
-					case 270 :// robo de sabiduría
+					case 270 :// robo de sabidur\u00eda
 					case 271 :// robo de fuerza
-					case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-					case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-					case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-					case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-					case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+					case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+					case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+					case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+					case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+					case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 						retorna = 3;
 						break;
 					case 141 :// mata al objetivo
@@ -2439,7 +2453,7 @@ public class Inteligencia extends Thread {
 		// }
 		for (final EfectoHechizo EH : efectos) {
 			ArrayList<Luchador> listaLuchadores = Hechizo.getObjetivosEfecto(mapa, _lanzador, EH, celdaLanzamientoID);
-			boolean esDaño = false;
+			boolean esDa\u00f1o = false;
 			switch (EH.getEfectoID()) {
 				case 4 :
 					continue;
@@ -2454,33 +2468,33 @@ public class Inteligencia extends Thread {
 				case 77 :// robo de PM
 				case 82 :// robar PDV fijo
 				case 84 :// robo de PA
-				case 85 :// Daños Agua %vida del atacante
-				case 86 :// Daños Tierra %vida del atacante
-				case 87 :// Daños Aire %vida del atacante
-				case 88 :// Daños Fuego %vida del atacante
-				case 89 :// Daños Neutral %vida del atacante
+				case 85 :// Da\u00f1os Agua %vida del atacante
+				case 86 :// Da\u00f1os Tierra %vida del atacante
+				case 87 :// Da\u00f1os Aire %vida del atacante
+				case 88 :// Da\u00f1os Fuego %vida del atacante
+				case 89 :// Da\u00f1os Neutral %vida del atacante
 				case 91 :// robo de vida Agua
 				case 92 :// robo de vida Tierra
 				case 93 :// robo de vida Aire
 				case 94 :// robo de vida fuego
 				case 95 :// robo de vida neutral
-				case 96 :// Daños Agua
-				case 97 :// Daños Tierra
-				case 98 :// Daños Aire
-				case 99 :// Daños fuego
-				case 100 :// Daños neutral
+				case 96 :// Da\u00f1os Agua
+				case 97 :// Da\u00f1os Tierra
+				case 98 :// Da\u00f1os Aire
+				case 99 :// Da\u00f1os fuego
+				case 100 :// Da\u00f1os neutral
 				case 101 :// - PA
 				case 116 :// - Alcance
 				case 127 :// - PM
 				case 131 :// veneno X pdv por PA
 				case 132 :// deshechiza
 				case 140 :// pasar turno
-				case 145 :// - a los daños
+				case 145 :// - a los da\u00f1os
 				case 152 :// -#1{~1~2 a -}#2 a la suerte
 				case 153 :// -#1{~1~2 a -}#2 a la vitalidad
 				case 154 :// -#1{~1~2 a -}#2 a la agilidad
 				case 155 :// -#1{~1~2 a -}#2 a la inteligencia
-				case 156 :// -#1{~1~2 a -}#2 a la sabiduría
+				case 156 :// -#1{~1~2 a -}#2 a la sabidur\u00eda
 				case 157 :// -#1{~1~2 a -}#2 a la fuerza
 				case 162 :// - % probabilidad de perder PA
 				case 163 :// - % probabilidad de perder PM
@@ -2495,14 +2509,14 @@ public class Inteligencia extends Thread {
 				case 267 :// robo de vitalidad
 				case 268 :// robo de agilidad
 				case 269 :// robo de inteligencia
-				case 270 :// robo de sabiduría
+				case 270 :// robo de sabidur\u00eda
 				case 271 :// robo de fuerza
-				case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-				case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-				case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-				case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-				case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
-					esDaño = true;
+				case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+				case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+				case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+				case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+				case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+					esDa\u00f1o = true;
 					break;
 			}
 			int max = EH.getValorParaPromediar();
@@ -2517,7 +2531,7 @@ public class Inteligencia extends Thread {
 				if (_influencias.containsKey(objetivo) && _influencias.get(objetivo).containsKey(EH)) {
 					influencia = _influencias.get(objetivo).get(EH);
 				} else {
-					influencia = Constantes.getInflDañoPorEfecto(EH.getEfectoID(), _lanzador, objetivo, max, celdaLanzamientoID,
+					influencia = Constantes.getInflDa\u00f1oPorEfecto(EH.getEfectoID(), _lanzador, objetivo, max, celdaLanzamientoID,
 					SH);
 					if (!_influencias.containsKey(objetivo)) {
 						_influencias.put(objetivo, new HashMap<EfectoHechizo, Integer>());
@@ -2551,7 +2565,7 @@ public class Inteligencia extends Thread {
 					default :
 						int preTotal = influencia * max;
 						if (_lanzador.esIAChafer() || _lanzador.getEquipoBin() != objetivo.getEquipoBin()) {
-							if (esDaño && influencia > 0) {
+							if (esDa\u00f1o && influencia > 0) {
 								retorna = 3;
 							}
 						} else {
@@ -2631,7 +2645,7 @@ public class Inteligencia extends Thread {
 		TotalStats stats = objetivo.getTotalStats();
 		if (stats.getTotalStatParaMostrar(Constantes.STAT_REDUCCION_FISICA) > 100 || stats.getTotalStatParaMostrar(
 		Constantes.STAT_REDUCCION_MAGICA) > 100 || stats.getTotalStatParaMostrar(
-		Constantes.STAT_MAS_DAÑOS_REDUCIDOS_NO_FECA) > 100)
+		Constantes.STAT_MAS_DA\u00f1OS_REDUCIDOS_NO_FECA) > 100)
 			return true;
 		return false;
 	}

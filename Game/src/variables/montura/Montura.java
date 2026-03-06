@@ -32,7 +32,7 @@ public class Montura implements Exchanger {
 	private Mapa _mapa;
 	private Celda _celda;
 	private final int _id, _colorID;
-	private int _dueñoID, _nivel = 1, _parejaID = -1, _certificadoID = -1;
+	private int _due\u00f1oID, _nivel = 1, _parejaID = -1, _certificadoID = -1;
 	private int _fatiga, _energia, _madurez, _serenidad, _amor, _resistencia;
 	private int _semiPod, _maxPod, _maxMadurez, _maxEnergia;
 	private long _experiencia, _tiempoInicioDescanso, _tiempoGestacion;
@@ -43,7 +43,7 @@ public class Montura implements Exchanger {
 	private Ubicacion _ubicacion = Ubicacion.PERGAMINO;// por defecto
 	private MonturaModelo _monturaModelo;
 	
-	public Montura(final int color, final int dueño, boolean castrado, boolean salvaje) {
+	public Montura(final int color, final int due\u00f1o, boolean castrado, boolean salvaje) {
 		_id = Mundo.sigIDMontura();
 		_sexo = SEXO_POSIBLES[Formulas.getRandomInt(0, SEXO_POSIBLES.length - 1)];
 		_colorID = color;
@@ -51,7 +51,7 @@ public class Montura implements Exchanger {
 		addExperiencia(Mundo.getExpMontura(MainServidor.INICIO_NIVEL_MONTURA));
 		_energia = getMaxEnergia();
 		_madurez = getMaxMadurez();
-		_dueñoID = dueño;
+		_due\u00f1oID = due\u00f1o;
 		if (castrado) {
 			castrarPavo();
 		}
@@ -87,7 +87,7 @@ public class Montura implements Exchanger {
 			}
 			addHabilidad(habilidad);
 		}
-		_dueñoID = madre.getDueñoID();
+		_due\u00f1oID = madre.getDue\u00f1oID();
 		_talla = 50;
 		_salvaje = false;
 		_tiempoGestacion = 0;
@@ -99,7 +99,7 @@ public class Montura implements Exchanger {
 	public Montura(final int id, final int color, final byte sexo, final int amor, final int resistencia, final int nivel,
 	final long exp, final String nombre, final int fatiga, final int energia, final byte reprod, final int madurez,
 	final int serenidad, final String objetos, final String anc, final String habilidad, final byte talla,
-	final short celda, final short mapa, final int dueño, final byte orientacion, final long fecundada, final int pareja,
+	final short celda, final short mapa, final int due\u00f1o, final byte orientacion, final long fecundada, final int pareja,
 	final byte salvaje) {
 		_id = id;
 		_colorID = color;
@@ -123,7 +123,7 @@ public class Montura implements Exchanger {
 				setUbicacion(Ubicacion.CERCADO);
 			}
 		}
-		_dueñoID = dueño;
+		_due\u00f1oID = due\u00f1o;
 		_orientacion = orientacion;
 		_tiempoGestacion = fecundada;
 		_parejaID = pareja;
@@ -260,7 +260,7 @@ public class Montura implements Exchanger {
 	public String getListaExchanger(Personaje perso) {
 		final StringBuilder objetos = new StringBuilder();
 		for (final Objeto obj : _objetos.values()) {
-			objetos.append("O" + obj.stringObjetoConGuiño());
+			objetos.append("O" + obj.stringObjetoConGui\u00f1o());
 		}
 		return objetos.toString();
 	}
@@ -351,12 +351,12 @@ public class Montura implements Exchanger {
 		GestorSalida.ENVIAR_EsK_MOVER_A_TIENDA_COFRE_BANCO(perso, str);
 	}
 	
-	public void setDueñoID(final int dueño) {
-		_dueñoID = dueño;
+	public void setDue\u00f1oID(final int due\u00f1o) {
+		_due\u00f1oID = due\u00f1o;
 	}
 	
-	public int getDueñoID() {
-		return _dueñoID;
+	public int getDue\u00f1oID() {
+		return _due\u00f1oID;
 	}
 	
 	public int getNivel() {
@@ -713,8 +713,8 @@ public class Montura implements Exchanger {
 		}
 	}
 	
-	public String getStringColor(final String colorDueñoPavo) {
-		return _colorID + (_habilidades.contains(Constantes.HABILIDAD_CAMALEON) ? ("," + colorDueñoPavo) : "");
+	public String getStringColor(final String colorDue\u00f1oPavo) {
+		return _colorID + (_habilidades.contains(Constantes.HABILIDAD_CAMALEON) ? ("," + colorDue\u00f1oPavo) : "");
 	}
 	
 	public void addHabilidad(final byte habilidad) {
@@ -774,15 +774,15 @@ public class Montura implements Exchanger {
 		}
 		str.append("^" + _talla + ";");
 		try {
-			str.append(Mundo.getPersonaje(_dueñoID).getNombre());
+			str.append(Mundo.getPersonaje(_due\u00f1oID).getNombre());
 		} catch (final Exception e) {
-			str.append("Sin Dueño");
+			str.append("Sin Due\u00f1o");
 		}
 		str.append(";" + _nivel + ";" + _colorID);
 		return str.toString();
 	}
 	
-	public void moverMontura(final Personaje dueño, final int dir, final int celdasAMover, final boolean alejar) {
+	public void moverMontura(final Personaje due\u00f1o, final int dir, final int celdasAMover, final boolean alejar) {
 		final Cercado cercado = _mapa.getCercado();
 		if (_mapa == null || _celda == null || cercado == null) {
 			return;
@@ -790,10 +790,10 @@ public class Montura implements Exchanger {
 		int direccion;
 		final short celdaInicio = _celda.getID();
 		if (dir == -1) {
-			if (dueño == null || dueño.getCelda().getID() == celdaInicio) {
+			if (due\u00f1o == null || due\u00f1o.getCelda().getID() == celdaInicio) {
 				return;
 			}
-			direccion = Camino.direccionEntreDosCeldas(_mapa, celdaInicio, dueño.getCelda().getID(), true);
+			direccion = Camino.direccionEntreDosCeldas(_mapa, celdaInicio, due\u00f1o.getCelda().getID(), true);
 		} else {
 			direccion = dir;
 		}
@@ -918,7 +918,7 @@ public class Montura implements Exchanger {
 		.esCastrado() || esCastrado()) {
 			return false;
 		}
-		if (_mapa.getCercado().esPublico() && montura.getDueñoID() != _dueñoID) {
+		if (_mapa.getCercado().esPublico() && montura.getDue\u00f1oID() != _due\u00f1oID) {
 			return false;
 		}
 		if (montura.getCapacidades().contains(Constantes.HABILIDAD_ENAMORADA) || _habilidades.contains(
@@ -951,12 +951,12 @@ public class Montura implements Exchanger {
 		if (esSalvaje()) {
 			int prob = Formulas.getRandomInt(1, 100);
 			if (prob <= MainServidor.PROBABILIDAD_ESCAPAR_MONTURA_DESPUES_FECUNDAR) {
-				Personaje dueñoOtro = Mundo.getPersonaje(getDueñoID());
-				if (dueñoOtro != null) {
-					if (dueñoOtro.enLinea()) {
-						GestorSalida.ENVIAR_Im_INFORMACION(dueñoOtro, "0111; <b>" + getNombre() + "</b>~" + getMapa().getID());
+				Personaje due\u00f1oOtro = Mundo.getPersonaje(getDue\u00f1oID());
+				if (due\u00f1oOtro != null) {
+					if (due\u00f1oOtro.enLinea()) {
+						GestorSalida.ENVIAR_Im_INFORMACION(due\u00f1oOtro, "0111; <b>" + getNombre() + "</b>~" + getMapa().getID());
 					} else {
-						dueñoOtro.getCuenta().addMensaje("0111; <b>" + getNombre() + "</b>~" + getMapa().getID(), true);
+						due\u00f1oOtro.getCuenta().addMensaje("0111; <b>" + getNombre() + "</b>~" + getMapa().getID(), true);
 					}
 				}
 				Mundo.eliminarMontura(this);

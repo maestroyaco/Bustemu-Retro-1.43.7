@@ -10,10 +10,10 @@ public class ObjetoMercadillo implements Comparable<ObjetoMercadillo> {
 	private final long _precio;
 	private final Objeto _objeto;
 	
-	public ObjetoMercadillo(final long precio, final int cant, final int dueño, final Objeto objeto, int mercadilloID) {
+	public ObjetoMercadillo(final long precio, final int cant, final int due\u00f1o, final Objeto objeto, int mercadilloID) {
 		_precio = precio;
 		_tipoCantidad = cant;
-		_cuentaID = dueño;
+		_cuentaID = due\u00f1o;
 		_objeto = objeto;
 		_mercadilloID = mercadilloID;
 	}

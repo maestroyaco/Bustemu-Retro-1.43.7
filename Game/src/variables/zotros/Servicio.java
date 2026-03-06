@@ -221,7 +221,7 @@ public class Servicio {
 						_perso.refrescarEnMapa();
 						GestorSalida.ENVIAR_bV_CERRAR_PANEL(_perso);
 					} else {
-						GestorSalida.enviar(_perso, "b—");
+						GestorSalida.enviar(_perso, "b\u00f1");
 					}
 					break;
 				case Constantes.SERVICIO_MIMOBIONTE :
@@ -246,7 +246,7 @@ public class Servicio {
 						Constantes.OBJETO_TIPO_MARTILLO, Constantes.OBJETO_TIPO_PALA, Constantes.OBJETO_TIPO_ANILLO,
 						Constantes.OBJETO_TIPO_CINTURON, Constantes.OBJETO_TIPO_BOTAS, Constantes.OBJETO_TIPO_SOMBRERO,
 						Constantes.OBJETO_TIPO_CAPA, Constantes.OBJETO_TIPO_MASCOTA, Constantes.OBJETO_TIPO_HACHA,
-						Constantes.OBJETO_TIPO_PICO, Constantes.OBJETO_TIPO_GUADA—A, Constantes.OBJETO_TIPO_MOCHILA,
+						Constantes.OBJETO_TIPO_PICO, Constantes.OBJETO_TIPO_GUADA\u00f1A, Constantes.OBJETO_TIPO_MOCHILA,
 						Constantes.OBJETO_TIPO_ESCUDO};
 						boolean esTipo = false;
 						for (int t : tipos) {

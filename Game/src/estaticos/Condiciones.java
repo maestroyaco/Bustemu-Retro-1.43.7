@@ -12,7 +12,7 @@ import variables.objeto.Objeto;
 import variables.personaje.Personaje;
 import variables.stats.Stats;
 import variables.stats.TotalStats;
-import com.singularsys.jep.Jep;
+import org.nfunk.jep.JEP;
 
 public class Condiciones {
 	public static boolean validaCondiciones(final Personaje perso, String condiciones) {
@@ -24,7 +24,7 @@ public class Condiciones {
 			|| condiciones.equalsIgnoreCase("ALL")) {
 				return true;
 			}
-			final Jep jep = new Jep();
+			final JEP jep = new JEP();
 			for (String s : splittear(condiciones)) {
 				try {
 					if (s.isEmpty()) {
@@ -247,9 +247,9 @@ public class Condiciones {
 				}
 			}
 			condiciones = condiciones.replace("&", "&&").replace("=", "==").replace("|", "||").replace("!", "!=");
-			jep.parse(condiciones);
-			// System.out.println("jep condition: " + jep.rootNodeToString());
-			final Object resultado = jep.evaluate();
+			jep.parseExpression(condiciones);
+			// System.out.println("jep condition: " + jep.getTopNode());
+			final Object resultado = jep.getValueAsObject();
 			boolean ok = false;
 			if (resultado != null) {
 				ok = Boolean.valueOf(resultado.toString());

@@ -161,7 +161,7 @@ public class Comandos {
 				}
 				objetivo.setInmovil(true);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a été freeze.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a \u00e9t\u00e9 freeze.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido inmovilizado el personaje " + objetivo.getNombre());
 				}
@@ -185,7 +185,7 @@ public class Comandos {
 				}
 				objetivo.setInmovil(false);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " peut désormais bouger.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " peut d\u00e9sormais bouger.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido movilizado el personaje " + objetivo.getNombre());
 				}
@@ -202,8 +202,8 @@ public class Comandos {
 					objetivos.setInmovil(true);
 				}
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Tous les joueurs présents sur la MAP " + mapa.getID()
-					+ " ont été freeze.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Tous les joueurs pr\u00e9sents sur la MAP " + mapa.getID()
+					+ " ont \u00e9t\u00e9 freeze.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Han sido inmovilizados todos los personajes del mapa " + mapa
 					.getID());
@@ -218,7 +218,7 @@ public class Comandos {
 					objetivos.setInmovil(false);
 				}
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Les joueurs de cette map ont été défreeze.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Les joueurs de cette map ont \u00e9t\u00e9 d\u00e9freeze.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Han sido movilizados todos los personajes del mapa " + mapa
 					.getID());
@@ -231,7 +231,7 @@ public class Comandos {
 					mapa = Mundo.getMapa(Short.parseShort(infos[1]));
 				mapa.setMuteado(true);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Map mutée.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Map mut\u00e9e.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido muteado el mapa " + mapa.getID());
 				}
@@ -284,7 +284,7 @@ public class Comandos {
 				}
 				if (numInt < 0) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La durée de mute est invalide.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La dur\u00e9e de mute est invalide.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La duracion es invalida.");
 					}
@@ -292,7 +292,7 @@ public class Comandos {
 				}
 				objetivo.getCuenta().mutear(true, numInt);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a été mute pour " + numInt
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a \u00e9t\u00e9 mute pour " + numInt
 					+ " secondes.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido mute " + objetivo.getNombre() + " por " + numInt
@@ -320,7 +320,7 @@ public class Comandos {
 				}
 				objetivo.getCuenta().mutear(false, 0);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur peut désormais parler.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur peut d\u00e9sormais parler.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El jugador " + objetivo.getNombre() + " ha sido desmuteado");
 				}
@@ -352,7 +352,7 @@ public class Comandos {
 				final short[] celdas = {127, 119, 359, 351};
 				objetivo.teleport((short) 666, celdas[Formulas.getRandomInt(0, 3)]);
 				objetivo.setCalabozo(true);
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a été envoyé en prison");
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a \u00e9t\u00e9 envoy\u00e9 en prison");
 				break;
 			case "UNJAIL" :
 			case "LIBERAR" :
@@ -375,9 +375,9 @@ public class Comandos {
 				^ Personaje.RA_PUEDE_USAR_OBJETOS);
 				GestorSalida.ENVIAR_AR_RESTRICCIONES_PERSONAJE(objetivo);
 				objetivo.setCalabozo(false);
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a été libéré.");
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a \u00e9t\u00e9 lib\u00e9r\u00e9.");
 				break;
-			case "TAMAÑO" :
+			case "TAMA\u00d1O" :
 			case "TALLA" :
 			case "SIZE" :
 				try {
@@ -407,7 +407,7 @@ public class Comandos {
 				objetivo.setTalla(numShort);
 				objetivo.refrescarEnMapa();
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La taille du joueur " + objetivo.getNombre() + " a été modifiée");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La taille du joueur " + objetivo.getNombre() + " a \u00e9t\u00e9 modifi\u00e9e");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La talla del personaje " + objetivo.getNombre()
 					+ " ha sido modificada");
@@ -453,7 +453,7 @@ public class Comandos {
 				objetivo.setGfxID(numShort);
 				objetivo.refrescarEnMapa();
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a changé d'apparence.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a chang\u00e9 d'apparence.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre()
 					+ " a cambiado de apariencia");
@@ -477,9 +477,9 @@ public class Comandos {
 						+ "Record de connexions: " + ServidorServer.getRecordJugadores() + "\n" + "====================");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "====================\n" + MainServidor.NOMBRE_SERVER
-						+ " (ELBUSTEMU " + Constantes.VERSION_EMULADOR + ")\n\nEnLínea: " + dia + "d " + hora + "h " + minuto + "m "
-						+ segundo + "s\n" + "Jugadores en línea: " + ServidorServer.nroJugadoresLinea() + "\n"
-						+ "Record de conexión: " + ServidorServer.getRecordJugadores() + "\n" + "====================");
+						+ " (ELBUSTEMU " + Constantes.VERSION_EMULADOR + ")\n\nEnL\u00ednea: " + dia + "d " + hora + "h " + minuto + "m "
+						+ segundo + "s\n" + "Jugadores en l\u00ednea: " + ServidorServer.nroJugadoresLinea() + "\n"
+						+ "Record de conexi\u00f3n: " + ServidorServer.getRecordJugadores() + "\n" + "====================");
 					}
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio un error");
@@ -532,7 +532,7 @@ public class Comandos {
 				for (final GrupoMob gm : mapa.getGrupoMobsTotales().values()) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "ID: " + gm.getID() + " - Case ID: " + gm.getCeldaID()
-						+ " - Monstres: " + gm.getStrGrupoMob() + " - Quantité: " + gm.getCantMobs() + " - Type: " + gm.getTipo()
+						+ " - Monstres: " + gm.getStrGrupoMob() + " - Quantit\u00e9: " + gm.getCantMobs() + " - Type: " + gm.getTipo()
 						+ " - Kamas: " + gm.getKamasHeroico() + " - ItemsID: " + gm.getIDsObjeto());
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "ID: " + gm.getID() + " - CeldaID: " + gm.getCeldaID()
@@ -545,7 +545,7 @@ public class Comandos {
 			case "CANT_SALVANDO" :
 			case "SAVE_TIMES" :
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le serveur a été sauvegardé " + Mundo.CANT_SALVANDO + " fois.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le serveur a \u00e9t\u00e9 sauvegard\u00e9 " + Mundo.CANT_SALVANDO + " fois.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El salvado del servidor esta en el " + Mundo.CANT_SALVANDO);
 				}
@@ -564,7 +564,7 @@ public class Comandos {
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "====================\nListe de joueur en ligne:");
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "====================\nLista de los jugadores en línea:");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "====================\nLista de los jugadores en l\u00ednea:");
 				}
 				int players = 0;
 				for (ServidorSocket ep : ServidorServer.getClientes()) {
@@ -678,7 +678,7 @@ public class Comandos {
 				}
 				if (!objetivo.enLinea()) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 					}
@@ -687,7 +687,7 @@ public class Comandos {
 				if (objetivo.getGremio() != null || objetivo.getMiembroGremio() != null) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre()
-						+ " appartient déjà à une guilde.");
+						+ " appartient d\u00e9j\u00e0 \u00e0 une guilde.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " ya tiene gremio");
 					}
@@ -697,7 +697,7 @@ public class Comandos {
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Panel de guilde ouvert pour : " + objetivo.getNombre());
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se abrió la ventana de gremio al personaje " + objetivo
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se abri\u00f3 la ventana de gremio al personaje " + objetivo
 					.getNombre());
 				}
 				break;
@@ -727,7 +727,7 @@ public class Comandos {
 				objetivo.refrescarEnMapa();
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre()
-					+ " a retrouvé son apparence initiale.");
+					+ " a retrouv\u00e9 son apparence initiale.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El jugador " + objetivo.getNombre() + " ha sido deformado");
 				}
@@ -739,7 +739,7 @@ public class Comandos {
 					objetivo = Mundo.getPersonajePorNombre(infos[1]);
 				} else {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Veuillez indiquer le nom du joueur à rejoindre.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Veuillez indiquer le nom du joueur \u00e0 rejoindre.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Hace falta colocar un nombre de jugador");
 					}
@@ -755,7 +755,7 @@ public class Comandos {
 				}
 				if (!objetivo.enLinea()) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 					}
@@ -768,7 +768,7 @@ public class Comandos {
 					teleportado = Mundo.getPersonajePorNombre(infos[2]);
 					if (teleportado == null || !teleportado.enLinea()) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur à téléporter n'existe pas ou n'est pas connecté");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur \u00e0 t\u00e9l\u00e9porter n'existe pas ou n'est pas connect\u00e9");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje a teleportar no existe o no esta conectado");
 						}
@@ -814,7 +814,7 @@ public class Comandos {
 				}
 				teleportado.teleport(mapaID, celdaID);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur a été téléporté");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur a \u00e9t\u00e9 t\u00e9l\u00e9port\u00e9");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El jugador " + teleportado.getNombre()
 					+ " fue teletransportado donde jugador " + objetivo.getNombre() + " (Map: " + objetivo.getMapa().getID()
@@ -827,7 +827,7 @@ public class Comandos {
 					objetivo = Mundo.getPersonajePorNombre(infos[1]);
 				} else {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Veuillez indiquer le nom du joueur à rejoindre.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Veuillez indiquer le nom du joueur \u00e0 rejoindre.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Hace falta colocar un nombre de jugador");
 					}
@@ -843,7 +843,7 @@ public class Comandos {
 				}
 				if (!objetivo.enLinea()) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 					}
@@ -888,7 +888,7 @@ public class Comandos {
 					traedor = Mundo.getPersonajePorNombre(infos[2]);
 					if (traedor == null || !traedor.enLinea()) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personajeno no esta conectado");
 						}
@@ -913,7 +913,7 @@ public class Comandos {
 					infos = mensaje.split(" ", 2);
 					if (infos.length < 2) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Veuillez indiquer le message à envoyer!");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Veuillez indiquer le message ? envoyer!");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Falta argumentos");
 						}
@@ -948,7 +948,7 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CELLID INVALIDE!");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inválida");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inv?lida");
 					}
 					return;
 				}
@@ -965,7 +965,7 @@ public class Comandos {
 					}
 					if (!objetivo.enLinea()) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 						}
@@ -974,7 +974,7 @@ public class Comandos {
 				}
 				if (objetivo.getPelea() != null) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur à téléporter est en combat.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur ? t?l?porter est en combat.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje a teleportar esta en combate");
 					}
@@ -982,7 +982,7 @@ public class Comandos {
 				}
 				if (objetivo.estaExchange()) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur à téléporter est entrain de crafter.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur ? t?l?porter est entrain de crafter.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje a teleportar esta haciendo un trabajo");
 					}
@@ -990,7 +990,7 @@ public class Comandos {
 				}
 				if (objetivo.getTutorial() != null) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur à téléporter est en tutoriel.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur ? t?l?porter est en tutoriel.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje a teleportar esta en un tutorial");
 					}
@@ -998,7 +998,7 @@ public class Comandos {
 				}
 				if (!objetivo.getHuir()) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur à téléporter ne peut fuir d'un combat PVP");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur ? t?l?porter ne peut fuir d'un combat PVP");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje a teleportar no puede huir de una pelea PVP");
 					}
@@ -1037,7 +1037,7 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CELLID INVALIDE!");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inválida");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inv?lida");
 					}
 					return;
 				}
@@ -1054,7 +1054,7 @@ public class Comandos {
 					}
 					if (!objetivo.enLinea()) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 						}
@@ -1087,7 +1087,7 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Position ou continent invalide!");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Posicion o continente inválido");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Posicion o continente inv?lido");
 					}
 					return;
 				}
@@ -1095,7 +1095,7 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CellID invalide!");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inválido");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inv?lido");
 					}
 					return;
 				}
@@ -1112,7 +1112,7 @@ public class Comandos {
 					}
 					if (!objetivo.enLinea()) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 						}
@@ -1129,7 +1129,7 @@ public class Comandos {
 				}
 				objetivo.teleport(mapa.getID(), celdaID);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a été téléporté!");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a ?t? t?l?port?!");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El jugador " + objetivo.getNombre() + " ha sido teletransportado");
 				}
@@ -1266,7 +1266,7 @@ public class Comandos {
 				} catch (final Exception e) {}
 				if (numInt == 0) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Durée du ban incorrecte!");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Dur?e du ban incorrecte!");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Tiempo de baneo incorrecto");
 					}
@@ -1277,7 +1277,7 @@ public class Comandos {
 					objetivo.getServidorSocket().cerrarSocket(true, " command BANEAR");
 				}
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a été banni par " + numInt
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a ?t? banni par " + numInt
 					+ " minutes.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido baneado " + objetivo.getNombre() + " por " + numInt
@@ -1309,7 +1309,7 @@ public class Comandos {
 				}
 				objetivo.getCuenta().setBaneado(false, 0);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a été débanni.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a ?t? d?banni.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido desbaneado " + objetivo.getNombre());
 				}
@@ -1347,7 +1347,7 @@ public class Comandos {
 					if (objetivo.enLinea()) {
 						objetivo.getServidorSocket().cerrarSocket(true, "command Banear IP");
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur a été kick.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur a ?t? kick.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El jugador fue retirado.");
 						}
@@ -1392,7 +1392,7 @@ public class Comandos {
 				}
 				GestorSQL.DELETE_BAN_IP(infos[1]);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'ip " + infos[1] + " a été débannie.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'ip " + infos[1] + " a ?t? d?bannie.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se borro la ip " + infos[1] + " de la lista de ip baneadas");
 				}
@@ -1425,7 +1425,7 @@ public class Comandos {
 				}
 				if (!objetivo.enLinea()) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 					}
@@ -1442,7 +1442,7 @@ public class Comandos {
 						return;
 					}
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a été kick.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a ?t? kick.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido expulsado " + objetivo.getNombre());
 					}
@@ -1459,7 +1459,7 @@ public class Comandos {
 					}
 				}
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Actuellement, le nombre de tickets achetés est de " + numInt + ".");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Actuellement, le nombre de tickets achet?s est de " + numInt + ".");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Actualmente hay " + numInt + " boletos comprados.");
 				}
@@ -1485,7 +1485,7 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Une erreur est survenue lors de la sauvegarde en BDD!");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrió un error al guardar la actualización en la BD.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurri? un error al guardar la actualizaci?n en la BD.");
 					}
 					return;
 				} else {
@@ -1505,7 +1505,7 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Une erreur est survenue lors de la sauvegarde en BDD!");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrió un error al guardar la actualización en la BD.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurri? un error al guardar la actualizaci?n en la BD.");
 					}
 					return;
 				} else {
@@ -1526,11 +1526,11 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Une erreur est survenue lors de la sauvegarde en BDD!");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrió un error al guardar la actualización en la BD.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurri? un error al guardar la actualizaci?n en la BD.");
 					}
 				} else {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Les positions de combat ont été supprimées.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Les positions de combat ont ?t? supprim?es.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Las posiciones de pelea han sido borradas.");
 					}
@@ -1556,7 +1556,7 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Une erreur est survenue lors de la sauvegarde en BDD!");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrió un error al guardar la actualización en la BD.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurri? un error al guardar la actualizaci?n en la BD.");
 					}
 				}
 				break;
@@ -1590,7 +1590,7 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Une erreur est survenue lors de la sauvegarde en BDD.");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrió un error al guardar la actualización en la BD.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurri? un error al guardar la actualizaci?n en la BD.");
 					}
 					return;
 				}
@@ -1708,7 +1708,7 @@ public class Comandos {
 				objetivo.cambiarAlineacion(alineacion, true);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'alignement du joueur " + objetivo.getNombre()
-					+ " a été modifié.");
+					+ " a ?t? modifi?.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La alineacion del personaje " + objetivo.getNombre()
 					+ " ha sido modificada");
@@ -1720,7 +1720,7 @@ public class Comandos {
 					numInt = Integer.parseInt(infos[1]);
 				} catch (final Exception e) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Veuillez indiquer l'id du métier.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Veuillez indiquer l'id du m?tier.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos Incorrectos");
 					}
@@ -1728,7 +1728,7 @@ public class Comandos {
 				}
 				if (Mundo.getOficio(numInt) == null) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'ID du métier est incorrect.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'ID du m?tier est incorrect.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "ID Oficio no existe");
 					}
@@ -1748,14 +1748,14 @@ public class Comandos {
 				}
 				if (objetivo.aprenderOficio(Mundo.getOficio(numInt), 0) != -1) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur a appris ce métier " + numInt);
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur a appris ce m?tier " + numInt);
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " ha aprendido el oficio "
 						+ numInt);
 					}
 				} else {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur ne peut pas apprendre ce métier.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur ne peut pas apprendre ce m?tier.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre()
 						+ " no puede aprender ese oficio");
@@ -1787,7 +1787,7 @@ public class Comandos {
 					}
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le pourcentage de vie du joueur " + objetivo.getNombre()
-						+ " a été modifié en " + porcPDV);
+						+ " a ?t? modifi? en " + porcPDV);
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido modificado el porcentaje de vida " + objetivo.getNombre()
 						+ " a " + porcPDV);
@@ -1897,7 +1897,7 @@ public class Comandos {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Valor incorrecto (segundos)");
 						return;
 					}
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se expulsó " + ServidorServer.borrarClientesBug(segundos)
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se expuls? " + ServidorServer.borrarClientesBug(segundos)
 					+ " clientes bugeados");
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "EXCEPTION COMANDO");
@@ -1934,7 +1934,7 @@ public class Comandos {
 			// break;
 			case "PANEL_ADMIN" :
 				try {
-					GestorSalida.enviarEnCola(_perso, "ÑP" + mapa.getCapabilitiesCompilado() + "|" + mapa.getMaxGrupoDeMobs()
+					GestorSalida.enviarEnCola(_perso, "?P" + mapa.getCapabilitiesCompilado() + "|" + mapa.getMaxGrupoDeMobs()
 					+ "|" + mapa.getMaxMobsPorGrupo() + "|" + mapa.getMaxMercantes(), false);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
@@ -1974,7 +1974,7 @@ public class Comandos {
 					}
 					if (!objetivo.enLinea()) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 						}
@@ -1992,7 +1992,7 @@ public class Comandos {
 						args = infos[3];
 					}
 					Accion.realizar_Accion_Estatico(tipoAccion, args, objetivo, null, -1, (short) -1);
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " realizó la acción "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " realiz? la acci?n "
 					+ tipoAccion + " con los argumentos " + args);
 				} catch (Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos incorrectos");
@@ -2001,8 +2001,8 @@ public class Comandos {
 			case "FIJAR_STATS_MOB" :
 			case "FIJAR_STATS" :
 			case "SET_STATS_MOB" :
-			case "FIJAR_DAÑOS" :
-			case "FIJAR_DAÑO" :
+			case "FIJAR_DA?OS" :
+			case "FIJAR_DA?O" :
 			case "MODIFICAR_STATS_MOB" :
 				try {
 					int id = 0;
@@ -2049,12 +2049,12 @@ public class Comandos {
 						GestorSalida.ENVIAR_BN_NADA(_perso);
 						return;
 					}
-					GestorSalida.ENVIAR_ÑJ_STATS_DEFECTO_MOB(_perso, mobModelo.strStatsTodosMobs());
+					GestorSalida.ENVIAR_\u00D1J_STATS_DEFECTO_MOB(_perso, mobModelo.strStatsTodosMobs());
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
 				break;
-			case "TEST_DAÑO" :
+			case "TEST_DA\u00F1O" :
 				try {
 					int id = 0;
 					byte grado = 1;
@@ -2074,7 +2074,7 @@ public class Comandos {
 						GestorSalida.ENVIAR_BN_NADA(_perso);
 						return;
 					}
-					GestorSalida.ENVIAR_ÑK_TEST_DAÑO_MOB(_perso, mobModelo.calculoDaño(grado, stats));
+					GestorSalida.ENVIAR_\u00D1K_TEST_DA\u00F1O_MOB(_perso, mobModelo.calculoDa\u00f1o(grado, stats));
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -2256,7 +2256,7 @@ public class Comandos {
 				}
 				try {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " possède " + GestorSQL
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " poss?de " + GestorSQL
 						.GET_OGRINAS_CUENTA(objetivo.getCuentaID()) + " ogrines/points");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " posee " + GestorSQL
@@ -2278,7 +2278,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.SEGUNDOS_TURNO_PELEA = segundos;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el SEGUNDOS_TURNO_PELEA a "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el SEGUNDOS_TURNO_PELEA a "
 					+ MainServidor.SEGUNDOS_TURNO_PELEA + " segundos");
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
@@ -2296,7 +2296,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.MINUTOS_ALIMENTACION_MASCOTA = minutos;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el MINUTOS_ALIMENTACION_MASCOTA a "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el MINUTOS_ALIMENTACION_MASCOTA a "
 					+ MainServidor.MINUTOS_ALIMENTACION_MASCOTA + " minutos");
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
@@ -2315,7 +2315,7 @@ public class Comandos {
 					}
 					MainServidor.SEGUNDOS_MOVER_MONTURAS = segundos;
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso,
-					"El Tiempo para que los dragopavos se muevan automáticamente ha sido modificado a "
+					"El Tiempo para que los dragopavos se muevan autom?ticamente ha sido modificado a "
 					+ MainServidor.SEGUNDOS_MOVER_MONTURAS + " segundos");
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
@@ -2333,7 +2333,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.MINUTOS_GESTACION_MONTURA = minutos;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el MINUTOS_PARIR_MONTURA a "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el MINUTOS_PARIR_MONTURA a "
 					+ MainServidor.MINUTOS_GESTACION_MONTURA + " minutos");
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
@@ -2350,7 +2350,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_FM = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_FM a " + MainServidor.RATE_FM);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_FM a " + MainServidor.RATE_FM);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -2365,7 +2365,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_PODS = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_PODS a " + MainServidor.RATE_PODS);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_PODS a " + MainServidor.RATE_PODS);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -2380,7 +2380,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_CAPTURA_MONTURA = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_CAPTURA_MONTURA a "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_CAPTURA_MONTURA a "
 					+ MainServidor.RATE_CAPTURA_MONTURA);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
@@ -2396,7 +2396,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_KAMAS = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_KAMAS a " + MainServidor.RATE_KAMAS);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_KAMAS a " + MainServidor.RATE_KAMAS);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -2411,7 +2411,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_DROP_NORMAL = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_DROP a " + MainServidor.RATE_DROP_NORMAL);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_DROP a " + MainServidor.RATE_DROP_NORMAL);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -2428,7 +2428,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_XP_PVM = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_XP_PVM a " + MainServidor.RATE_XP_PVM);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_XP_PVM a " + MainServidor.RATE_XP_PVM);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -2445,7 +2445,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_XP_PVP = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_XP_PVP a " + MainServidor.RATE_XP_PVP);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_XP_PVP a " + MainServidor.RATE_XP_PVP);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -2463,7 +2463,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_XP_OFICIO = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_XP_OFICIO a " + MainServidor.RATE_XP_OFICIO);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_XP_OFICIO a " + MainServidor.RATE_XP_OFICIO);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -2481,7 +2481,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_CRIANZA_MONTURA = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_CRIANZA_MONTURA a "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_CRIANZA_MONTURA a "
 					+ MainServidor.RATE_CRIANZA_MONTURA);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
@@ -2498,7 +2498,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_HONOR = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_HONOR a " + MainServidor.RATE_HONOR);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_HONOR a " + MainServidor.RATE_HONOR);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -2513,7 +2513,7 @@ public class Comandos {
 						return;
 					}
 					MainServidor.RATE_DROP_ARMAS_ETEREAS = rate;
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el RATE_DROP_ARMAS_ETEREAS a "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el RATE_DROP_ARMAS_ETEREAS a "
 					+ MainServidor.RATE_DROP_ARMAS_ETEREAS);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
@@ -2916,7 +2916,7 @@ public class Comandos {
 					if (!ServidorSocket.RASTREAR_CUENTAS.contains(objetivo.getCuentaID())) {
 						ServidorSocket.RASTREAR_CUENTAS.add(objetivo.getCuentaID());
 					}
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se agregó a la lista de rastreos: " + infos[1]);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se agreg? a la lista de rastreos: " + infos[1]);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una exception");
 				}
@@ -2939,7 +2939,7 @@ public class Comandos {
 					if (!ServidorSocket.RASTREAR_CUENTAS.contains(cuenta.getID())) {
 						ServidorSocket.RASTREAR_CUENTAS.add(cuenta.getID());
 					}
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se agregó a la lista de rastreos: " + infos[1]);
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se agreg? a la lista de rastreos: " + infos[1]);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una exception");
 				}
@@ -2992,12 +2992,12 @@ public class Comandos {
 					} catch (final Exception e) {}
 					final MisionEtapaModelo etapa = Mundo.getEtapa(id);
 					if (etapa == null) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misión no existe");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misi?n no existe");
 						return;
 					}
 					etapa.setRecompensa(args);
 					GestorSQL.UPDATE_RECOMPENSA_ETAPA(id, args);
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misión (" + id + ") " + etapa.getNombre()
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misi?n (" + id + ") " + etapa.getNombre()
 					+ " ha modificado sus recompensas a " + args);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una exception");
@@ -3020,12 +3020,12 @@ public class Comandos {
 					} catch (final Exception e) {}
 					final MisionEtapaModelo etapa = Mundo.getEtapa(id);
 					if (etapa == null) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misión no existe");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misi?n no existe");
 						return;
 					}
 					etapa.setObjetivos(args);
 					GestorSQL.UPDATE_ETAPA(id, args);
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misión (" + id + ") " + etapa.getNombre()
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misi?n (" + id + ") " + etapa.getNombre()
 					+ " ha modificado sus objetivos a " + args);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una exception");
@@ -3045,10 +3045,10 @@ public class Comandos {
 					}
 					final MisionEtapaModelo etapa = Mundo.getEtapa(id);
 					if (etapa == null) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misión no existe");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misi?n no existe");
 						return;
 					}
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misión (" + id + ") " + etapa.getNombre()
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La etapa de misi?n (" + id + ") " + etapa.getNombre()
 					+ " tiene como objetivos: " + etapa.strObjetivos());
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una exception");
@@ -3083,7 +3083,7 @@ public class Comandos {
 					} catch (final Exception e) {}
 					final MisionModelo mision = Mundo.getMision(id);
 					if (mision == null) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La misión no existe");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La misi?n no existe");
 						return;
 					}
 					mision.setEtapas(etapas);
@@ -3091,7 +3091,7 @@ public class Comandos {
 					mision.setPreguntas(pregMisCumplida, Mision.ESTADO_COMPLETADO);
 					mision.setPreguntas(pregMisIncompleta, Mision.ESTADO_INCOMPLETO);
 					GestorSQL.UPDATE_MISION(id, etapas, pregDarMision, pregMisCumplida, pregMisIncompleta);
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La misión (" + id + ") " + mision.getNombre()
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La misi?n (" + id + ") " + mision.getNombre()
 					+ " ha modificado sus etapas: " + etapas + ", pregDarMision: " + pregDarMision + ", pregMisCumplida: "
 					+ pregMisCumplida + ", pregMisIncompleta: " + pregMisIncompleta);
 				} catch (final Exception e) {
@@ -3110,10 +3110,10 @@ public class Comandos {
 					}
 					final MisionModelo mision = Mundo.getMision(id);
 					if (mision == null) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La misión no existe");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La misi?n no existe");
 						return;
 					}
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La misión (" + id + ") " + mision.getNombre()
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La misi?n (" + id + ") " + mision.getNombre()
 					+ " tiene como info etapas: " + mision.strEtapas() + ", pregDarMision: " + mision.strMisionPregunta(
 					Mision.ESTADO_NO_TIENE) + ", pregMisCumplida: " + mision.strMisionPregunta(Mision.ESTADO_COMPLETADO)
 					+ ", pregMisIncompleta: " + mision.strMisionPregunta(Mision.ESTADO_INCOMPLETO));
@@ -3131,7 +3131,7 @@ public class Comandos {
 						return;
 					}
 					objModelo.setNivel(nivel);
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el objeto (" + id + ") " + objModelo.getNombre()
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el objeto (" + id + ") " + objModelo.getNombre()
 					+ " con nivel " + objModelo.getNivel());
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos incorrectos");
@@ -3146,7 +3146,7 @@ public class Comandos {
 						return;
 					}
 					objModelo.setGFX(Integer.parseInt(infos[2]));
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modificó el objeto (" + id + ") " + objModelo.getNombre()
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se modific? el objeto (" + id + ") " + objModelo.getNombre()
 					+ " con gfx " + infos[2]);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos incorrectos");
@@ -3155,8 +3155,8 @@ public class Comandos {
 			case "PREPARAR_LISTA_NIVEL" :
 				try {
 					Mundo.prepararListaNivel();
-					GestorSalida.ENVIAR_ÑB_LISTA_NIVEL_TODOS();
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se actualizó la lista de niveles modificados");
+					GestorSalida.ENVIAR_\u00D1B_LISTA_NIVEL_TODOS();
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se actualiz? la lista de niveles modificados");
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una exception");
 				}
@@ -3164,8 +3164,8 @@ public class Comandos {
 			case "PREPARAR_LISTA_GFX" :
 				try {
 					Mundo.prepararListaGFX();
-					GestorSalida.ENVIAR_ÑA_LISTA_GFX_TODOS();
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se actualizó la lista de GFXs modificados");
+					GestorSalida.ENVIAR_\u00D1A_LISTA_GFX_TODOS();
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se actualiz? la lista de GFXs modificados");
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una exception");
 				}
@@ -3244,7 +3244,7 @@ public class Comandos {
 					}
 					mapa.setKeyMapData(key[0], key[1], key[2]);
 					GestorSQL.UPDATE_FECHA_KEY_MAPDATA(mapa.getID(), key[0], key[1], key[2]);
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se cambió el mapa " + mapa.getID() + " por un mapa con key");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se cambi? el mapa " + mapa.getID() + " por un mapa con key");
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -3305,7 +3305,7 @@ public class Comandos {
 						mapaID = Short.parseShort(infos[2]);
 						celdaID = Short.parseShort(infos[3]);
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválidos");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lidos");
 						return;
 					}
 					Mundo.borrarOtroInteractivo(id, mapaID, celdaID, 0, false);
@@ -3331,7 +3331,7 @@ public class Comandos {
 						celdaID = Short.parseShort(infos[3]);
 						accionID = Integer.parseInt(infos[4]);
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválidos");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lidos");
 						return;
 					}
 					try {
@@ -3346,7 +3346,7 @@ public class Comandos {
 					try {
 						descripcion = infos[8];
 					} catch (final Exception e) {}
-					strB.append("Se creo acción para Otro Interactivo GfxID: " + id + ", mapaID: " + mapaID + ", celdaID: "
+					strB.append("Se creo acci?n para Otro Interactivo GfxID: " + id + ", mapaID: " + mapaID + ", celdaID: "
 					+ celdaID + ", accionID: " + accionID + ", args: " + args + ", condicion: " + condicion + ", tiempoRecarga: "
 					+ tiempoRecarga);
 					Mundo.borrarOtroInteractivo(id, mapaID, celdaID, accionID, true);
@@ -3397,7 +3397,7 @@ public class Comandos {
 					MainServidor.ACCESO_ADMIN_MINIMO = accesoGM;
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso,
-						"Le serveur est désormais accessible au joueur dont le GM est supérieur à : " + accesoGM);
+						"Le serveur est d?sormais accessible au joueur dont le GM est sup?rieur ? : " + accesoGM);
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Server bloqueado a Nivel GM : " + accesoGM);
 					}
@@ -3412,7 +3412,7 @@ public class Comandos {
 						}
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso,
-							"Le joueurs dont le GM est inférieur à celui spécifié ont été expulsés.");
+							"Le joueurs dont le GM est inf?rieur ? celui sp?cifi? ont ?t? expuls?s.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Los jugadores nivel GM inferior a " + botarRango
 							+ " han sido expulsados.");
@@ -3438,7 +3438,7 @@ public class Comandos {
 						id = Integer.parseInt(infos[1]);
 						accionID = Integer.parseInt(infos[2]);
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválidos");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lidos");
 						return;
 					}
 					try {
@@ -3454,8 +3454,8 @@ public class Comandos {
 					}
 					Accion accion = new Accion(accionID, args, condicion);
 					respuesta.addAccion(accion);
-					strB.append("La acción respuesta " + respuesta.getID() + ", accionID: " + accion.getID() + ", args: " + accion
-					.getArgs() + ", condición: " + accion.getCondicion() + " agregada");
+					strB.append("La acci?n respuesta " + respuesta.getID() + ", accionID: " + accion.getID() + ", args: " + accion
+					.getArgs() + ", condici?n: " + accion.getCondicion() + " agregada");
 					if (GestorSQL.REPLACE_ACCIONES_RESPUESTA(respuesta.getID(), accion.getID(), accion.getArgs(), accion
 					.getCondicion())) {
 						strB.append(" a la BDD");
@@ -3477,12 +3477,12 @@ public class Comandos {
 					try {
 						id = Integer.parseInt(infos[1]);
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválidos");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lidos");
 						return;
 					}
 					RespuestaNPC respuesta = Mundo.getRespuestaNPC(id);
 					if (respuesta == null) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Respuesta inválida");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Respuesta inv?lida");
 						return;
 					}
 					respuesta.borrarAcciones();
@@ -3505,7 +3505,7 @@ public class Comandos {
 						npcID = Integer.parseInt(infos[1]);
 						preguntaID = Integer.parseInt(infos[2]);
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválidos");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lidos");
 						return;
 					}
 					final NPCModelo npcModelo = Mundo.getNPCModelo(npcID);
@@ -3540,7 +3540,7 @@ public class Comandos {
 					try {
 						id = Integer.parseInt(infos[1]);
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválidos");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lidos");
 						return;
 					}
 					try {
@@ -3557,7 +3557,7 @@ public class Comandos {
 						pregunta.setRespuestas(respuestas);
 						pregunta.setParams(args);
 					}
-					strB.append("Parámetros de la pregunta " + id + " => respuestas: " + pregunta.getStrRespuestas() + ", args: "
+					strB.append("Par?metros de la pregunta " + id + " => respuestas: " + pregunta.getStrRespuestas() + ", args: "
 					+ pregunta.getParams() + ", alternos: " + pregunta.getStrAlternos());
 					if (GestorSQL.REPLACE_PREGUNTA_NPC(pregunta)) {
 						strB.append(" a la BDD");
@@ -3584,7 +3584,7 @@ public class Comandos {
 					try {
 						id = Integer.parseInt(infos[1]);
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválidos");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lidos");
 						return;
 					}
 					try {
@@ -3597,7 +3597,7 @@ public class Comandos {
 					} else {
 						pregunta.setPreguntasCondicionales(alternos);
 					}
-					strB.append("Parámetros de la pregunta " + id + " => respuestas: " + pregunta.getStrRespuestas() + ", args: "
+					strB.append("Par?metros de la pregunta " + id + " => respuestas: " + pregunta.getStrRespuestas() + ", args: "
 					+ pregunta.getParams() + ", alternos: " + pregunta.getStrAlternos());
 					if (GestorSQL.REPLACE_PREGUNTA_NPC(pregunta)) {
 						strB.append(" a la BDD");
@@ -3738,7 +3738,7 @@ public class Comandos {
 						if (strB.length() > 0) {
 							strB.append("\n----------------------------------\n");
 						}
-						strB.append("Acciones de la respuesta ID " + respuesta2.getID() + ", condición: " + respuesta2
+						strB.append("Acciones de la respuesta ID " + respuesta2.getID() + ", condici?n: " + respuesta2
 						.getCondicion());
 						for (Accion a : respuesta2.getAcciones()) {
 							strB.append("\n\tAccion ID: " + a.getID() + ", Args: " + a.getArgs());
@@ -3846,7 +3846,7 @@ public class Comandos {
 			case "SAVE" :
 				if (Mundo.SERVIDOR_ESTADO == Constantes.SERVIDOR_SALVANDO) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Une sauvegarde est déjà en cours.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Une sauvegarde est d?j? en cours.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso,
 						"No se puede ejecutar el comando, porque el server ya se esta salvando");
@@ -3866,7 +3866,7 @@ public class Comandos {
 			case "SAVE_ALL" :
 				if (Mundo.SERVIDOR_ESTADO == Constantes.SERVIDOR_SALVANDO) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Une sauvegarde est déjà en cours.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Une sauvegarde est d?j? en cours.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso,
 						"No se puede ejecutar el comando, porque el server ya se esta salvando");
@@ -3991,7 +3991,7 @@ public class Comandos {
 					}
 					mapa.setMaxMercantes(limite);
 					if (!GestorSQL.UPDATE_MAPA_MAX_MERCANTES(mapa.getID(), limite)) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrió un error al guardar la actualización en la BD.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurri? un error al guardar la actualizaci?n en la BD.");
 						return;
 					}
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "En el mapa " + mapa.getID()
@@ -4014,7 +4014,7 @@ public class Comandos {
 					}
 					mapa.setMaxMobsPorGrupo(limite);
 					if (!GestorSQL.UPDATE_MAPA_MAX_MOB_GRUPO(mapa.getID(), limite)) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrió un error al guardar la actualización en la BD.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurri? un error al guardar la actualizaci?n en la BD.");
 						return;
 					}
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "En el mapa " + mapa.getID()
@@ -4037,7 +4037,7 @@ public class Comandos {
 					}
 					mapa.setMaxGrupoDeMobs(limite);
 					if (!GestorSQL.UPDATE_MAPA_MAX_GRUPO_MOBS(mapa.getID(), limite)) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrió un error al guardar la actualización en la BD.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurri? un error al guardar la actualizaci?n en la BD.");
 						return;
 					}
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "En el mapa " + mapa.getID()
@@ -4091,7 +4091,7 @@ public class Comandos {
 					}
 					for (DropMob drop : mobModelo.getDrops()) {
 						if (drop.getIDObjModelo() == objModID) {
-							GestorSalida.enviarEnCola(_perso, "Ñd" + drop.getProspeccion() + ";" + (drop.getPorcentaje() * 1000) + ";"
+							GestorSalida.enviarEnCola(_perso, "?d" + drop.getProspeccion() + ";" + (drop.getPorcentaje() * 1000) + ";"
 							+ drop.getMaximo(), false);
 							break;
 						}
@@ -4130,9 +4130,9 @@ public class Comandos {
 					mobModelo.addDrop(new DropMob(objModID, prospecc, porcentaje, max, condicion));
 					GestorSQL.INSERT_DROP(mobID, objModID, prospecc, porcentaje, max, mobModelo.getNombre(), objModelo
 					.getNombre(), condicion);
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se agregó al mob " + mobModelo.getNombre() + " (" + mobModelo
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se agreg? al mob " + mobModelo.getNombre() + " (" + mobModelo
 					.getID() + ") el objeto " + objModelo.getNombre() + " (" + objModelo.getID() + ") con PP " + prospecc + ", "
-					+ porcentaje + "%, máximo " + max + " y condición " + condicion);
+					+ porcentaje + "%, m?ximo " + max + " y condici?n " + condicion);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
 				}
@@ -4212,7 +4212,7 @@ public class Comandos {
 						tipo = Integer.parseInt(infos[1]);
 						accionID = Integer.parseInt(infos[2]);
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumento inválido");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumento inv?lido");
 						return;
 					}
 					if (infos.length > 3) {
@@ -4232,7 +4232,7 @@ public class Comandos {
 						}
 					} catch (final Exception e) {}
 					mapa.addAccionFinPelea(tipo, new Accion(accionID, args, ""));
-					strB.append("Se agregó la accion fin pelea, mapaID: " + mapa.getID() + ", tipoPelea: " + tipo + ", accionID: "
+					strB.append("Se agreg? la accion fin pelea, mapaID: " + mapa.getID() + ", tipoPelea: " + tipo + ", accionID: "
 					+ accionID + ", args: " + args + " condicion: " + condicion);
 					if (GestorSQL.INSERT_ACCION_FIN_PELEA(mapa.getID(), tipo, accionID, args, condicion, descripcion)) {
 						strB.append(" a la BDD");
@@ -4364,7 +4364,7 @@ public class Comandos {
 						condInicio, segundosRespawn);
 					}
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le groupe monstre a été spawn.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le groupe monstre a ?t? spawn.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se agrego el grupomob: " + grupoData + " de tipo: " + tipoGrupo
 						+ ", condInicio: " + condInicio + ", condUnirse: " + condUnirse + ", tiempoReaparecer: " + segundosRespawn
@@ -4402,7 +4402,7 @@ public class Comandos {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'ID du PNJ est invalide.");
 						} else {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC ID inválido");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC ID inv?lido");
 						}
 						return;
 					}
@@ -4411,7 +4411,7 @@ public class Comandos {
 					if (GestorSQL.REPLACE_NPC_AL_MAPA(mapa.getID(), _perso.getCelda().getID(), id, _perso.getOrientacion(), npc
 					.getModelo().getNombre())) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le PNJ a été ajouté.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le PNJ a ?t? ajout?.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El NPC " + npc.getModelo().getNombre() + " ha sido agregado");
 						}
@@ -4445,7 +4445,7 @@ public class Comandos {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'ID du PNJ est invalide.");
 						} else {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC ID inválido");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC ID inv?lido");
 						}
 						return;
 					}
@@ -4474,7 +4474,7 @@ public class Comandos {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'ID du PNJ est invalide.");
 						} else {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC ID inválido");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC ID inv?lido");
 						}
 						return;
 					}
@@ -4558,7 +4558,7 @@ public class Comandos {
 						}
 						celda.addAccion(accionID, args, condicion);
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El mapa: " + mapa.getID() + ", celda: " + celda.getID()
-						+ ", le ha sido agregado la acción: " + accionID + ", args: " + args + ", y condición (4to arg): "
+						+ ", le ha sido agregado la acci?n: " + accionID + ", args: " + args + ", y condici?n (4to arg): "
 						+ condicion);
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El trigger no se puede agregar");
@@ -4616,7 +4616,7 @@ public class Comandos {
 					} catch (final Exception e) {}
 					ObjetoModelo objModelo = Mundo.getObjetoModelo(id);
 					if (objModelo == null) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Algun valor inválido");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Algun valor inv?lido");
 						return;
 					}
 					objModelo.addAccion(new Accion(accionID, args, ""));
@@ -4644,7 +4644,7 @@ public class Comandos {
 					}
 					ObjetoModelo objModelo = Mundo.getObjetoModelo(id);
 					if (objModelo == null) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Objeto modelo inválido");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Objeto modelo inv?lido");
 						return;
 					}
 					objModelo.borrarAcciones();
@@ -4916,7 +4916,7 @@ public class Comandos {
 						bonus = "BONUS HONOR";
 						break;
 				}
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se actualizó el día almanax " + id + ", con ofrenda " + str
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se actualiz? el d?a almanax " + id + ", con ofrenda " + str
 				+ ", tipoBonus " + bonus + " y bonus %" + cantInt);
 				break;
 			case "ADD_MOB_CARD" :
@@ -4938,7 +4938,7 @@ public class Comandos {
 				}
 				if (!objetivo.enLinea()) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 					}
@@ -4955,10 +4955,10 @@ public class Comandos {
 				objetivo.addCardMob(id);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre()
-					+ " agrego asu lista de cardMobs la tarjeta N°" + id);
+					+ " agrego asu lista de cardMobs la tarjeta N?" + id);
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre()
-					+ " agrego asu lista de cardMobs la tarjeta N°" + id + " (" + Mundo.getMobModelo(id).getNombre() + ")");
+					+ " agrego asu lista de cardMobs la tarjeta N?" + id + " (" + Mundo.getMobModelo(id).getNombre() + ")");
 				}
 				break;
 			case "PRECIO_SISTEMA_RECURSO" :
@@ -5023,10 +5023,10 @@ public class Comandos {
 				}
 				objetivo.addEnergiaConIm(cantInt, true);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'énergie de " + objetivo.getNombre() + " a été modifiée en "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'?nergie de " + objetivo.getNombre() + " a ?t? modifi?e en "
 					+ objetivo.getEnergia());
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido modificado la energía de " + objetivo.getNombre() + " a "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido modificado la energ?a de " + objetivo.getNombre() + " a "
 					+ objetivo.getEnergia());
 				}
 				break;
@@ -5056,10 +5056,10 @@ public class Comandos {
 				}
 				objetivo.addTitulo(titulo, color);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " possède désormais le titre "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " poss?de d?sormais le titre "
 					+ titulo);
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " adquirió el título "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " adquiri? el t?tulo "
 					+ titulo);
 				}
 				if (objetivo.getPelea() == null) {
@@ -5087,9 +5087,9 @@ public class Comandos {
 				objetivo.setOrnamento(cantByte);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre()
-					+ " possède désormais l'ornement " + cantByte);
+					+ " poss?de d?sormais l'ornement " + cantByte);
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " adquirió el ornamento "
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " adquiri? el ornamento "
 					+ cantByte);
 				}
 				if (objetivo.getPelea() == null) {
@@ -5116,7 +5116,7 @@ public class Comandos {
 					objetivo.setTituloVIP(str);
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre()
-						+ " possède désormais le titre VIP " + str);
+						+ " poss?de d?sormais le titre VIP " + str);
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre()
 						+ " a adquirido el titulo VIP de " + str);
@@ -5187,23 +5187,23 @@ public class Comandos {
 						objetivo.addObjIdentAInventario(obj, false);
 					}
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						strB.append("Création de la panoplie " + OS.getNombre() + " pour " + objetivo.getNombre());
+						strB.append("Cr?ation de la panoplie " + OS.getNombre() + " pour " + objetivo.getNombre());
 					} else {
-						strB.append("Creación del objeto set " + OS.getNombre() + " a " + objetivo.getNombre());
+						strB.append("Creaci?n del objeto set " + OS.getNombre() + " a " + objetivo.getNombre());
 					}
 					switch (useMax) {
 						case MAXIMO :
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 								strB.append(" avec des jets parfaits.");
 							} else {
-								strB.append(" con stats máximos");
+								strB.append(" con stats m?ximos");
 							}
 							break;
 						case MINIMO :
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 								strB.append(" avec des jets minimuns.");
 							} else {
-								strB.append(" con stats mínimos");
+								strB.append(" con stats m?nimos");
 							}
 							break;
 						default :
@@ -5225,7 +5225,7 @@ public class Comandos {
 						npcModelo = Mundo.getNPCModelo(npcID);
 						npcModelo.getID();
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC inválido");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC inv?lido");
 						return;
 					}
 					final ArrayList<ObjetoModelo> objetos = new ArrayList<ObjetoModelo>();
@@ -5240,9 +5240,9 @@ public class Comandos {
 					}
 					npcModelo.borrarObjetoAVender(objetos);
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Al NPC " + npcModelo.getNombre()
-					+ " se le borró los siguientes objetos:" + strB.toString());
+					+ " se le borr? los siguientes objetos:" + strB.toString());
 				} catch (final Exception e) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválidos");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lidos");
 					return;
 				}
 				break;
@@ -5260,7 +5260,7 @@ public class Comandos {
 						npcModelo = Mundo.getNPCModelo(npcID);
 						npcModelo.getID();
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC inválido");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "NPC inv?lido");
 						return;
 					}
 					final ArrayList<ObjetoModelo> objetos = new ArrayList<ObjetoModelo>();
@@ -5275,9 +5275,9 @@ public class Comandos {
 					}
 					npcModelo.addObjetoAVender(objetos);
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Al NPC " + npcModelo.getNombre()
-					+ " se le agregó los siguientes objetos:" + strB.toString());
+					+ " se le agreg? los siguientes objetos:" + strB.toString());
 				} catch (final Exception e) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválidos");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lidos");
 					return;
 				}
 				break;
@@ -5289,7 +5289,7 @@ public class Comandos {
 					npcModelo.borrarTodosObjVender();
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se borraron todos los objetos del NPC " + npcModelo.getNombre());
 				} catch (final Exception ex) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inválido");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos inv?lido");
 					return;
 				}
 				break;
@@ -5322,7 +5322,7 @@ public class Comandos {
 				}
 				objetivo.addHonor(honor);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, honor + " points d'honneur ont été ajoutés à " + objetivo
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, honor + " points d'honneur ont ?t? ajout?s ? " + objetivo
 					.getNombre());
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido agregado " + honor + " honor a " + objetivo.getNombre());
@@ -5337,7 +5337,7 @@ public class Comandos {
 				} catch (final Exception e) {}
 				_perso.getMapa().setParametros(cantShort);
 				GestorSQL.UPDATE_MAPA_PARAMETROS(_perso.getMapa().getID(), cantShort);
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Los parametros del mapa cambió a " + cantShort);
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Los parametros del mapa cambi? a " + cantShort);
 				break;
 			case "REGALO" :
 			case "GIFT" :
@@ -5358,9 +5358,9 @@ public class Comandos {
 				}
 				objetivo.getCuenta().addRegalo(str);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le cadeau été envoyé.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le cadeau ?t? envoy?.");
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se entregó el regalo " + str + " a " + objetivo.getNombre());
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se entreg? el regalo " + str + " a " + objetivo.getNombre());
 				}
 				break;
 			case "REGALO_PARA_ONLINE" :
@@ -5375,9 +5375,9 @@ public class Comandos {
 					} catch (final Exception e) {}
 				}
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le cadeau a été envoyé à tous les joueurs en ligne.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le cadeau a ?t? envoy? ? tous les joueurs en ligne.");
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se entregó el regalo " + str + " a todos los jugadores en línea");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se entreg? el regalo " + str + " a todos los jugadores en l?nea");
 				}
 				break;
 			case "REGALO_PARA_TODOS" :
@@ -5389,9 +5389,9 @@ public class Comandos {
 					cuenta.addRegalo(str);
 				}
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le cadeau a été envoyé à tous les joueurs database.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le cadeau a ?t? envoy? ? tous les joueurs database.");
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se entregó el regalo " + str
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se entreg? el regalo " + str
 					+ " a todos los jugadores de la database");
 				}
 				break;
@@ -5434,10 +5434,10 @@ public class Comandos {
 				}
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "L'objet " + objModelo.getNombre() + " avec quant " + cantInt
-					+ " a été envoyé à tous les joueurs en ligne");
+					+ " a ?t? envoy? ? tous les joueurs en ligne");
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se entregó el objeto " + objModelo.getNombre() + " con cantidad "
-					+ cantInt + " a todos los jugadores en línea");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se entreg? el objeto " + objModelo.getNombre() + " con cantidad "
+					+ cantInt + " a todos los jugadores en l?nea");
 				}
 				break;
 			case "ADD_EXP_OFICIO" :
@@ -5480,7 +5480,7 @@ public class Comandos {
 				final StatOficio statsOficio = objetivo.getStatOficioPorID(oficio);
 				if (statsOficio == null) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'exerce pas ce métier.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'exerce pas ce m?tier.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no conoce el oficio");
 					}
@@ -5488,7 +5488,7 @@ public class Comandos {
 				}
 				statsOficio.addExperiencia(objetivo, exp, 0);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le métier du joueur a gagné de l'expérience.");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le m?tier du joueur a gagn? de l'exp?rience.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El oficio ha subido de experiencia");
 				}
@@ -5524,7 +5524,7 @@ public class Comandos {
 				objetivo.addPuntosHechizos(pts);
 				GestorSalida.ENVIAR_Ak_KAMAS_PDV_EXP_PJ(objetivo);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a reçu " + pts
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a re?u " + pts
 					+ " points de sort");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " se le ha aumentado " + pts
@@ -5755,7 +5755,7 @@ public class Comandos {
 				objetivo.addPuntosStats(puntos);
 				GestorSalida.ENVIAR_Ak_KAMAS_PDV_EXP_PJ(objetivo);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a reçu " + puntos
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur " + objetivo.getNombre() + " a re?u " + puntos
 					+ " points de capital");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " se le ha aumentado "
@@ -5789,7 +5789,7 @@ public class Comandos {
 				}
 				objetivo.addKamas(cantLong, true, true);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Tu as " + (cantLong < 0 ? "retiré" : "ajouté") + " " + Math.abs(
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Tu as " + (cantLong < 0 ? "retir?" : "ajout?") + " " + Math.abs(
 					cantLong) + " kamas a " + objetivo.getNombre());
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido " + (cantLong < 0 ? "retirado" : "agregado") + " " + Math
@@ -5883,7 +5883,7 @@ public class Comandos {
 						} catch (final Exception e) {}
 					}
 				}
-				GestorSalida.ENVIAR_ÑL_BOTON_LOTERIA_TODOS(Mundo.VENDER_BOLETOS);
+				GestorSalida.ENVIAR_\u00D1L_BOTON_LOTERIA_TODOS(Mundo.VENDER_BOLETOS);
 				GestorSalida.ENVIAR_bRI_INICIAR_CUENTA_REGRESIVA_TODOS();
 				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se inicio la cuenta regresiva con mensaje " + str + " y tiempo " + id
 				+ " segundos");
@@ -5897,7 +5897,7 @@ public class Comandos {
 						return;
 					}
 					objetivo = Mundo.getPersonaje(Mundo.LOTERIA_BOLETOS[id]);
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El dueño del boleto Nº " + id + " es el jugador " + objetivo
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El due?o del boleto N? " + id + " es el jugador " + objetivo
 					.getNombre());
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio un error");
@@ -5905,37 +5905,37 @@ public class Comandos {
 				}
 				break;
 			case "ADIC_PJ" :
-			case "MULTIPLICADOR_DAÑO_PJ" :
+			case "MULTIPLICADOR_DA\u00f1O_PJ" :
 				try {
 					cantFloat = Float.parseFloat(infos[1]);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos incorrectos");
 					return;
 				}
-				EfectoHechizo.MULTIPLICADOR_DAÑO_PJ = cantFloat;
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El multiplicador daño personaje ha sido cambiado a " + cantFloat);
+				EfectoHechizo.MULTIPLICADOR_DA\u00f1O_PJ = cantFloat;
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El multiplicador da\u00f1o personaje ha sido cambiado a " + cantFloat);
 				break;
 			case "ADIC_MOB" :
-			case "MULTIPLICADOR_DAÑO_MOB" :
+			case "MULTIPLICADOR_DA\u00f1O_MOB" :
 				try {
 					cantFloat = Float.parseFloat(infos[1]);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos incorrectos");
 					return;
 				}
-				EfectoHechizo.MULTIPLICADOR_DAÑO_MOB = cantFloat;
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El multiplicador de daño mob ha sido cambiado a " + cantFloat);
+				EfectoHechizo.MULTIPLICADOR_DA\u00f1O_MOB = cantFloat;
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El multiplicador de da\u00f1o mob ha sido cambiado a " + cantFloat);
 				break;
 			case "ADIC_CAC" :
-			case "MULTIPLICADOR_DAÑO_CAC" :
+			case "MULTIPLICADOR_DA\u00f1O_CAC" :
 				try {
 					cantFloat = Float.parseFloat(infos[1]);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumentos incorrectos");
 					return;
 				}
-				EfectoHechizo.MULTIPLICADOR_DAÑO_CAC = cantFloat;
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El multiplicador de daño CaC ha sido cambiado a " + cantFloat);
+				EfectoHechizo.MULTIPLICADOR_DA\u00f1O_CAC = cantFloat;
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El multiplicador de da\u00f1o CaC ha sido cambiado a " + cantFloat);
 				break;
 			// case "TOLERANCIA_VIP" :
 			// try {
@@ -6355,13 +6355,13 @@ public class Comandos {
 							"Le joueur est en mode incarnation, impossible de lui augmenter son niveau.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso,
-							"No se le puede subir el nivel, porque el personaje es una encarnación.");
+							"No se le puede subir el nivel, porque el personaje es una encarnaci?n.");
 						}
 						return;
 					}
 					objetivo.subirHastaNivel(cantInt);
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le niveau du joueur a été modifié.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le niveau du joueur a ?t? modifi?.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ha sido modificado el nivel de " + objetivo.getNombre() + " a "
 						+ cantInt);
@@ -6390,7 +6390,7 @@ public class Comandos {
 				}
 				if (!objetivo.enLinea()) {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 					} else {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 					}
@@ -6451,7 +6451,7 @@ public class Comandos {
 					}
 					if (OM.getOgrinas() > 0 && _cuenta.getAdmin() < 5) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Tu ne possèdes pas le GM nécessaire pour spawn cet objet.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Tu ne poss?des pas le GM n?cessaire pour spawn cet objet.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "No posees el nivel de GM requerido");
 						}
@@ -6499,7 +6499,7 @@ public class Comandos {
 						strB.append("Creatio de l'objet " + OM.getNombre() + " (" + id + ") en " + cantInt + " exemplaires pour "
 						+ objetivo.getNombre());
 					} else {
-						strB.append("Se creó " + cantInt + " objeto(s) " + OM.getNombre() + " (" + id + ") para el personaje "
+						strB.append("Se cre? " + cantInt + " objeto(s) " + OM.getNombre() + " (" + id + ") para el personaje "
 						+ objetivo.getNombre());
 					}
 					switch (useMax) {
@@ -6507,14 +6507,14 @@ public class Comandos {
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 								strB.append(" avec des jets parfaits.");
 							} else {
-								strB.append(" con stats máximos");
+								strB.append(" con stats m?ximos");
 							}
 							break;
 						case MINIMO :
 							if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 								strB.append(" avec des jets minimuns.");
 							} else {
-								strB.append(" con stats mínimos");
+								strB.append(" con stats m?nimos");
 							}
 							break;
 						default :
@@ -6649,7 +6649,7 @@ public class Comandos {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CELLID INVALIDE!");
 						} else {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inválida");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inv?lida");
 						}
 						return;
 					}
@@ -6723,7 +6723,7 @@ public class Comandos {
 					}
 					Mundo.addObjetoTrueque(objMod.getID(), str, prioridad, npcs);
 					GestorSQL.INSERT_OBJETO_TRUEQUE(objMod.getID(), str, prioridad, npcs, objMod.getNombre());
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se agregó el objeto trueque " + objMod.getNombre() + " (" + objMod
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se agreg? el objeto trueque " + objMod.getNombre() + " (" + objMod
 					.getID() + "), objetos necesarios: " + str + ", prioridad: " + prioridad + ", npcs: " + npcs);
 				} catch (final Exception e) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Ocurrio una excepcion");
@@ -6768,7 +6768,7 @@ public class Comandos {
 					}
 					if (!objetivo.enLinea()) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 						}
@@ -6805,7 +6805,7 @@ public class Comandos {
 					}
 					if (!objetivo.enLinea()) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 						}
@@ -6837,7 +6837,7 @@ public class Comandos {
 					}
 					if (!objetivo.enLinea()) {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connecté.");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le joueur n'est pas connect\u00e9.");
 						} else {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje no esta conectado");
 						}
@@ -7362,12 +7362,12 @@ public class Comandos {
 				MainServidor.PARAM_LADDER_STAFF = boleano;
 				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El PARAM_RANKING_STAFF cambio a " + boleano);
 				break;
-			case "PARAM_INFO_DAÑO_BATALLA" :
+			case "PARAM_INFO_DA\u00f1O_BATALLA" :
 				try {
 					boleano = infos[1].equalsIgnoreCase("true");
 				} catch (final Exception e) {}
-				MainServidor.PARAM_INFO_DAÑO_BATALLA = boleano;
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El PARAM_INFO_DAÑO_BATALLA cambio a " + boleano);
+				MainServidor.PARAM_INFO_DA\u00f1O_BATALLA = boleano;
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El PARAM_INFO_DA\u00f1O_BATALLA cambio a " + boleano);
 				break;
 			case "PARAM_MOSTRAR_EXP_MOBS" :
 				try {
@@ -7526,7 +7526,7 @@ public class Comandos {
 					return;
 				}
 				MainServidor.SABIDURIA_PARA_REENVIO = idInt;
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La sabiduria para aumentar el daño por reenvio cambio a " + idInt);
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La sabiduria para aumentar el da?o por reenvio cambio a " + idInt);
 				break;
 			case "MILISEGUNDOS_CERRAR_SERVIDOR" :
 			case "TIEMPO_CERRAR_SERVIDOR" :
@@ -7591,7 +7591,7 @@ public class Comandos {
 					boleano = infos[1].equalsIgnoreCase("true");
 				} catch (final Exception e) {}
 				MainServidor.PARAM_DEVOLVER_OGRINAS = boleano;
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se cambió devolver ogrinas a " + MainServidor.PARAM_DEVOLVER_OGRINAS);
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se cambi? devolver ogrinas a " + MainServidor.PARAM_DEVOLVER_OGRINAS);
 				break;
 			case "PARAM_LADDER" :
 			case "LADDER" :
@@ -7601,7 +7601,7 @@ public class Comandos {
 				MainServidor.PARAM_LADDER_NIVEL = boleano;
 				if (boleano)
 					Mundo.actualizarRankings();
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se cambió ladder a " + MainServidor.PARAM_LADDER_NIVEL);
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se cambi? ladder a " + MainServidor.PARAM_LADDER_NIVEL);
 				break;
 			case "MOBS_EVENTO" :
 				try {
@@ -7612,7 +7612,7 @@ public class Comandos {
 				}
 				Mundo.MOB_EVENTO = idByte;
 				new RefrescarTodosMobs().start();
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se cambió el mobEvento a " + idByte
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se cambi? el mobEvento a " + idByte
 				+ " y se esta refrescando todos los mapas");
 				break;
 			case "SET_STATS_OBJ_MODELO" :
@@ -7803,7 +7803,7 @@ public class Comandos {
 				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se elimino el objeto " + obj.getID() + " (" + obj.getObjModelo()
 				.getNombre() + ")");
 				break;
-			case "CAMBIAR_CONTRASEÑA" :
+			case "CAMBIAR_CONTRASE\u00D1A" :
 			case "CAMBIAR_CLAVE" :
 			case "CHANGE_PASSWORD" :
 				Cuenta consultado = null;
@@ -7817,11 +7817,11 @@ public class Comandos {
 				if (infos.length > 2) {
 					str = infos[2];
 				} else {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La contraseña no puede estar vacia");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La contrase\u00f1a no puede estar vacia");
 					return;
 				}
-				GestorSQL.CAMBIAR_CONTRASEÑA_CUENTA(str, consultado.getID());
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La cuenta " + consultado.getNombre() + " ha cambiado su contraseña a "
+				GestorSQL.CAMBIAR_CONTRASE\u00D1A_CUENTA(str, consultado.getID());
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La cuenta " + consultado.getNombre() + " ha cambiado su contrase\u00f1a a "
 				+ str);
 				break;
 			case "ADMIN" :
@@ -7836,7 +7836,7 @@ public class Comandos {
 					if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Merci d'indiquer un GM valide!");
 					} else {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El arguemento tiene que ser un número positivo");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El arguemento tiene que ser un n?mero positivo");
 					}
 					return;
 				}
@@ -7854,7 +7854,7 @@ public class Comandos {
 				}
 				objetivo.getCuenta().setRango(idInt);
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le GM du joueur a été modifié!");
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le GM du joueur a ?t? modifi?!");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El personaje " + objetivo.getNombre() + " ahora tiene GM nivel "
 					+ idInt);
@@ -7911,7 +7911,7 @@ public class Comandos {
 				Mundo.BLOQUEANDO = boleano;
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso,
-					"L'accès au serveur est bloqué le temps que les attaques se calment.");
+					"L'acc?s au serveur est bloqu? le temps que les attaques se calment.");
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso,
 					"Se activo medidas de bloqueo acceso al server, hasta que pare el ataque");
@@ -7920,11 +7920,11 @@ public class Comandos {
 					GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE_TODOS(
 					"El Servidor esta siendo atacado, se ha activado la el ANTI-ATTACK de Elbusta, por el momento no se podran conectar al servidor, "
 					+ "pero si continuar jugando, porfavor eviten salir, que en unos minutos reestablecemos la conexion al servidor, GRACIAS!!",
-					"L'accès au serveur est bloqué car nous sommes attaqués, merci de ne pas vous déconnecter!");
+					"L'acc?s au serveur est bloqu? car nous sommes attaqu?s, merci de ne pas vous d?connecter!");
 				} else {
 					GestorSalida.ENVIAR_Im1223_MENSAJE_IMBORRABLE_TODOS(
 					"El ataque ha parado, ahora el servidor desbloqueara el acceso a las cuentas, YA PUEDEN LOGUEARSE, SIN TEMOR!! GRACIAS ELBUSTA!!",
-					"L'accès au serveur est rétabli!");
+					"L'acc?s au serveur est r?tabli!");
 				}
 				break;
 			case "PARAM_REGISTRO_JUGADORES" :
@@ -7966,7 +7966,7 @@ public class Comandos {
 				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "El MODO_HEROICO cambio a " + boleano);
 				break;
 			case "ACCOUNT_PASSWORD" :
-			case "CUENTA_CONTRASEÑA" :
+			case "CUENTA_CONTRASE?A" :
 			case "GET_PASS" :
 				if (infos.length > 1) {
 					objetivo = Mundo.getPersonajePorNombre(infos[1]);
@@ -7984,8 +7984,8 @@ public class Comandos {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La cuenta es nula");
 					return;
 				}
-				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La cuenta es " + cuenta.getNombre() + " y la contraseña es " + cuenta
-				.getContraseña());
+				GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "La cuenta es " + cuenta.getNombre() + " y la contrase\u00f1a es " + cuenta
+				.getContrase\u00f1a());
 				break;
 			case "BORRAR_PRISMA" :
 				try {
@@ -7995,7 +7995,7 @@ public class Comandos {
 						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Esta subArea no posee prisma");
 						return;
 					}
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se borró el prisma de la subArea " + prisma.getSubArea().getID());
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se borr? el prisma de la subArea " + prisma.getSubArea().getID());
 					prisma.murio();
 				} catch (Exception e) {}
 				break;
@@ -8100,7 +8100,7 @@ public class Comandos {
 			// case "LIDER_PVP" :
 			// case "LEADER_PVP" :
 			// Mundo.actualizarLiderPVP();
-			// GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le meilleur joueur PVP a été mis a jour.");
+			// GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Le meilleur joueur PVP a ?t? mis a jour.");
 			// break;
 			case "ADD_ACCION_PELEA" :
 			case "ADD_ACTION_FIGHT" :
@@ -8116,7 +8116,7 @@ public class Comandos {
 						accionID = Integer.parseInt(infos[1]);
 						args = infos[2];
 					} catch (final Exception e) {
-						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumento inválido");
+						GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Argumento inv?lido");
 						return;
 					}
 					pelea.addAccion(new Accion(accionID, args, ""));
@@ -8157,7 +8157,7 @@ public class Comandos {
 				GestorSQL.SET_CREDITOS_CUENTA(GestorSQL.GET_CREDITOS_CUENTA(objetivo.getCuentaID()) + idInt, objetivo
 				.getCuentaID());
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " creditos ont été ajoutés à " + objetivo.getNombre());
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " creditos ont ?t? ajout?s ? " + objetivo.getNombre());
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se le ha agregado " + idInt + " creditos a " + objetivo
 					.getNombre());
@@ -8185,7 +8185,7 @@ public class Comandos {
 				GestorSQL.SET_OGRINAS_CUENTA(GestorSQL.GET_OGRINAS_CUENTA(objetivo.getCuentaID()) + idInt, objetivo
 				.getCuentaID());
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " ogrines ont été ajoutés à " + objetivo.getNombre());
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " ogrines ont ?t? ajout?s ? " + objetivo.getNombre());
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se le ha agregado " + idInt + " ogrinas a " + objetivo.getNombre());
 				}
@@ -8209,7 +8209,7 @@ public class Comandos {
 				}
 				GestorSQL.SET_OGRINAS_CUENTA(GestorSQL.GET_OGRINAS_CUENTA(cuenta.getID()) + idInt, cuenta.getID());
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " ogrines ont été ajoutés à " + cuenta.getNombre());
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " ogrines ont ?t? ajout?s ? " + cuenta.getNombre());
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se le ha agregado " + idInt + " ogrinas a " + cuenta.getNombre());
 				}
@@ -8239,7 +8239,7 @@ public class Comandos {
 				abonoM = Math.max(abonoM, System.currentTimeMillis() - 1000);
 				GestorSQL.SET_ABONO(abonoM, objetivo.getCuentaID());
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " minutes abonne ont été ajoutés à " + objetivo.getNombre());
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " minutes abonne ont ?t? ajout?s ? " + objetivo.getNombre());
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se le ha agregado " + idInt + " minutos de abono a " + objetivo
 					.getNombre());
@@ -8270,7 +8270,7 @@ public class Comandos {
 				abonoH = Math.max(abonoH, System.currentTimeMillis() - 1000);
 				GestorSQL.SET_ABONO(abonoH, objetivo.getCuentaID());
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " heures abonne ont été ajoutés à " + objetivo.getNombre());
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " heures abonne ont ?t? ajout?s ? " + objetivo.getNombre());
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se le ha agregado " + idInt + " horas de abono a " + objetivo
 					.getNombre());
@@ -8301,7 +8301,7 @@ public class Comandos {
 				abonoD = Math.max(abonoD, System.currentTimeMillis() - 1000);
 				GestorSQL.SET_ABONO(abonoD, objetivo.getCuentaID());
 				if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
-					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " jouers abonne ont été ajoutés à " + objetivo.getNombre());
+					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, idInt + " jouers abonne ont ?t? ajout?s ? " + objetivo.getNombre());
 				} else {
 					GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "Se le ha agregado " + idInt + " dias de abono a " + objetivo
 					.getNombre());
@@ -8417,7 +8417,7 @@ public class Comandos {
 						if (_cuenta.getIdioma().equalsIgnoreCase("fr")) {
 							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CELLID INVALIDE!");
 						} else {
-							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inválida");
+							GestorSalida.ENVIAR_BAT2_CONSOLA(_perso, "CeldaID inv?lida");
 						}
 						return;
 					}

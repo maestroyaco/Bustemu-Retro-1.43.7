@@ -248,11 +248,11 @@ public class Trabajo implements Runnable, Exchanger {
 		FallaNormal = resultados[2];
 		FalloCritico = resultados[3];
 		if (perso.getCuenta().getIdioma().equalsIgnoreCase("fr")) {
-			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "La probabilité de FM ton item <b>" + objAMaguear.getObjModelo()
+			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "La probabilit\u00e9 de FM ton item <b>" + objAMaguear.getObjModelo()
 			.getNombre() + "</b>:", Constantes.COLOR_NEGRO);
-			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Succès critique] = " + ExitoCritico + "%</b>",
+			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[SuccÃ¨s critique] = " + ExitoCritico + "%</b>",
 			Constantes.COLOR_AZUL);
-			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Succès] = " + ExitoNormal + "%</b>",
+			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[SuccÃ¨s] = " + ExitoNormal + "%</b>",
 			Constantes.COLOR_VERDE_OSCURO);
 			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Echec] = " + FallaNormal + "%</b>", Constantes.COLOR_NARANJA);
 			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Echec Critique] = " + FalloCritico + "%</b>",
@@ -260,13 +260,13 @@ public class Trabajo implements Runnable, Exchanger {
 		} else {
 			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "La probabilidad de magueo del objeto <b>" + objAMaguear.getObjModelo()
 			.getNombre() + "</b> con la <b>" + objRunaOPocima.getObjModelo().getNombre() + "</b>", Constantes.COLOR_NEGRO);
-			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Exito Crítico] = " + ExitoCritico + "%</b>",
+			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Exito Cr\u00edtico] = " + ExitoCritico + "%</b>",
 			Constantes.COLOR_AZUL);
 			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Exito Normal] = " + ExitoNormal + "%</b>",
 			Constantes.COLOR_VERDE_OSCURO);
 			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Fallo Normal] = " + FallaNormal + "%</b>",
 			Constantes.COLOR_NARANJA);
-			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Fallo Crítico] = " + FalloCritico + "%</b>",
+			GestorSalida.ENVIAR_cs_CHAT_MENSAJE(perso, "<b>[Fallo Cr\u00edtico] = " + FalloCritico + "%</b>",
 			Constantes.COLOR_ROJO);
 		}
 	}
@@ -288,7 +288,7 @@ public class Trabajo implements Runnable, Exchanger {
 			case 98 :
 			case 99 :
 				int suerte = objModelo.getProbabilidadGC() * objModelo.getCostePA() / (objModelo.getBonusGC() + objMaguear
-				.getDañoPromedioNeutral());
+				.getDa\u00f1oPromedioNeutral());
 				suerte += cantAumRuna + nivelOficio;
 				if (suerte > 100) {
 					suerte = 100;
@@ -910,7 +910,7 @@ public class Trabajo implements Runnable, Exchanger {
 						case Constantes.OBJETO_TIPO_HACHA :
 						case Constantes.OBJETO_TIPO_HERRAMIENTA :
 						case Constantes.OBJETO_TIPO_PICO :
-						case Constantes.OBJETO_TIPO_GUADAÑA :
+						case Constantes.OBJETO_TIPO_GUADA\u00f1A :
 						case Constantes.OBJETO_TIPO_MOCHILA :
 						case Constantes.OBJETO_TIPO_BALLESTA :
 						case Constantes.OBJETO_TIPO_ARMA_MAGICA :
@@ -1083,13 +1083,13 @@ public class Trabajo implements Runnable, Exchanger {
 				final int objetoID = ingrediente.getKey();
 				final int cantObjeto = ingrediente.getValue();
 				final Objeto objeto = Mundo.getObjeto(objetoID);
-				Personaje dueño = null;
+				Personaje due\u00f1o = null;
 				if (_artesano.tieneObjetoID(objetoID)) {
-					dueño = _artesano;
+					due\u00f1o = _artesano;
 				} else if (_cliente.tieneObjetoID(objetoID)) {
-					dueño = _cliente;
+					due\u00f1o = _cliente;
 				}
-				if (dueño == null || objeto == null || objeto.getCantidad() < cantObjeto) {
+				if (due\u00f1o == null || objeto == null || objeto.getCantidad() < cantObjeto) {
 					_artesano.setForjaEc("EI");
 					_cliente.setForjaEc("EI");
 					if (objeto == null) {
@@ -1103,10 +1103,10 @@ public class Trabajo implements Runnable, Exchanger {
 				final int nuevaCant = objeto.getCantidad() - cantObjeto;
 				if (nuevaCant <= 0) {
 					// agregar si lo tiene el artesano o el cliente
-					dueño.borrarOEliminarConOR(objetoID, true);
+					due\u00f1o.borrarOEliminarConOR(objetoID, true);
 				} else {
 					objeto.setCantidad(nuevaCant);
-					GestorSalida.ENVIAR_OQ_CAMBIA_CANTIDAD_DEL_OBJETO(dueño, objeto);
+					GestorSalida.ENVIAR_OQ_CAMBIA_CANTIDAD_DEL_OBJETO(due\u00f1o, objeto);
 				}
 				final int idModelo = objeto.getObjModeloID();
 				if (ingredientesPorModelo.get(idModelo) == null) {
@@ -1219,7 +1219,7 @@ public class Trabajo implements Runnable, Exchanger {
 						case Constantes.OBJETO_TIPO_HACHA :
 						case Constantes.OBJETO_TIPO_HERRAMIENTA :
 						case Constantes.OBJETO_TIPO_PICO :
-						case Constantes.OBJETO_TIPO_GUADAÑA :
+						case Constantes.OBJETO_TIPO_GUADA\u00f1A :
 						case Constantes.OBJETO_TIPO_MOCHILA :
 						case Constantes.OBJETO_TIPO_BALLESTA :
 						case Constantes.OBJETO_TIPO_ARMA_MAGICA :

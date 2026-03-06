@@ -583,7 +583,7 @@ public class Celda {
 							GestorSalida.ENVIAR_Im_INFORMACION(perso, "194");
 							break;
 						}
-						if (cercado1.getDueñoID() != perso.getID()) {
+						if (cercado1.getDue\u00f1oID() != perso.getID()) {
 							GestorSalida.ENVIAR_Im_INFORMACION(perso, "195");
 							break;
 						}

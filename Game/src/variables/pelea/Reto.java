@@ -48,7 +48,7 @@ public class Reto {
 			case Constantes.RETO_ORDENADO :
 			case Constantes.RETO_NI_PIAS_NI_SUMISAS :
 			case Constantes.RETO_NI_PIOS_NI_SUMISOS :
-			case Constantes.RETO_LOS_PEQUEÑOS_ANTES :
+			case Constantes.RETO_LOS_PEQUE\u00f1OS_ANTES :
 			case Constantes.RETO_SUPERVIVIENTE :
 			case Constantes.RETO_AUDAZ :
 			case Constantes.RETO_PEGAJOSO :

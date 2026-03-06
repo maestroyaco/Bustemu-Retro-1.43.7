@@ -18,10 +18,10 @@ import estaticos.Mundo;
 public class Cercado implements Exchanger {
 	private byte _capacidadMax, _objetosMax;
 	private short _celda = -1, _celdaMontura, _celdaPuerta;
-	private int _dueñoID, _precioPJ, _precioOriginal;
+	private int _due\u00f1oID, _precioPJ, _precioOriginal;
 	private Gremio _gremio;
 	private final Mapa _mapa;
-	// private final Map<Short, Map<Integer, Objeto>> _objCrianzaConDueño = new HashMap<Short,
+	// private final Map<Short, Map<Integer, Objeto>> _objCrianzaConDue\u00f1o = new HashMap<Short,
 	// Map<Integer, Objeto>>();
 	private final Map<Short, Objeto> _objCrianza = new HashMap<Short, Objeto>();
 	private final ConcurrentHashMap<Integer, Montura> _criando = new ConcurrentHashMap<Integer, Montura>();
@@ -114,7 +114,7 @@ public class Cercado implements Exchanger {
 					break;
 			}
 			if (publico) {
-				_dueñoID = -1;
+				_due\u00f1oID = -1;
 				_precioOriginal = _precioPJ = 0;
 				for (final String str : objCrianza.split(Pattern.quote("|"))) {
 					try {
@@ -134,15 +134,15 @@ public class Cercado implements Exchanger {
 		}
 	}
 	
-	public void actualizarCercado(int dueñoID, int gremio, int precio, String objCrianza, String criando) {
-		_dueñoID = dueñoID;
+	public void actualizarCercado(int due\u00f1oID, int gremio, int precio, String objCrianza, String criando) {
+		_due\u00f1oID = due\u00f1oID;
 		_gremio = null;
-		if (_dueñoID > 0) {
-			Personaje dueño = Mundo.getPersonaje(_dueñoID);
-			if (dueño == null) {
-				_dueñoID = 0;
+		if (_due\u00f1oID > 0) {
+			Personaje due\u00f1o = Mundo.getPersonaje(_due\u00f1oID);
+			if (due\u00f1o == null) {
+				_due\u00f1oID = 0;
 			} else {
-				_gremio = dueño.getGremio();
+				_gremio = due\u00f1o.getGremio();
 			}
 			_precioPJ = precio;
 			for (final String str : objCrianza.split(Pattern.quote("|"))) {
@@ -172,7 +172,7 @@ public class Cercado implements Exchanger {
 	}
 	
 	public void resetear() {
-		_dueñoID = 0;
+		_due\u00f1oID = 0;
 		_precioPJ = 3_000_000;
 		_gremio = null;
 		_objCrianza.clear();
@@ -218,16 +218,16 @@ public class Cercado implements Exchanger {
 		return _objCrianza;
 	}
 	
-	public void setTamañoyObjetos(final byte tamaño, final byte objetos) {
-		_capacidadMax = tamaño;
+	public void setTama\u00f1oyObjetos(final byte tama\u00f1o, final byte objetos) {
+		_capacidadMax = tama\u00f1o;
 		_objetosMax = objetos;
 	}
 	
-	public void addObjetoCria(final short celda, final Objeto objeto, final int dueño) {
+	public void addObjetoCria(final short celda, final Objeto objeto, final int due\u00f1o) {
 		// final Map<Integer, Objeto> otro = new TreeMap<Integer, Objeto>();
-		// otro.put(dueño, objeto);
+		// otro.put(due\u00f1o, objeto);
 		_objCrianza.put(celda, objeto);
-		// _objCrianzaConDueño.put(celda, otro);
+		// _objCrianzaConDue\u00f1o.put(celda, otro);
 	}
 	
 	public boolean retirarObjCria(final short celda, final Personaje perso) {
@@ -239,7 +239,7 @@ public class Cercado implements Exchanger {
 		} else {// si se elimnia por desgaste
 			Mundo.eliminarObjeto(_objCrianza.get(celda).getID());
 		}
-		// _objCrianzaConDueño.remove(celda);
+		// _objCrianzaConDue\u00f1o.remove(celda);
 		_objCrianza.remove(celda);
 		return true;
 	}
@@ -326,15 +326,15 @@ public class Cercado implements Exchanger {
 	}
 	
 	public boolean esPublico() {
-		return _dueñoID == -1;
+		return _due\u00f1oID == -1;
 	}
 	
-	public int getDueñoID() {
-		return _dueñoID;
+	public int getDue\u00f1oID() {
+		return _due\u00f1oID;
 	}
 	
-	public void setDueñoID(final int dueño) {
-		_dueñoID = dueño;
+	public void setDue\u00f1oID(final int due\u00f1o) {
+		_due\u00f1oID = due\u00f1o;
 	}
 	
 	public Gremio getGremio() {
@@ -358,7 +358,7 @@ public class Cercado implements Exchanger {
 	}
 	
 	public int getPrecio() {
-		return _dueñoID > 0 ? _precioPJ : _precioOriginal;
+		return _due\u00f1oID > 0 ? _precioPJ : _precioOriginal;
 	}
 	
 	public void setPrecioPJ(final int precio) {
@@ -366,7 +366,7 @@ public class Cercado implements Exchanger {
 	}
 	
 	public String informacionCercado() {
-		return "Rp" + _dueñoID + ";" + getPrecio() + ";" + _capacidadMax + ";" + _objetosMax + ";" + (_gremio == null
+		return "Rp" + _due\u00f1oID + ";" + getPrecio() + ";" + _capacidadMax + ";" + _objetosMax + ";" + (_gremio == null
 		? ";"
 		: (_gremio.getNombre() + ";" + _gremio.getEmblema()));
 	}

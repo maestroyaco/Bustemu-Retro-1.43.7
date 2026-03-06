@@ -27,7 +27,7 @@ import variables.stats.TotalStats;
 import estaticos.Mundo.Duo;
 
 public class Constantes {
-	public static final String VERSION_EMULADOR = "7.1 Retro Versión";
+	public static final String VERSION_EMULADOR = "7.1 Retro Versi\u00f3n";
 	// public static final String SUBVERSION_EMULADOR = ".2";
 	public static final String CREADOR = "ELBUSTA";
 	public static final String ZAAPI_BONTA = "6159,4174,8758,4299,4180,8759,4183,2221,4217,4098,8757,4223,8760,2214,4179,4229,4232,8478,4238,4263,4216,4172,4247,4272,4271,4250,4178,4106,4181,4259,4090,4262,4287,4300,4240,4218,4074,4308";
@@ -105,7 +105,7 @@ public class Constantes {
 	public static final byte ESTADO_PESADO = 7;
 	public static final byte ESTADO_TRANSPORTADO = 8;
 	public static final byte ESTADO_MOTIVACION_SILVESTRE = 9;
-	public static final byte ESTADO_DOMESTICACIÓN = 10;
+	public static final byte ESTADO_DOMESTICACI\u00d3N = 10;
 	public static final byte ESTADO_CABALGANDO = 11;
 	public static final byte ESTADO_REVOLTOSO = 12;
 	public static final byte ESTADO_MUY_REVOLTOSO = 13;
@@ -138,7 +138,7 @@ public class Constantes {
 	public static final byte ESTADO_DE_MAL_HUMOR = 47;
 	public static final byte ESTADO_DESCONCERTADO = 48;
 	public static final byte ESTADO_GHULIFICADO = 49;
-	// Este estado hace que no se puedan usar hechizos de curación ni que pueda curarse de ninguna
+	// Este estado hace que no se puedan usar hechizos de curaci\u00f3n ni que pueda curarse de ninguna
 	// forma.
 	public static final byte ESTADO_ALTRUISTA = 50;
 	public static final byte ESTADO_JUBILADO = 55;
@@ -200,44 +200,44 @@ public class Constantes {
 	public static final byte PELEA_FASE_COMBATE = 3;
 	public static final byte PELEA_FASE_FINALIZADO = 4;
 	// RETOS
-	public static final byte RETO_ZOMBI = 1;// Utiliza sólo un punto de movimiento en cada turno.
+	public static final byte RETO_ZOMBI = 1;// Utiliza s\u00f3lo un punto de movimiento en cada turno.
 	public static final byte RETO_ESTATUA = 2;// Acaba tu turno en la misma casilla donde lo
 	// empezaste, hasta que acabe el combate.
 	public static final byte RETO_ELEGIDO_VOLUNTARIO = 3;// Matar %1 el primero.
-	public static final byte RETO_APLAZAMIENTO = 4;// Matar %1 el último.
+	public static final byte RETO_APLAZAMIENTO = 4;// Matar %1 el \u00faltimo.
 	public static final byte RETO_AHORRADOR = 5;// Durante el tiempo que dure el combate, cada
-	// personaje sólo debe utilizar la misma acción una
-	// única vez.
-	public static final byte RETO_VERSATIL = 6;// Durante su turno, cada jugador sólo puede utilizar
-	// una vez la misma acción.
+	// personaje s\u00f3lo debe utilizar la misma acci\u00f3n una
+	// \u00fanica vez.
+	public static final byte RETO_VERSATIL = 6;// Durante su turno, cada jugador s\u00f3lo puede utilizar
+	// una vez la misma acci\u00f3n.
 	public static final byte RETO_JARDINERO = 7;// Durante el tiempo que dure el combate, planta una
-	// Zanahowia cada vez que el hechizo esté disponible.
+	// Zanahowia cada vez que el hechizo est\u00e1 disponible.
 	public static final byte RETO_NOMADA = 8;// Durante el tiempo que dure el combate, utiliza todos
 	// tus PM disponibles en cada turno.
-	public static final byte RETO_BARBARO = 9;// No utilices ningún hechizo durante el tiempo que dure
+	public static final byte RETO_BARBARO = 9;// No utilices ning\u00fan hechizo durante el tiempo que dure
 	// este combate.
 	public static final byte RETO_CRUEL = 10;// Debes matar a los adversarios en orden creciente de
 	// nivel.
 	public static final byte RETO_MISTICO = 11;// Durante el tiempo que dure el combate, utiliza
 	// solamente hechizos.
 	public static final byte RETO_SEPULTURERO = 12;// Durante el tiempo que dure el combate, invoca un
-	// Chaferloko cada vez que el hechizo esté
+	// Chaferloko cada vez que el hechizo est\u00e1
 	// disponible.
 	public static final byte RETO_CASINO_REAL = 14;// Durante el tiempo que dure el combate, lanzar el
 	// hechizo Ruleta cada vez que se encuentre
 	// disponible.
-	public static final byte RETO_ARACNOFILO = 15;// Invocar una arakna cada vez que el hechizo esté
-	// disponible. Válido durante todo el combate.
-	public static final byte RETO_ENTOMOLOGO = 16;// Invocar una Llamita cada vez que el hechizo esté
-	// disponible. Válido durante todo el combate.
+	public static final byte RETO_ARACNOFILO = 15;// Invocar una arakna cada vez que el hechizo est\u00e1
+	// disponible. V\u00e1lido durante todo el combate.
+	public static final byte RETO_ENTOMOLOGO = 16;// Invocar una Llamita cada vez que el hechizo est\u00e1
+	// disponible. V\u00e1lido durante todo el combate.
 	public static final byte RETO_INTOCABLE = 17;// No perder puntos de vida durante el tiempo que
 	// dure el combate.
 	public static final byte RETO_INCURABLE = 18;// No curar durante el tiempo que dure el combate.
 	public static final byte RETO_MANOS_LIMPIAS = 19;// Acabar con los monstruos sin ocasionarles
-	// daños directos durante lo que dure el
+	// da\u00f1os directos durante lo que dure el
 	// combate. Se puede utilizar trampas, glifos,
-	// venenos, daños ocasionados por desplazamiento
-	// así como los ataques de invocaciones.
+	// venenos, da\u00f1os ocasionados por desplazamiento
+	// as\u00ed como los ataques de invocaciones.
 	public static final byte RETO_ELEMENTAL = 20;// Utiliza el mismo elemento de ataque durante todo
 	// el combate.
 	public static final byte RETO_CIRCULEN = 21;// No quitar PM a los adversarios mientras dure el
@@ -252,25 +252,25 @@ public class Constantes {
 	// descendiente de nivel.
 	public static final byte RETO_NI_PIAS_NI_SUMISAS = 28;// Los personajes de sexo masculino deben
 	// dejar que los de sexo femenino acaben con
-	// los adversarios. Válido durante todo el
+	// los adversarios. V\u00e1lido durante todo el
 	// combate.
 	public static final byte RETO_NI_PIOS_NI_SUMISOS = 29;// Los personajes de sexo femenino deben
 	// dejar que los de sexo masculino acaben
-	// con los adversarios. Válido durante todo
+	// con los adversarios. V\u00e1lido durante todo
 	// el combate.
-	public static final byte RETO_LOS_PEQUEÑOS_ANTES = 30;// El personaje de menor nivel debe acabar
+	public static final byte RETO_LOS_PEQUE\u00f1OS_ANTES = 30;// El personaje de menor nivel debe acabar
 	// con los adversarios.
 	public static final byte RETO_FOCALIZACION = 31;// Cuando se ataca a un adversario, hay que
 	// matarlo antes de atacar a otro adversario.
 	public static final byte RETO_ELITISTA = 32;// Todos los ataques deben ir dirigidos a %1 hasta que
 	// muera.
-	public static final byte RETO_SUPERVIVIENTE = 33;// Ningún aliado debe morir.
+	public static final byte RETO_SUPERVIVIENTE = 33;// Ning\u00fan aliado debe morir.
 	public static final byte RETO_IMPREVISIBLE = 34;// Todos los ataques deben ir dirigidos a un mismo
 	// objetivo que se designa en cada turno de un
 	// personaje.
 	public static final byte RETO_ASESINO_A_SUELDO = 35;// Debes matar a los adversarios en el orden
 	// indicado. Cada vez que mates a un objetivo,
-	// obtendrás el nombre del próximo al que
+	// obtendr\u00e1s el nombre del pr\u00f3ximo al que
 	// tienes que matar
 	public static final byte RETO_AUDAZ = 36;// Acaba tu turno en una de las casillas pegadas a las de
 	// uno de tus adversarios.
@@ -282,37 +282,37 @@ public class Constantes {
 	// adyacente a la de uno de tus aliados.
 	public static final byte RETO_PUSILANIME = 40;// No termines nunca tu turno en una casilla
 	// adyacente a la de uno de tus adversarios.
-	public static final byte RETO_IMPETUOSO = 41;// Utiliza todos tus puntos de acción antes de acabar
+	public static final byte RETO_IMPETUOSO = 41;// Utiliza todos tus puntos de acci\u00f3n antes de acabar
 	// tu turno.
-	// Cuando un personaje mata a un adversario, tiene que matar obligatoriamente a un (y sólo a un)
+	// Cuando un personaje mata a un adversario, tiene que matar obligatoriamente a un (y s\u00f3lo a un)
 	// segundo adversario durante su turno.
 	public static final byte RETO_EL_DOS_POR_UNO = 42;
 	// Nadie puede recibir curas durante su turno.
 	public static final byte RETO_ABNEGACION = 43;
-	// Cada personaje debe matar al menos a un adversario (que no sea una invocación) durante el
+	// Cada personaje debe matar al menos a un adversario (que no sea una invocaci\u00f3n) durante el
 	// combate.
 	public static final byte RETO_REPARTO = 44;
-	// Cuando un personaje ataca a un adversario, ningún otro personaje debe atacar a ese mismo
+	// Cuando un personaje ataca a un adversario, ning\u00fan otro personaje debe atacar a ese mismo
 	// adversario durante el tiempo que dure el combate.
 	public static final byte RETO_DUELO = 45;
 	// Cada personaje debe matar al menos a un adversario durante el combate. Cuando un personaje
-	// ataca a un adversario, ningún otro personaje puede atacar a ese mismo adversario durante el
+	// ataca a un adversario, ning\u00fan otro personaje puede atacar a ese mismo adversario durante el
 	// combate.
 	public static final byte RETO_CADA_UNO_CON_SU_MONSTRUO = 46;
-	// Cuando un aliado pierde puntos de vida, dispones de 3 turnos para rematar a tu aliado o ¡ganar
+	// Cuando un aliado pierde puntos de vida, dispones de 3 turnos para rematar a tu aliado o ganar
 	// el combate!
 	public static final byte RETO_CONTAMINACION = 47;
-	// El personaje secundario de menor nivel tiene que matar a todos los adversarios (así aprenderás
+	// El personaje secundario de menor nivel tiene que matar a todos los adversarios (as\u00ed aprender\u00e1s
 	// a querer abusar como un puerkazo).
 	public static final byte RETO_LOS_PERSONAJES_SECUNDARIOS_PRIMERO = 48;
 	// Aliados y personajes secundarios deben acabar vivos el combate.
 	public static final byte RETO_PROTEJAN_A_SUS_PERSONAJES_SECUNDARIOS = 49;
-	// Acaba el combate, para ganar el desafío. Ya se sabe, los desarrolladores del juego son unos
+	// Acaba el combate, para ganar el desaf\u00edo. Ya se sabe, los desarrolladores del juego son unos
 	// tramposos...
 	public static final byte RETO_LA_TRAMPA_DE_LOS_DESARROLLADORES = 50;
 	// OFICIOS
 	public static final int OFICIO_BASE = 1;
-	public static final int OFICIO_LEÑADOR = 2;
+	public static final int OFICIO_LE\u00cdADOR = 2;
 	public static final int OFICIO_FORJADOR_ESPADAS = 11;
 	public static final int OFICIO_ESCULTOR_ARCOS = 13;
 	public static final int OFICIO_FORJADOR_MARTILLOS = 14;
@@ -350,7 +350,7 @@ public class Constantes {
 	// EMOTES
 	public static final byte EMOTE_NULO = 0;
 	public static final byte EMOTE_SENTARSE = 1;
-	public static final byte EMOTE_SEÑAL_CON_MANO = 2;
+	public static final byte EMOTE_SE\u00f1AL_CON_MANO = 2;
 	public static final byte EMOTE_APLAUDIR = 3;
 	public static final byte EMOTE_ENFADARSE = 4;
 	public static final byte EMOTE_MIEDO = 5;
@@ -363,7 +363,7 @@ public class Constantes {
 	public static final byte EMOTE_HOJA = 12;
 	public static final byte EMOTE_TIJERAS = 13;
 	public static final byte EMOTE_CRUZARSE_BRAZOS = 14;
-	public static final byte EMOTE_SEÑALAR_DEDO = 15;
+	public static final byte EMOTE_SE\u00f1ALAR_DEDO = 15;
 	public static final byte EMOTE_CROW = 16;
 	public static final byte EMOTE_COMER = 17;
 	public static final byte EMOTE_BEBER = 18;
@@ -390,7 +390,7 @@ public class Constantes {
 	public static final byte OBJETO_POS_DOFUS6 = 14;
 	public static final byte OBJETO_POS_ESCUDO = 15;
 	public static final byte OBJETO_POS_MONTURA = 16;
-	public static final byte OBJETO_POS_COMPAÑERO = 17;
+	public static final byte OBJETO_POS_COMPA\u00f1ERO = 17;
 	public static final byte OBJETO_POS_OBJ_MUTACION = 20;
 	public static final byte OBJETO_POS_BOOST = 21;
 	public static final byte OBJETO_POS_MALDICION = 22;
@@ -426,7 +426,7 @@ public class Constantes {
 	public static final int OBJETO_TIPO_HACHA = 19;
 	public static final int OBJETO_TIPO_HERRAMIENTA = 20;
 	public static final int OBJETO_TIPO_PICO = 21;
-	public static final int OBJETO_TIPO_GUADAÑA = 22;
+	public static final int OBJETO_TIPO_GUADA\u00f1A = 22;
 	public static final int OBJETO_TIPO_DOFUS = 23;
 	public static final int OBJETO_TIPO_OBJETO_DE_BUSQUEDA = 24;
 	public static final int OBJETO_TIPO_DOCUMENTO = 25;
@@ -523,7 +523,7 @@ public class Constantes {
 	public static final int OBJETO_TIPO_MONEDA_VIP = 118;
 	public static final int OBJETO_TIPO_ESPECIALES = 150;
 	public static final int OBJETO_TIPO_TROFEO = 151;
-	public static final int OBJETO_TIPO_COMPAÑERO = 169;
+	public static final int OBJETO_TIPO_COMPA\u00d1ERO = 169;
 	// ALINEACION
 	public static final byte ALINEACION_NULL = -1;
 	public static final byte ALINEACION_NEUTRAL = 0;
@@ -607,55 +607,55 @@ public class Constantes {
 	public static final int[] NO_BOOST_CC_IDS = {101};
 	public static final int[] BUFF_ACCION_RESPUESTA = {9, 79, 788, 776};
 	// 9 - Esquiva un #1% de los golpes retrocediendo de #2 casilla(s)", c: 0, o: ""
-	// 79 - #3% de posibilidades de que sufras daños x#1, o de que te cure x#2", c: 0, o: ""
+	// 79 - #3% de posibilidades de que sufras da\u00f1os x#1, o de que te cure x#2", c: 0, o: ""
 	// 788 - Castigo #2 durante #3 turno(s).", c: 0, o: "+"
-	// 776 - +#1{~1~2 a }#2% de los daños incurables sufridos", c: 75, o: "-", j: true
+	// 776 - +#1{~1~2 a }#2% de los da\u00f1os incurables sufridos", c: 75, o: "-", j: true
 	public static final int[] BUFF_SET_CLASE = {281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292};
 	// 281 Aumenta #3 casillas el alcance del hechizo #1", c: 0, o: "+"
 	// 282 Vuelve modificable el alcance del hechizo #1", c: 0, o: "+"
-	// 283 +#3 a los daños del hechizo #1", c: 0, o: "+"
+	// 283 +#3 a los da\u00f1os del hechizo #1", c: 0, o: "+"
 	// 284 +#3 a las curas del hechizo #1", c: 0, o: "+"
-	// 285 Reduce en #3 el número de PA que cuesta el hechizo #1.", c: 0, o: "+"
-	// 286 Reduce en #3 el número de turnos a esperar antes de poder volver a lanzar el hechizo
+	// 285 Reduce en #3 el n\u00famero de PA que cuesta el hechizo #1.", c: 0, o: "+"
+	// 286 Reduce en #3 el n\u00famero de turnos a esperar antes de poder volver a lanzar el hechizo
 	// #1", c: 0, o: "+"
 	// 287 +#3 al GC del hechizo #1", c: 0, o: "+"
-	// 288 Desactiva el lanzamiento en línea recta del hechizo #1", c: 0, o: "+"
-	// 289 Desactiva la línea de visión del hechizo #1", c: 0, o: "+"
-	// 290 +#3 al número máximo de veces por que se puede lanzar el hechizo #1", c: 0, o: "+"
-	// 291 +#3 al número máximo de veces que se le puede lanzar a un mismo objetivo el hechizo
+	// 288 Desactiva el lanzamiento en l\u00ednea recta del hechizo #1", c: 0, o: "+"
+	// 289 Desactiva la l\u00ednea de visi\u00f3n del hechizo #1", c: 0, o: "+"
+	// 290 +#3 al n\u00famero m\u00e1ximo de veces por que se puede lanzar el hechizo #1", c: 0, o: "+"
+	// 291 +#3 al n\u00famero m\u00e1ximo de veces que se le puede lanzar a un mismo objetivo el hechizo
 	// #1", c: 0, o: "+"
-	// 292 Fija a #3 el número de turnos para volver a lanzar el hechizo #1", c: 0, o: "+"
+	// 292 Fija a #3 el n\u00famero de turnos para volver a lanzar el hechizo #1", c: 0, o: "+"
 	// STATS
 	public static final int STAT_ROBA_PM = 77;
 	public static final int STAT_MAS_PM_2 = 78;
 	public static final int STAT_CURAR_2 = 81;
 	public static final int STAT_ROBA_PA = 84;
 	public static final int STAT_MENOS_PA = 101;
-	public static final int STAT_DAÑOS_ROBAR_AGUA = 91;// Robar Vida(agua)
-	public static final int STAT_DAÑOS_ROBAR_TIERRA = 92;// Robar Vida(tierra)
-	public static final int STAT_DAÑOS_ROBAR_AIRE = 93;// Robar Vida(aire)
-	public static final int STAT_DAÑOS_ROBAR_FUEGO = 94;// Robar Vida(fuego)
-	public static final int STAT_DAÑOS_ROBAR_NEUTRAL = 95;// Robar Vida(neutral)
-	public static final int STAT_DAÑOS_AGUA = 96;// Daños Agua
-	public static final int STAT_DAÑOS_TIERRA = 97;// Daños Tierra
-	public static final int STAT_DAÑOS_AIRE = 98;// Daños Aire
-	public static final int STAT_DAÑOS_FUEGO = 99;// Daños Fuego
-	public static final int STAT_DAÑOS_NEUTRAL = 100;// Daños Neutral
-	public static final int STAT_MAS_DAÑOS_REDUCIDOS_NO_FECA = 105;
+	public static final int STAT_DA\u00d1OS_ROBAR_AGUA = 91;// Robar Vida(agua)
+	public static final int STAT_DA\u00d1OS_ROBAR_TIERRA = 92;// Robar Vida(tierra)
+	public static final int STAT_DA\u00d1OS_ROBAR_AIRE = 93;// Robar Vida(aire)
+	public static final int STAT_DA\u00d1OS_ROBAR_FUEGO = 94;// Robar Vida(fuego)
+	public static final int STAT_DA\u00d1OS_ROBAR_NEUTRAL = 95;// Robar Vida(neutral)
+	public static final int STAT_DA\u00d1OS_AGUA = 96;// Da\u00f1os Agua
+	public static final int STAT_DA\u00d1OS_TIERRA = 97;// Da\u00f1os Tierra
+	public static final int STAT_DA\u00d1OS_AIRE = 98;// Da\u00f1os Aire
+	public static final int STAT_DA\u00d1OS_FUEGO = 99;// Da\u00f1os Fuego
+	public static final int STAT_DA\u00d1OS_NEUTRAL = 100;// Da\u00f1os Neutral
+	public static final int STAT_MAS_DA\u00f1OS_REDUCIDOS_NO_FECA = 105;
 	public static final int STAT_REENVIA_HECHIZO = 106;
-	public static final int STAT_DAÑOS_DEVUELTOS = 107;
+	public static final int STAT_DA\u00f1OS_DEVUELTOS = 107;
 	public static final int STAT_CURAR = 108;
 	public static final int STAT_MAS_VIDA = 110;
 	public static final int STAT_MAS_PA = 111;
-	public static final int STAT_MAS_DAÑOS = 112;
-	public static final int STAT_MULTIPLICA_DAÑOS = 114;
+	public static final int STAT_MAS_DA\u00f1OS = 112;
+	public static final int STAT_MULTIPLICA_DA\u00d1OS = 114;
 	public static final int STAT_MAS_GOLPES_CRITICOS = 115;
 	public static final int STAT_MENOS_ALCANCE = 116;
 	public static final int STAT_MAS_ALCANCE = 117;
 	public static final int STAT_MAS_FUERZA = 118;
 	public static final int STAT_MAS_AGILIDAD = 119;
 	public static final int STAT_MAS_PA_2 = 120;
-	public static final int STAT_MAS_DAÑOS_2 = 121;
+	public static final int STAT_MAS_DA\u00f1OS_2 = 121;
 	public static final int STAT_MAS_FALLOS_CRITICOS = 122;
 	public static final int STAT_MAS_SUERTE = 123;
 	public static final int STAT_MAS_SABIDURIA = 124;
@@ -663,9 +663,9 @@ public class Constantes {
 	public static final int STAT_MAS_INTELIGENCIA = 126;
 	public static final int STAT_MENOS_PM = 127;
 	public static final int STAT_MAS_PM = 128;
-	public static final int STAT_MAS_PORC_DAÑOS = 138;
-	public static final int STAT_MAS_DAÑO_FISICO = 142;
-	public static final int STAT_MENOS_DAÑOS = 145;
+	public static final int STAT_MAS_PORC_DA\u00d1OS = 138;
+	public static final int STAT_MAS_DA\u00f1O_FISICO = 142;
+	public static final int STAT_MENOS_DA\u00d1OS = 145;
 	public static final int STAT_CAMBIA_APARIENCIA = 149;
 	public static final int STAT_MENOS_SUERTE = 152;
 	public static final int STAT_MENOS_VITALIDAD = 153;
@@ -679,7 +679,7 @@ public class Constantes {
 	public static final int STAT_MAS_ESQUIVA_PERD_PM = 161;
 	public static final int STAT_MENOS_ESQUIVA_PERD_PA = 162;
 	public static final int STAT_MENOS_ESQUIVA_PERD_PM = 163;
-	public static final int STAT_MENOS_DAÑOS_REDUCIDOS = 164;
+	public static final int STAT_MENOS_DA\u00d1OS_REDUCIDOS = 164;
 	public static final int STAT_MAS_DOMINIO = 165;
 	public static final int STAT_MENOS_PA_FIJO = 168;
 	public static final int STAT_MENOS_PM_FIJO = 169;
@@ -693,7 +693,7 @@ public class Constantes {
 	public static final int STAT_MAS_CRIATURAS_INVO = 182;
 	public static final int STAT_REDUCCION_MAGICA = 183;
 	public static final int STAT_REDUCCION_FISICA = 184;
-	public static final int STAT_MENOS_PORC_DAÑOS = 186;
+	public static final int STAT_MENOS_PORC_DA\u00d1OS = 186;
 	public static final int STAT_GANAR_KAMAS = 194;
 	public static final int STAT_MAS_RES_PORC_TIERRA = 210;
 	public static final int STAT_MAS_RES_PORC_AGUA = 211;
@@ -705,9 +705,9 @@ public class Constantes {
 	public static final int STAT_MENOS_RES_PORC_AIRE = 217;
 	public static final int STAT_MENOS_RES_PORC_FUEGO = 218;
 	public static final int STAT_MENOS_RES_PORC_NEUTRAL = 219;
-	public static final int STAT_REENVIA_DAÑOS = 220;
-	public static final int STAT_MAS_DAÑOS_TRAMPA = 225;
-	public static final int STAT_MAS_PORC_DAÑOS_TRAMPA = 226;
+	public static final int STAT_REENVIA_DA\u00f1OS = 220;
+	public static final int STAT_MAS_DA\u00f1OS_TRAMPA = 225;
+	public static final int STAT_MAS_PORC_DA\u00d1OS_TRAMPA = 226;
 	public static final int STAT_MAS_RES_FIJA_TIERRA = 240;
 	public static final int STAT_MAS_RES_FIJA_AGUA = 241;
 	public static final int STAT_MAS_RES_FIJA_AIRE = 242;
@@ -733,10 +733,10 @@ public class Constantes {
 	public static final int STAT_MAS_RES_FIJA_PVP_AIRE = 262;
 	public static final int STAT_MAS_RES_FIJA_PVP_FUEGO = 263;
 	public static final int STAT_MAS_RES_FIJA_PVP_NEUTRAL = 264;
-	public static final int STAT_MAS_DAÑOS_REDUCIDOS_ARMADURAS_FECA = 265;
+	public static final int STAT_MAS_DA\u00f1OS_REDUCIDOS_ARMADURAS_FECA = 265;
 	public static final int STAT_HECHIZO_CLASE_AUMENTA_ALCANCE = 281;
 	public static final int STAT_HECHIZO_CLASE_VUELVE_MODIFICABLE_ALCANCE = 282;
-	public static final int STAT_HECHIZO_CLASE_MAS_DAÑOS = 283;
+	public static final int STAT_HECHIZO_CLASE_MAS_DA\u00d1OS = 283;
 	public static final int STAT_HECHIZO_CLASE_MAS_CURAS = 284;
 	public static final int STAT_HECHIZO_CLASE_REDUCE_COSTO_PA = 285;
 	public static final int STAT_HECHIZO_CLASE_REDUCE_TURNOS_VOLVER_LANZAR = 286;
@@ -746,7 +746,7 @@ public class Constantes {
 	public static final int STAT_HECHIZO_CLASE_MAS_VECES_LANZAMIENTOS_POR_TURNO = 290;
 	public static final int STAT_HECHIZO_CLASE_MAS_VECES_LANZAMIENTOS_POR_OBJETIVO = 291;
 	public static final int STAT_HECHIZO_CLASE_FIJAR_TURNOS_VOLVER_A_LANZAR = 292;
-	// E[293] = {d: "Aumenta los daños de base del hechizo #1 en #3", c: 0, o: "+"};
+	// E[293] = {d: "Aumenta los da\u00f1os de base del hechizo #1 en #3", c: 0, o: "+"};
 	// E[294] = {d: "Disminuye el alcance del hechizo #1 de #3", c: 0, o: "-"};
 	public static final int STAT_ROBA_ALCANCE = 320;
 	public static final int STAT_MOVER_DESAPARECE_BUFF = 334;
@@ -755,45 +755,45 @@ public class Constantes {
 	public static final int STAT_MENOS_HUIDA = 411;
 	public static final int STAT_MAS_PLACAJE = 413;
 	public static final int STAT_MENOS_PLACAJE = 414;
-	public static final int STAT_MAS_DAÑOS_DE_AGUA = 415;
-	public static final int STAT_MAS_DAÑOS_DE_TIERRA = 416;
-	public static final int STAT_MAS_DAÑOS_DE_AIRE = 417;
-	public static final int STAT_MAS_DAÑOS_DE_FUEGO = 418;
-	public static final int STAT_MAS_DAÑOS_DE_NEUTRAL = 419;
+	public static final int STAT_MAS_DA\u00f1OS_DE_AGUA = 415;
+	public static final int STAT_MAS_DA\u00f1OS_DE_TIERRA = 416;
+	public static final int STAT_MAS_DA\u00f1OS_DE_AIRE = 417;
+	public static final int STAT_MAS_DA\u00f1OS_DE_FUEGO = 418;
+	public static final int STAT_MAS_DA\u00f1OS_DE_NEUTRAL = 419;
 	public static final int STAT_QUITA_EFECTOS_HECHIZO = 420;
 	public static final int STAT_RETROCEDE_CASILLAS = 421;
 	public static final int STAT_MAS_PORC_ESCUDO_PDV = 422;
 	public static final int STAT_AVANZAR_CASILLAS = 423;
 	public static final int STAT_MENOS_PORC_PDV_TEMPORAL = 424;
-	public static final int STAT_MAS_DAÑOS_EMPUJE = 425;
+	public static final int STAT_MAS_DA\u00f1OS_EMPUJE = 425;
 	public static final int STAT_MAS_VELOCIDAD = 426;
 	public static final int STAT_DETONAR_BOMBA = 427;
 	public static final int STAT_INVOCA_BOMBA = 428;
-	public static final int STAT_MAS_DAÑOS_CRITICOS = 429;
+	public static final int STAT_MAS_DA\u00f1OS_CRITICOS = 429;
 	public static final int STAT_MAS_REDUCCION_CRITICOS = 430;
 	public static final int STAT_MAS_RETIRO_PA = 431;
 	public static final int STAT_MAS_RETIRO_PM = 432;
 	public static final int STAT_MENOS_RETIRO_PA = 433;
 	public static final int STAT_MENOS_RETIRO_PM = 434;
 	public static final int STAT_MAS_REDUCCION_EMPUJE = 435;
-	public static final int STAT_MENOS_DAÑOS_DE_AGUA = 436;
-	public static final int STAT_MENOS_DAÑOS_DE_TIERRA = 437;
-	public static final int STAT_MENOS_DAÑOS_DE_AIRE = 438;
-	public static final int STAT_MENOS_DAÑOS_DE_FUEGO = 439;
-	public static final int STAT_MENOS_DAÑOS_DE_NEUTRAL = 440;
-	public static final int STAT_MENOS_DAÑOS_CRITICOS = 441;
+	public static final int STAT_MENOS_DA\u00d1OS_DE_AGUA = 436;
+	public static final int STAT_MENOS_DA\u00d1OS_DE_TIERRA = 437;
+	public static final int STAT_MENOS_DA\u00d1OS_DE_AIRE = 438;
+	public static final int STAT_MENOS_DA\u00d1OS_DE_FUEGO = 439;
+	public static final int STAT_MENOS_DA\u00d1OS_DE_NEUTRAL = 440;
+	public static final int STAT_MENOS_DA\u00d1OS_CRITICOS = 441;
 	public static final int STAT_MENOS_REDUCCION_CRITICOS = 442;
-	public static final int STAT_MENOS_DAÑOS_EMPUJE = 443;
+	public static final int STAT_MENOS_DA\u00d1OS_EMPUJE = 443;
 	public static final int STAT_MENOS_REDUCCION_EMPUJE = 444;
 	public static final int STAT_DAR_OBJETO = 500;
-	public static final int STAT_MAS_COMPAÑERO = 501;
+	public static final int STAT_MAS_COMPA\u00d1ERO = 501;
 	public static final int STAT_DAR_OGRINAS = 550;
 	public static final int STAT_DAR_CREDITOS = 551;
 	public static final int STAT_GANAR_EXPERIENCIA = 605;
 	public static final int STAT_INVOCA_MOB = 623;
 	public static final int STAT_INVOCA_MOB_2 = 628;
 	public static final int STAT_ENCARNACION_NIVEL = 669;
-	public static final int STAT_CAMBIO_ELEMENTO_DAÑO = 700;
+	public static final int STAT_CAMBIO_ELEMENTO_DA\u00d1O = 700;
 	public static final int STAT_POTENCIA_RUNA = 701;
 	public static final int STAT_POTENCIA_CAPTURA_ALMA = 705;
 	public static final int STAT_DOMESTICAR_MONTURA = 706;
@@ -806,7 +806,7 @@ public class Constantes {
 	public static final int STAT_CORPULENCIA = 806;
 	public static final int STAT_ULTIMA_COMIDA = 807;
 	public static final int STAT_SE_HA_COMIDO_EL = 808;
-	public static final int STAT_TAMAÑO_POCES = 810;
+	public static final int STAT_TAMA\u00d1O_POCES = 810;
 	public static final int STAT_TURNOS = 811;
 	public static final int STAT_RESISTENCIA = 812;
 	public static final int STAT_LLAVE_MAZMORRA = 814;
@@ -833,10 +833,10 @@ public class Constantes {
 	public static final int STAT_SUBIR_BAJAR_MONTURA = 949;
 	public static final int STAT_DAR_ESTADO = 950;// Estado #3", c: 71, o: "/"
 	public static final int STAT_QUITAR_ESTADO = 951;// Quita el estado \'\'#3\'\'", c: 71, o: "/"
-	public static final int STAT_ALINEACION = 960;// Alineación: #3", c: 0, o: "/"
+	public static final int STAT_ALINEACION = 960;// Alineaci\u00f3n: #3", c: 0, o: "/"
 	public static final int STAT_RANGO = 961;// Rango: #3", c: 0, o: "/"
 	public static final int STAT_NIVEL = 962;// Nivel: #3", c: 0, o: "/"
-	public static final int STAT_CREADA_HACE_DIAS = 963;// Creada hace: #3 día(s)", c: 0, o: "/"
+	public static final int STAT_CREADA_HACE_DIAS = 963;// Creada hace: #3 d\u00eda(s)", c: 0, o: "/"
 	public static final int STAT_APELLIDOS = 964;// Apellidos: #4", c: 0, o: "/"
 	public static final int STAT_REAL_GFX = 970;
 	public static final int STAT_HUMOR_OBJEVIVO = 971;
@@ -874,12 +874,12 @@ public class Constantes {
 	// Q.t[1] = "Ve a ver a #1";
 	// Q.t[10] = "Escolta a #1 #2";
 	// Q.t[7] = "Vence al monstruo: #1";
-	// Q.t[2] = "Enseña a #1: #3 #2";
+	// Q.t[2] = "Ense\u00f1a a #1: #3 #2";
 	// Q.t[3] = "Entrega a #1: x#3 #2";
 	// Q.t[12] = "Lleva #3 alma(s) de #2 a #1";
 	// Q.t[9] = "Vuelve a ver a #1";
 	// Q.t[8] = "Utiliza: #1";
-	// Q.t[11] = "Vence a un jugador en desafío #1";
+	// Q.t[11] = "Vence a un jugador en desaf\u00edo #1";
 	// Q.t[6] = "Vence a x#2 #1 en un solo combate";
 	// otros efectos
 	// OBJEVIVOS
@@ -897,27 +897,27 @@ public class Constantes {
 	public static final int ALMANAX_BONUS_DROPS_RECOLECCION = 6;
 	public static final int ALMANAX_BONUS_HONOR = 7;
 	// CAPACIDADES DRAGOPAVOS
-	public static final byte HABILIDAD_INFATIGABLE = 1;// Una montura infatigable tiene mucha más
-	// energía que una montura normal y también
-	// recupera mucho más rápido
+	public static final byte HABILIDAD_INFATIGABLE = 1;// Una montura infatigable tiene mucha m\u00e1s
+	// energ\u00eda que una montura normal y tambi\u00e9n
+	// recupera mucho m\u00e1s r\u00e1pido
 	public static final byte HABILIDAD_PORTADORA = 2;// Una montura portadora puede llevar una mayor
 	// cantidad de objetos que una montura normal
-	public static final byte HABILIDAD_REPRODUCTORA = 3;// Una montura reproductora trae al mundo más
+	public static final byte HABILIDAD_REPRODUCTORA = 3;// Una montura reproductora trae al mundo m\u00e1s
 	// monturitas que una montura normal
-	public static final byte HABILIDAD_SABIA = 4;// Una montura sabia evoluciona dos veces más rápido
+	public static final byte HABILIDAD_SABIA = 4;// Una montura sabia evoluciona dos veces m\u00e1s r\u00e1pido
 	// que una montura normal
 	public static final byte HABILIDAD_RESISTENTE = 5;// Una montura resistente se vuelve resistente
-	// más rápido que una montura normal
-	public static final byte HABILIDAD_ENAMORADA = 6;// Una montura enamorada se enamora más que una
+	// m\u00e1s r\u00e1pido que una montura normal
+	public static final byte HABILIDAD_ENAMORADA = 6;// Una montura enamorada se enamora m\u00e1s que una
 	// montura normal
-	public static final byte HABILIDAD_PRECOZ = 7;// Una montura precoz se vuelve madura más rápido
+	public static final byte HABILIDAD_PRECOZ = 7;// Una montura precoz se vuelve madura m\u00e1s r\u00e1pido
 	// que una montura normal
-	public static final byte HABILIDAD_PREDISPUESTA = 8;// Una montura predispuesta genéticamente
-	// tiene más probabilidades de transmitir sus
-	// características genéticas que una montura
+	public static final byte HABILIDAD_PREDISPUESTA = 8;// Una montura predispuesta gen\u00e9ticamente
+	// tiene m\u00e1s probabilidades de transmitir sus
+	// caracter\u00edsticas gen\u00e9ticas que una montura
 	// normal
-	public static final byte HABILIDAD_CAMALEON = 9;// Una montura camaleónica cambia su apariencia
-	// según el plumaje del aventurero que la monta
+	public static final byte HABILIDAD_CAMALEON = 9;// Una montura camale\u00f3nica cambia su apariencia
+	// seg\u00fan el plumaje del aventurero que la monta
 	// SKILLS
 	public final static int SKILL_MAGUEAR_DAGA = 1;
 	public final static int SKILL_TALAR_FRESNO = 6;
@@ -949,7 +949,7 @@ public class Constantes {
 	public final static int SKILL_TALAR_OLMO = 35;
 	public final static int SKILL_TALAR_ARCE = 37;
 	public final static int SKILL_TALAR_CARPE = 38;
-	public final static int SKILL_TALAR_CASTAÑO = 39;
+	public final static int SKILL_TALAR_CASTA\u00d1O = 39;
 	public final static int SKILL_TALAR_NOGAL = 40;
 	public final static int SKILL_TALAR_CEREZO_SILVESTRE = 41;
 	public final static int SKILL_RECOGER_PATATAS = 42;
@@ -961,8 +961,8 @@ public class Constantes {
 	public final static int SKILL_SEGAR_LINO = 50;
 	public final static int SKILL_SEGAR_CENTENO = 52;
 	public final static int SKILL_SEGAR_CEBADA = 53;
-	public final static int SKILL_SEGAR_CAÑAMO = 54;
-	public final static int SKILL_RECOLECTAR_ESTAÑO = 55;
+	public final static int SKILL_SEGAR_CA\u00d1AMO = 54;
+	public final static int SKILL_RECOLECTAR_ESTA\u00d1O = 55;
 	public final static int SKILL_RECOLECTAR_MANGANESO = 56;
 	public final static int SKILL_SEGAR_AVENA = 57;
 	public final static int SKILL_SEGAR_MALTA = 58;
@@ -970,10 +970,10 @@ public class Constantes {
 	public final static int SKILL_CREAR_SOMBRERO = 63;
 	public final static int SKILL_CREAR_CAPA = 64;
 	public final static int SKILL_CREAR_HACHA = 65;
-	public final static int SKILL_CREAR_GUADAÑA = 66;
+	public final static int SKILL_CREAR_GUADA\u00d1A = 66;
 	public final static int SKILL_CREAR_PICO = 67;
 	public final static int SKILL_COSECHAR_LINO = 68;
-	public final static int SKILL_COSECHAR_CAÑAMO = 69;
+	public final static int SKILL_COSECHAR_CA\u00d1AMO = 69;
 	public final static int SKILL_COSECHAR_TREBOL = 71;
 	public final static int SKILL_COSECHAR_MENTA_SALVAJE = 72;
 	public final static int SKILL_COSECHAR_ORQUIDEA = 73;
@@ -1018,7 +1018,7 @@ public class Constantes {
 	public final static int SKILL_PREPARAR_PESCADO = 135;
 	public final static int SKILL_PESCAR_PISCHI = 136;
 	public final static int SKILL_TALAR_BOMBU = 139;
-	public final static int SKILL_PESCAR_SOMBRA_EXTRAÑA = 140;
+	public final static int SKILL_PESCAR_SOMBRA_EXTRA\u00d1A = 140;
 	public final static int SKILL_TALAR_OLIVIOLETA = 141;
 	public final static int SKILL_REPARAR_DAGA = 142;
 	public final static int SKILL_REPARAR_HACHA = 143;
@@ -1058,7 +1058,7 @@ public class Constantes {
 	public final static int SKILL_ACCIONAR_PALANCA = 179;
 	public final static int SKILL_ROMPER_OBJETO = 181;
 	public final static int SKILL_CREAR_LLAVE = 182;
-	public static final String SKILLS_LIBRO_ARTESANOS = OFICIO_LEÑADOR + ";" + OFICIO_CAMPESINO + ";" + OFICIO_ALQUIMISTA
+	public static final String SKILLS_LIBRO_ARTESANOS = OFICIO_LE\u00cdADOR + ";" + OFICIO_CAMPESINO + ";" + OFICIO_ALQUIMISTA
 	+ ";" + OFICIO_MINERO + ";" + OFICIO_PESCADOR + ";" + OFICIO_CAZADOR + ";" + OFICIO_PANADERO + ";" + OFICIO_CARNICERO
 	+ ";" + OFICIO_PESCADERO + ";" + OFICIO_ZAPATERO + ";" + OFICIO_JOYERO + ";" + OFICIO_SASTRE + ";"
 	+ OFICIO_ESCULTOR_BASTONES + ";" + OFICIO_ESCULTOR_VARITAS + ";" + OFICIO_ESCULTOR_ARCOS + ";" + OFICIO_FORJADOR_DAGAS
@@ -1165,7 +1165,7 @@ public class Constantes {
 	// MOB SUPER TIPO
 	public final static int MOB_SUPER_TIPO_CRIATURAS_DIVERSAS = 1;
 	public final static int MOB_SUPER_TIPO_CRIATURAS_DE_LOS_CAMPOS = 2;
-	public final static int MOB_SUPER_TIPO_CRIATURAS_DE_LA_MONTAÑA = 3;
+	public final static int MOB_SUPER_TIPO_CRIATURAS_DE_LA_MONTA\u00d1A = 3;
 	public final static int MOB_SUPER_TIPO_CRIATURAS_DEL_BOSQUE = 4;
 	public final static int MOB_SUPER_TIPO_CRIATURAS_DE_LAS_LLANURAS = 5;
 	public final static int MOB_SUPER_TIPO_CRIATURAS_DE_LAS_LANDAS = 6;
@@ -1221,35 +1221,35 @@ public class Constantes {
 	{101},
 	// fresno
 	{SKILL_TALAR_FRESNO, 303},
-	// madera de castaño
-	{SKILL_TALAR_CASTAÑO, 473},
+	// madera de casta\u00f1o
+	{SKILL_TALAR_CASTA\u00d1O, 473},
 	// madera de nogal
 	{SKILL_TALAR_NOGAL, 476},
 	// madera de roble
 	{SKILL_TALAR_ROBLE, 460},
 	// Madera de olivioleta
 	{SKILL_TALAR_OLIVIOLETA, 2357},
-	// Madera de bombú
+	// Madera de bomb\u00f3
 	{SKILL_TALAR_BOMBU, 2358},
 	// Madera de arce
 	{SKILL_TALAR_ARCE, 471},
-	// Madera de bambú
+	// Madera de bomb\u00f3
 	{SKILL_TALAR_BAMBU, 7013},
 	// Madera de tejo
 	{SKILL_TALAR_TEJO, 461},
 	// Madera de cerezo salvaje
 	{SKILL_TALAR_CEREZO_SILVESTRE, 474},
-	// Madera de ébano
+	// Madera de \u00e9bano
 	{SKILL_TALAR_EBANO, 449},
 	// Madera de kalipto
 	{SKILL_TALAR_KALIPTO, 7925},
-	// Madera de bambú oscuro
+	// Madera de bomb\u00f3 oscuro
 	{SKILL_TALAR_BAMBU_OSCURO, 7016},
 	// Madera de carpe
 	{SKILL_TALAR_CARPE, 472},
 	// Madera de olmo
 	{SKILL_TALAR_OLMO, 470},
-	// Madera de bambú sagrado
+	// Madera de bomb\u00f3 sagrado
 	{SKILL_TALAR_BAMBU_SAGRADO, 7014},
 	//
 	{48},
@@ -1267,21 +1267,21 @@ public class Constantes {
 	{SKILL_RECOLECTAR_MANGANESO, 445},
 	// Silicato
 	{SKILL_RECOLECTAR_SILICATO, 7032},
-	// Estaño
-	{SKILL_RECOLECTAR_ESTAÑO, 444},
+	// Esta\u00f1o
+	{SKILL_RECOLECTAR_ESTA\u00d1O, 444},
 	// Plata
 	{SKILL_RECOLECTAR_PLATA, 350},
 	// Bauxita
 	{SKILL_RECOLECTAR_BAUXITA, 446},
 	// Oro
 	{SKILL_RECOLECTAR_ORO, 313},
-	// Dolomía
+	// Dolom\u00eda
 	{SKILL_RECOLECTAR_DOLOMIA, 7033},
 	//
 	{133},
 	// Bamga, Bamga Horror
 	{SKILL_PESCAR_PESCADITOS_MAR, 598, 1786},
-	// Cangrejo Surimi, Cangrejo Surimi exótico
+	// Cangrejo Surimi, Cangrejo Surimi ex\u00f3tico
 	{SKILL_PESCAR_PESCADITOS_MAR, 1757, 1759},
 	// Pescado Empapado, Pez Igloo
 	{SKILL_PESCAR_PESCADITOS_MAR, 1750, 1754},
@@ -1293,37 +1293,37 @@ public class Constantes {
 	{SKILL_PESCAR_PESCADITOS_RIO, 1844, 607},
 	// Trucha, Trucha de barro
 	{SKILL_PESCAR_PESCADITOS_RIO, 1844, 1846},
-	// Pischi Dicumpetición
+	// Pischi Dicumpetici\u00f3n
 	{SKILL_PESCAR_PISCHI, 2187},
 	// Lucio, Lucio Tupe-Halett
 	{SKILL_PESCAR_PESCADOS_RIO, 1847, 1849},
 	// Carpa de Iem, Carpita de las arenas
 	{SKILL_PESCAR_PESCADOS_RIO, 1794, 1796},
-	// Kralamar único, Cangrejo Surimi exótico
-	{SKILL_PESCAR_SOMBRA_EXTRAÑA, 1799, 1759},
-	// Kralamar, Kralamar único
+	// Kralamar \u00fanico, Cangrejo Surimi ex\u00f3tico
+	{SKILL_PESCAR_SOMBRA_EXTRA\u00d1A, 1799, 1759},
+	// Kralamar, Kralamar \u00fanico
 	{SKILL_PESCAR_PESCADOS_MAR, 600, 1799},
 	// Sardina brillante, Sardina oscura
 	{SKILL_PESCAR_PESCADOS_MAR, 1805, 1807},
-	// Lubina Mericana, Lubina Fónica
+	// Lubina Mericana, Lubina F\u00f3nica
 	{SKILL_PESCAR_PECES_GORDOS_RIO, 1779, 1792},
 	// Raya azul, Raya de Farle
 	{SKILL_PESCAR_PECES_GORDOS_MAR, 1784, 1788},
 	// Perca, Gatito Perca
 	{SKILL_PESCAR_PESCADOS_GIGANTES_RIO, 1801, 1803},
-	// Pez Martillhoz, Tiburón mercado libre
+	// Pez Martillhoz, Tibur\u00f3n mercado libre
 	{SKILL_PESCAR_PESCADOS_GIGANTES_MAR, 602, 1853},
 	//
 	{23},
 	// Flor de lino
 	{SKILL_COSECHAR_LINO, 421},
-	// Flor de cáñamo
-	{SKILL_COSECHAR_CAÑAMO, 428},
-	// Trébol de 5 hojas
+	// Flor de c\u00e1\u00f1amo
+	{SKILL_COSECHAR_CA\u00d1AMO, 428},
+	// Tr\u00e9bol de 5 hojas
 	{SKILL_COSECHAR_TREBOL, 395},
 	// Hoja de menta salvaje
 	{SKILL_COSECHAR_MENTA_SALVAJE, 380},
-	// Orquídea Freyesca
+	// Orqu\u00eddea Freyesca
 	{SKILL_COSECHAR_ORQUIDEA, 593},
 	// Edelweiss
 	{SKILL_COSECHAR_EDELWEISS, 594},
@@ -1337,9 +1337,9 @@ public class Constantes {
 	{SKILL_SEGAR_TRIGO, 289, 2018},
 	// Cebada, Cebada azucarada
 	{SKILL_SEGAR_CEBADA, 400, 2032},
-	// Avena, Avena Aurífera
+	// Avena, Avena Aur\u00edfera
 	{SKILL_SEGAR_AVENA, 533, 2036},
-	// Lúpulo, Lúpulo brillante
+	// L\u00fapulo, L\u00fapulo brillante
 	{SKILL_SEGAR_LUPULO, 401, 2021},
 	// Lino, Lino Tempestad
 	{SKILL_SEGAR_LINO, 423, 2026},
@@ -1349,8 +1349,8 @@ public class Constantes {
 	{SKILL_SEGAR_ARROZ, 7018},
 	// Malta
 	{SKILL_SEGAR_MALTA, 405},
-	// Cáñamo, Cáñamo eufórico
-	{SKILL_SEGAR_CAÑAMO, 425, 2035},
+	// C\u00e1\u00f1amo, C\u00e1\u00f1amo euf\u00f3rico
+	{SKILL_SEGAR_CA\u00d1AMO, 425, 2035},
 	//
 	{109},
 	//
@@ -1447,7 +1447,7 @@ public class Constantes {
 	{SKILL_CREAR_ESCUDO}};
 	
 	// EM[1] = {n: "Sentarse", s: "sit"};
-	// EM[2] = {n: "Hacer una señal con la mano", s: "bye"};
+	// EM[2] = {n: "Hacer una se\u00f1al con la mano", s: "bye"};
 	// EM[3] = {n: "Aplaudir", s: "appl"};
 	// EM[4] = {n: "Enfadarse", s: "mad"};
 	// EM[5] = {n: "Mostrar su miedo", s: "fear"};
@@ -1460,12 +1460,12 @@ public class Constantes {
 	// EM[12] = {n: "Hoja", s: "pfc2"};
 	// EM[13] = {n: "Tijeras", s: "pfc3"};
 	// EM[14] = {n: "Cruzarse de brazos", s: "cross"};
-	// EM[15] = {n: "Señalar con el dedo", s: "point"};
+	// EM[15] = {n: "Se\u00f1alar con el dedo", s: "point"};
 	// EM[16] = {n: ". . . . .", s: "crow"};
 	// EM[19] = {n: "Acostarse", s: "rest"};
-	// EM[21] = {n: "Campeón", s: "champ"};
+	// EM[21] = {n: "Campe\u00f3n", s: "champ"};
 	// EM[22] = {n: "Aura de poder", s: "aura"};
-	// EM[23] = {n: "Aura vampírica", s: "bat"};
+	// EM[23] = {n: "Aura vamp\u00edrica", s: "bat"};
 	// Accion de Oficio {trabajoID, objeto recolectado,obj especial}
 	public static final int getMobSinHalloween(int id) {
 		switch (id) {
@@ -1976,22 +1976,22 @@ public class Constantes {
 	public static final long getTiempoDeUnStat(final String stat, int escala) {
 		try {
 			final String[] str = stat.split(Pattern.quote("#"));
-			int año = Integer.parseInt(str[0], 16);
+			int a\u00f1o = Integer.parseInt(str[0], 16);
 			int mes = Integer.parseInt(str[1], 16) / 100 + 1;
 			int dia = Integer.parseInt(str[1], 16) % 100;
 			int hora = Integer.parseInt(str[2], 16) / 100;
 			int minuto = Integer.parseInt(str[2], 16) % 100;
-			return getTiempoFechaX(año, mes, dia, hora, minuto, escala);
+			return getTiempoFechaX(a\u00f1o, mes, dia, hora, minuto, escala);
 		} catch (final Exception e) {
 			return 0;
 		}
 	}
 	
-	public static final long getTiempoFechaX(final int año, final int mes, final int dia, final int hora,
+	public static final long getTiempoFechaX(final int a\u00f1o, final int mes, final int dia, final int hora,
 	final int minuto, int escala) {
 		try {
 			final Calendar calendar = Calendar.getInstance();
-			calendar.set(Calendar.YEAR, año);
+			calendar.set(Calendar.YEAR, a\u00f1o);
 			calendar.set(Calendar.MONTH, mes - 1);
 			calendar.set(Calendar.DAY_OF_MONTH, dia);
 			calendar.set(Calendar.HOUR_OF_DAY, hora);
@@ -2127,7 +2127,7 @@ public class Constantes {
 			case MOB_TIPO_CRUJIDORES :
 			case MOB_TIPO_CERDOS :
 			case MOB_TIPO_GUARDIANES_DE_LOS_PUEBLOS_DE_KWAKS :
-				return MOB_SUPER_TIPO_CRIATURAS_DE_LA_MONTAÑA;
+				return MOB_SUPER_TIPO_CRIATURAS_DE_LA_MONTA\u00d1A;
 			case MOB_TIPO_DRAGOHUEVOS :
 			case MOB_TIPO_GELATINAS :
 			case MOB_TIPO_ABRAKNIDEO :
@@ -2240,7 +2240,7 @@ public class Constantes {
 			case 8 :
 				return "Monstruos de la noche";
 			case 9 :
-				return "Jalatós";
+				return "Jalat\u00e9s";
 			case 10 :
 				return "Plantas de los campos";
 			case 11 :
@@ -2258,11 +2258,11 @@ public class Constantes {
 			case 19 :
 				return "Pnjs";
 			case 20 :
-				return "Kaníbolas de la Isla de Moon";
+				return "Kan\u00edbolas de la Isla de Moon";
 			case 21 :
 				return "Dragopavo";
 			case 22 :
-				return "Abraknídeo";
+				return "Abrakn\u00e9deo";
 			case 23 :
 				return "Blops";
 			case 24 :
@@ -2284,7 +2284,7 @@ public class Constantes {
 			case 32 :
 				return "Se busca";
 			case 33 :
-				return "Píos";
+				return "P\u00edos";
 			case 34 :
 				return "Monstruos del pueblo de Pandala";
 			case 35 :
@@ -2318,7 +2318,7 @@ public class Constantes {
 			case 49 :
 				return "Animales del bosque";
 			case 50 :
-				return "Monstruos de búsqueda";
+				return "Monstruos de b\u00fasqueda";
 			case 51 :
 				return "Cuerboks";
 			case 52 :
@@ -2344,7 +2344,7 @@ public class Constantes {
 			case 63 :
 				return "Protectores de los Minerales";
 			case 64 :
-				return "Protectores de los árboles";
+				return "Protectores de los \u00e1rboles";
 			case 65 :
 				return "Protectores de los Peces";
 			case 66 :
@@ -2366,7 +2366,7 @@ public class Constantes {
 			case 74 :
 				return "Monstruos de la Oscura Selva";
 			case 75 :
-				return "Monstruos del Árbol Hakam";
+				return "Monstruos del \u00e1rbol Hakam";
 			case 76 :
 				return "Monstruos del Arca de Otomai";
 			case 77 :
@@ -2478,26 +2478,26 @@ public class Constantes {
 	public static final int prioridadEfecto(final int id) {
 		switch (id) {
 			case 82 :// robar PDV
-			case 85 :// Daños Agua %vida del atacante
-			case 86 :// Daños Tierra %vida del atacante
-			case 87 :// Daños Aire %vida del atacante
-			case 88 :// Daños Fuego %vida del atacante
-			case 89 :// Daños Neutral %vida del atacante
-			case STAT_DAÑOS_ROBAR_AGUA :// 91;// Robar Vida(agua)
-			case STAT_DAÑOS_ROBAR_TIERRA :// 92;// Robar Vida(tierra)
-			case STAT_DAÑOS_ROBAR_AIRE :// 93;// Robar Vida(aire)
-			case STAT_DAÑOS_ROBAR_FUEGO :// 94;// Robar Vida(fuego)
-			case STAT_DAÑOS_ROBAR_NEUTRAL :// 95;// Robar Vida(neutral)
-			case STAT_DAÑOS_AGUA :// 96;// Daños Agua
-			case STAT_DAÑOS_TIERRA :// 97;// Daños Tierra
-			case STAT_DAÑOS_AIRE :// 98;// Daños Aire
-			case STAT_DAÑOS_FUEGO :// 99;// Daños Fuego
-			case STAT_DAÑOS_NEUTRAL :// 100;// Daños Neutral
-			case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-			case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-			case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-			case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-			case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+			case 85 :// Da\u00f1os Agua %vida del atacante
+			case 86 :// Da\u00f1os Tierra %vida del atacante
+			case 87 :// Da\u00f1os Aire %vida del atacante
+			case 88 :// Da\u00f1os Fuego %vida del atacante
+			case 89 :// Da\u00f1os Neutral %vida del atacante
+			case STAT_DA\u00d1OS_ROBAR_AGUA :// 91;// Robar Vida(agua)
+			case STAT_DA\u00d1OS_ROBAR_TIERRA :// 92;// Robar Vida(tierra)
+			case STAT_DA\u00d1OS_ROBAR_AIRE :// 93;// Robar Vida(aire)
+			case STAT_DA\u00d1OS_ROBAR_FUEGO :// 94;// Robar Vida(fuego)
+			case STAT_DA\u00d1OS_ROBAR_NEUTRAL :// 95;// Robar Vida(neutral)
+			case STAT_DA\u00d1OS_AGUA :// 96;// Da\u00f1os Agua
+			case STAT_DA\u00d1OS_TIERRA :// 97;// Da\u00f1os Tierra
+			case STAT_DA\u00d1OS_AIRE :// 98;// Da\u00f1os Aire
+			case STAT_DA\u00d1OS_FUEGO :// 99;// Da\u00f1os Fuego
+			case STAT_DA\u00d1OS_NEUTRAL :// 100;// Da\u00f1os Neutral
+			case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+			case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+			case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+			case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+			case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 			case 300 :
 			case 301 :
 			case 302 :
@@ -2520,7 +2520,7 @@ public class Constantes {
 			case STAT_MENOS_ALCANCE :// 116;
 			case STAT_MENOS_PM :// 127;
 			case 131 :// veneno X pdv por PA
-			case STAT_MENOS_DAÑOS :// 145;
+			case STAT_MENOS_DA\u00d1OS :// 145;
 			case STAT_MENOS_SUERTE :// 152;
 			case STAT_MENOS_VITALIDAD :// 153;
 			case STAT_MENOS_AGILIDAD :// 154;
@@ -2530,14 +2530,14 @@ public class Constantes {
 			case STAT_MENOS_PODS :// 159;
 			case STAT_MENOS_ESQUIVA_PERD_PA :// 162;
 			case STAT_MENOS_ESQUIVA_PERD_PM :// 163;
-			case STAT_MENOS_DAÑOS_REDUCIDOS :// 164;
+			case STAT_MENOS_DA\u00d1OS_REDUCIDOS :// 164;
 			case STAT_MENOS_PA_FIJO :// 168;
 			case STAT_MENOS_PM_FIJO :// 169;
 			case STAT_MENOS_INICIATIVA :// 175;
 			case STAT_MENOS_PROSPECCION :// 177;
 			case STAT_MENOS_CURAS :// 179;
 			case STAT_MENOS_GOLPES_CRITICOS :
-			case STAT_MENOS_PORC_DAÑOS :// 186;
+			case STAT_MENOS_PORC_DA\u00d1OS :// 186;
 			case STAT_MENOS_RES_PORC_TIERRA :// 215;
 			case STAT_MENOS_RES_PORC_AGUA :// 216;
 			case STAT_MENOS_RES_PORC_AIRE :// 217;
@@ -2557,21 +2557,21 @@ public class Constantes {
 			case 267 :// robo de vitalidad
 			case 268 :// robo de agilidad
 			case 269 :// robo de inteligencia
-			case 270 :// robo de sabiduría
+			case 270 :// robo de sabidur\u00eda
 			case 271 :// robo de fuerza
 			case STAT_ROBA_ALCANCE :// 320;
 			case STAT_MENOS_HUIDA :// 411;
 			case STAT_MENOS_PLACAJE :// 414;
 			case STAT_MENOS_RETIRO_PA :// 433;
 			case STAT_MENOS_RETIRO_PM :// 434;
-			case STAT_MENOS_DAÑOS_DE_AGUA :// 436;
-			case STAT_MENOS_DAÑOS_DE_TIERRA :// 437;
-			case STAT_MENOS_DAÑOS_DE_AIRE :// 438;
-			case STAT_MENOS_DAÑOS_DE_FUEGO :// 439;
-			case STAT_MENOS_DAÑOS_DE_NEUTRAL :// 440;
-			case STAT_MENOS_DAÑOS_CRITICOS :// 441;
+			case STAT_MENOS_DA\u00d1OS_DE_AGUA :// 436;
+			case STAT_MENOS_DA\u00d1OS_DE_TIERRA :// 437;
+			case STAT_MENOS_DA\u00d1OS_DE_AIRE :// 438;
+			case STAT_MENOS_DA\u00d1OS_DE_FUEGO :// 439;
+			case STAT_MENOS_DA\u00d1OS_DE_NEUTRAL :// 440;
+			case STAT_MENOS_DA\u00d1OS_CRITICOS :// 441;
 			case STAT_MENOS_REDUCCION_CRITICOS :// 442;
-			case STAT_MENOS_DAÑOS_EMPUJE :// 443;
+			case STAT_MENOS_DA\u00d1OS_EMPUJE :// 443;
 			case STAT_MENOS_REDUCCION_EMPUJE :// 444;
 				return 4;
 			case 141 :// mata al objetivo
@@ -2598,28 +2598,28 @@ public class Constantes {
 			case STAT_QUITAR_ESTADO :// 951;// Quita el estado \'\'#3\'\'", c: 71, o: "/"
 				return 17;
 			case 9 :// Esquiva un X% del ataque haciendolo retroceder Y casillas
-			case 79 :// + X % de posibilidades de que sufras daños x X, o de que te cure x Y
-			case STAT_MAS_DAÑOS_REDUCIDOS_NO_FECA :// 105;
+			case 79 :// + X % de posibilidades de que sufras da\u00f1os x X, o de que te cure x Y
+			case STAT_MAS_DA\u00f1OS_REDUCIDOS_NO_FECA :// 105;
 			case STAT_REENVIA_HECHIZO :// 106;
-			case STAT_DAÑOS_DEVUELTOS :// 107;
+			case STAT_DA\u00f1OS_DEVUELTOS :// 107;
 			case STAT_MAS_VIDA :// 110;
 			case STAT_MAS_PA :// 111;
-			case STAT_MAS_DAÑOS :// 112;
-			case STAT_MULTIPLICA_DAÑOS :// 114;
+			case STAT_MAS_DA\u00f1OS :// 112;
+			case STAT_MULTIPLICA_DA\u00d1OS :// 114;
 			case STAT_MAS_GOLPES_CRITICOS :// 115;
 			case STAT_MAS_ALCANCE :// 117;
 			case STAT_MAS_FUERZA :// 118;
 			case STAT_MAS_AGILIDAD :// 119;
 			case STAT_MAS_PA_2 :// 120;
-			case STAT_MAS_DAÑOS_2 :// 121;
+			case STAT_MAS_DA\u00f1OS_2 :// 121;
 			case STAT_MAS_FALLOS_CRITICOS :// 122;
 			case STAT_MAS_SUERTE :// 123;
 			case STAT_MAS_SABIDURIA :// 124;
 			case STAT_MAS_VITALIDAD :// 125;
 			case STAT_MAS_INTELIGENCIA :// 126;
 			case STAT_MAS_PM :// 128;
-			case STAT_MAS_PORC_DAÑOS :// 138;
-			case STAT_MAS_DAÑO_FISICO :// 142;
+			case STAT_MAS_PORC_DA\u00d1OS :// 138;
+			case STAT_MAS_DA\u00f1O_FISICO :// 142;
 			case 150 :// invisibilidad
 			case STAT_MAS_PODS :// 158;
 			case STAT_MAS_ESQUIVA_PERD_PA :// 160;
@@ -2636,9 +2636,9 @@ public class Constantes {
 			case STAT_MAS_RES_PORC_AIRE :// 212;
 			case STAT_MAS_RES_PORC_FUEGO :// 213;
 			case STAT_MAS_RES_PORC_NEUTRAL :// 214;
-			case STAT_REENVIA_DAÑOS :// 220;
-			case STAT_MAS_DAÑOS_TRAMPA :// 225;
-			case STAT_MAS_PORC_DAÑOS_TRAMPA :// 226;
+			case STAT_REENVIA_DA\u00f1OS :// 220;
+			case STAT_MAS_DA\u00f1OS_TRAMPA :// 225;
+			case STAT_MAS_PORC_DA\u00d1OS_TRAMPA :// 226;
 			case STAT_MAS_RES_FIJA_TIERRA :// 240;
 			case STAT_MAS_RES_FIJA_AGUA :// 241;
 			case STAT_MAS_RES_FIJA_AIRE :// 242;
@@ -2654,20 +2654,20 @@ public class Constantes {
 			case STAT_MAS_RES_FIJA_PVP_AIRE :// 262;
 			case STAT_MAS_RES_FIJA_PVP_FUEGO :// 263;
 			case STAT_MAS_RES_FIJA_PVP_NEUTRAL :// 264;
-			case STAT_MAS_DAÑOS_REDUCIDOS_ARMADURAS_FECA :// 265;
+			case STAT_MAS_DA\u00f1OS_REDUCIDOS_ARMADURAS_FECA :// 265;
 			case STAT_MAS_HUIDA :// 410;
 			case STAT_MAS_PLACAJE :// 413;
-			case STAT_MAS_DAÑOS_DE_AGUA :// 415;
-			case STAT_MAS_DAÑOS_DE_TIERRA :// 416;
-			case STAT_MAS_DAÑOS_DE_AIRE :// 417;
-			case STAT_MAS_DAÑOS_DE_FUEGO :// 418;
-			case STAT_MAS_DAÑOS_DE_NEUTRAL :// 419;
+			case STAT_MAS_DA\u00f1OS_DE_AGUA :// 415;
+			case STAT_MAS_DA\u00f1OS_DE_TIERRA :// 416;
+			case STAT_MAS_DA\u00f1OS_DE_AIRE :// 417;
+			case STAT_MAS_DA\u00f1OS_DE_FUEGO :// 418;
+			case STAT_MAS_DA\u00f1OS_DE_NEUTRAL :// 419;
 			case STAT_RETROCEDE_CASILLAS :// 421;
 			case STAT_MAS_PORC_ESCUDO_PDV :// 422;
 			case STAT_AVANZAR_CASILLAS :// 423;
 			case STAT_MENOS_PORC_PDV_TEMPORAL :// 424;
-			case STAT_MAS_DAÑOS_EMPUJE :// 425;
-			case STAT_MAS_DAÑOS_CRITICOS :// 429;
+			case STAT_MAS_DA\u00f1OS_EMPUJE :// 425;
+			case STAT_MAS_DA\u00f1OS_CRITICOS :// 429;
 			case STAT_MAS_REDUCCION_CRITICOS :// 430;
 			case STAT_MAS_RETIRO_PA :// 431;
 			case STAT_MAS_RETIRO_PM :// 432;
@@ -2676,33 +2676,33 @@ public class Constantes {
 		return 1000;
 	}
 	
-	public static final int estimaDaño(final int id) {
+	public static final int estimaDa\u00f1o(final int id) {
 		switch (id) {
 			case 81 :// cura
 			case 108 :// cura
 			case 9 :// Esquiva un X% del ataque haciendolo retroceder Y casillas
-			case 79 :// + X % de posibilidades de que sufras daños x X, o de que te cure x Y
-			case STAT_MAS_DAÑOS_REDUCIDOS_NO_FECA :// 105;
+			case 79 :// + X % de posibilidades de que sufras da\u00f1os x X, o de que te cure x Y
+			case STAT_MAS_DA\u00f1OS_REDUCIDOS_NO_FECA :// 105;
 			case STAT_REENVIA_HECHIZO :// 106;
-			case STAT_DAÑOS_DEVUELTOS :// 107;
+			case STAT_DA\u00f1OS_DEVUELTOS :// 107;
 			case STAT_MAS_VIDA :// 110;
 			case STAT_MAS_PA :// 111;
-			case STAT_MAS_DAÑOS :// 112;
-			case STAT_MULTIPLICA_DAÑOS :// 114;
+			case STAT_MAS_DA\u00f1OS :// 112;
+			case STAT_MULTIPLICA_DA\u00d1OS :// 114;
 			case STAT_MAS_GOLPES_CRITICOS :// 115;
 			case STAT_MAS_ALCANCE :// 117;
 			case STAT_MAS_FUERZA :// 118;
 			case STAT_MAS_AGILIDAD :// 119;
 			case STAT_MAS_PA_2 :// 120;
-			case STAT_MAS_DAÑOS_2 :// 121;
+			case STAT_MAS_DA\u00f1OS_2 :// 121;
 			case STAT_MAS_FALLOS_CRITICOS :// 122;
 			case STAT_MAS_SUERTE :// 123;
 			case STAT_MAS_SABIDURIA :// 124;
 			case STAT_MAS_VITALIDAD :// 125;
 			case STAT_MAS_INTELIGENCIA :// 126;
 			case STAT_MAS_PM :// 128;
-			case STAT_MAS_PORC_DAÑOS :// 138;
-			case STAT_MAS_DAÑO_FISICO :// 142;
+			case STAT_MAS_PORC_DA\u00d1OS :// 138;
+			case STAT_MAS_DA\u00f1O_FISICO :// 142;
 			case 150 :// invisibilidad
 			case STAT_MAS_PODS :// 158;
 			case STAT_MAS_ESQUIVA_PERD_PA :// 160;
@@ -2719,9 +2719,9 @@ public class Constantes {
 			case STAT_MAS_RES_PORC_AIRE :// 212;
 			case STAT_MAS_RES_PORC_FUEGO :// 213;
 			case STAT_MAS_RES_PORC_NEUTRAL :// 214;
-			case STAT_REENVIA_DAÑOS :// 220;
-			case STAT_MAS_DAÑOS_TRAMPA :// 225;
-			case STAT_MAS_PORC_DAÑOS_TRAMPA :// 226;
+			case STAT_REENVIA_DA\u00f1OS :// 220;
+			case STAT_MAS_DA\u00f1OS_TRAMPA :// 225;
+			case STAT_MAS_PORC_DA\u00d1OS_TRAMPA :// 226;
 			case STAT_MAS_RES_FIJA_TIERRA :// 240;
 			case STAT_MAS_RES_FIJA_AGUA :// 241;
 			case STAT_MAS_RES_FIJA_AIRE :// 242;
@@ -2737,20 +2737,20 @@ public class Constantes {
 			case STAT_MAS_RES_FIJA_PVP_AIRE :// 262;
 			case STAT_MAS_RES_FIJA_PVP_FUEGO :// 263;
 			case STAT_MAS_RES_FIJA_PVP_NEUTRAL :// 264;
-			case STAT_MAS_DAÑOS_REDUCIDOS_ARMADURAS_FECA :// 265;
+			case STAT_MAS_DA\u00f1OS_REDUCIDOS_ARMADURAS_FECA :// 265;
 			case STAT_MAS_HUIDA :// 410;
 			case STAT_MAS_PLACAJE :// 413;
-			case STAT_MAS_DAÑOS_DE_AGUA :// 415;
-			case STAT_MAS_DAÑOS_DE_TIERRA :// 416;
-			case STAT_MAS_DAÑOS_DE_AIRE :// 417;
-			case STAT_MAS_DAÑOS_DE_FUEGO :// 418;
-			case STAT_MAS_DAÑOS_DE_NEUTRAL :// 419;
+			case STAT_MAS_DA\u00f1OS_DE_AGUA :// 415;
+			case STAT_MAS_DA\u00f1OS_DE_TIERRA :// 416;
+			case STAT_MAS_DA\u00f1OS_DE_AIRE :// 417;
+			case STAT_MAS_DA\u00f1OS_DE_FUEGO :// 418;
+			case STAT_MAS_DA\u00f1OS_DE_NEUTRAL :// 419;
 			case STAT_RETROCEDE_CASILLAS :// 421;
 			case STAT_MAS_PORC_ESCUDO_PDV :// 422;
 			case STAT_AVANZAR_CASILLAS :// 423;
 			case STAT_MENOS_PORC_PDV_TEMPORAL :// 424;
-			case STAT_MAS_DAÑOS_EMPUJE :// 425;
-			case STAT_MAS_DAÑOS_CRITICOS :// 429;
+			case STAT_MAS_DA\u00f1OS_EMPUJE :// 425;
+			case STAT_MAS_DA\u00f1OS_CRITICOS :// 429;
 			case STAT_MAS_REDUCCION_CRITICOS :// 430;
 			case STAT_MAS_RETIRO_PA :// 431;
 			case STAT_MAS_RETIRO_PM :// 432;
@@ -2762,7 +2762,7 @@ public class Constantes {
 			case STAT_MENOS_ALCANCE :// 116;
 			case STAT_MENOS_PM :// 127;
 			case 131 :// veneno X pdv por PA
-			case STAT_MENOS_DAÑOS :// 145;
+			case STAT_MENOS_DA\u00d1OS :// 145;
 			case STAT_MENOS_SUERTE :// 152;
 			case STAT_MENOS_VITALIDAD :// 153;
 			case STAT_MENOS_AGILIDAD :// 154;
@@ -2772,14 +2772,14 @@ public class Constantes {
 			case STAT_MENOS_PODS :// 159;
 			case STAT_MENOS_ESQUIVA_PERD_PA :// 162;
 			case STAT_MENOS_ESQUIVA_PERD_PM :// 163;
-			case STAT_MENOS_DAÑOS_REDUCIDOS :// 164;
+			case STAT_MENOS_DA\u00d1OS_REDUCIDOS :// 164;
 			case STAT_MENOS_PA_FIJO :// 168;
 			case STAT_MENOS_PM_FIJO :// 169;
 			case STAT_MENOS_INICIATIVA :// 175;
 			case STAT_MENOS_PROSPECCION :// 177;
 			case STAT_MENOS_CURAS :// 179;
 			case STAT_MENOS_GOLPES_CRITICOS :
-			case STAT_MENOS_PORC_DAÑOS :// 186;
+			case STAT_MENOS_PORC_DA\u00d1OS :// 186;
 			case STAT_MENOS_RES_PORC_TIERRA :// 215;
 			case STAT_MENOS_RES_PORC_AGUA :// 216;
 			case STAT_MENOS_RES_PORC_AIRE :// 217;
@@ -2799,51 +2799,51 @@ public class Constantes {
 			case 267 :// robo de vitalidad
 			case 268 :// robo de agilidad
 			case 269 :// robo de inteligencia
-			case 270 :// robo de sabiduría
+			case 270 :// robo de sabidur\u00eda
 			case 271 :// robo de fuerza
 			case STAT_ROBA_ALCANCE :// 320;
 			case STAT_MENOS_HUIDA :// 411;
 			case STAT_MENOS_PLACAJE :// 414;
 			case STAT_MENOS_RETIRO_PA :// 433;
 			case STAT_MENOS_RETIRO_PM :// 434;
-			case STAT_MENOS_DAÑOS_DE_AGUA :// 436;
-			case STAT_MENOS_DAÑOS_DE_TIERRA :// 437;
-			case STAT_MENOS_DAÑOS_DE_AIRE :// 438;
-			case STAT_MENOS_DAÑOS_DE_FUEGO :// 439;
-			case STAT_MENOS_DAÑOS_DE_NEUTRAL :// 440;
-			case STAT_MENOS_DAÑOS_CRITICOS :// 441;
+			case STAT_MENOS_DA\u00d1OS_DE_AGUA :// 436;
+			case STAT_MENOS_DA\u00d1OS_DE_TIERRA :// 437;
+			case STAT_MENOS_DA\u00d1OS_DE_AIRE :// 438;
+			case STAT_MENOS_DA\u00d1OS_DE_FUEGO :// 439;
+			case STAT_MENOS_DA\u00d1OS_DE_NEUTRAL :// 440;
+			case STAT_MENOS_DA\u00d1OS_CRITICOS :// 441;
 			case STAT_MENOS_REDUCCION_CRITICOS :// 442;
-			case STAT_MENOS_DAÑOS_EMPUJE :// 443;
+			case STAT_MENOS_DA\u00d1OS_EMPUJE :// 443;
 			case STAT_MENOS_REDUCCION_EMPUJE :// 444;
 			case 5 :// empuja de X casillas
 			case 6 : // atrae X casillas
 			case 8 :// intercambia posiciones
 			case 82 :// robal PDV
-			case 85 :// Daños Agua %vida del atacante
-			case 86 :// Daños Tierra %vida del atacante
-			case 87 :// Daños Aire %vida del atacante
-			case 88 :// Daños Fuego %vida del atacante
-			case 89 :// Daños Neutral %vida del atacante
+			case 85 :// Da\u00f1os Agua %vida del atacante
+			case 86 :// Da\u00f1os Tierra %vida del atacante
+			case 87 :// Da\u00f1os Aire %vida del atacante
+			case 88 :// Da\u00f1os Fuego %vida del atacante
+			case 89 :// Da\u00f1os Neutral %vida del atacante
 			case 91 :// robo de vida Agua
 			case 92 :// robo de vida Tierra
 			case 93 :// robo de vida Aire
 			case 94 :// robo de vida fuego
 			case 95 :// robo de vida neutral
-			case 96 :// Daños Agua
-			case 97 :// Daños Tierra
-			case 98 :// Daños Aire
-			case 99 :// Daños fuego
-			case 100 :// Daños neutral
+			case 96 :// Da\u00f1os Agua
+			case 97 :// Da\u00f1os Tierra
+			case 98 :// Da\u00f1os Aire
+			case 99 :// Da\u00f1os fuego
+			case 100 :// Da\u00f1os neutral
 			case 132 :// deshechiza
 			case 140 :// pasar turno
 			case 141 :// mata al objetivo
 			case 172 : // reduccion magica disminuida
 			case 173 : // reduccion fisica disminuida
-			case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-			case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-			case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-			case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-			case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+			case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+			case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+			case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+			case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+			case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 			case 405 :// mata y reemplaza por una invocacion
 			case 765 :
 				return 1;
@@ -2851,7 +2851,7 @@ public class Constantes {
 		return 0;
 	}
 	
-	public static final int getInflDañoPorEfecto(final int efectoID, final Luchador lanzador, final Luchador objetivo,
+	public static final int getInflDa\u00f1oPorEfecto(final int efectoID, final Luchador lanzador, final Luchador objetivo,
 	final int cantidad, final short idCeldaLanzamiento, StatHechizo SH) {
 		try {
 			if (objetivo.estaMuerto() && efectoID != 780) {
@@ -2925,7 +2925,7 @@ public class Constantes {
 						.getTotalStatConComplemento(STAT_MAS_ESQUIVA_PERD_PM));
 					}
 					break;
-				case 79 :// + X % de posibilidades de que sufras daños x X, o de que te cure x Y
+				case 79 :// + X % de posibilidades de que sufras da\u00f1os x X, o de que te cure x Y
 					inf = -5000;
 					break;
 				case 81 :// cura
@@ -2951,16 +2951,16 @@ public class Constantes {
 						.getTotalStatConComplemento(STAT_MAS_ESQUIVA_PERD_PA));
 					}
 					break;
-				case 85 :// Daños Agua %vida del atacante
-				case 86 :// Daños Tierra %vida del atacante
-				case 87 :// Daños Aire %vida del atacante
-				case 88 :// Daños Fuego %vida del atacante
-				case 89 :// Daños Neutral %vida del atacante
-				case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-				case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-				case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-				case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-				case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+				case 85 :// Da\u00f1os Agua %vida del atacante
+				case 86 :// Da\u00f1os Tierra %vida del atacante
+				case 87 :// Da\u00f1os Aire %vida del atacante
+				case 88 :// Da\u00f1os Fuego %vida del atacante
+				case 89 :// Da\u00f1os Neutral %vida del atacante
+				case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+				case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+				case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+				case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+				case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 					inf = Math.max(1, lanzador.getPDVConBuff() / 10) + 20;
 					break;
 				case 91 :// robo de vida Agua
@@ -2970,11 +2970,11 @@ public class Constantes {
 				case 95 :// robo de vida neutral
 					inf = 170;
 					break;
-				case 96 :// Daños Agua
-				case 97 :// Daños Tierra
-				case 98 :// Daños Aire
-				case 99 :// Daños fuego
-				case 100 :// Daños neutral
+				case 96 :// Da\u00f1os Agua
+				case 97 :// Da\u00f1os Tierra
+				case 98 :// Da\u00f1os Aire
+				case 99 :// Da\u00f1os fuego
+				case 100 :// Da\u00f1os neutral
 					inf = 120;
 					break;
 				case 101 :// - PA
@@ -2989,14 +2989,14 @@ public class Constantes {
 						.getTotalStatConComplemento(STAT_MAS_ESQUIVA_PERD_PA));
 					}
 					break;
-				case 105 :// Daños reducidos a X
+				case 105 :// Da\u00f1os reducidos a X
 					inf = -250;
 					break;
 				case 106 :// Reenvia un hechizo de nivel
 					inf = -10000;
 					break;
-				case 107 :// reenvia daños
-				case 220 :// reenvia daños
+				case 107 :// reenvia da\u00f1os
+				case 220 :// reenvia da\u00f1os
 					inf = -400;
 					break;
 				case 110 :// + X vida
@@ -3005,10 +3005,10 @@ public class Constantes {
 				case 111 :// + PA
 					inf = -1000;
 					break;
-				case 112 :// + Daños
+				case 112 :// + Da\u00f1os
 					inf = -100;
 					break;
-				case 114 :// Multiplica los daños por X
+				case 114 :// Multiplica los da\u00f1os por X
 					inf = -2500;
 					break;
 				case 115 :// + Golpes Criticos
@@ -3031,10 +3031,10 @@ public class Constantes {
 				case 126 :// + inteligencia
 					inf = -50;
 					break;
-				case 120 :// Añade X PA
+				case 120 :// A\u00f1ade X PA
 					inf = -1000;
 					break;
-				case 121 :// + Daños
+				case 121 :// + Da\u00f1os
 					inf = -250;
 					break;
 				case 122 :// + fallos criticos
@@ -3064,7 +3064,7 @@ public class Constantes {
 					}
 					inf = 15000;
 					break;
-				case 138 :// + % Daños
+				case 138 :// + % Da\u00f1os
 					inf = -100;
 					break;
 				case 140 :// pasar turno
@@ -3077,8 +3077,8 @@ public class Constantes {
 				case 405 :// mata al objetivo y lo reemplaza por una invocacion
 					inf = 40000;
 					break;
-				case 145 : // - a los daños
-					if (statsObj.getTotalStatParaMostrar(STAT_MAS_DAÑOS) <= 0) {
+				case 145 : // - a los da\u00f1os
+					if (statsObj.getTotalStatParaMostrar(STAT_MAS_DA\u00f1OS) <= 0) {
 						break;
 					}
 					inf = 250;
@@ -3093,7 +3093,7 @@ public class Constantes {
 				case 153 :// - vitalidad
 				case 154 :// - agilidad
 				case 155 :// - inteligencia
-				case 156 :// - sabiduría
+				case 156 :// - sabidur\u00eda
 				case 157 :// - fuerza
 					if (statsObj.getTotalStatParaMostrar(getStatPositivoDeNegativo(efectoID)) <= 0) {
 						break;
@@ -3124,10 +3124,10 @@ public class Constantes {
 					}
 					inf = 5;
 					break;
-				case 164 :// daños reducidos
+				case 164 :// da\u00f1os reducidos
 					inf = -250;
 					break;
-				case 165 :// aumenta los daños %
+				case 165 :// aumenta los da\u00f1os %
 					inf = -100;
 					break;
 				case 168 :// -PA no esquivable
@@ -3185,8 +3185,8 @@ public class Constantes {
 				case 184 :// reduccion fisica
 					inf = -300;
 					break;
-				case 186 :// - % daños
-					if (statsObj.getTotalStatParaMostrar(STAT_MAS_PORC_DAÑOS) <= 0) {
+				case 186 :// - % da\u00f1os
+					if (statsObj.getTotalStatParaMostrar(STAT_MAS_PORC_DA\u00d1OS) <= 0) {
 						break;
 					}
 					inf = 100;
@@ -3205,14 +3205,14 @@ public class Constantes {
 				case 219 :// debilidad
 					inf = 300;
 					break;
-				case 265 :// Reduccion a los Daños
+				case 265 :// Reduccion a los Da\u00f1os
 					inf = -250;
 					break;
 				case 266 :// robo de suerte
 				case 267 :// robo de vitalidad
 				case 268 :// robo de agilidad
 				case 269 :// robo de inteligencia
-				case 270 :// robo de sabiduría
+				case 270 :// robo de sabidur\u00eda
 				case 271 :// robo de fuerza
 					inf = 100;
 					break;
@@ -3263,29 +3263,29 @@ public class Constantes {
 					break;
 			}
 			switch (efectoID) {
-				case 85 :// Daños Agua %vida del atacante
-				case 86 :// Daños Tierra %vida del atacante
-				case 87 :// Daños Aire %vida del atacante
-				case 88 :// Daños Fuego %vida del atacante
-				case 89 :// Daños Neutral %vida del atacante
-				case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-				case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-				case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-				case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
-				case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+				case 85 :// Da\u00f1os Agua %vida del atacante
+				case 86 :// Da\u00f1os Tierra %vida del atacante
+				case 87 :// Da\u00f1os Aire %vida del atacante
+				case 88 :// Da\u00f1os Fuego %vida del atacante
+				case 89 :// Da\u00f1os Neutral %vida del atacante
+				case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+				case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+				case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+				case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+				case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 				case 91 :// robo de vida Agua
 				case 92 :// robo de vida Tierra
 				case 93 :// robo de vida Aire
 				case 94 :// robo de vida fuego
 				case 95 :// robo de vida neutral
-				case 96 :// Daños Agua
-				case 97 :// Daños Tierra
-				case 98 :// Daños Aire
-				case 99 :// Daños fuego
-				case 100 :// Daños neutral
-					reduccion = statsObj.getTotalStatParaMostrar(STAT_MAS_DAÑOS_REDUCIDOS_NO_FECA);
-					redFisOMag = statsObj.getTotalStatParaMostrar(getReduccionPorDaño(efectoID));
-					resistPorc = statsObj.getTotalStatParaMostrar(getResistenciaPorDaño(efectoID));
+				case 96 :// Da\u00f1os Agua
+				case 97 :// Da\u00f1os Tierra
+				case 98 :// Da\u00f1os Aire
+				case 99 :// Da\u00f1os fuego
+				case 100 :// Da\u00f1os neutral
+					reduccion = statsObj.getTotalStatParaMostrar(STAT_MAS_DA\u00f1OS_REDUCIDOS_NO_FECA);
+					redFisOMag = statsObj.getTotalStatParaMostrar(getReduccionPorDa\u00f1o(efectoID));
+					resistPorc = statsObj.getTotalStatParaMostrar(getResistenciaPorDa\u00f1o(efectoID));
 					if (reduccion >= cantidad || redFisOMag >= cantidad || resistPorc >= 100) {
 						return 1;
 					}
@@ -3294,7 +3294,7 @@ public class Constantes {
 					}
 					inf = Math.max(1, inf - (reduccion));
 					inf = Math.max(1, inf - (redFisOMag));
-					inf = Math.max(1, inf - resistenciaInfluenciaDaño(resistPorc, inf));
+					inf = Math.max(1, inf - resistenciaInfluenciaDa\u00f1o(resistPorc, inf));
 					if (Inteligencia.tieneReenvio(lanzador, objetivo, SH)) {
 						inf = -inf;
 					} else if (inf > 1) {
@@ -3304,7 +3304,7 @@ public class Constantes {
 			}
 			return inf;
 		} catch (Exception e) {
-			MainServidor.redactarLogServidorln("EXCEPTION getInfDañoPorEfecto " + efectoID);
+			MainServidor.redactarLogServidorln("EXCEPTION getInfDa\u00f1oPorEfecto " + efectoID);
 			e.printStackTrace();
 			return 0;
 		}
@@ -3315,63 +3315,63 @@ public class Constantes {
 		if (id == 666) {// el q no tiene nada
 			return 0;
 		}
-		return getInflDañoPorEfecto(id, lanzador, objetivo, cantidad, idCeldaLanzamiento, SH);
+		return getInflDa\u00f1oPorEfecto(id, lanzador, objetivo, cantidad, idCeldaLanzamiento, SH);
 	}
 	
-	private static int getResistenciaPorDaño(int statDaño) {
-		switch (statDaño) {
-			case 85 :// Daños Agua %vida del atacante
+	private static int getResistenciaPorDa\u00f1o(int statDa\u00f1o) {
+		switch (statDa\u00f1o) {
+			case 85 :// Da\u00f1os Agua %vida del atacante
 			case 91 :// robo de vida Agua
-			case 96 :// Daños Agua
-			case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+			case 96 :// Da\u00f1os Agua
+			case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
 				return STAT_MAS_RES_PORC_AGUA;
-			case 86 :// Daños Tierra %vida del atacante
+			case 86 :// Da\u00f1os Tierra %vida del atacante
 			case 92 :// robo de vida Tierra
-			case 97 :// Daños Tierra
-			case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+			case 97 :// Da\u00f1os Tierra
+			case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
 				return STAT_MAS_RES_PORC_TIERRA;
-			case 87 :// Daños Aire %vida del atacante
+			case 87 :// Da\u00f1os Aire %vida del atacante
 			case 93 :// robo de vida Aire
-			case 98 :// Daños Aire
-			case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+			case 98 :// Da\u00f1os Aire
+			case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
 				return STAT_MAS_RES_PORC_AIRE;
-			case 88 :// Daños Fuego %vida del atacante
+			case 88 :// Da\u00f1os Fuego %vida del atacante
 			case 94 :// robo de vida fuego
-			case 99 :// Daños fuego
-			case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+			case 99 :// Da\u00f1os fuego
+			case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
 				return STAT_MAS_RES_PORC_FUEGO;
-			case 89 :// Daños Neutral %vida del atacante
+			case 89 :// Da\u00f1os Neutral %vida del atacante
 			case 95 :// robo de vida neutral
-			case 100 :// Daños neutral
-			case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+			case 100 :// Da\u00f1os neutral
+			case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 				return STAT_MAS_RES_PORC_NEUTRAL;
 		}
 		return -1;
 	}
 	
-	private static int getReduccionPorDaño(int statDaño) {
-		switch (statDaño) {
-			case 85 :// Daños Agua %vida del atacante
+	private static int getReduccionPorDa\u00f1o(int statDa\u00f1o) {
+		switch (statDa\u00f1o) {
+			case 85 :// Da\u00f1os Agua %vida del atacante
 			case 91 :// robo de vida Agua
-			case 96 :// Daños Agua
-			case 275 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
-			case 86 :// Daños Tierra %vida del atacante
+			case 96 :// Da\u00f1os Agua
+			case 275 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (agua)
+			case 86 :// Da\u00f1os Tierra %vida del atacante
 			case 92 :// robo de vida Tierra
-			case 97 :// Daños Tierra
-			case 276 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
-			case 87 :// Daños Aire %vida del atacante
+			case 97 :// Da\u00f1os Tierra
+			case 276 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (tierra)
+			case 87 :// Da\u00f1os Aire %vida del atacante
 			case 93 :// robo de vida Aire
-			case 98 :// Daños Aire
-			case 277 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
-			case 88 :// Daños Fuego %vida del atacante
+			case 98 :// Da\u00f1os Aire
+			case 277 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (aire)
+			case 88 :// Da\u00f1os Fuego %vida del atacante
 			case 94 :// robo de vida fuego
-			case 99 :// Daños fuego
-			case 278 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
+			case 99 :// Da\u00f1os fuego
+			case 278 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (fuego)
 				return STAT_REDUCCION_MAGICA;
-			case 89 :// Daños Neutral %vida del atacante
+			case 89 :// Da\u00f1os Neutral %vida del atacante
 			case 95 :// robo de vida neutral
-			case 100 :// Daños neutral
-			case 279 :// Daños: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
+			case 100 :// Da\u00f1os neutral
+			case 279 :// Da\u00f1os: #1{~1~2 a }#2% de la vida que le queda al atacante (neutro)
 				return STAT_REDUCCION_FISICA;
 		}
 		return -1;
@@ -3391,7 +3391,7 @@ public class Constantes {
 		return TipoGrupo.FIJO;
 	}
 	
-	private static int resistenciaInfluenciaDaño(int resist, int influencia) {
+	private static int resistenciaInfluenciaDa\u00f1o(int resist, int influencia) {
 		resist = Math.min(100, resist);
 		return (influencia * resist / 100);
 	}
@@ -3527,7 +3527,7 @@ public class Constantes {
 	// final Mapa map = MundoDofus.getMapa(s);
 	// if (map != null) {
 	// final String swf = s + "_" + map.getFecha()
-	// + (map.getCodigo().equalsIgnoreCase("elbustaelmejor2012") ? "" : "X") + ".swf";
+	// + (map.getCodigo().equalsIgnoreCase("elbustaelmejor2012") \u00f1 "" : "X") + ".swf";
 	// copiarArchivos("C:/wamp/www/mibebito/maps/" + swf, "C:/wamp/www/mibebito/azendar/" +
 	// swf);
 	// }
@@ -3748,7 +3748,7 @@ public class Constantes {
 		switch (oficio) {
 			case OFICIO_BASE :// base
 				return "22;110;121";
-			case OFICIO_LEÑADOR :// leñador
+			case OFICIO_LE\u00cdADOR :// le\u00f1ador
 				return "101";
 			case OFICIO_FORJADOR_ESPADAS :// forjador de espadas
 				return "145;20";
@@ -3866,7 +3866,7 @@ public class Constantes {
 			case OBJETO_TIPO_HACHA :
 			case OBJETO_TIPO_HERRAMIENTA :
 			case OBJETO_TIPO_PICO :
-			case OBJETO_TIPO_GUADAÑA :
+			case OBJETO_TIPO_GUADA\u00f1A :
 			case OBJETO_TIPO_ARMA_MAGICA :
 				if (pos == OBJETO_POS_ARMA) {
 					return true;
@@ -3948,8 +3948,8 @@ public class Constantes {
 					return true;
 				}
 				break;
-			case OBJETO_TIPO_COMPAÑERO :
-				if (pos == OBJETO_POS_COMPAÑERO) {
+			case OBJETO_TIPO_COMPA\u00d1ERO :
+				if (pos == OBJETO_POS_COMPA\u00f1ERO) {
 					return true;
 				}
 				break;
@@ -4103,7 +4103,7 @@ public class Constantes {
 					skills.add(new Trabajo(SKILL_PESCAR_PESCADOS_RIO, 0, 1, false, 12000 - tiempoGanado, 15, oficio));
 				}
 				if (nivel >= 0) {
-					skills.add(new Trabajo(SKILL_PESCAR_SOMBRA_EXTRAÑA, 0, 1, false, 12000 - tiempoGanado, 50, oficio));
+					skills.add(new Trabajo(SKILL_PESCAR_SOMBRA_EXTRA\u00d1A, 0, 1, false, 12000 - tiempoGanado, 50, oficio));
 					skills.add(new Trabajo(SKILL_PESCAR_PESCADITOS_RIO, 0, 1, false, 12000 - tiempoGanado, 10, oficio));
 					skills.add(new Trabajo(SKILL_PESCAR_PESCADITOS_MAR, 0, 1, false, 12000 - tiempoGanado, 10, oficio));
 					skills.add(new Trabajo(SKILL_PESCAR_PISCHI, 0, 1, false, 12000 - tiempoGanado, 5, oficio));
@@ -4138,7 +4138,7 @@ public class Constantes {
 					+ ((nivel - 60) / 5), false, 12000 - tiempoGanado, 40, oficio));
 				}
 				if (nivel >= 50) {
-					skills.add(new Trabajo(SKILL_RECOLECTAR_ESTAÑO, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2
+					skills.add(new Trabajo(SKILL_RECOLECTAR_ESTA\u00d1O, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2
 					+ ((nivel - 50) / 5), false, 12000 - tiempoGanado, 35, oficio));
 					skills.add(new Trabajo(SKILL_RECOLECTAR_SILICATO, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2
 					+ ((nivel - 50) / 5), false, 12000 - tiempoGanado, 35, oficio));
@@ -4188,7 +4188,7 @@ public class Constantes {
 					- 20) / 5), false, 12000 - tiempoGanado, 20, oficio));
 				}
 				if (nivel >= 10) {
-					skills.add(new Trabajo(SKILL_COSECHAR_CAÑAMO, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2 + ((nivel
+					skills.add(new Trabajo(SKILL_COSECHAR_CA\u00d1AMO, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2 + ((nivel
 					- 10) / 5), false, 12000 - tiempoGanado, 15, oficio));
 				}
 				if (nivel >= 0) {
@@ -4198,7 +4198,7 @@ public class Constantes {
 				skills.add(new Trabajo(SKILL_CREAR_POCIMA, 2, getIngMaxPorNivel(nivel), true, getSuerteMaxPorNivel(nivel), -1,
 				oficio));
 				break;
-			case OFICIO_LEÑADOR :
+			case OFICIO_LE\u00cdADOR :
 				if (nivel >= 100) {
 					skills.add(new Trabajo(SKILL_TALAR_BAMBU_SAGRADO, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2
 					+ ((nivel - 100) / 5), false, 12000 - tiempoGanado, 75, oficio));
@@ -4248,7 +4248,7 @@ public class Constantes {
 					- 20) / 5), false, 12000 - tiempoGanado, 20, oficio));
 				}
 				if (nivel >= 10) {
-					skills.add(new Trabajo(SKILL_TALAR_CASTAÑO, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2 + ((nivel
+					skills.add(new Trabajo(SKILL_TALAR_CASTA\u00d1O, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2 + ((nivel
 					- 10) / 5), false, 12000 - tiempoGanado, 15, oficio));
 				}
 				if (nivel >= 0) {
@@ -4260,7 +4260,7 @@ public class Constantes {
 				break;
 			case OFICIO_CAMPESINO :
 				if (nivel >= 70) {
-					skills.add(new Trabajo(SKILL_SEGAR_CAÑAMO, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2 + ((nivel
+					skills.add(new Trabajo(SKILL_SEGAR_CA\u00d1AMO, (nivel >= 100 ? 5 : 0) + 1, (nivel >= 100 ? 5 : 0) + 2 + ((nivel
 					- 70) / 5), false, 12000 - tiempoGanado, 45, oficio));
 				}
 				if (nivel >= 60) {
@@ -4393,16 +4393,16 @@ public class Constantes {
 				case 98 :// tofu
 				case 473 :// Tofu Enfermo
 				case 803 :// Tofu Enjaulado
-				case 808 :// Tofu Gordinflón
+				case 808 :// Tofu Gordinfl\u00f3n
 				case 796 :// Tofu Negro
 				case 1012 :// Tofu obeso Cebado
 				case 382 :// Tofu Real
 				case 806 :// Tofukaz
-				case 2357 :// Tofumantxú el Mítico
+				case 2357 :// Tofumantx\u00f1 el M\u00edtico
 				case 804 :// Tofuna
 				case 807 :// Tofuzmo
 					if (azar <= 70)
-						carne = 1896;// Carne de pájaro
+						carne = 1896;// Carne de p\u00e1jaro
 					return carne;
 			}
 		}
@@ -4418,24 +4418,24 @@ public class Constantes {
 				case 456 :// Larva Dorada
 				case 46 :// Larva Naranja
 				case 976 :// Larva Naranja Inmadura
-				case 413 :// Larva Rubí
+				case 413 :// Larva Rub\u00ed
 					if (azar <= 50)
 						carne = 1900; // Carne de larva ***
 					return carne;
 			}
 			switch (mob) {
-				case 134 :// Jalatín Blanco
-				case 149 :// Jalatín Negro
+				case 134 :// Jalat\u00e9s Blanco
+				case 149 :// Jalat\u00e9s Negro
 					if (azar <= 50)
-						carne = 1911; // Muslo de jalatín
+						carne = 1911; // Muslo de Jalat\u00e9s
 					return carne;
 			}
 		}
 		if (nivel >= 20) {
 			switch (mob) {
-				case 101 :// Jalatín Blanco
+				case 101 :// Jalat\u00e9s Blanco
 					if (azar <= 48)
-						carne = 1912; // Muslo de jalató **
+						carne = 1912; // Muslo de jalat\u00e9s **
 					return carne;
 			}
 			switch (mob) {
@@ -4450,7 +4450,7 @@ public class Constantes {
 			switch (mob) {
 				case 289 :// Maestro Cuerbok
 					if (azar <= 10)
-						carne = 1933; // Carne de pájaro ****
+						carne = 1933; // Carne de p\u00e1jaro ****
 					return carne;
 			}
 			switch (mob) {
@@ -4460,8 +4460,8 @@ public class Constantes {
 					return carne;
 			}
 			switch (mob) {
-				case 104 :// Jabalí
-				case 2769 :// Jabalí
+				case 104 :// Jabal\u00ed
+				case 2769 :// Jabal\u00ed
 					if (azar <= 45)
 						carne = 1917; // Solomillo de cerdo
 					return carne;
@@ -4474,7 +4474,7 @@ public class Constantes {
 				case 235 :// Kwak de Tierra
 				case 81 :// Kwak de Viento
 					if (azar <= 45)
-						carne = 1897; // Carne de pájaro **
+						carne = 1897; // Carne de p\u00e1jaro **
 					return carne;
 			}
 			switch (mob) {
@@ -4484,9 +4484,9 @@ public class Constantes {
 					return carne;
 			}
 			switch (mob) {
-				case 148 :// Jefe de Guerra Jalató
+				case 148 :// Jefe de Guerra jalat\u00e9s
 					if (azar <= 40)
-						carne = 1913; // Muslo de jalató ***
+						carne = 1913; // Muslo de jalat\u00e9s ***
 					return carne;
 			}
 			switch (mob) {
@@ -4514,13 +4514,13 @@ public class Constantes {
 					return carne;
 			}
 			switch (mob) {
-				case 147 :// Jalató Real
+				case 147 :// jalat\u00e9s Real
 					if (azar <= 30)
-						carne = 1914; // Muslo de jalató ****
+						carne = 1914; // Muslo de jalat\u00e9s ****
 					return carne;
 			}
 			switch (mob) {
-				case 297 :// Jabalí de las llanuras
+				case 297 :// Jabal\u00ed de las llanuras
 					if (azar <= 30)
 						carne = 1918; // Solomillo de cerdo **
 					return carne;
@@ -4533,13 +4533,13 @@ public class Constantes {
 				case 752 :// Koalak Coco
 				case 785 :// Koalak Forestal
 				case 753 :// Koalak Guinda
-				case 751 :// Koalak Índigo
+				case 751 :// Koalak \u00edndigo
 				case 748 :// Koalak Inmaduro
 				case 754 :// Koalak Reineta
 				case 756 :// Koalak Salvaje
-				case 744 :// Koalak Sanguíneo
+				case 744 :// Koalak Sangu\u00edneo
 				case 758 :// Maestro Koalak
-				case 755 :// Mamá Koalak
+				case 755 :// Mam\u00e1 Koalak
 				case 760 :// Momia Koalak
 				case 761 :// Sepulturero Koalak
 					if (azar <= 25)
@@ -4641,7 +4641,7 @@ public class Constantes {
 			case OBJETO_TIPO_HACHA :
 			case OBJETO_TIPO_HERRAMIENTA :
 			case OBJETO_TIPO_PICO :
-			case OBJETO_TIPO_GUADAÑA :
+			case OBJETO_TIPO_GUADA\u00f1A :
 			case OBJETO_TIPO_ARCO :
 			case OBJETO_TIPO_VARITA :
 			case OBJETO_TIPO_DAGAS :
@@ -4906,27 +4906,27 @@ public class Constantes {
 		} else if (A == 18 && B == 21) {
 			colorNuevaCria = 43; // dorado - esmeralda
 		} else if (A == 3 && B == 21) {
-			colorNuevaCria = 50; // ébano - esmeralda
+			colorNuevaCria = 50; // \u00e9bano - esmeralda
 		} else if (A == 17 && B == 21) {
-			colorNuevaCria = 55; // esmeralda e índigo
+			colorNuevaCria = 55; // esmeralda e \u00edndigo
 		} else if (A == 16 && B == 21) {
 			colorNuevaCria = 56; // esmeralda - marfil
 		} else if (A == 15 && B == 21) {
 			colorNuevaCria = 58; // esmeralda - turquesa
 		} else if (A == 21 && B == 22) {
-			colorNuevaCria = 59; // esmeralda - orquídeo
+			colorNuevaCria = 59; // esmeralda - orqu\u00eddea
 		} else if (A == 19 && B == 21) {
-			colorNuevaCria = 60; // esmeralda - púrpura
+			colorNuevaCria = 60; // esmeralda - p\u00farpura
 		} else if (A == 20 && B == 23) {
 			colorNuevaCria = 77; // ciruela - almendrado
 		} else if (A == 18 && B == 23) {
 			colorNuevaCria = 78; // ciruela - dorado
 		} else if (A == 3 && B == 23) {
-			colorNuevaCria = 79; // ciruela - ébano
+			colorNuevaCria = 79; // ciruela - \u00e9bano
 		} else if (A == 21 && B == 23) {
 			colorNuevaCria = 80; // ciruela - esmeralda
 		} else if (A == 17 && B == 23) {
-			colorNuevaCria = 82; // ciruela - índigo
+			colorNuevaCria = 82; // ciruela - \u00edndigo
 		} else if (A == 16 && B == 23) {
 			colorNuevaCria = 83; // ciruela - marfil
 		} else if (A == 10 && B == 23) {
@@ -4934,7 +4934,7 @@ public class Constantes {
 		} else if (A == 15 && B == 23) {
 			colorNuevaCria = 85; // ciruela - turquesa
 		} else if (A == 22 && B == 23) {
-			colorNuevaCria = 86; // ciruela - orquídeo
+			colorNuevaCria = 86; // ciruela - orqu\u00eddea
 		} else if (A == 19 && B == 23) {
 			colorNuevaCria = 87; // ciruela - purpura
 		}
@@ -4993,7 +4993,7 @@ public class Constantes {
 				return 52;
 			case OFICIO_SASTREMAGO : // Sastremago primordial
 				return 53;
-			case OFICIO_LEÑADOR :
+			case OFICIO_LE\u00cdADOR :
 				return 22;
 			case OFICIO_FORJADOR_ESPADAS :
 				return 23;
@@ -5053,7 +5053,7 @@ public class Constantes {
 	public static final Reto getReto(final byte reto, final Pelea pelea) {
 		int bonusXPGrupo = 0, bonusXPFijo = 0;
 		switch (reto) {
-			case RETO_ZOMBI :// 1;// Utiliza sólo un punto de movimiento en cada turno.
+			case RETO_ZOMBI :// 1;// Utiliza s\u00f3lo un punto de movimiento en cada turno.
 				bonusXPFijo = 30;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(1) / 4f) * 10);
 				break;
@@ -5066,17 +5066,17 @@ public class Constantes {
 				bonusXPFijo = 30;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(2) / 3f) * 10);
 				break;
-			case RETO_APLAZAMIENTO :// 4;// Matar %1 el último.
+			case RETO_APLAZAMIENTO :// 4;// Matar %1 el \u00faltimo.
 				bonusXPFijo = 20;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(2) / 1.5f) * 5);
 				break;
 			case RETO_AHORRADOR :// 5;// Durante el tiempo que dure el combate, cada
-				// personaje sólo debe utilizar la misma acción una única vez.
+				// personaje s\u00f3lo debe utilizar la misma acci\u00f3n una \u00fanica vez.
 				bonusXPFijo = 160;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(1) / 1.5f) * 10);
 				break;
-			case RETO_VERSATIL :// 6;// Durante su turno, cada jugador sólo puede utilizar
-				// una vez la misma acción.
+			case RETO_VERSATIL :// 6;// Durante su turno, cada jugador s\u00f3lo puede utilizar
+				// una vez la misma acci\u00f3n.
 				bonusXPFijo = 50;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(1) / 1.5f) * 5);
 				break;
@@ -5085,7 +5085,7 @@ public class Constantes {
 				bonusXPFijo = 20;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(1) / 1.5f) * 5);
 				break;
-			case RETO_BARBARO :// 9;// No utilices ningún hechizo durante el tiempo que dure
+			case RETO_BARBARO :// 9;// No utilices ning\u00fan hechizo durante el tiempo que dure
 				// este combate.
 				bonusXPFijo = 60;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(1) / 3f) * 5);
@@ -5100,8 +5100,8 @@ public class Constantes {
 				bonusXPFijo = 40;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(2) / 2f) * 5);
 				break;
-			case RETO_ENTOMOLOGO :// 16;// Invocar una Llamita cada vez que el hechizo esté
-				// disponible. Válido durante todo el combate.
+			case RETO_ENTOMOLOGO :// 16;// Invocar una Llamita cada vez que el hechizo est\u00e1
+				// disponible. V\u00e1lido durante todo el combate.
 				bonusXPFijo = 25;
 				for (final Luchador luchador : pelea.luchadoresDeEquipo(1)) {
 					if (luchador.getPersonaje().tieneHechizoID(311)) {
@@ -5119,11 +5119,11 @@ public class Constantes {
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(1) / 2f) * 5);
 				break;
 			case RETO_MANOS_LIMPIAS :// 19;// Acabar con los monstruos sin ocasionarles
-				// daños
+				// da\u00f1os
 				// directos durante lo que dure el combate. Se
 				// puede utilizar trampas, glifos, venenos,
-				// daños
-				// ocasionados por desplazamiento así como los
+				// da\u00f1os
+				// ocasionados por desplazamiento as\u00ed como los
 				// ataques de invocaciones.
 				bonusXPFijo = 25;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(2)) * 5);
@@ -5157,15 +5157,15 @@ public class Constantes {
 				break;
 			case RETO_NI_PIAS_NI_SUMISAS :// 28;// Los personajes de sexo masculino deben
 				// dejar que los de sexo femenino acaben con
-				// los adversarios. Válido durante todo el
+				// los adversarios. V\u00e1lido durante todo el
 				// combate.
 			case RETO_NI_PIOS_NI_SUMISOS :// 29;// Los personajes de sexo femenino deben
 				// dejar que los de sexo masculino acaben
-				// con los adversarios. Válido durante todo
+				// con los adversarios. V\u00e1lido durante todo
 				// el combate.
 				bonusXPFijo = 35;
 				break;
-			case RETO_LOS_PEQUEÑOS_ANTES :// 30;// El personaje de menor nivel debe acabar
+			case RETO_LOS_PEQUE\u00f1OS_ANTES :// 30;// El personaje de menor nivel debe acabar
 				// con los adversarios.
 				bonusXPFijo = 40;
 				break;
@@ -5179,7 +5179,7 @@ public class Constantes {
 				bonusXPFijo = 50;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(2) / 3f) * 5);
 				break;
-			case RETO_SUPERVIVIENTE :// 33;// Ningún aliado debe morir.
+			case RETO_SUPERVIVIENTE :// 33;// ning\u00fan aliado debe morir.
 				bonusXPFijo = 30;
 				break;
 			case RETO_IMPREVISIBLE :// 34;// Todos los ataques deben ir dirigidos a un mismo
@@ -5188,7 +5188,7 @@ public class Constantes {
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(2) / 2f) * 5);
 				break;
 			case RETO_ASESINO_A_SUELDO :// 35;// Debes matar a los adversarios en el orden
-				// indicado. Cada vez que mates a un objetivo, obtendrás el nombre del próximo al que tienes
+				// indicado. Cada vez que mates a un objetivo, obtendr\u00e1s el nombre del pr\u00f3ximo al que tienes
 				// que matar
 				bonusXPFijo = 45;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(2) / 3f) * 10);
@@ -5215,12 +5215,12 @@ public class Constantes {
 				// adyacente a la de uno de tus adversarios.
 				bonusXPFijo = 30;
 				break;
-			case RETO_IMPETUOSO :// 41;// Utiliza todos tus puntos de acción antes de acabar
+			case RETO_IMPETUOSO :// 41;// Utiliza todos tus puntos de acci\u00f3n antes de acabar
 				// tu turno.
 				bonusXPFijo = 10;
 				break;
 			case RETO_EL_DOS_POR_UNO :// 42;// Cuando un personaje mata a un adversario,
-				// tiene que matar obligatoriamente a un (y sólo a un) segundo adversario durante su turno.
+				// tiene que matar obligatoriamente a un (y s\u00f3lo a un) segundo adversario durante su turno.
 				bonusXPFijo = 60;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(2) / 1.5f) * 5);
 				break;
@@ -5229,25 +5229,25 @@ public class Constantes {
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(1) / 2f) * 5);
 				break;
 			case RETO_REPARTO :// 44;// Cada personaje debe matar al menos a un adversario
-				// (que no sea una invocación) durante el combate.
+				// (que no sea una invocaci\u00f3n) durante el combate.
 				bonusXPFijo = 50;
 				break;
-			case RETO_DUELO :// 45;// Cuando un personaje ataca a un adversario, ningún otro
+			case RETO_DUELO :// 45;// Cuando un personaje ataca a un adversario, ning\u00fan otro
 				// personaje debe atacar a ese mismo adversario durante el tiempo que dure el combate.
 				bonusXPFijo = 40;
 				break;
 			case RETO_CADA_UNO_CON_SU_MONSTRUO :// 46;// Cada personaje debe matar al menos
-				// a un adversario durante el combate. Cuando un personaje ataca a un adversario, ningún
+				// a un adversario durante el combate. Cuando un personaje ataca a un adversario, ning\u00fan
 				// otro personaje puede atacar a ese mismo adversario durante el combate.
 				bonusXPFijo = 60;
 				bonusXPGrupo = (int) (Math.ceil(pelea.cantLuchDeEquipo(2) / 1.5f) * 5);
 				break;
 			case RETO_CONTAMINACION :// 47;// Cuando un aliado pierde puntos de vida,
-				// dispones de 3 turnos para rematar a tu aliado o ¡ganar el combate!
+				// dispones de 3 turnos para rematar a tu aliado o \u00f1ganar el combate!
 				bonusXPFijo = 60;
 				break;
 			case RETO_LOS_PERSONAJES_SECUNDARIOS_PRIMERO :// 48;// El personaje secundario
-				// de menor nivel tiene que matar a todos los adversarios (así aprenderás a querer abusar
+				// de menor nivel tiene que matar a todos los adversarios (as\u00ed aprender\u00f1s a querer abusar
 				// como un puerkazo).
 				bonusXPFijo = 10;
 				bonusXPGrupo = (pelea.cantLuchDeEquipo(1) / 2) * 15;
@@ -5258,7 +5258,7 @@ public class Constantes {
 				bonusXPGrupo = (pelea.cantLuchDeEquipo(1) / 2) * 15;
 				break;
 			case RETO_LA_TRAMPA_DE_LOS_DESARROLLADORES :// 50;// Acaba el combate, para
-				// ganar el desafío. Ya se sabe, los desarrolladores del juego son unos tramposos...
+				// ganar el desaf\u00edo. Ya se sabe, los desarrolladores del juego son unos tramposos...
 				bonusXPFijo = 1;
 				break;
 			case RETO_JARDINERO :// jardinero, durante el combate, plantar una zanahowia cada vez q se
@@ -5286,7 +5286,7 @@ public class Constantes {
 					}
 				}
 				break;
-			case RETO_ARACNOFILO :// aracnofilo, invocar una araña cada vez q se pueda
+			case RETO_ARACNOFILO :// aracnofilo, invocar una ara\u00f1a cada vez q se pueda
 				bonusXPFijo = 10;
 				for (final Luchador luchador : pelea.luchadoresDeEquipo(1)) {
 					if (luchador.getPersonaje().tieneHechizoID(370)) {
@@ -5334,7 +5334,7 @@ public class Constantes {
 						}
 					}
 					return false;
-				case RETO_ARACNOFILO :// aracnofilo, invocar una araña cada vez q se pueda
+				case RETO_ARACNOFILO :// aracnofilo, invocar una ara\u00f1a cada vez q se pueda
 					for (final Luchador luchador : pelea.luchadoresDeEquipo(1)) {
 						if (luchador.getPersonaje().tieneHechizoID(370)) {
 							return true;
@@ -5370,13 +5370,13 @@ public class Constantes {
 					}
 					return false;
 				case RETO_EL_DOS_POR_UNO :// el dos por uno, Cuando un personaje mata a un adversario, tiene
-					// que matar obligatoriamente a un (y sólo
+					// que matar obligatoriamente a un (y s\u00f3lo
 					if (pelea.cantLuchDeEquipo(2) % 2 == 0) {
 						return true;
 					}
 					return false;
 				case RETO_REPARTO :// reparto, Cada personaje debe matar al menos a un adversario (que no
-														// sea una invocación) durante el duelo
+														// sea una invocaci\u00f3n) durante el duelo
 				case RETO_DUELO :
 				case RETO_CADA_UNO_CON_SU_MONSTRUO :// cada uno con su mounstro, Cada personaje debe matar
 																						// al menos a un adversario durante el combate.
@@ -5386,9 +5386,9 @@ public class Constantes {
 					return false;
 				case RETO_ANACORETA :
 				case RETO_PEGAJOSO :
-				case RETO_LOS_PEQUEÑOS_ANTES :// los pequeños antes, el personaje de menor nivel debe acabar
+				case RETO_LOS_PEQUE\u00f1OS_ANTES :// los peque\u00f1os antes, el personaje de menor nivel debe acabar
 																			// con todos los mobs
-				case RETO_SUPERVIVIENTE :// superviviente, Ningún aliado debe morir
+				case RETO_SUPERVIVIENTE :// superviviente, ning\u00fan aliado debe morir
 				case RETO_CONTAMINACION :// contaminacion, Cuando un aliado pierde puntos de vida, dispones
 																	// de 3 turnos para rematar a tu aliado o
 					if (pelea.cantLuchDeEquipo(1) >= 2) {
@@ -5438,7 +5438,7 @@ public class Constantes {
 						return false;
 					}
 					break;
-				case RETO_MANOS_LIMPIAS :// manos limpias,acabar con los mounstros sin ocasionarles daños
+				case RETO_MANOS_LIMPIAS :// manos limpias,acabar con los mounstros sin ocasionarles da\u00f1os
 																	// directos
 					if (nuevo == RETO_BARBARO) {
 						return false;
@@ -5475,8 +5475,8 @@ public class Constantes {
 						return false;
 					}
 					break;
-				case RETO_ELEGIDO_VOLUNTARIO :// elegido voluntario, Matar %1 el último
-				case RETO_APLAZAMIENTO :// aplazamiento, Matar %1 el último
+				case RETO_ELEGIDO_VOLUNTARIO :// elegido voluntario, Matar %1 el \u00faltimo
+				case RETO_APLAZAMIENTO :// aplazamiento, Matar %1 el \u00faltimo
 				case RETO_CRUEL :// cruel
 				case RETO_ORDENADO :// ordenado
 				case RETO_FOCALIZACION :// focalizacion, cuando se ataca a un adversario, hay q matarlo para
@@ -5488,7 +5488,7 @@ public class Constantes {
 																		// indicado. Cada vez que mates a un
 				case RETO_BLITZKRIEG :// Blitzkrieg, Cuando se ataca a un adversario, hay que matarlo antes
 															// de que comience su turno
-				case RETO_DUELO :// duelo, Cuando un personaje ataca a un adversario, ningún otro personaje
+				case RETO_DUELO :// duelo, Cuando un personaje ataca a un adversario, ning\u00fan otro personaje
 													// debe atacar a ese mismo
 					if (nuevo == RETO_ELEGIDO_VOLUNTARIO || nuevo == RETO_APLAZAMIENTO || nuevo == RETO_CRUEL
 					|| nuevo == RETO_ORDENADO || nuevo == RETO_FOCALIZACION || nuevo == RETO_ELITISTA
@@ -5688,7 +5688,7 @@ public class Constantes {
 						return 690;
 					case 58 :// segar malta
 						return 691;
-					case 54 :// segar cañamo
+					case 54 :// segar ca\u00f1amo
 						return 692;
 				}
 				break;
@@ -5704,7 +5704,7 @@ public class Constantes {
 						return 696;
 					case 56 :// recolectar manganeso
 						return 697;
-					case 55 :// recolectar estaño
+					case 55 :// recolectar esta\u00f1o
 						return 698;
 					case 162 :// recolectar silicato
 						return 699;
@@ -5718,11 +5718,11 @@ public class Constantes {
 						return 703;
 				}
 				break;
-			case 2 :// leñador
+			case 2 :// le\u00f1ador
 				switch (trabajoID) {
 					case 6 :// talar fresno
 						return 711;
-					case 39 :// talar castaño
+					case 39 :// talar casta\u00f1o
 						return 712;
 					case 40 :// talar nogal
 						return 713;
@@ -5761,7 +5761,7 @@ public class Constantes {
 						return 707;
 					case 71 :// cosechar trebol
 						return 706;
-					case 69 :// cosechar cañamo
+					case 69 :// cosechar ca\u00f1amo
 						return 705;
 					case 68 :// cosechar lino
 						return 704;
@@ -5850,24 +5850,24 @@ public class Constantes {
 	
 	public static final int getCaracObjCria(final int idObjMod) {
 		switch (idObjMod) {
-			case 7606 : // Pesebre clásico
+			case 7606 : // Pesebre cl\u00f1sico
 			case 7612 : // Pesebre de arce
-			case 7619 : // Pesebre de bambú
-			case 7685 : // Pesebre de bambú dorado
-			case 7686 : // Pesebre de bambú mágico
-			case 7620 : // Pesebre de bambú oscuro
-			case 7621 : // Pesebre de bambú sagrado
-			case 7617 : // Pesebre de bombú
+			case 7619 : // Pesebre de bamb\u00fa
+			case 7685 : // Pesebre de bamb\u00fa dorado
+			case 7686 : // Pesebre de bamb\u00fa m\u00f1gico
+			case 7620 : // Pesebre de bamb\u00fa oscuro
+			case 7621 : // Pesebre de bamb\u00fa sagrado
+			case 7617 : // Pesebre de bamb\u00fa
 			case 7613 : // Pesebre de carpe
-			case 7614 : // Pesebre de castaño
+			case 7614 : // Pesebre de casta\u00f1o
 			case 7616 : // Pesebre de cerezo silvestre
-			case 7610 : // Pesebre de ébano
+			case 7610 : // Pesebre de \u00e9bano
 			case 7607 : // Pesebre de fresno
 			case 7683 : // Pesebre de madera ancestral
 			case 7687 : // Pesebre de madera de bambuto
 			case 7688 : // Pesebre de madera de bambuto sagrado
 			case 7689 : // Pesebre de madera de kokoko
-			case 7690 : // Pesebre de madera de tronkónido
+			case 7690 : // Pesebre de madera de tronk\u00f1nido
 			case 7684 : // Pesebre de madera embrujada
 			case 7615 : // Pesebre de nogal
 			case 7618 : // Pesebre de olivioleta
@@ -5875,43 +5875,43 @@ public class Constantes {
 			case 7608 : // Pesebre de roble
 			case 7609 : // Pesebre de tejo
 				return 6;
-			case 7628 : // Acariciador Clásico
+			case 7628 : // Acariciador Cl\u00f1sico
 			case 7738 : // Acariciador de Pluma de Cuerbok
 			case 7739 : // Acariciador de Pluma de Kwak de Hielo
 			case 7740 : // Acariciador de Pluma de Kwak de Llama
 			case 7741 : // Acariciador de Pluma de Kwak de Viento
-			case 7735 : // Acariciador de Pluma de Pío Amarillo
-			case 7623 : // Acariciador de Pluma de Pío Azul
-			case 7734 : // Acariciador de Pluma de Pío Rojo
-			case 7736 : // Acariciador de Pluma de Pío Rosa
-			case 7733 : // Acariciador de Pluma de Pío Verde
-			case 7624 : // Acariciador de Pluma de Pío Violeta
+			case 7735 : // Acariciador de Pluma de P\u00f1o Amarillo
+			case 7623 : // Acariciador de Pluma de P\u00f1o Azul
+			case 7734 : // Acariciador de Pluma de P\u00f1o Rojo
+			case 7736 : // Acariciador de Pluma de P\u00f1o Rosa
+			case 7733 : // Acariciador de Pluma de P\u00f1o Verde
+			case 7624 : // Acariciador de Pluma de P\u00f1o Violeta
 			case 7622 : // Acariciador de Pluma de Tofu
-			case 7737 : // Acariciador de Pluma de Tofu Maléfico
+			case 7737 : // Acariciador de Pluma de Tofu Mal\u00f1fico
 			case 7746 : // Acariciador de Pluma de Tofu Real
 			case 7742 : // Acariciador de Pluma del Kwak de Tierra
 			case 7745 : // Acariciador de Pluma del Maestro Cuerbok
-			case 7743 : // Acariciador de Pluma del Último Pohoyo
+			case 7743 : // Acariciador de Pluma del \u00faltimo Pohoyo
 			case 7744 : // Acariciador de Pluma Puntiaguda de Kwak
 				return 5;
-			case 7625 : // Aporreadora clásica
+			case 7625 : // Aporreadora cl\u00f1sica
 			case 7757 : // Aporreadora de arce
-			case 7762 : // Aporreadora de bambú
-			case 7770 : // Aporreadora de bambú dorado
-			case 7772 : // Aporreadora de bambú mágico
-			case 7765 : // Aporreadora de bambú oscuro
-			case 7766 : // Aporreadora de bambú sagrado
-			case 7763 : // Aporreadora de bombú
+			case 7762 : // Aporreadora de bamb\u00fa
+			case 7770 : // Aporreadora de bamb\u00fa dorado
+			case 7772 : // Aporreadora de bamb\u00fa m\u00f1gico
+			case 7765 : // Aporreadora de bamb\u00fa oscuro
+			case 7766 : // Aporreadora de bamb\u00fa sagrado
+			case 7763 : // Aporreadora de bamb\u00fa
 			case 7758 : // Aporreadora de carpe
-			case 7626 : // Aporreadora de castaño
+			case 7626 : // Aporreadora de casta\u00f1o
 			case 7761 : // Aporreadora de cerezo silvestre
-			case 7755 : // Aporreadora de Ébano
+			case 7755 : // Aporreadora de \u00e9bano
 			case 7759 : // Aporreadora de fresno
 			case 7767 : // Aporreadora de madera ancestral
 			case 7773 : // Aporreadora de madera de bambuto
 			case 7774 : // Aporreadora de madera de bambuto sagrado
 			case 7771 : // Aporreadora de madera de kokoko
-			case 7769 : // Aporreadora de madera de tronkónido
+			case 7769 : // Aporreadora de madera de tronk\u00f1nido
 			case 7768 : // Aporreadora de madera embrujada
 			case 7760 : // Aporreadora de nogal
 			case 7764 : // Aporreadora de olivioleta
@@ -5919,39 +5919,39 @@ public class Constantes {
 			case 7627 : // Aporreadora de roble
 			case 7629 : // Aporreadora de tejo
 				return 4;
-			case 7634 : // Dragonalgas clásico
+			case 7634 : // Dragonalgas cl\u00f1sico
 			case 7695 : // Dragonalgas de cuero de cochinillo
 			case 7694 : // Dragonalgas de cuero de dragocerdo
-			case 7693 : // Dragonalgas de cuero de jabalí
-			case 7699 : // Dragonalgas de cuero de jabalí de las llanuras
-			case 7635 : // Dragonalgas de cuero de jalatín blanco
-			case 7636 : // Dragonalgas de cuero de jalatín negro
-			case 7637 : // Dragonalgas de cuero de jalató
-			case 7692 : // Dragonalgas de cuero de Jalató Real
-			case 7691 : // Dragonalgas de cuero de jefe de guerra jalató
+			case 7693 : // Dragonalgas de cuero de Jabal\u00ed
+			case 7699 : // Dragonalgas de cuero de Jabal\u00ed de las llanuras
+			case 7635 : // Dragonalgas de cuero de Jalat\u00e9s blanco
+			case 7636 : // Dragonalgas de cuero de Jalat\u00e9s negro
+			case 7637 : // Dragonalgas de cuero de jalat\u00e9s
+			case 7692 : // Dragonalgas de cuero de jalat\u00e9s Real
+			case 7691 : // Dragonalgas de cuero de jefe de guerra jalat\u00e9s
 			case 7700 : // Dragonalgas de cuero de Minotauroro
 			case 7697 : // Dragonalgas de cuero de Puerkazo
 			case 7698 : // Dragonalgas de cuero negro
 			case 7696 : // Dragonalgas de cuero violeta de bwork
 				return 3;
-			case 7798 : // Fulminadora clásica
+			case 7798 : // Fulminadora cl\u00f1sica
 			case 7780 : // Fulminadora de arce
-			case 7787 : // Fulminadora de bambú
-			case 7793 : // Fulminadora de bambú dorado
-			case 7794 : // Fulminadora de bambú mágico
-			case 7788 : // Fulminadora de bambú oscuro
-			case 7789 : // Fulminadora de bambú sagrado
-			case 7785 : // Fulminadora de bombú
+			case 7787 : // Fulminadora de bamb\u00fa
+			case 7793 : // Fulminadora de bamb\u00fa dorado
+			case 7794 : // Fulminadora de bamb\u00fa m\u00f1gico
+			case 7788 : // Fulminadora de bamb\u00fa oscuro
+			case 7789 : // Fulminadora de bamb\u00fa sagrado
+			case 7785 : // Fulminadora de bamb\u00fa
 			case 7781 : // Fulminadora de carpe
-			case 7782 : // Fulminadora de castaño
+			case 7782 : // Fulminadora de casta\u00f1o
 			case 7784 : // Fulminadora de cerezo silvestre
-			case 7778 : // Fulminadora de ébano
+			case 7778 : // Fulminadora de \u00e9bano
 			case 7775 : // Fulminadora de fresno
 			case 7790 : // Fulminadora de madera ancestral
 			case 7795 : // Fulminadora de madera de bambuto
 			case 7796 : // Fulminadora de madera de bambuto sagrado
 			case 7797 : // Fulminadora de madera de kokoko
-			case 7792 : // Fulminadora de madera de tronkónido
+			case 7792 : // Fulminadora de madera de tronk\u00f1nido
 			case 7791 : // Fulminadora de madera embrujada
 			case 7783 : // Fulminadora de nogal
 			case 7786 : // Fulminadora de olivioleta
@@ -5959,24 +5959,24 @@ public class Constantes {
 			case 7776 : // Fulminadora de roble
 			case 7777 : // Fulminadora de tejo
 				return 2;
-			case 7605 : // Abrevadero Clásico
+			case 7605 : // Abrevadero Cl\u00f1sico
 			case 7592 : // Abrevadero de Arce
-			case 7602 : // Abrevadero de Bambú
-			case 7676 : // Abrevadero de Bambú Dorado
-			case 7677 : // Abrevadero de Bambú Mágico
-			case 7603 : // Abrevadero de Bambú Oscuro
-			case 7604 : // Abrevadero de Bambú Sagrado
-			case 7600 : // Abrevadero de Bombú
+			case 7602 : // Abrevadero de Bamb\u00f1
+			case 7676 : // Abrevadero de Bamb\u00f1 Dorado
+			case 7677 : // Abrevadero de Bamb\u00f1 M\u00f1gico
+			case 7603 : // Abrevadero de Bamb\u00f1 Oscuro
+			case 7604 : // Abrevadero de Bamb\u00f1 Sagrado
+			case 7600 : // Abrevadero de Bomb\u00f1
 			case 7594 : // Abrevadero de Carpe
-			case 7593 : // Abrevadero de Castaño
+			case 7593 : // Abrevadero de Casta\u00f1o
 			case 7596 : // Abrevadero de Cerezo Silvestre
-			case 7598 : // Abrevadero de Ébano
+			case 7598 : // Abrevadero de \u00e9bano
 			case 7590 : // Abrevadero de Fresno
 			case 7673 : // Abrevadero de Madera Ancestral
 			case 7678 : // Abrevadero de Madera de Bambuto
 			case 7679 : // Abrevadero de Madera de Bambuto Sagrado
 			case 7682 : // Abrevadero de Madera de Kokoko
-			case 7675 : // Abrevadero de Madera de Tronkónido
+			case 7675 : // Abrevadero de Madera de Tronk\u00f1nido
 			case 7674 : // Abrevadero de Madera Embrujada
 			case 7595 : // Abrevadero de Nogal
 			case 7601 : // Abrevadero de Olivioleta
@@ -6317,10 +6317,10 @@ public class Constantes {
 				return STAT_MAS_PROSPECCION;
 			case STAT_MENOS_CURAS :// curaciones
 				return STAT_MAS_CURAS;
-			case STAT_MENOS_DAÑOS :// daños
-				return STAT_MAS_DAÑOS;
-			case STAT_MENOS_PORC_DAÑOS :// % daños
-				return STAT_MAS_PORC_DAÑOS;
+			case STAT_MENOS_DA\u00d1OS :// da\u00f1os
+				return STAT_MAS_DA\u00f1OS;
+			case STAT_MENOS_PORC_DA\u00d1OS :// % da\u00f1os
+				return STAT_MAS_PORC_DA\u00d1OS;
 			case STAT_MENOS_GOLPES_CRITICOS :// golpes criticos
 				return STAT_MAS_GOLPES_CRITICOS;
 			case STAT_MENOS_RES_PORC_TIERRA :// tierra
@@ -6343,22 +6343,22 @@ public class Constantes {
 				return STAT_MAS_RES_FIJA_FUEGO;
 			case STAT_MENOS_RES_FIJA_NEUTRAL :// neutral
 				return STAT_MAS_RES_FIJA_NEUTRAL;
-			case STAT_MENOS_DAÑOS_DE_AGUA :
-				return STAT_MAS_DAÑOS_DE_AGUA;
-			case STAT_MENOS_DAÑOS_DE_AIRE :
-				return STAT_MAS_DAÑOS_DE_AIRE;
-			case STAT_MENOS_DAÑOS_DE_FUEGO :
-				return STAT_MAS_DAÑOS_DE_FUEGO;
-			case STAT_MENOS_DAÑOS_DE_TIERRA :
-				return STAT_MAS_DAÑOS_DE_TIERRA;
-			case STAT_MENOS_DAÑOS_DE_NEUTRAL :
-				return STAT_MAS_DAÑOS_DE_NEUTRAL;
-			case STAT_MENOS_DAÑOS_EMPUJE :
-				return STAT_MAS_DAÑOS_EMPUJE;
+			case STAT_MENOS_DA\u00d1OS_DE_AGUA :
+				return STAT_MAS_DA\u00f1OS_DE_AGUA;
+			case STAT_MENOS_DA\u00d1OS_DE_AIRE :
+				return STAT_MAS_DA\u00f1OS_DE_AIRE;
+			case STAT_MENOS_DA\u00d1OS_DE_FUEGO :
+				return STAT_MAS_DA\u00f1OS_DE_FUEGO;
+			case STAT_MENOS_DA\u00d1OS_DE_TIERRA :
+				return STAT_MAS_DA\u00f1OS_DE_TIERRA;
+			case STAT_MENOS_DA\u00d1OS_DE_NEUTRAL :
+				return STAT_MAS_DA\u00f1OS_DE_NEUTRAL;
+			case STAT_MENOS_DA\u00d1OS_EMPUJE :
+				return STAT_MAS_DA\u00f1OS_EMPUJE;
 			case STAT_MENOS_REDUCCION_CRITICOS :
 				return STAT_MAS_REDUCCION_CRITICOS;
-			case STAT_MENOS_DAÑOS_CRITICOS :
-				return STAT_MAS_DAÑOS_CRITICOS;
+			case STAT_MENOS_DA\u00d1OS_CRITICOS :
+				return STAT_MAS_DA\u00f1OS_CRITICOS;
 			case STAT_MENOS_REDUCCION_EMPUJE :
 				return STAT_MAS_REDUCCION_EMPUJE;
 			case STAT_MENOS_HUIDA :
@@ -6377,12 +6377,12 @@ public class Constantes {
 		switch (statID) {
 			case STAT_MENOS_PA :
 				return STAT_MAS_PA;
-			case STAT_MAS_DAÑOS_REDUCIDOS_NO_FECA :
-				return STAT_MENOS_DAÑOS_REDUCIDOS;
+			case STAT_MAS_DA\u00f1OS_REDUCIDOS_NO_FECA :
+				return STAT_MENOS_DA\u00d1OS_REDUCIDOS;
 			case STAT_MAS_PA :
 				return STAT_MENOS_PA;
-			case STAT_MAS_DAÑOS :
-				return STAT_MENOS_DAÑOS;
+			case STAT_MAS_DA\u00f1OS :
+				return STAT_MENOS_DA\u00d1OS;
 			case STAT_MAS_GOLPES_CRITICOS :
 				return STAT_MENOS_GOLPES_CRITICOS;
 			case STAT_MENOS_ALCANCE :
@@ -6405,10 +6405,10 @@ public class Constantes {
 				return STAT_MAS_PM;
 			case STAT_MAS_PM :
 				return STAT_MENOS_PM;
-			case STAT_MAS_PORC_DAÑOS :
-				return STAT_MENOS_PORC_DAÑOS;
-			case STAT_MENOS_DAÑOS :
-				return STAT_MAS_DAÑOS;
+			case STAT_MAS_PORC_DA\u00d1OS :
+				return STAT_MENOS_PORC_DA\u00d1OS;
+			case STAT_MENOS_DA\u00d1OS :
+				return STAT_MAS_DA\u00f1OS;
 			case STAT_MENOS_SUERTE :
 				return STAT_MAS_SUERTE;
 			case STAT_MENOS_VITALIDAD :
@@ -6433,8 +6433,8 @@ public class Constantes {
 				return STAT_MAS_ESQUIVA_PERD_PA;
 			case STAT_MENOS_ESQUIVA_PERD_PM :
 				return STAT_MAS_ESQUIVA_PERD_PM;
-			case STAT_MENOS_DAÑOS_REDUCIDOS :
-				return STAT_MAS_DAÑOS_REDUCIDOS_NO_FECA;
+			case STAT_MENOS_DA\u00d1OS_REDUCIDOS :
+				return STAT_MAS_DA\u00f1OS_REDUCIDOS_NO_FECA;
 			case STAT_MENOS_GOLPES_CRITICOS :
 				return STAT_MAS_GOLPES_CRITICOS;
 			case STAT_MAS_INICIATIVA :
@@ -6449,8 +6449,8 @@ public class Constantes {
 				return STAT_MENOS_CURAS;
 			case STAT_MENOS_CURAS :
 				return STAT_MAS_CURAS;
-			case STAT_MENOS_PORC_DAÑOS :
-				return STAT_MAS_PORC_DAÑOS;
+			case STAT_MENOS_PORC_DA\u00d1OS :
+				return STAT_MAS_PORC_DA\u00d1OS;
 			case STAT_MAS_RES_PORC_TIERRA :
 				return STAT_MENOS_RES_PORC_TIERRA;
 			case STAT_MAS_RES_PORC_AGUA :
@@ -6527,40 +6527,40 @@ public class Constantes {
 				return STAT_MENOS_RETIRO_PA;
 			case STAT_MENOS_RETIRO_PA :
 				return STAT_MAS_RETIRO_PA;
-			case STAT_MAS_DAÑOS_DE_AGUA :
-				return STAT_MENOS_DAÑOS_DE_AGUA;
-			case STAT_MAS_DAÑOS_DE_AIRE :
-				return STAT_MENOS_DAÑOS_DE_AIRE;
-			case STAT_MAS_DAÑOS_DE_FUEGO :
-				return STAT_MENOS_DAÑOS_DE_FUEGO;
-			case STAT_MAS_DAÑOS_DE_TIERRA :
-				return STAT_MENOS_DAÑOS_DE_TIERRA;
-			case STAT_MAS_DAÑOS_DE_NEUTRAL :
-				return STAT_MENOS_DAÑOS_DE_NEUTRAL;
-			case STAT_MAS_DAÑOS_EMPUJE :
-				return STAT_MENOS_DAÑOS_EMPUJE;
+			case STAT_MAS_DA\u00f1OS_DE_AGUA :
+				return STAT_MENOS_DA\u00d1OS_DE_AGUA;
+			case STAT_MAS_DA\u00f1OS_DE_AIRE :
+				return STAT_MENOS_DA\u00d1OS_DE_AIRE;
+			case STAT_MAS_DA\u00f1OS_DE_FUEGO :
+				return STAT_MENOS_DA\u00d1OS_DE_FUEGO;
+			case STAT_MAS_DA\u00f1OS_DE_TIERRA :
+				return STAT_MENOS_DA\u00d1OS_DE_TIERRA;
+			case STAT_MAS_DA\u00f1OS_DE_NEUTRAL :
+				return STAT_MENOS_DA\u00d1OS_DE_NEUTRAL;
+			case STAT_MAS_DA\u00f1OS_EMPUJE :
+				return STAT_MENOS_DA\u00d1OS_EMPUJE;
 			case STAT_MAS_REDUCCION_CRITICOS :
 				return STAT_MENOS_REDUCCION_CRITICOS;
-			case STAT_MAS_DAÑOS_CRITICOS :
-				return STAT_MENOS_DAÑOS_CRITICOS;
+			case STAT_MAS_DA\u00f1OS_CRITICOS :
+				return STAT_MENOS_DA\u00d1OS_CRITICOS;
 			case STAT_MAS_REDUCCION_EMPUJE :
 				return STAT_MENOS_REDUCCION_EMPUJE;
-			case STAT_MENOS_DAÑOS_DE_AGUA :
-				return STAT_MAS_DAÑOS_DE_AGUA;
-			case STAT_MENOS_DAÑOS_DE_AIRE :
-				return STAT_MAS_DAÑOS_DE_AIRE;
-			case STAT_MENOS_DAÑOS_DE_FUEGO :
-				return STAT_MAS_DAÑOS_DE_FUEGO;
-			case STAT_MENOS_DAÑOS_DE_TIERRA :
-				return STAT_MAS_DAÑOS_DE_TIERRA;
-			case STAT_MENOS_DAÑOS_DE_NEUTRAL :
-				return STAT_MAS_DAÑOS_DE_NEUTRAL;
-			case STAT_MENOS_DAÑOS_EMPUJE :
-				return STAT_MAS_DAÑOS_EMPUJE;
+			case STAT_MENOS_DA\u00d1OS_DE_AGUA :
+				return STAT_MAS_DA\u00f1OS_DE_AGUA;
+			case STAT_MENOS_DA\u00d1OS_DE_AIRE :
+				return STAT_MAS_DA\u00f1OS_DE_AIRE;
+			case STAT_MENOS_DA\u00d1OS_DE_FUEGO :
+				return STAT_MAS_DA\u00f1OS_DE_FUEGO;
+			case STAT_MENOS_DA\u00d1OS_DE_TIERRA :
+				return STAT_MAS_DA\u00f1OS_DE_TIERRA;
+			case STAT_MENOS_DA\u00d1OS_DE_NEUTRAL :
+				return STAT_MAS_DA\u00f1OS_DE_NEUTRAL;
+			case STAT_MENOS_DA\u00d1OS_EMPUJE :
+				return STAT_MAS_DA\u00f1OS_EMPUJE;
 			case STAT_MENOS_REDUCCION_CRITICOS :
 				return STAT_MAS_REDUCCION_CRITICOS;
-			case STAT_MENOS_DAÑOS_CRITICOS :
-				return STAT_MAS_DAÑOS_CRITICOS;
+			case STAT_MENOS_DA\u00d1OS_CRITICOS :
+				return STAT_MAS_DA\u00f1OS_CRITICOS;
 			case STAT_MENOS_REDUCCION_EMPUJE :
 				return STAT_MAS_REDUCCION_EMPUJE;
 		}
@@ -6582,7 +6582,7 @@ public class Constantes {
 				r[i++] = 30;
 				r[i++] = 100;
 				break;
-			case STAT_MAS_DAÑOS :// daños
+			case STAT_MAS_DA\u00f1OS :// da\u00f1os
 			case STAT_MAS_CURAS :// curas
 			case STAT_MAS_GOLPES_CRITICOS :// Criticos
 			case STAT_MAS_CRIATURAS_INVO :
@@ -6594,7 +6594,7 @@ public class Constantes {
 			case STAT_MAS_RES_FIJA_AIRE :// resistencia aire
 			case STAT_MAS_RES_FIJA_FUEGO :// resistencia fuego
 			case STAT_MAS_RES_FIJA_NEUTRAL :// resistencia neutral
-			case STAT_REENVIA_DAÑOS :// daños reenvio
+			case STAT_REENVIA_DA\u00f1OS :// da\u00f1os reenvio
 			case STAT_MAS_RES_PORC_TIERRA :// resistencia % tierra
 			case STAT_MAS_RES_PORC_AGUA :// resistencia % agua
 			case STAT_MAS_RES_PORC_AIRE :// resistencia % aire
@@ -6602,13 +6602,13 @@ public class Constantes {
 			case STAT_MAS_RES_PORC_NEUTRAL :// resistencia % neutral
 				r[i++] = 1;
 				break;
-			case STAT_MAS_DAÑOS_TRAMPA :
+			case STAT_MAS_DA\u00f1OS_TRAMPA :
 			case STAT_MAS_PROSPECCION :
 				r[i++] = 1;
 				r[i++] = 3;
 				break;
-			case STAT_MAS_PORC_DAÑOS :// daños %
-			case STAT_MAS_PORC_DAÑOS_TRAMPA :// trampa %
+			case STAT_MAS_PORC_DA\u00d1OS :// da\u00f1os %
+			case STAT_MAS_PORC_DA\u00d1OS_TRAMPA :// trampa %
 			case STAT_MAS_FUERZA :// Fuerza
 			case STAT_MAS_AGILIDAD :// Agi
 			case STAT_MAS_SUERTE :// suerte
@@ -6728,8 +6728,8 @@ public class Constantes {
 		switch (stat) {
 			case STAT_MAS_PA :// Pa
 				return 1557;// runa PA
-			case STAT_MAS_DAÑOS : // daños
-				return 7435;// runa daño
+			case STAT_MAS_DA\u00f1OS : // da\u00f1os
+				return 7435;// runa da\u00f1o
 			case STAT_MAS_GOLPES_CRITICOS :
 				return 7433;
 			case STAT_MAS_ALCANCE :// alcance
@@ -6790,7 +6790,7 @@ public class Constantes {
 				}
 			case STAT_MAS_PM :// PM
 				return 1558;// runa PM 1
-			case STAT_MAS_PORC_DAÑOS :// Daño %
+			case STAT_MAS_PORC_DA\u00d1OS :// Da\u00f1o %
 				// 10613 Runa Pa Pi e1#3#0#0#0d0+3
 				// 10615 Runa Pa Pi Per e2#3#0#0#0d0+3
 				// 10616 Runa Ra Pi Per e2#a#0#0#0d0+10
@@ -6802,7 +6802,7 @@ public class Constantes {
 					case 2 :
 						return 10618;
 					default :
-						return 7436;// runa porcDaño
+						return 7436;// runa porcDa\u00f1o
 				}
 			case STAT_MAS_PODS :// pods
 				switch (tipo) {
@@ -6833,23 +6833,23 @@ public class Constantes {
 				return 7434;// runa cura
 			case STAT_MAS_CRIATURAS_INVO :// invoca
 				return 7442;// runa invo
-			case STAT_REENVIA_DAÑOS :
+			case STAT_REENVIA_DA\u00f1OS :
 				return 7437;// runa reenvio
-			case STAT_MAS_DAÑOS_TRAMPA :
+			case STAT_MAS_DA\u00f1OS_TRAMPA :
 				switch (tipo) {
 					case 2 :
 						return 10613;
 					default :
-						return 7446;// runa daño trampa
+						return 7446;// runa da\u00f1o trampa
 				}
-			case STAT_MAS_PORC_DAÑOS_TRAMPA :
+			case STAT_MAS_PORC_DA\u00d1OS_TRAMPA :
 				switch (tipo) {
 					case 3 :
 						return 10616;
 					case 2 :
 						return 10615;
 					default :
-						return 7447;// runa daño porc Trampa
+						return 7447;// runa da\u00f1o porc Trampa
 				}
 			case STAT_MAS_RES_FIJA_FUEGO :
 				return 7452;// runa re fuego
@@ -6891,14 +6891,14 @@ public class Constantes {
 	
 	public static final boolean esStatDePelea(final int statID) {
 		switch (statID) {
-			case STAT_MAS_DAÑOS_DE_AGUA :
-			case STAT_MAS_DAÑOS_DE_AIRE :
-			case STAT_MAS_DAÑOS_DE_FUEGO :
-			case STAT_MAS_DAÑOS_DE_TIERRA :
-			case STAT_MAS_DAÑOS_DE_NEUTRAL :
-			case STAT_MAS_DAÑOS_EMPUJE :
+			case STAT_MAS_DA\u00f1OS_DE_AGUA :
+			case STAT_MAS_DA\u00f1OS_DE_AIRE :
+			case STAT_MAS_DA\u00f1OS_DE_FUEGO :
+			case STAT_MAS_DA\u00f1OS_DE_TIERRA :
+			case STAT_MAS_DA\u00f1OS_DE_NEUTRAL :
+			case STAT_MAS_DA\u00f1OS_EMPUJE :
 			case STAT_MAS_REDUCCION_CRITICOS :
-			case STAT_MAS_DAÑOS_CRITICOS :
+			case STAT_MAS_DA\u00f1OS_CRITICOS :
 			case STAT_MAS_REDUCCION_EMPUJE :
 			case STAT_MAS_RETIRO_PA :
 			case STAT_MAS_RETIRO_PM :
@@ -6917,8 +6917,8 @@ public class Constantes {
 			case STAT_MAS_PA_2 :// PA
 			case STAT_MAS_PM :// PM
 			case STAT_MAS_ALCANCE :// alcance
-			case STAT_MAS_DAÑOS :// + daños
-			case STAT_MAS_PORC_DAÑOS :// % daños
+			case STAT_MAS_DA\u00f1OS :// + da\u00f1os
+			case STAT_MAS_PORC_DA\u00d1OS :// % da\u00f1os
 			case STAT_MAS_PODS :// pods
 			case STAT_MAS_PROSPECCION :// prospeccion
 			case STAT_MAS_CURAS :// curas
@@ -6939,10 +6939,10 @@ public class Constantes {
 			case STAT_MAS_RES_PORC_PVP_NEUTRAL :
 			case STAT_MAS_GOLPES_CRITICOS :// criticos
 			case STAT_MAS_CRIATURAS_INVO :// runa invo
-			case STAT_REENVIA_DAÑOS :// runa reenvio
-			case STAT_MAS_DAÑOS_TRAMPA :
-			case STAT_MAS_DAÑOS_REDUCIDOS_NO_FECA :
-			case STAT_MAS_PORC_DAÑOS_TRAMPA :
+			case STAT_REENVIA_DA\u00f1OS :// runa reenvio
+			case STAT_MAS_DA\u00f1OS_TRAMPA :
+			case STAT_MAS_DA\u00f1OS_REDUCIDOS_NO_FECA :
+			case STAT_MAS_PORC_DA\u00d1OS_TRAMPA :
 			case STAT_MAS_VELOCIDAD :
 			case STAT_MAS_RES_FIJA_PVP_TIERRA :
 			case STAT_MAS_RES_FIJA_PVP_AGUA :
@@ -6951,7 +6951,7 @@ public class Constantes {
 			case STAT_MAS_RES_FIJA_PVP_NEUTRAL :
 			case STAT_REDUCCION_FISICA :
 			case STAT_REDUCCION_MAGICA :
-			case STAT_MAS_DAÑOS_REDUCIDOS_ARMADURAS_FECA :
+			case STAT_MAS_DA\u00f1OS_REDUCIDOS_ARMADURAS_FECA :
 				return true;
 		}
 		return false;
@@ -6967,11 +6967,11 @@ public class Constantes {
 			case STAT_MAS_INICIATIVA :// iniciativa
 				pesoRuna = 0.1f;
 				break;
-			case STAT_MAS_DAÑOS_DE_AGUA :// + daño agua
-			case STAT_MAS_DAÑOS_DE_TIERRA :// + daño tierra
-			case STAT_MAS_DAÑOS_DE_AIRE :// + daño aire
-			case STAT_MAS_DAÑOS_DE_FUEGO :// + daño fuego
-			case STAT_MAS_DAÑOS_DE_NEUTRAL :// + daño neutral
+			case STAT_MAS_DA\u00f1OS_DE_AGUA :// + da\u00f1o agua
+			case STAT_MAS_DA\u00f1OS_DE_TIERRA :// + da\u00f1o tierra
+			case STAT_MAS_DA\u00f1OS_DE_AIRE :// + da\u00f1o aire
+			case STAT_MAS_DA\u00f1OS_DE_FUEGO :// + da\u00f1o fuego
+			case STAT_MAS_DA\u00f1OS_DE_NEUTRAL :// + da\u00f1o neutral
 				pesoRuna = 5;
 				break;
 			case STAT_MAS_ESQUIVA_PERD_PA :// % perdida PA
@@ -6988,9 +6988,9 @@ public class Constantes {
 			case STAT_MAS_INTELIGENCIA :// Inteligencia
 				pesoRuna = 1;
 				break;
-			case STAT_MAS_DAÑO_FISICO : // daños fisicos
-			case STAT_MAS_PORC_DAÑOS :// daños %
-			case STAT_MAS_PORC_DAÑOS_TRAMPA :// trampa %
+			case STAT_MAS_DA\u00f1O_FISICO : // da\u00f1os fisicos
+			case STAT_MAS_PORC_DA\u00d1OS :// da\u00f1os %
+			case STAT_MAS_PORC_DA\u00d1OS_TRAMPA :// trampa %
 			case STAT_MAS_RES_FIJA_TIERRA :
 			case STAT_MAS_RES_FIJA_AGUA :
 			case STAT_MAS_RES_FIJA_AIRE :
@@ -7007,7 +7007,7 @@ public class Constantes {
 			case STAT_MAS_PROSPECCION :// Prospeccion
 				pesoRuna = 3;
 				break;
-			case STAT_MAS_DAÑOS_TRAMPA :// trampa daños
+			case STAT_MAS_DA\u00f1OS_TRAMPA :// trampa da\u00f1os
 				pesoRuna = 5;
 				break;
 			case STAT_MAS_RES_PORC_TIERRA :
@@ -7022,13 +7022,13 @@ public class Constantes {
 			case STAT_MAS_RES_PORC_PVP_NEUTRAL :
 				pesoRuna = 6;
 				break;
-			case STAT_MAS_DAÑOS :// daños
+			case STAT_MAS_DA\u00f1OS :// da\u00f1os
 			case STAT_MAS_CURAS :// curas
 				pesoRuna = 20;
 				break;
 			case STAT_MAS_GOLPES_CRITICOS :// Criticos
 			case STAT_MAS_CRIATURAS_INVO :// invocaciones
-			case STAT_REENVIA_DAÑOS :// daños reenvio
+			case STAT_REENVIA_DA\u00f1OS :// da\u00f1os reenvio
 				pesoRuna = 30;
 				break;
 			case STAT_MAS_ALCANCE :// alcance
@@ -7043,12 +7043,12 @@ public class Constantes {
 			case STAT_MAS_VELOCIDAD :
 				pesoRuna = 0.1f;
 				break;
-			case STAT_MAS_DAÑOS_EMPUJE :
+			case STAT_MAS_DA\u00f1OS_EMPUJE :
 			case STAT_MAS_REDUCCION_CRITICOS :
-			case STAT_MAS_DAÑOS_CRITICOS :
+			case STAT_MAS_DA\u00f1OS_CRITICOS :
 			case STAT_MAS_REDUCCION_EMPUJE :
-			case STAT_MAS_DAÑOS_REDUCIDOS_NO_FECA :
-			case STAT_MAS_DAÑOS_REDUCIDOS_ARMADURAS_FECA :
+			case STAT_MAS_DA\u00f1OS_REDUCIDOS_NO_FECA :
+			case STAT_MAS_DA\u00f1OS_REDUCIDOS_ARMADURAS_FECA :
 				pesoRuna = 10;
 				break;
 			case STAT_MAS_RETIRO_PA :

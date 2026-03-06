@@ -432,7 +432,7 @@ public class StatHechizo {
 				suerte += EH.getSuerte();
 			}
 			final ArrayList<Luchador> listaLuchadores = Hechizo.getObjetivosEfecto(mapa, lanzador, EH, idCeldaObjetivo);
-			int estima = Constantes.getInflDañoPorEfecto(EH.getEfectoID(), lanzador, objetivo, EH.getValorParaPromediar(),
+			int estima = Constantes.getInflDa\u00f1oPorEfecto(EH.getEfectoID(), lanzador, objetivo, EH.getValorParaPromediar(),
 			idCeldaObjetivo, this);
 			for (Luchador L : listaLuchadores) {
 				if (estima > 0) {

@@ -29,7 +29,7 @@ import estaticos.Mundo.Duo;
 
 public class Recaudador implements PreLuchador, Exchanger, Preguntador {
 	private final int _id;
-	private int _dueño;
+	private int _due\u00f1o;
 	private byte _direccion;
 	private long _kamas, _exp, _proxMovimiento = -1, _tiempoProteccion, _tiempoCreacion;
 	private boolean _enRecolecta = false;
@@ -44,7 +44,7 @@ public class Recaudador implements PreLuchador, Exchanger, Preguntador {
 	
 	public Recaudador(final int id, final short mapa, final short celdaID, final byte orientacion, final int gremioID,
 	final String N1, final String N2, final String objetos, final long kamas, final long xp, final long tiempoProteccion,
-	long tiempoCreacion, int dueño) {
+	long tiempoCreacion, int due\u00f1o) {
 		_id = id;
 		_mapa = Mundo.getMapa(mapa);
 		_celda = _mapa.getCelda(celdaID);
@@ -63,7 +63,7 @@ public class Recaudador implements PreLuchador, Exchanger, Preguntador {
 		_exp = xp;
 		_tiempoProteccion = tiempoProteccion;
 		_tiempoCreacion = tiempoCreacion;
-		_dueño = dueño;
+		_due\u00f1o = due\u00f1o;
 		addKamas(kamas, null);
 		restarMovimiento();
 		_gremio = Mundo.getGremio(gremioID);
@@ -76,8 +76,8 @@ public class Recaudador implements PreLuchador, Exchanger, Preguntador {
 		}
 	}
 	
-	public int getDueño() {
-		return _dueño;
+	public int getDue\u00f1o() {
+		return _due\u00f1o;
 	}
 	
 	public long getTiempoCreacion() {
@@ -368,7 +368,7 @@ public class Recaudador implements PreLuchador, Exchanger, Preguntador {
 	public String getListaExchanger(Personaje perso) {
 		final StringBuilder str = new StringBuilder();
 		for (final Objeto obj : _objetos.values()) {
-			str.append("O" + obj.stringObjetoConGuiño());
+			str.append("O" + obj.stringObjetoConGui\u00f1o());
 		}
 		if (_kamas > 0) {
 			str.append("G" + _kamas);
@@ -530,9 +530,9 @@ public class Recaudador implements PreLuchador, Exchanger, Preguntador {
 		StringBuilder str = new StringBuilder();
 		str.append(Integer.toString(_id, 36) + ";");
 		str.append(_nombre1 + "," + _nombre2 + ",");
-		Personaje dueño = Mundo.getPersonaje(_dueño);
-		if (dueño != null) {
-			str.append(dueño.getNombre());
+		Personaje due\u00f1o = Mundo.getPersonaje(_due\u00f1o);
+		if (due\u00f1o != null) {
+			str.append(due\u00f1o.getNombre());
 		}
 		str.append("," + _tiempoCreacion + ",,100000000,100000000");
 		str.append(";" + Integer.toString(_mapa.getID(), 36) + "," + _mapa.getX() + "," + _mapa.getY() + ";");

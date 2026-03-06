@@ -32,7 +32,7 @@ public class GestorSalida {
 				return;
 			}
 			if (perso.esMultiman()) {
-				perso = perso.getCompañero();
+				perso = perso.getCompa\u00f1ero();
 				if (perso == null) {
 					return;
 				}
@@ -53,7 +53,7 @@ public class GestorSalida {
 				return;
 			}
 			if (perso.esMultiman()) {
-				perso = perso.getCompañero();
+				perso = perso.getCompa\u00f1ero();
 			}
 			if (perso.enLinea()) {
 				perso.getServidorSocket().enviarPW(packet, true, true);
@@ -922,8 +922,8 @@ public class GestorSalida {
 		imprimir("ORDEN LUCH: PERSO", packet);
 	}
 	
-	public static void ENVIAR_Gñ_IDS_PARA_MODO_CRIATURA(final Pelea pelea, final Personaje perso) {
-		String packet = ("Gñ");
+	public static void ENVIAR_G\u00f1_IDS_PARA_MODO_CRIATURA(final Pelea pelea, final Personaje perso) {
+		String packet = ("G\u00f1");
 		for (final Luchador luchador : pelea.luchadoresDeEquipo(3)) {
 			if (luchador.estaMuerto() || luchador.esInvisible(perso.getID())) {
 				continue;
@@ -1195,8 +1195,8 @@ public class GestorSalida {
     	String packet = ("GA;" + accionID + ";" + s2);
 		ArrayList<String> packetlist = new ArrayList<String>();
     	if (!s3.isEmpty()) {
-                if(s3.contains("¬")) {
-                    String[] s3list = s3.split("¬");
+                if(s3.contains("\u00f1")) {
+                    String[] s3list = s3.split("\u00f1");
                     for (String s : s3list) {
                         packetlist.add(packet+";"+s);
                     }
@@ -1517,7 +1517,7 @@ public class GestorSalida {
 	}
 	
 	public static void ENVIAR_cMK_CHAT_MENSAJE_KOLISEO(final Personaje perso, final String msj) {
-		String sufijo = "¿";
+		String sufijo = "\u00f1";
 		final String packet = "cMK" + sufijo + "|" + perso.getID() + "|" + perso.getNombre() + "|" + msj;
 		for (final Personaje p : perso.getGrupoKoliseo().getMiembros()) {
 			if (!p.tieneCanal(sufijo)) {
@@ -1545,7 +1545,7 @@ public class GestorSalida {
 						continue;
 					}
 					break;
-				case "¡" :// vip
+				case "\u00f1" :// vip
 					if (!MainServidor.PARAM_MOSTRAR_CHAT_VIP_TODOS && !p.getCuenta().esAbonado()) {
 						continue;
 					}
@@ -1564,8 +1564,8 @@ public class GestorSalida {
 	}
 	
 	public static void ENVIAR_GDZ_COLOREAR_ZONA_EN_PELEA(final Pelea pelea, final int equipos, final String add,
-	final short celda, final int tamaño, final int color, char forma) {// , int radioInt
-		final String packet = "GDZ" + add + celda + ";" + tamaño + ";" + color + ";" + forma;
+	final short celda, final int tama\u00f1o, final int color, char forma) {// , int radioInt
+		final String packet = "GDZ" + add + celda + ";" + tama\u00f1o + ";" + color + ";" + forma;
 		for (final Luchador luchador : pelea.luchadoresDeEquipo(equipos)) {
 			if (luchador == null) {
 				continue;
@@ -1579,8 +1579,8 @@ public class GestorSalida {
 	}
 	
 	public static void ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADORES(final ArrayList<Luchador> luchadores, final String add,
-	final short celda, final int tamaño, final int color, char forma) {
-		final String packet = "GDZ" + add + celda + ";" + tamaño + ";" + color + ";" + forma;
+	final short celda, final int tama\u00f1o, final int color, char forma) {
+		final String packet = "GDZ" + add + celda + ";" + tama\u00f1o + ";" + color + ";" + forma;
 		for (final Luchador luchador : luchadores) {
 			if (luchador == null) {
 				continue;
@@ -1594,8 +1594,8 @@ public class GestorSalida {
 	}
 	
 	public static void ENVIAR_GDZ_COLOREAR_ZONA_A_LUCHADOR(final Luchador luchador, final String add, final short celda,
-	final int tamaño, final int color, char forma) {
-		final String packet = "GDZ" + add + celda + ";" + tamaño + ";" + color + ";" + forma;
+	final int tama\u00f1o, final int color, char forma) {
+		final String packet = "GDZ" + add + celda + ";" + tama\u00f1o + ";" + color + ";" + forma;
 		enviarEnCola(luchador.getPersonaje(), packet, true);
 		imprimir("COLOREAR ZONA: LUCHADOR", packet);
 	}
@@ -1802,7 +1802,7 @@ public class GestorSalida {
 	}
 	
 	public static void ENVIAR_OAKO_APARECER_OBJETO(final Personaje perso, final Objeto objeto) {
-		final String packet = "OAKO" + objeto.stringObjetoConGuiño();
+		final String packet = "OAKO" + objeto.stringObjetoConGui\u00f1o();
 		enviarEnCola(perso, packet, true);
 		imprimir("APARECER OBJETO: PERSO", packet);
 		try {
@@ -1822,7 +1822,7 @@ public class GestorSalida {
 	public static void ENVIAR_OCK_ACTUALIZA_OBJETO(final Personaje perso, final Objeto objeto) {
 		if (objeto == null)
 			return;
-		final String packet = "OCK" + objeto.stringObjetoConGuiño();
+		final String packet = "OCK" + objeto.stringObjetoConGui\u00f1o();
 		enviarEnCola(perso, packet, true);
 		imprimir("ACTUALIZA OBJETO: PERSO", packet);
 		try {
@@ -2452,7 +2452,7 @@ public class GestorSalida {
 		if (cercado == null) {
 			return;
 		}
-		packet = "Rp" + cercado.getDueñoID() + ";" + cercado.getPrecio() + ";" + cercado.getCapacidadMax() + ";" + cercado
+		packet = "Rp" + cercado.getDue\u00f1oID() + ";" + cercado.getPrecio() + ";" + cercado.getCapacidadMax() + ";" + cercado
 		.getCantObjMax() + ";";
 		final Gremio gremio = cercado.getGremio();
 		if (gremio != null) {
@@ -2666,7 +2666,7 @@ public class GestorSalida {
 		final String packet = "GM|" + signo + montura.stringGM();
 		boolean esPublico = mapa.getCercado().esPublico();
 		for (final Personaje pj : mapa.getArrayPersonajes()) {
-			if (esPublico && montura.getDueñoID() != pj.getID()) {
+			if (esPublico && montura.getDue\u00f1oID() != pj.getID()) {
 				continue;
 			}
 			if (pj.getPelea() == null) {
@@ -3533,8 +3533,8 @@ public class GestorSalida {
 		enviarEnCola(_perso, packet, false);
 	}
 	
-	public static void ENVIAR_bñ_PANEL_ORNAMENTOS(final Personaje perso) {
-		final String packet = "bñ" + Mundo.listarOrnamentos(perso);
+	public static void ENVIAR_b\u00f1_PANEL_ORNAMENTOS(final Personaje perso) {
+		final String packet = "b\u00f1" + Mundo.listarOrnamentos(perso);
 		enviarEnCola(perso, packet, true);
 		imprimir("PANEL ORNAMENTOS: PERSO", packet);
 	}
@@ -3545,54 +3545,54 @@ public class GestorSalida {
 		imprimir("PANEL TITULOS: PERSO", packet);
 	}
 	
-	public static void ENVIAR_Ñs_BOTON_BOUTIQUE(final ServidorSocket ss) {
-		final String packet = "Ñs";
+	public static void ENVIAR_\u00D1s_BOTON_BOUTIQUE(final ServidorSocket ss) {
+		final String packet = "\u00f1s";
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_ÑL_BOTON_LOTERIA(final ServidorSocket ss, boolean bMostrar) {
-		final String packet = "ÑL" + (bMostrar ? "1" : "0");
+	public static void ENVIAR_\u00D1L_BOTON_LOTERIA(final ServidorSocket ss, boolean bMostrar) {
+		final String packet = "\u00f1L" + (bMostrar ? "1" : "0");
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_ÑU_URL_IMAGEN_VOTO(final ServidorSocket ss) {
-		final String packet = "ÑU" + MainServidor.URL_IMAGEN_VOTO;
+	public static void ENVIAR_\u00D1U_URL_IMAGEN_VOTO(final ServidorSocket ss) {
+		final String packet = "\u00D1U" + MainServidor.URL_IMAGEN_VOTO;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_Ñu_URL_LINK_VOTO(final ServidorSocket ss) {
-		final String packet = "Ñu" + MainServidor.URL_LINK_VOTO;
+	public static void ENVIAR_\u00D1u_URL_LINK_VOTO(final ServidorSocket ss) {
+		final String packet = "\u00D1u" + MainServidor.URL_LINK_VOTO;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_Ñx_URL_LINK_BUG(final ServidorSocket ss) {
-		final String packet = "Ñx" + MainServidor.URL_LINK_BUG;
+	public static void ENVIAR_\u00D1x_URL_LINK_BUG(final ServidorSocket ss) {
+		final String packet = "\u00D1x" + MainServidor.URL_LINK_BUG;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_Ñz_URL_LINK_COMPRA(final ServidorSocket ss) {
-		final String packet = "Ñz" + MainServidor.URL_LINK_COMPRA;
+	public static void ENVIAR_\u00D1z_URL_LINK_COMPRA(final ServidorSocket ss) {
+		final String packet = "\u00D1z" + MainServidor.URL_LINK_COMPRA;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_Ñe_EXO_PANEL_ITEMS(final ServidorSocket ss) {
-		final String packet = "Ñe" + MainServidor.SISTEMA_ITEMS_PERFECTO_MULTIPLICA_POR + ","
+	public static void ENVIAR_\u00D1e_EXO_PANEL_ITEMS(final ServidorSocket ss) {
+		final String packet = "\u00f1e" + MainServidor.SISTEMA_ITEMS_PERFECTO_MULTIPLICA_POR + ","
 		+ MainServidor.SISTEMA_ITEMS_EXO_PA_PRECIO + "," + MainServidor.SISTEMA_ITEMS_EXO_PM_PRECIO;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_Ña_AUTO_PASAR_TURNO(final ServidorSocket ss) {
-		final String packet = "Ña" + (MainServidor.PARAM_AUTO_SALTAR_TURNO ? "1" : "0");
+	public static void ENVIAR_\u00D1a_AUTO_PASAR_TURNO(final ServidorSocket ss) {
+		final String packet = "\u00f1a" + (MainServidor.PARAM_AUTO_SALTAR_TURNO ? "1" : "0");
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_Ñr_SUFJIO_RESET(final ServidorSocket ss) {
-		final String packet = "Ñr" + MainServidor.SUFIJO_RESET;
+	public static void ENVIAR_\u00D1r_SUFJIO_RESET(final ServidorSocket ss) {
+		final String packet = "\u00f1r" + MainServidor.SUFIJO_RESET;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_ÑL_BOTON_LOTERIA_TODOS(boolean bMostrar) {
-		final String packet = "ÑL" + (bMostrar ? "1" : "0");
+	public static void ENVIAR_\u00D1L_BOTON_LOTERIA_TODOS(boolean bMostrar) {
+		final String packet = "\u00f1L" + (bMostrar ? "1" : "0");
 		for (final Personaje perso : Mundo.getPersonajesEnLinea()) {
 			enviarEnCola(perso, packet, false);
 		}
@@ -3603,8 +3603,8 @@ public class GestorSalida {
 		enviarEnCola(_perso, packet, true);
 	}
 	
-	public static void ENVIAR_ÑA_LISTA_GFX(final ServidorSocket ss) {
-		String packet = "ÑA" + Mundo.LISTA_GFX;
+	public static void ENVIAR_\u00D1A_LISTA_GFX(final ServidorSocket ss) {
+		String packet = "\u00D1A" + Mundo.LISTA_GFX;
 		ss.enviarPW(packet);
 	}
 	
@@ -3613,121 +3613,121 @@ public class GestorSalida {
 		enviarEnCola(_perso, packet, true);
 	}
 	
-	public static void ENVIAR_ÑV_ACTUALIZAR_URL_LINK_MP3(final ServidorSocket ss) {
-		String packet = "ÑV" + MainServidor.URL_LINK_MP3;
+	public static void ENVIAR_\u00D1V_ACTUALIZAR_URL_LINK_MP3(final ServidorSocket ss) {
+		String packet = "\u00f1V" + MainServidor.URL_LINK_MP3;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_ÑA_LISTA_GFX_TODOS() {
-		String packet = "ÑA" + Mundo.LISTA_GFX;
+	public static void ENVIAR_\u00D1A_LISTA_GFX_TODOS() {
+		String packet = "\u00D1A" + Mundo.LISTA_GFX;
 		for (final Personaje perso : Mundo.getPersonajesEnLinea()) {
 			enviarEnCola(perso, packet, false);
 		}
 	}
 	
-	public static void ENVIAR_ÑB_LISTA_NIVEL(final ServidorSocket ss) {
-		String packet = "ÑB" + Mundo.LISTA_NIVEL;
+	public static void ENVIAR_\u00D1B_LISTA_NIVEL(final ServidorSocket ss) {
+		String packet = "\u00D1B" + Mundo.LISTA_NIVEL;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_ÑB_LISTA_NIVEL_TODOS() {
-		String packet = "ÑB" + Mundo.LISTA_NIVEL;
+	public static void ENVIAR_\u00D1B_LISTA_NIVEL_TODOS() {
+		String packet = "\u00D1B" + Mundo.LISTA_NIVEL;
 		for (final Personaje perso : Mundo.getPersonajesEnLinea()) {
 			enviarEnCola(perso, packet, false);
 		}
 	}
 	
-	public static void ENVIAR_ÑE_DETALLE_MOB(final ServidorSocket ss, final String str) {
-		String packet = "ÑE" + str;
+	public static void ENVIAR_\u00D1E_DETALLE_MOB(final ServidorSocket ss, final String str) {
+		String packet = "\u00f1E" + str;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_ÑF_BESTIARIO_MOBS(final ServidorSocket ss, final String str) {
-		String packet = "ÑF" + str;
+	public static void ENVIAR_\u00D1F_BESTIARIO_MOBS(final ServidorSocket ss, final String str) {
+		String packet = "\u00f1F" + str;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_Ñf_BESTIARIO_DROPS(final ServidorSocket ss, final String str) {
-		String packet = "Ñf" + str;
+	public static void ENVIAR_\u00D1f_BESTIARIO_DROPS(final ServidorSocket ss, final String str) {
+		String packet = "\u00f1f" + str;
 		ss.enviarPW(packet);
 		// if (MainServidor.MOSTRAR_ENVIOS) {
 		// imprimir("BESTIARIO DROPS: PERSO", packet);
 		// }
 	}
 	
-	public static void ENVIAR_ÑV_VOTO_RPG(final ServidorSocket ss, final String str) {
-		ss.enviarPW("ÑV" + str);
+	public static void ENVIAR_\u00D1V_VOTO_RPG(final ServidorSocket ss, final String str) {
+		ss.enviarPW("\u00D1V" + str);
 	}
 	
-	public static void ENVIAR_ÑR_ACTIVAR_BOTON_RECURSOS(final ServidorSocket ss) {
-		ss.enviarPW("ÑR");
+	public static void ENVIAR_\u00D1R_ACTIVAR_BOTON_RECURSOS(final ServidorSocket ss) {
+		ss.enviarPW("\u00D1R");
 	}
 	
-	public static void ENVIAR_ÑX_PANEL_ALMANAX(final ServidorSocket ss, String str) {
-		ss.enviarPW("ÑX" + str);
+	public static void ENVIAR_\u00D1X_PANEL_ALMANAX(final ServidorSocket ss, String str) {
+		ss.enviarPW("\u00D1X" + str);
 	}
 	
-	public static void ENVIAR_ÑK_TEST_DAÑO_MOB(final Personaje _perso, String str) {
-		final String packet = "ÑK" + str;
+	public static void ENVIAR_\u00D1K_TEST_DA\u00F1O_MOB(final Personaje _perso, String str) {
+		final String packet = "\u00D1K" + str;
 		enviarEnCola(_perso, packet, false);
 	}
 	
-	public static void ENVIAR_ÑS_SERVER_HEROICO(final ServidorSocket ss) {
-		ss.enviarPW("ÑS");
+	public static void ENVIAR_\u00D1S_SERVER_HEROICO(final ServidorSocket ss) {
+		ss.enviarPW("\u00D1S");
 	}
 	
-	public static void ENVIAR_ÑR_BOTON_RECURSOS(final ServidorSocket ss) {
-		ss.enviarPW("ÑR");
+	public static void ENVIAR_\u00D1R_BOTON_RECURSOS(final ServidorSocket ss) {
+		ss.enviarPW("\u00D1R");
 	}
 	
-	public static void ENVIAR_Ñm_MENSAJE_NOMBRE_SERVER(final ServidorSocket ss) {
-		ss.enviarPW("Ñm" + MainServidor.NOMBRE_SERVER);
+	public static void ENVIAR_\u00D1m_MENSAJE_NOMBRE_SERVER(final ServidorSocket ss) {
+		ss.enviarPW("\u00D1m" + MainServidor.NOMBRE_SERVER);
 	}
 	
-	public static void ENVIAR_ÑG_CLASES_PERMITIDAS(final ServidorSocket ss) {
-		String packet = "ÑG" + Mundo.CLASES_PERMITIDAS;
+	public static void ENVIAR_\u00D1G_CLASES_PERMITIDAS(final ServidorSocket ss) {
+		String packet = "\u00D1G" + Mundo.CLASES_PERMITIDAS;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_ÑO_ID_OBJETO_MODELO_MAX(ServidorSocket ss) {
-		ss.enviarPW("ÑO" + MainServidor.MAX_ID_OBJETO_MODELO);
+	public static void ENVIAR_\u00D1O_ID_OBJETO_MODELO_MAX(ServidorSocket ss) {
+		ss.enviarPW("\u00D1O" + MainServidor.MAX_ID_OBJETO_MODELO);
 	}
 	
-	public static void ENVIAR_ÑD_DAÑO_PERMANENTE(final ServidorSocket ss) {
-		final String packet = "ÑD" + MainServidor.PORCENTAJE_DAÑO_NO_CURABLE;
+	public static void ENVIAR_\u00D1D_DA\u00F1O_PERMANENTE(final ServidorSocket ss) {
+		final String packet = "\u00D1D" + MainServidor.PORCENTAJE_DA\u00F1O_NO_CURABLE;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_ÑM_PANEL_MIMOBIONTE(final Personaje _perso) {
-		String packet = "ÑM";
+	public static void ENVIAR_\u00D1M_PANEL_MIMOBIONTE(final Personaje _perso) {
+		String packet = "\u00D1M";
 		enviarEnCola(_perso, packet, true);
 	}
 	
-	public static void ENVIAR_ÑJ_STATS_DEFECTO_MOB(final Personaje _perso, final String str) {
-		final String packet = "ÑJ" + str;
+	public static void ENVIAR_\u00D1J_STATS_DEFECTO_MOB(final Personaje _perso, final String str) {
+		final String packet = "\u00D1J" + str;
 		enviarEnCola(_perso, packet, false);
 	}
 	
-	public static void ENVIAR_ÑI_CREA_TU_ITEM_OBJETOS(final ServidorSocket ss) {
-		final String packet = "ÑI" + Mundo.CREA_TU_ITEM_OBJETOS;
+	public static void ENVIAR_\u00D1I_CREA_TU_ITEM_OBJETOS(final ServidorSocket ss) {
+		final String packet = "\u00D1I" + Mundo.CREA_TU_ITEM_OBJETOS;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_Ñi_CREA_TU_ITEM_PRECIOS(final ServidorSocket ss) {
-		final String packet = "Ñi" + Mundo.CREAT_TU_ITEM_PRECIOS;
+	public static void ENVIAR_\u00D1i_CREA_TU_ITEM_PRECIOS(final ServidorSocket ss) {
+		final String packet = "\u00D1i" + Mundo.CREAT_TU_ITEM_PRECIOS;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_Ñp_RANGO_NIVEL_PVP(final ServidorSocket ss) {
-		final String packet = "Ñp" + MainServidor.RANGO_NIVEL_PVP;
+	public static void ENVIAR_\u00D1p_RANGO_NIVEL_PVP(final ServidorSocket ss) {
+		final String packet = "\u00D1p" + MainServidor.RANGO_NIVEL_PVP;
 		ss.enviarPW(packet);
 	}
 	
-	public static void ENVIAR_ÑZ_COLOR_CHAT(final ServidorSocket ss) {
+	public static void ENVIAR_\u00D1Z_COLOR_CHAT(final ServidorSocket ss) {
 		if (MainServidor.CANALES_COLOR_CHAT.isEmpty()) {
 			return;
 		}
-		final String packet = "ÑZ" + MainServidor.CANALES_COLOR_CHAT;
+		final String packet = "\u00D1Z" + MainServidor.CANALES_COLOR_CHAT;
 		ss.enviarPW(packet);
 	}
 	
